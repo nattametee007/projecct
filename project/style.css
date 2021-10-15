@@ -25,6 +25,10 @@
     .lightmode {
         background-color: white;
     }
+    
+    .search {
+        overflow: auto;
+    }
     /* ส่วนข่าวสารอัพเดท*/
     
     .title {

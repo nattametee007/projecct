@@ -7,3 +7,13 @@
 .navbar-nav li a:hover {
     color: #FF8C00 !important;
 }
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f58024;
+    text-decoration: none;
+}

@@ -70,10 +70,3 @@
         width: 100%;
         height: 100%;
     }
-    
-    #rcorners1 {
-        border-radius: 15px;
-        background: #f58024;
-        padding: 20px;
-        display: inline;
-    }

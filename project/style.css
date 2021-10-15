@@ -25,3 +25,80 @@ a:hover {
 .lightmode {
     background-color: white;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 80px;
+    margin: auto;
+}
+
+.box1 {
+    background: rgb(119, 185, 240);
+    border-radius: 8px;
+    width: 238px;
+    margin: 10px;
+}
+
+.box1 img {
+    width: 238px;
+    height: 165px;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px;
+}
+
+.des1 {
+    margin-top: -11px;
+}
+
+.grouptxt1 {
+    margin-top: -6px;
+}
+
+.grouptxt1 .date1 {
+    color: #737373;
+}
+
+.from {
+    margin-left: 10px;
+}
+
+.price {
+
+}
+
+.round {
+
+}
+
+.detail {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.button1 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.price {
+    color: #f58024;
+}
+
+.reserve1 {
+    background-color:#f58024;
+    font-size: 22px;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 5px;
+}
+
+.reserve1:hover {
+    background-color:#737373;
+} 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <title>Project</title>
+    <title>mail</title>
 
 
     <script>
-        $(document).ready(function(){
-            $.getJSON("questions.json",function(data){
+        $(document).ready(function() {
+            $.getJSON("questions.json", function(data) {
                 var quiz_data = "";
                 $.each(data, function(key, value) {
                     quiz_data += '<tr>';
-                    quiz_data += '<td>'+ value.question+'</td>';
-                    quiz_data += '<td>'+ value.question+'</td>';
-                    quiz_data += '<td>'+ value.answers.a+'</td>';
-                    quiz_data += '<td>'+ value.answers.b+'</td>';
-                    quiz_data += '<td>'+ value.answers.c+'</td>';
-                    quiz_data += '<td>'+ value.answers.correct+'</td>';
+                    quiz_data += '<td>' + value.question + '</td>';
+                    quiz_data += '<td>' + value.question + '</td>';
+                    quiz_data += '<td>' + value.answers.a + '</td>';
+                    quiz_data += '<td>' + value.answers.b + '</td>';
+                    quiz_data += '<td>' + value.answers.c + '</td>';
+                    quiz_data += '<td>' + value.answers.correct + '</td>';
                 });
 
                 $('#quiz').append(quiz_data);
@@ -29,84 +30,84 @@
 
         });
 
-        function submit(){
-                
-                var question = document.getElementById("quiz_insert").value;
-                var ch1 = document.getElementById("choice1").value;
-                var ch2 = document.getElementById("choice2").value;
-                var ch3 = document.getElementById("choice3").value;   
-                var ans = document.getElementById("answers_quiz").value;
+        function submit() {
 
-                var table = document.getElementsByTagName('table')[0];
+            var question = document.getElementById("quiz_insert").value;
+            var ch1 = document.getElementById("choice1").value;
+            var ch2 = document.getElementById("choice2").value;
+            var ch3 = document.getElementById("choice3").value;
+            var ans = document.getElementById("answers_quiz").value;
 
-                var newRow = table.insertRow(table.rows.length);
-                  
-                  var cel0 = newRow.insertCell(0);
-                  var cel1 = newRow.insertCell(1);
-                  var cel2 = newRow.insertCell(2);
-                  var cel3 = newRow.insertCell(3);
-                  
-                  text = newRow.rowIndex;
-                  count = document.createTextNode(text);
+            var table = document.getElementsByTagName('table')[0];
 
-                  cel0.appendChild(count);
-                   
-                  cel1.innerHTML = quiz;
-                  cel2.innerHTML = fname;
-                  cel3.innerHTML = lname;
+            var newRow = table.insertRow(table.rows.length);
 
-            }
-    </script> 
+            var cel0 = newRow.insertCell(0);
+            var cel1 = newRow.insertCell(1);
+            var cel2 = newRow.insertCell(2);
+            var cel3 = newRow.insertCell(3);
+
+            text = newRow.rowIndex;
+            count = document.createTextNode(text);
+
+            cel0.appendChild(count);
+
+            cel1.innerHTML = quiz;
+            cel2.innerHTML = fname;
+            cel3.innerHTML = lname;
+
+        }
+    </script>
 
 
-<body>
+    <body>
 
-    
 
- <div class="container mt-5">
 
-    <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">คำถาม</label>
-          <input type="text" class="form-control" id="quiz_insert" aria-describedby="quiz_help" placeholder="Enter question">
+        <div class="container mt-5">
+
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">คำถาม</label>
+                    <input type="text" class="form-control" id="quiz_insert" aria-describedby="quiz_help" placeholder="Enter question">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">คำตอบข้อที่ 1</label>
+                    <input type="text" class="form-control" id="choice1" aria-describedby="quiz_help" placeholder="Enter Choice A">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">คำตอบข้อที่ 2</label>
+                    <input type="text" class="form-control" id="choice2" aria-describedby="quiz_help" placeholder="Enter Choice B">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">คำตอบข้อที่ 3</label>
+                    <input type="text" class="form-control" id="choice3" aria-describedby="quiz_help" placeholder="Enter Choice C">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">เฉลย</label>
+                    <input type="text" class="form-control" id="answers_quiz" aria-describedby="quiz_help" placeholder="Enter Correct Answer">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
         </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">คำตอบข้อที่ 1</label>
-            <input type="text" class="form-control" id="choice1" aria-describedby="quiz_help" placeholder="Enter Choice A">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">คำตอบข้อที่ 2</label>
-            <input type="text" class="form-control" id="choice2" aria-describedby="quiz_help" placeholder="Enter Choice B">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">คำตอบข้อที่ 3</label>
-            <input type="text" class="form-control" id="choice3" aria-describedby="quiz_help" placeholder="Enter Choice C">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">เฉลย</label>
-            <input type="text" class="form-control" id="answers_quiz" aria-describedby="quiz_help" placeholder="Enter Correct Answer">
-          </div>
-          <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <br>
+        <hr>
+        <br>
+        <table class="table table-bordered table-striped" id="quiz">
+            <tr>
+                <th>ข้อที่</th>
+                <th>คำถาม</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>คำตอบ</th>
+            </tr>
+        </table>
 
-    </div>
-    <br>
-    <hr>
-    <br>
-     <table class="table table-bordered table-striped" id="quiz">
-         <tr>
-             <th>ข้อที่</th>
-             <th>คำถาม</th>
-             <th>A</th>
-             <th>B</th>
-             <th>C</th>
-             <th>คำตอบ</th>
-         </tr>
-     </table>
+        </div>
 
- </div>
-   
-</body>
+    </body>
 
 </html>

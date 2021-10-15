@@ -17,3 +17,11 @@ a:hover {
     color: #f58024;
     text-decoration: none;
 }
+
+.blackmode {
+    background-color: #333333;
+}
+
+.lightmode {
+    background-color: white;
+}

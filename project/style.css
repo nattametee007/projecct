@@ -1,1 +1,9 @@
+.navbar-inner {
+    height: 100px;
+    font-size: 20px;
+    padding: 10px;
+}
 
+.navbar-nav li a:hover {
+    color: #FF8C00 !important;
+}

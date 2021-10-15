@@ -27,7 +27,7 @@
     }
     
     .search {
-        overflow: auto;
+        overflow: scroll;
     }
     /* ส่วนข่าวสารอัพเดท*/
     

@@ -25,3 +25,11 @@ a:hover {
 .lightmode {
     background-color: white;
 }
+
+
+/* ส่วนข่าวสารอัพเดท*/
+
+.title {
+    color: #f58024;
+    text-align: center;
+}

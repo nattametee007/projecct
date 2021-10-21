@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>pakage</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
             color: #FF8C00;
         }
     </style>
-    </style>
+    <link href="style.css" rel="stylesheet">
 
 
 
@@ -42,7 +42,7 @@
 
             <ul id="b" class="nav navbar-inner navbar-nav navbar-right">
                 <li><a href="#">ข้อเสนอที่น่าสนใจ</a></li>
-                <li><a href="#">ข่าวสารอัปเดต</a></li>
+                <li><a href="#">ข่าวสารอัพเดท</a></li>
                 <li><a href="#">จัดการการจอง</a></li>
                 <li><a href="#">คนหนีเที่ยว</a></li>
                 <li class="hidden-xs">
@@ -69,13 +69,14 @@
 
     <div class="container form-group">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <div class="table-bordered">
                     <h2>สุวรรณภูมิ > เชียงใหม่</h2>
 
-                    <div>
+                    <div class="btn-group rcorners1 ">
                         <button class="well well-sm middle">เลือกเวลาการเดินทาง
                         <p class="glyphicon glyphicon-chevron-down"></p></button>
+                        <butto id="rcorners1">จอง</butto>
                     </div>
                 </div>
                 <h1>เชียงใหม่</h1>
@@ -106,13 +107,111 @@
                     <a href="#">www.thaismileair.com/</a> , Call Center 1181 หรือ 0-2118-8888, ห้องจำหน่ายบัตรโดยสารไทยสมายล์ (Smile Service Center) และตัวแทนจำหน่ายบัตรโดยสารไทยสมายล์ทั่วประเทศ (Smile Travel Agents)***</p>
                 <p>***สายการบินไทยสมายล์ขอสงวนสิทธิ์ในการเปลี่ยนแปลงข้อกำหนด/เงื่อนไข โดยมิต้องแจ้งให้ทราบล่วงหน้า**</p>
             </div>
-            <div class="col-md-6 posittion-fix">
-                <img src="https://www.thaismileair.com/assets/v2/offer/57/l_thailand-chiangmai.jpg" width="600" height="350">
+            <div class="col-lg-6 container price">
+                <img id="pic" src="https://www.thaismileair.com/assets/v2/offer/57/l_thailand-chiangmai.jpg" alt="Cinque Terre">
+                <div class="topleft form-group">
+                    เริ่มต้นที่<br>
+                    <b>1,090</b> บาท
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid" style="background-color: #333333; color: gray;">
+            <br>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-11">
+                            <div class="col-md-3">
+                                <p>นโยบายความเป็นส่วนตัว</p>
+                                <hr>
+                                <a href="privacy.html">นโยบายความเป็นส่วนตัว</a><br>
+                                <a href="complementary.html">บริการพิเศษที่ท่านจะได้รับ</a><br>
+                                <a>นโยบายเกี่ยวกับสัมภาระ</a><br>
+                                <a>รอยัล ออร์คิด พลัส</a><br>
+                                <a>Frequent Flyer Programs</a><br>
+                                <a>ข้อกำหนดและเงื่อนไข</a><br>
+                                <a>นโยบายคุกกี้</a><br>
+                            </div>
+                            <div class="col-md-6">
+                                <p>แผนผังเว็บไซต์</p>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a>การจัดซื้อจัดจ้าง</a><br>
+                                        <a>ข้อเสนอและโปรโมชั่น</a><br>
+                                        <a>จุดหมายปลายทาง</a><br>
+                                        <a>เที่ยวบินเช่าเหมาลำ</a><br>
+                                        <a>สิทธิพิเศษ จาก WE PRIVILEGE</a><br>
+                                        <a>MARKETPLACE</a><br>
+                                        <a>e-Magazine</a><br>
+                                        <a>Star Alliance</a><br>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a>ปัญหาที่พบบ่อย</a><br>
+                                        <a>ข่าวและประกาศ</a><br>
+                                        <a>ไทยสมายล์ บล็อก</a><br>
+                                        <a>จัดการการจอง</a><br>
+                                        <a>ติดต่อเรา</a><br>
+                                        <a>ร่วมงานกับเรา</a><br>
+                                        <a>อัตราค่าโดยสารสูงสุดสำหรับเส้นทางในประเทศ</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <p>ที่เที่ยวยอดนิยม</p>
+                                <hr>
+                                <a>กรุงเทพไปจีน</a><br>
+                                <a>กรุงเทพไปอินเดีย</a><br>
+                                <a>กรุงเทพไปมาเลเซีย</a><br>
+                                <a>กรุงเทพไปพม่า</a><br>
+                                <a>กรุงเทพไปลาว</a><br>
+                                <a>กรุงเทพไปกัวลาลัมเปอร์</a><br>
+                                <a>กรุงเทพไปปีนัง</a><br>
+                                <a>กรุงเทพไปชัยปุระ</a><br>
+                                <a>กรุงเทพไปเสียมราฐ</a><br>
+                                <a>ประเทศไทยไปภายในประเทศ</a><br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <br>
+                            <p>คอลเซ็นเตอร์:</p>
+                            <p>+662 118 8888</p><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-line.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-facebook.png"><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-youtube.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-ig.png"><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-trip.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-twitter.png"><br><br><br>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="font-size: 50px; color: #f58024; font-weight: bolder;">1181</p><br><br><br>
+                            <i>&emsp;&emsp;<img
+                                    src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_footer_logo_dark_1.png"
+                                    style="width: 150px;"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color: #f58027;">
+                <br>
+                <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
+                </p>
+                <br>
             </div>
 
         </div>
-    </div>
-
+    </footer>
 
 
 

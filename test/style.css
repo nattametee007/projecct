@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.offer-title {
+    font-size: 22px;
+    color: tomato;
+    margin-bottom: 6px;
+    padding-left: 13px;
+
+}
+
+.offer-container {
+    width: 50%;
+    height: 180px;
+    padding: 0;
+
+}
+
+.offer-tour {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    width: 100%;
+    height: max-content;
+    position: relative;
+    align-items: center;
+    right: -12px;
+}
+
+
+.offer-tour-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 180px;
+    border: 1px solid #fff;
+    position: relative;
+    overflow: hidden;
+    flex: 50%;
+}
+
+
+.offer-tour-item img {
+    max-width: 100%;
+    min-width: 100%;
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+
+.offer-tour-item .offer-backdrop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.offer-tour-item:hover .offer-backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.offer-tour-item:hover img {
+    transform: scale(1.1);
+}
+
+.offer-container .offer-tour-icon {
+    visibility: hidden;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+a:hover .offer-tour-icon {
+    color: white;
+    z-index: 1;
+    visibility: visible;
+}
+
+.offer-tour-item-text {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 0 15px 0 15px;
+    top: 73px;
+}
+
+.offer-tour-item:hover .offer-tour-item-text {
+    opacity: 0.2;
+}
+
+
+.offer-tour-title {
+    font-family: "krart_bold";
+    color: #fff;
+    font-size: 35px;
+    margin: 0 0 5px 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.offer-tour-title span {
+    font-family: "krart_medium";
+    font-size: 14px;
+    margin: 0 0 0 5px;
+}
+
+.offer-tour-sub {
+    font-family: "krart_medium";
+    font-size: 14px;
+    color: #fff;
+    margin: 0 0 0 0;
+    line-height: 1.4;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='orange' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    } 
+
+    .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='orange' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+    .carousel .carousel-indicators button {
+      background-color: gray;
+      height: 4px;
+      width: 27px;
+    }
+    .carousel .carousel-indicators button.active {
+      background-color: rgb(231, 119, 15);
+    }
+
+    .carousel {
+      box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
+      -webkit-box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
+      -moz-box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
+    }

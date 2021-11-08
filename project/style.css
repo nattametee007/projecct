@@ -41,6 +41,12 @@
         position: relative;
     }
     
+    .col-3 {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+    }
+    
     .topleft {
         margin-top: 20px;
         position: absolute;

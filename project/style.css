@@ -142,7 +142,7 @@ a:hover {
 .price {
     position: relative;
 }
-    
+
 .topleft {
     margin-top: 20px;
     position: absolute;
@@ -155,6 +155,11 @@ a:hover {
     width: 100px;
     height: 80px;
 }
+
+    .search {
+        overflow: scroll;
+    }
+    /* ส่วนข่าวสารอัพเดท*/
     
 .topleft b {
     color: #f58024;

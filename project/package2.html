@@ -2,23 +2,37 @@
 <html lang="en">
 
 <head>
-    <title>ข่าวสารอัพเดท</title>
+    <title>pakage</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <style>
+        .navbar-inner {
+            height: 100px;
+            font-size: 20px;
+            padding: 10px;
+        }
+        
+        .navbar-nav li a:hover {
+            color: #FF8C00 !important;
+        }
+        
+        h3 {
+            text-decoration: underline;
+            color: #FF8C00;
+        }
+    </style>
     <link href="style.css" rel="stylesheet">
 
 
 
 </head>
 
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <nav class="navbar navbar-inner navbar-inverse navbar-light">
+    <nav class="navbar navbar-inner navbar-light navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png" width="100"></a>
@@ -48,51 +62,61 @@
                 </li>
             </ul>
 
+
     </nav>
 
-    <div class="title container-fluid">
-        <h1><b>ข่าวสารจากไทยสมายล์</b></h1><br>
-        <h6 class="text-muted">ตามติดทุกเรื่องราวของเรา พร้อมข่าวสารใหม่ๆ จากไทยสมายล์</h6>
-        <input type="search" placeholder="ค้นหา" class="glyphicon glyphicon-search">
-    </div>
+    <a style="text-decoration: none; color:#939598;" class="glyphicon glyphicon-chevron-left" href="try.html">กลับ</a>
 
-    <div class="container news">
-        <h3>ข่าวอัพเดทล่าสุดจากไทยสมายล์</h3>
+    <div class="container form-group">
         <div class="row">
-            <div class="col-lg-4">
-                <img src="https://www.thaismileair.com/assets/v2/news/3009/l_Announcement-ASF%20JAN2020%20(cover).jpg" class="w-100 h-100">
-                <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                <a href="#">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</a><br>
-                <a href="#">อ่านต่อ >></a>
+            <div class="col-lg-6">
+                <div class="table-bordered">
+                    <h2>สุวรรณภูมิ > เชียงใหม่</h2>
+
+                    <div class="btn-group rcorners1 ">
+                        <button class="well well-sm middle">เลือกเวลาการเดินทาง
+                        <p class="glyphicon glyphicon-chevron-down"></p></button>
+                        <butto id="rcorners1">จอง</butto>
+                    </div>
+                </div>
+                <h1>เชียงใหม่</h1>
+                <p class="text-muted">บัตรโดยสารราคาพิเศษสำหรับการเดินทางเที่ยวเดียวเริ่มที่ 1,090 บาท (รวมภาษีและค่าธรรมเนียมต่างๆแล้ว)</p>
+                <b>จอง   > 01/01/21 - 31/12/21</b><br>
+                <b>เดินทาง   > 01/01/21 - 31/12/21</b>
+                <hr>
+                <h3>เงื่อนไขบัตรโดยสาร</h3>
+                <ol>
+                    <li>สำหรับออกบัตรโดยสารตั้งแต่ : วันนี้เป็นต้นไป</li>
+                    <li>สำหรับเดินทางตั้งแต่ : วันนี้เป็นต้นไป</li>
+                    <li>ไมล์สะสม : ได้รับไมล์สะสม ROP</li>
+                    <li>ส่วนลดบัตรโดยสารสำหรับเด็ก/ทารก : ไม่มีส่วนลดสำหรับเด็ก อายุ 2 - 11 ปี ลด 25% / ทารกต่ำกว่า 2 ปี ไม่มีที่นั่ง ลด 90%</li>
+                    <li>การเปลี่ยนแปลง</li>
+                    <li>การยกเลิก/ขอคืนเงิน : ไม่สามารถยกเลิกหรือขอคืนเงินได้ </li>
+                    <ul class="text-muted">
+                        <li>สามารถเปลี่ยนแปลงเที่ยวบินและวันเดินทางได้ มีค่าธรรมเนียม 500 บาท พร้อมส่วนต่างราคาบัตรโดยสาร (ถ้ามี)</li>
+                        <li>ไม่อนุญาตให้เปลี่ยนชื่อผู้โดยสาร </li>
+                        <li>การแก้ไขชื่อ (สูงสุด 3 ตัวอักษร): สามารถเปลี่ยนแปลงก่อนวันเดินทางโดยไม่มีค่าธรรมเนียม</li>
+                    </ul>
+                    <li> เงื่อนไขอื่นๆ</li>
+                    <ul class="text-muted">
+                        <li>ที่นั่งมีจำนวนจำกัดในแต่ละเที่ยวบิน และอาจไม่มีให้บริการในบางเที่ยวบิน</li>
+                        <li>ราคาอาจมีการเปลี่ยนแปลง เนื่องจากอัตราแลกเปลี่ยน</li>
+                    </ul>
+                </ol>
+                <p>***สำรองบัตรโดยสาร ได้ที่
+                    <a href="#">www.thaismileair.com/</a> , Call Center 1181 หรือ 0-2118-8888, ห้องจำหน่ายบัตรโดยสารไทยสมายล์ (Smile Service Center) และตัวแทนจำหน่ายบัตรโดยสารไทยสมายล์ทั่วประเทศ (Smile Travel Agents)***</p>
+                <p>***สายการบินไทยสมายล์ขอสงวนสิทธิ์ในการเปลี่ยนแปลงข้อกำหนด/เงื่อนไข โดยมิต้องแจ้งให้ทราบล่วงหน้า**</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 ">
-                    <img src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" class="w-100 h-100">
-                    <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                    <a href="#">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</a><br>
-                    <a href="#">อ่านต่อ >></a>
-                </div>
-                <div class="col-lg-4 ">
-                    <img src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" class="w-100 h-100">
-                    <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                    <a href="#">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</a><br>
-                    <a href="#">อ่านต่อ >></a>
-                </div>
-                <div class="col-lg-4 ">
-                    <img src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" class="w-100 h-100">
-                    <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                    <a href="#">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</a><br>
-                    <a href="#">อ่านต่อ >></a>
+            <div class="col-lg-6 container price">
+                <img id="pic" src="https://www.thaismileair.com/assets/v2/offer/57/l_thailand-chiangmai.jpg" alt="Cinque Terre">
+                <div class="topleft form-group">
+                    เริ่มต้นที่<br>
+                    <b>1,090</b> บาท
+
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
     <footer>
         <div class="container-fluid" style="background-color: #333333; color: gray;">
             <br>
@@ -188,6 +212,9 @@
 
         </div>
     </footer>
+
+
+
 </body>
 
 </html>

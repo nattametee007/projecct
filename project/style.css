@@ -50,7 +50,7 @@ a:hover {
 .box1 img {
     width: 238px;
     height: 165px;
-    border-top-left-radius: 8px ;
+    border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
@@ -93,7 +93,7 @@ a:hover {
 }
 
 .reserve1 {
-    background-color:#f58024;
+    background-color: #f58024;
     font-size: 20px;
     color: white;
     border-radius: 5px;
@@ -105,24 +105,24 @@ a:hover {
 }
 
 .reserve1:hover {
-    background-color:#949090;
-} 
+    background-color: #949090;
+}
 
 .navbar-inner {
     height: 100px;
     font-size: 20px;
     padding: 10px;
 }
-    
+
 .navbar-nav li a:hover {
     color: #FF8C00 !important;
 }
-    
+
 a {
     color: gray;
     text-decoration: none;
 }
-    
+
 a:hover {
     color: #f58024;
     text-decoration: none;
@@ -134,7 +134,7 @@ a:hover {
 
 
 /* ส่วนข่าวสารอัพเดท*/
-    
+
 .title {
     color: #f58024;
     text-align: center;
@@ -142,7 +142,7 @@ a:hover {
 
 
 /* ส่วนของ package*/
-    
+
 .price {
     position: relative;
 }
@@ -159,20 +159,32 @@ a:hover {
     width: 100px;
     height: 80px;
 }
-    
+
 .topleft b {
     color: #f58024;
     font-size: 35px;
     opacity: 2;
 }
-    
+
 .topleft p {
     color: aliceblue;
     font-size: 25px;
     padding-right: 0px;
 }
-    
+
 #pic {
     width: 100%;
     height: 100%;
+}
+
+
+/* ส่วนของ package*/
+
+#booking {
+    border-radius: 8px;
+    width: 00px;
+    height: 50px;
+    text-align: center;
+    color: #f58024;
+    background-color: white;
 }

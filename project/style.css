@@ -29,12 +29,16 @@ a:hover {
 .search {
     overflow: scroll;
 }
+
+
 /* ส่วนข่าวสารอัพเดท*/
 
 .title {
     color: #f58024;
     text-align: center;
 }
+
+
 /* ส่วนของ package*/
 
 .price {

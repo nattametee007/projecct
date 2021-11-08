@@ -1,4 +1,7 @@
-<<<<<<< HEAD
+body {
+    background-color: #000000;
+}
+
 .navbar-inner {
     height: 100px;
     font-size: 20px;
@@ -42,7 +45,7 @@ a:hover {
 }
 
 .box1 {
-    background: rgb(119, 185, 240);
+    background: #FFFFFF;
     border-radius: 8px;
     width: 238px;
     margin: 10px;
@@ -73,7 +76,13 @@ a:hover {
 }
 
 .price1 {
-    margin-left: 84px;
+    padding-left: 91px;
+    margin-top: -7px;
+    color: #f58024;
+}
+
+.price2 {
+    padding-left: 111px;
     margin-top: -7px;
     color: #f58024;
 }
@@ -107,7 +116,7 @@ a:hover {
 }
 
 .reserve1:hover {
-    background-color:#949090;
+    background-color:#939598;
 } 
 
 .navbar-inner {
@@ -174,211 +183,36 @@ a:hover {
     width: 100%;
     height: 100%;
 }
-=======
-            .navbar-inner {
-                height: 100px;
-                font-size: 20px;
-                padding: 10px;
-            }
+
+/* ส่วนของ tab ด้านบน*/
             
-            .navbar-nav li a:hover {
-                color: #FF8C00 !important;
-            }
-            
-            a {
-                color: gray;
-                text-decoration: none;
-            }
-            
-            a:hover {
-                color: #f58024;
-                text-decoration: none;
-            }
-            
-            .darkmode {
-                background-color: #333333;
-            }
-            
-            .lightmode {
-                background-color: white;
-            }
-            
-            * {
-                margin: 0px;
-                padding: 0px;
-            }
-            
-            .rctsearch1 {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding-top: 0px;
-                padding-bottom: 50px;
-                margin: auto;
-            }
-            
-            .box1 {
-                background: rgb(119, 185, 240);
-                border-radius: 8px;
-                width: 238px;
-                margin: 10px;
-            }
-            
-            .box1 img {
-                width: 238px;
-                height: 165px;
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-            }
-            
-            .des1 {
-                margin-top: -11px;
-            }
-            
-            .grouptxt1 {
-                margin-top: -6px;
-            }
-            
-            .grouptxt1 .date1 {
-                color: #737373;
-            }
-            
-            .from {
-                margin-left: 185px;
-                color: #737373;
-            }
-            
-            .price1 {
-                margin-left: 84px;
-                margin-top: -7px;
-                color: #f58024;
-            }
-            
-            .round {
-                margin-left: 146px;
-                margin-top: -7px;
-            }
-            
-            .detail1 {
-                padding: 10px;
-                font-size: 15px;
-            }
-            
-            .button1 {
-                text-align: center;
-                padding-bottom: 15px;
-            }
-            
-            .reserve1 {
-                background-color: #f58024;
-                font-size: 20px;
-                color: white;
-                border-radius: 5px;
-                padding-left: 70px;
-                padding-right: 70px;
-                padding-top: 7px;
-                padding-bottom: 7px;
-                border: #f58024;
-            }
-            
-            .reserve1:hover {
-                background-color: #949090;
-            }
-            
-            .navbar-inner {
-                height: 100px;
-                font-size: 20px;
-                padding: 10px;
-            }
-            
-            .navbar-nav li a:hover {
-                color: #FF8C00 !important;
-            }
-            
-            a {
-                color: gray;
-                text-decoration: none;
-            }
-            
-            a:hover {
-                color: #f58024;
-                text-decoration: none;
-            }
-            
-            .search {
-                overflow: auto;
-            }
-            /* ส่วนข่าวสารอัพเดท*/
-            
-            .title {
-                color: #f58024;
-                text-align: center;
-            }
-            /* ส่วนของ package*/
-            
-            .price {
-                position: relative;
-            }
-            
-            .topleft {
-                margin-top: 20px;
-                position: absolute;
-                top: 8px;
-                left: 16px;
-                font-size: 12px;
-                color: aliceblue;
-                background-color: rgb(75, 59, 59);
-                opacity: 0.65;
-                width: 100px;
-                height: 80px;
-            }
-            
-            .topleft b {
-                color: #f58024;
-                font-size: 35px;
-                opacity: 2;
-            }
-            
-            .topleft p {
-                color: aliceblue;
-                font-size: 25px;
-                padding-right: 0px;
-            }
-            
-            #pic {
-                width: 100%;
-                height: 100%;
-            }
-            /* ส่วนของ tab ด้านบน*/
-            
-            .bookingtab-container .bookingtab-group {
-                cursor: pointer;
-                color: #f58024;
-            }
-            
-            .bktab {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            
-            .bookingtab-group {
-                margin: 10px;
-                border: rgb(51, 51, 51) solid;
-                background-color: rgb(51, 51, 51);
-                border-radius: 6px;
-            }
-            
-            .bookingtab-container {
-                text-align: center;
-            }
-            
-            .bookingtab-text {
-                margin: 10px;
-            }
-            /* จองเครื่องบิน*/
-            
-            .bk {
-                display: flex;
-                flex-wrap: wrap;
-            }
->>>>>>> b0dabfce09cb00d4921c8d58164c2580d6e9b74c
+.bookingtab-container .bookingtab-group {
+    cursor: pointer;
+    color: #f58024;
+}
+
+.bktab {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bookingtab-group {
+    margin: 10px;
+    border: rgb(51, 51, 51) solid;
+    background-color: rgb(51, 51, 51);
+    border-radius: 6px;
+}
+
+.bookingtab-container {
+    text-align: center;
+}
+
+.bookingtab-text {
+    margin: 10px;
+}
+/* จองเครื่องบิน*/
+
+.bk {
+    display: flex;
+    flex-wrap: wrap;
+}

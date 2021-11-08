@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SDASDSAD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link href="styles2.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db15b4141a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-inner navbar-light navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png" width="100"></a>
+                <a class="navbar-brand "><img src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png" width="50"></a>
+
+            </div>
+
+            <ul id="b" class="nav navbar-inner navbar-nav navbar-right">
+                <li><a href="#">ข้อเสนอที่น่าสนใจ</a></li>
+                <li><a href="#">ข่าวสารอัพเดท</a></li>
+                <li><a href="#">จัดการการจอง</a></li>
+                <li><a href="#">คนหนีเที่ยว</a></li>
+                <li class="hidden-xs">
+                    <a id="mibew-agent-button" class="live-mobile" href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank" onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th" border="0" alt="" /></a>
+
+                </li>
+
+                <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-user"></span>ล็อคอิน</a>
+                </li>
+                <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-align-right"></span></a>
+                </li>
+
+                <li>
+                    <a class="language-sub">TH</span><img
+                            src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" width="50"> </a>
+
+                </li>
+            </ul>
+
+
+    </nav>
+    <div class="container">
+        <div class="bookingtab-container" style="padding-left: 150px;">
+            <div class="bktab" id="booktab">
+                <div class="bookingtab-group " id='booktab' data-target="booktab" style="display: inline-block;">
+                    <p class='bookingtab-text'><i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
+                    <div class="triangle-down"></div>
+                </div>
+                <div class="bookingtab-group" id='covidtab' data-target="covidtab">
+
+                    <p class='bookingtab-text'><i class="fas fa-virus"></i>&nbsp;โควิด-19 เซ็นเตอร์/เครดิตวงเงิน(EMD)</p>
+                    <div class="triangle-down"></div>
+                </div>
+
+                <div class="bookingtab-group" id='hoteltab' data-target="hoteltab">
+                    <p class='bookingtab-text'><i class="fas fa-hotel"></i>&nbsp;จองที่พัก</p>
+                    <div class="triangle-down"></div>
+                </div>
+
+                <div class="bookingtab-group" id='bookingnhoteltab' data-target="bookingnhoteltab">
+                    <p class='bookingtab-text'><i class="fas fa-plane"></i><i class="fas fa-hotel"></i>&nbsp;ตั๋วเครื่องบิน+ที่พัก</p>
+                    <div class="triangle-down"></div>
+                </div>
+
+                <div class="bookingtab-group" id='carenttab' data-target="carenttab">
+                    <p class='bookingtab-text'><i class="fas fa-car"></i>&nbsp;บริการรถเช่า</p>
+                    <div class="triangle-down"></div>
+                </div>
+
+                <div class="bookingtab-group" id='herotab' data-target="herotab">
+                    <p class='bookingtab-text'><i class="fas fa-briefcase"></i>&nbsp;บริการอื่นๆ</p>
+                    <div class="triangle-down"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="booking-container" style="padding-left: 150px;">
+            <div class="bk" id="book">
+                <div class="booking-group " id='book' data-target="book" style="display: inline-block;">
+                    <p class='booking-text'><b>เลือกเส้นทาง</b></p>
+
+                </div>
+                <div class="booking-group" id='covid' data-target="covid">
+
+                    <p class='booking-text'><b>เลือกเวลาการเดินทาง</b></p>
+
+                </div>
+
+                <div class="booking-group" id='hotel' data-target="hotel">
+                    <p class='booking-text'><b>เลือกจำนวนผู้โดยสาร</b></p>
+
+                </div>
+
+                <div class="booking-group" id='bookingnhotel' data-target="bookingnhotel">
+                    <p class='booking-text'><b>โปรโมชั่นโค้ด</b></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container form-group">
+        <h2>ผลการค้นหาล่าสุด</h2>
+        <ul>
+            <div class="dropdown">
+                <input type="search" id="menu1" data-toggle="dropdown" placeholder="ระบุต้นทาง">
+                <span class="caret"></span></button>
+
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">กระบี่ (KBV), ไทย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">กรุงเทพฯ-สุวรรณภูมิ (BKK), ไทย </a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">กัวลาลัมเปอร์ (KUL), มาเลเซีย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">กาฐมาณฑุ (KTM), เนปาล</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ขอนแก่น (KKC), ไทย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">คยา (GAY), อินเดีย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ฉงชิ่ง (CKG), จีน</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">นครพนม (KOP), ไทย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">นครศรีธรรมราช (NST), ไทย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">นราธิวาส (NAW), ไทย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">น่าน (NNT), ไทย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ปีนัง (PEN), มาเลเซีย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">พนมเปญ (PNH), กัมพูชา</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ภูเก็ต (HKT), ไทย</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">มัณฑะเลย์ (MDL), พม่า</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">มุมไบ (BOM), อินเดีย</a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="rctsearch1">
+                    <div class="box1">
+                        <img src="https://assets.airtrfx.com/media-em/we/6142919ed6d5c_EM_HKT-01.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1"></div>
+                            <div class="grouptxt1">
+                                <p><b>ภูเก็ต</b></p>
+                                <p class="date1">24/10/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 1,250*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://assets.airtrfx.com/media-em/we/614bf4c4ca61a_EM_CNX_01_01.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>เชียงใหม่</b></p>
+                                <p class="date1">27/10/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 1,140*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://www.thaismileair.com/en/flights/media-em/we/5f8fa11175163_NNT_EM.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>เทศบาลเมืองน่าน</b></p>
+                                <p class="date1">18/10/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 1,250*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://assets.airtrfx.com/media-em/we/614bf4bb706e2_EM_CEI.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>เชียงราย</b></p>
+                                <p class="date1">24/10/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 900*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="rctsearch1">
+                    <div class="box1">
+                        <img src="https://assets.airtrfx.com/media-em/we/614bf4bb706e2_EM_CEI.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1"></div>
+                            <div class="grouptxt1">
+                                <p><b>เชียงราย</b></p>
+                                <p class="date1">08/11/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 900*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://www.thaismileair.com/en/flights/media-em/we/HatYai-HDY.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>หาดใหญ่</b></p>
+                                <p class="date1">15/11/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 1,060*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://www.thaismileair.com/en/flights/media-em/we/SuratThani-URT.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>สุราษฎร์ธานี</b></p>
+                                <p class="date1">21/11/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 900*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://assets.airtrfx.com/media-em/we/6142918972370_EM_BKK-01.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>ภูเก็ต จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>กรุงเทพมหานคร</b></p>
+                                <p class="date1">17/11/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 1,000*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="rctsearch1">
+                    <div class="box1">
+                        <img src="https://assets.airtrfx.com/media-em/we/6142918972370_EM_BKK-01.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>หาดใหญ่ จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1"></div>
+                            <div class="grouptxt1">
+                                <p><b>กรุงเทพมหานคร</b></p>
+                                <p class="date1">20/11/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 1,100*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://www.thaismileair.com/en/flights/media-em/we/KhonKaen-KKC.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>ขอนแก่น</b></p>
+                                <p class="date1">14/11/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 1,000*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://assets.airtrfx.com/media-em/we/614bf4d09f9a6_EM_UTH.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>อุดรธานี</b></p>
+                                <p class="date1">14/11/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 900*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <img src="https://assets.airtrfx.com/media-em/we/614bf4caa8a73_EM_UBP.jpg?width=400&height=300&quality=80&format=auto&opt=true">
+                        <div class="detail1">
+                            <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                            <p class="des1"><b>ปลายทาง</b></p>
+                            <div class="grouptxt1">
+                                <p><b>อุบลราชธานี</b></p>
+                                <p class="date1">15/11/2021</p>
+                            </div>
+                            <p class="from">จาก</p>
+                            <h3 class="price1"><b>THB 900*</b></h3>
+                            <p class="round">เที่ยวเดียว</p>
+                        </div>
+                        <div class="button1">
+                            <button class="reserve1">จองเลย</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="container-fluid" style="background-color: #000000; color: gray;">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                    <div class="row" style="text-align: center;">
+                        <div class="col-md-3">
+                            <br><br>
+                            <p><img src="https://www.thaismileair.com/assets/v2/complementary/27/f_Com_01.png"></p>
+                            <p style="font-size: medium;">รับไมล์สะสม รอยัลออร์คิดพลัส</p>
+                            <p style="font-size: smaller;">สมาชิกรอยัล ออร์คิด พลัส สามารถรับไมล์สะสม รวมถึงการแลกตั๋วรางวัล เมื่อโดยสารกับสายการบินไทยสมายล์ได้ ท่านสามารถดูตารางไมล์สะสมสายการบินไทยสมายล์และวิ ...<a>อ่านต่อ</a></p><br><br><br>
+                        </div>
+                        <div class="col-md-3">
+                            <br><br>
+                            <p><img src="https://www.thaismileair.com/assets/v2/complementary/54/f_Com_02.png"></p>
+                            <p style="font-size: medium;">บริการอาหารว่างและเครื่องดื่ม</p>
+                            <p style="font-size: smaller;">เรามีบริการของว่าง และเครื่องดื่มสำหรับทุกที่นั่ง ทั้งเที่ยวบินในประเทศและเที่ยวบินต่างประเทศ ... <a>อ่านต่อ</a></p><br><br><br>
+                        </div>
+                        <div class="col-md-3">
+                            <br><br>
+                            <p><img src="https://www.thaismileair.com/assets/v2/complementary/6/f_Com_03.png"></p>
+                            <p style="font-size: medium;">เลือกที่นั่งฟรีไม่เสียค่าธรรมเนียม</p>
+                            <p style="font-size: smaller;">**เฉพาะเส้นทางบินภายในประเทศ** สำรองที่นั่งได้ก่อนใคร ฟรี! เพียงท่านเลือกเดินทางไปกับไทยสมายล์ ท่านก็สามารถใช้บริการสำรองที่นั่งออนไลน์ ท่านสามารถสำรอ ... <a>อ่านต่อ</a></p><br><br><br>
+                        </div>
+                        <div class="col-md-3">
+                            <br><br>
+                            <p><img src="https://www.thaismileair.com/assets/v2/complementary/70/f_Com_04.png"></p>
+                            <p style="font-size: medium;">ฟรีน้ำหนักสัมภาระ 20 ก.ก.</p>
+                            <p style="font-size: smaller;">ท่านจะได้รับน้ำหนักกระเป๋าใต้ท้องเครื่องทันทีถึง 20 กิโลกรัมเมื่อซื้อตั๋วโดยสารชั้นสมายล์คลาส และ 30 กิโลกรัมสำหรับตั๋วโดยสารชั้นสมายล์พลัส เมื่อเดินท ...<a>อ่านต่อ</a></p><br><br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid darkmode" style="color: gray;">
+            <br>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-11">
+                            <div class="col-md-3">
+                                <p>นโยบายความเป็นส่วนตัว</p>
+                                <hr>
+                                <a href="privacy.html">นโยบายความเป็นส่วนตัว</a><br>
+                                <a href="complementary.html">บริการพิเศษที่ท่านจะได้รับ</a><br>
+                                <a>นโยบายเกี่ยวกับสัมภาระ</a><br>
+                                <a>รอยัล ออร์คิด พลัส</a><br>
+                                <a>Frequent Flyer Programs</a><br>
+                                <a>ข้อกำหนดและเงื่อนไข</a><br>
+                                <a>นโยบายคุกกี้</a><br>
+                            </div>
+                            <div class="col-md-6">
+                                <p>แผนผังเว็บไซต์</p>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a>การจัดซื้อจัดจ้าง</a><br>
+                                        <a>ข้อเสนอและโปรโมชั่น</a><br>
+                                        <a>จุดหมาย</a><br>
+                                        <p><b>ปลายทาง</b></p>
+                                        <div class="grouptxt1"></div>
+                                        <a>เที่ยวบินเช่าเหมาลำ</a><br>
+                                        <a>สิทธิพิเศษ จาก WE PRIVILEGE</a><br>
+                                        <a>MARKETPLACE</a><br>
+                                        <a>e-Magazine</a><br>
+                                        <a>Star Alliance</a><br>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a>ปัญหาที่พบบ่อย</a><br>
+                                        <a>ข่าวและประกาศ</a><br>
+                                        <a>ไทยสมายล์ บล็อก</a><br>
+                                        <a>จัดการการจอง</a><br>
+                                        <a>ติดต่อเรา</a><br>
+                                        <a>ร่วมงานกับเรา</a><br>
+                                        <a>อัตราค่าโดยสารสูงสุดสำหรับเส้นทางในประเทศ</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <p>ที่เที่ยวยอดนิยม</p>
+                                <hr>
+                                <a>กรุงเทพไปจีน</a><br>
+                                <a>กรุงเทพไปอินเดีย</a><br>
+                                <a>กรุงเทพไปมาเลเซีย</a><br>
+                                <a>กรุงเทพไปพม่า</a><br>
+                                <a>กรุงเทพไปลาว</a><br>
+                                <a>กรุงเทพไปกัวลาลัมเปอร์</a><br>
+                                <a>กรุงเทพไปปีนัง</a><br>
+                                <a>กรุงเทพไปชัยปุระ</a><br>
+                                <a>กรุงเทพไปเสียมราฐ</a><br>
+                                <a>ประเทศไทยไปภายในประเทศ</a><br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <br>
+                            <p>คอลเซ็นเตอร์:</p>
+                            <p>+662 118 8888</p><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-line.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-facebook.png"><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-youtube.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-ig.png"><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-trip.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-twitter.png"><br><br><br>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="font-size: 50px; color: #f58024; font-weight: bolder;">1181</p><br><br><br>
+                            <i>&emsp;&emsp;<img
+                                    src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_footer_logo_dark_1.png"
+                                    style="width: 150px;"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color: #f58027;">
+                <br>
+                <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
+                </p>
+                <br>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

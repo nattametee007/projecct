@@ -116,34 +116,31 @@
         </div>
     </div>
 
+    <h2 style="color: #f58024;">ผลการค้นหาล่าสุด</h2>
+    <div class="container destination">
 
-    <div class="container form-group">
-        <h2>ผลการค้นหาล่าสุด</h2>
-        <ul>
-            <div class="dropdown">
-                <input type="search" id="menu1" data-toggle="dropdown" placeholder="ระบุต้นทาง">
-                <span class="caret"></span></button>
+        <label for="search">จาก</label><br>
+        <select id="province" name="province">
+            <option value="" selected> ระบุต้นทาง</option>
+            <option value="กระบี่"> กระบี่ (KBV), ไทย</option>
+            <option value="กรุงเทพฯ">กรุงเทพฯ-สุวรรณภูมิ (BKK), ไทย </option>
+            <option value="กัวลาลัมเปอร์">กัวลาลัมเปอร์ (KUL), มาเลเซีย</option>
+            <option value="กาฐมาณฑุ">กาฐมาณฑุ (KTM), เนปาล </option>
+            <option value=ขอนแก่น>ขอนแก่น (KKC), ไทย </option>
+            <option value=คยา>คยา (GAY), อินเดีย </option>
+            <option value=ฉงชิ่ง>ฉงชิ่ง (CKG), จีน </option>
+            <option value=นครพนม>นครพนม (KOP), ไทย </option>
+            <option value=นครศรีธรรมราช>นครศรีธรรมราช (NST), ไทย</option>
+            <option value=นราธิวาส>นราธิวาส (NAW), ไทย </option>
+            <option value=น่าน>น่าน (NNT), ไทย </option>
+            <option value=ปีนัง>ปีนัง (PEN), มาเลเซีย </option>
+            <option value=พนมเปญ>พนมเปญ (PNH), กัมพูชา </option>
+            <option value=ภูเก็น>ภูเก็ต (HKT), ไทย </option>
+            <option value=มัณฑะเลย์ >มัณฑะเลย์ (MDL), พม่า </option>
+            <option value=มุมไบ>มุมไบ (BOM), อินเดีย </option>                                   
+        </select>
 
-                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">กระบี่ (KBV), ไทย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">กรุงเทพฯ-สุวรรณภูมิ (BKK), ไทย </a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">กัวลาลัมเปอร์ (KUL), มาเลเซีย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">กาฐมาณฑุ (KTM), เนปาล</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ขอนแก่น (KKC), ไทย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">คยา (GAY), อินเดีย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ฉงชิ่ง (CKG), จีน</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">นครพนม (KOP), ไทย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">นครศรีธรรมราช (NST), ไทย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">นราธิวาส (NAW), ไทย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">น่าน (NNT), ไทย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ปีนัง (PEN), มาเลเซีย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">พนมเปญ (PNH), กัมพูชา</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ภูเก็ต (HKT), ไทย</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">มัณฑะเลย์ (MDL), พม่า</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">มุมไบ (BOM), อินเดีย</a></li>
-                </ul>
-            </div>
-        </ul>
+
     </div>
     <div id="carouselExampleControls" class="carousel slide">
         <div class="carousel-inner">

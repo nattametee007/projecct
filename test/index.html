@@ -163,12 +163,12 @@
                       <form class="ng-pristine ng-valid">
                         <div class="booking-form-col-check">
                           <div class="pretty p-default p-round p-smooth">
-                            <input class="in-online" type="radio" name="radio1" checked>
+                            <input class="in-online" type="radio" name="radio1" checked onclick="checkin()">
                             <label class="state">เช็คอินออนไลน์</label>
                             
                           </div>
                           <div class="pretty p-default p-round p-smooth p-smooth">
-                            <input class="in-booking" type="radio" name="radio1">
+                            <input class="in-booking" type="radio" name="radio1" onclick="inbooking()">
                               <label class="state">จัดการการจอง</label>
                           </div>
                         </div>
@@ -197,6 +197,15 @@
 
 </body>
 
+<script>
+  function checkin() {
+    document.getElementById("submit").innerHTML = 'เช็คอิน';
+  }
 
+  function inbooking() {
+    document.getElementById("submit").innerHTML = 'ค้นหาการจอง';
+  }
+
+</script>
 
 </html>

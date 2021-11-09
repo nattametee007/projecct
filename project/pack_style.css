@@ -1,0 +1,122 @@
+    body {
+        background-color: #000000;
+    }
+    /* package สุวรรณภูมิ-เชียงใหม่*/
+    
+    .package {
+        /* Font & Text */
+        font-family: krart_medium;
+        font-size: 14px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 16.8px;
+        text-decoration: none solid rgb(115, 115, 115);
+        text-align: start;
+        text-indent: 0px;
+        text-transform: none;
+        vertical-align: baseline;
+        white-space: normal;
+        word-spacing: 0px;
+        /* Color & Background */
+        background-attachment: scroll;
+        background-color: rgba(0, 0, 0, 0);
+        background-image: none;
+        background-position: 0% 0%;
+        background-repeat: repeat;
+        color: rgb(115, 115, 115);
+        /* Box */
+        height: 867px;
+        width: 1315px;
+        border: 0px none rgb(115, 115, 115);
+        border-top: 0px none rgb(115, 115, 115);
+        border-right: 0px none rgb(115, 115, 115);
+        border-bottom: 0px none rgb(115, 115, 115);
+        border-left: 0px none rgb(115, 115, 115);
+        margin: 0px 106.5px;
+        padding: 0px 15px;
+        max-height: none;
+        min-height: 0px;
+        max-width: none;
+        min-width: 0px;
+        /* Positioning */
+        position: static;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        float: none;
+        display: block;
+        clear: none;
+        z-index: auto;
+        /* List */
+        list-style-image: none;
+        list-style-type: disc;
+        list-style-position: outside;
+        /* Table */
+        border-collapse: separate;
+        border-spacing: 0px 0px;
+        caption-side: top;
+        empty-cells: show;
+        table-layout: auto;
+        /* Miscellaneous */
+        overflow: visible;
+        cursor: auto;
+        visibility: visible;
+        /* Effects */
+        transform: none;
+        transition: all 0s ease 0s;
+        outline-offset: 0px;
+        box-sizing: border-box;
+        resize: none;
+        text-shadow: none;
+        text-overflow: clip;
+        word-wrap: normal;
+        box-shadow: none;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    .package-title {
+        color: rgb(149, 149, 149);
+        /* Box */
+        height: 85.2px;
+        width: 418.7px;
+        padding: 20px 15px;
+        /* Effects */
+        transform: matrix(1, 0, 0.0524078, 1, 0, 0);
+        outline: rgb(236, 236, 236) dashed 1px;
+    }
+    /* ส่วนของ package*/
+    
+    .price {
+        position: relative;
+    }
+    
+    .topleft {
+        margin-top: 20px;
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 12px;
+        color: aliceblue;
+        background-color: rgb(75, 59, 59);
+        opacity: 0.65;
+        width: 100px;
+        height: 80px;
+    }
+    
+    .topleft b {
+        color: #f58024;
+        font-size: 35px;
+        opacity: 2;
+    }
+    
+    .topleft p {
+        color: aliceblue;
+        font-size: 25px;
+        padding-right: 0px;
+    }

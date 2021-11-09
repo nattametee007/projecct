@@ -54,7 +54,7 @@ a:hover {
 .box1 img {
     width: 238px;
     height: 165px;
-    border-top-left-radius: 8px ;
+    border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
@@ -104,7 +104,7 @@ a:hover {
 }
 
 .reserve1 {
-    background-color:#f58024;
+    background-color: #f58024;
     font-size: 20px;
     color: white;
     border-radius: 5px;
@@ -116,24 +116,24 @@ a:hover {
 }
 
 .reserve1:hover {
-    background-color:#939598;
-} 
+    background-color: #939598;
+}
 
 .navbar-inner {
     height: 100px;
     font-size: 20px;
     padding: 10px;
 }
-    
+
 .navbar-nav li a:hover {
     color: #FF8C00 !important;
 }
-    
+
 a {
     color: gray;
     text-decoration: none;
 }
-    
+
 a:hover {
     color: #f58024;
     text-decoration: none;
@@ -142,50 +142,18 @@ a:hover {
 .search {
     overflow: auto;
 }
+
+
 /* ส่วนข่าวสารอัพเดท*/
-    
+
 .title {
     color: #f58024;
     text-align: center;
 }
-/* ส่วนของ package*/
-    
-.price {
-    position: relative;
-}
 
-.topleft {
-    margin-top: 20px;
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 12px;
-    color: aliceblue;
-    background-color: rgb(75, 59, 59);
-    opacity: 0.65;
-    width: 100px;
-    height: 80px;
-}
-    
-.topleft b {
-    color: #f58024;
-    font-size: 35px;
-    opacity: 2;
-}
-    
-.topleft p {
-    color: aliceblue;
-    font-size: 25px;
-    padding-right: 0px;
-}
-    
-#pic {
-    width: 100%;
-    height: 100%;
-}
 
 /* ส่วนของ tab ด้านบน*/
-            
+
 .bookingtab-container .bookingtab-group {
     cursor: pointer;
     color: #f58024;
@@ -210,6 +178,8 @@ a:hover {
 .bookingtab-text {
     margin: 10px;
 }
+
+
 /* จองเครื่องบิน*/
 
 .bk {

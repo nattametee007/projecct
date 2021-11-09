@@ -202,3 +202,18 @@ a:hover {
 .reserve2:hover {
     background-color: #f58024;
 }
+
+.carousel .carousel-indicators button {
+    background-color: gray;
+    height: 4px;
+    width: 27px;
+  }
+  .carousel .carousel-indicators button.active {
+    background-color: rgb(231, 119, 15);
+  }
+
+  .carousel {
+    box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
+    -webkit-box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
+    -moz-box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
+  }

@@ -186,3 +186,19 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
 }
+
+.reserve2 {
+    background-color: #939598;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: #939598;
+}
+
+.reserve2:hover {
+    background-color: #f58024;
+}

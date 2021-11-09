@@ -16,7 +16,6 @@
         text-align: start;
         text-indent: 0px;
         text-transform: none;
-        vertical-align: baseline;
         white-space: normal;
         word-spacing: 0px;
         /* Color & Background */
@@ -81,14 +80,13 @@
     }
     
     .package-title {
-        color: rgb(149, 149, 149);
         /* Box */
         height: 85.2px;
         width: 418.7px;
         padding: 20px 15px;
         /* Effects */
-        transform: matrix(1, 0, 0.0524078, 1, 0, 0);
-        outline: rgb(236, 236, 236) dashed 1px;
+        transform: matrix(1, 0, -0.0524078, 1, 0, 0);
+        border: solid 1px;
     }
     /* ส่วนของ package*/
     

@@ -161,6 +161,7 @@ a:hover {
 .bktab {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .bookingtab-group {

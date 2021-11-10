@@ -162,6 +162,8 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    margin-left: -13%;
 }
 
 .bookingtab-group {
@@ -206,7 +208,18 @@ a:hover {
     margin: 10px;
     min-width: 235px;
     min-height: auto;
-    width: 90%;
+}
+
+.booking-group-promo {
+    text-align: center;
+    height: 50px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 10px;
+    min-width: 235px;
+    min-height: auto;
 }
 
 .booking-text {

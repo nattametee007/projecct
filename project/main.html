@@ -57,7 +57,7 @@
     <div class="container-fluid" style="text-align: center;">
         <div class="bookingtab-container" style="padding-left: 150px;">
             <div class="bktab" id="booktab">
-                <button class="bookingtab-group " data-target="booktab" onclick="document.getElementById('book').style.fontSize='35px'">
+                <button class="btn btn-primary bookingtab-group" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 
                     <p class='bookingtab-text' id='booktab'>
                         <i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
@@ -94,8 +94,8 @@
 
     </div>
 
-    <div class="container-fluid" style="width: 1285px; height: auto; position: relative; top: -25px;" >
-        <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; display: none;">
+    <div class="container" style="width: 1285px; height: auto; position: relative; top: -25px;">
+        <div class="booking-container" id="booking-container" style=" display: block;">
             <div class="bk" id="book">
                 <div class="booking-group " data-target="book">
                     <p class='booking-text' id='book'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
@@ -112,7 +112,7 @@
 
                 </div>
 
-                <div class="booking-group" id='bookingnhotel' data-target="bookingnhotel" style="width: 200px;">
+                <div class="booking-group" id='bookingnhotel' data-target="bookingnhotel">
                     <p class='booking-text'>โปรโมชั่นโค้ด</p>
 
                 </div>
@@ -180,7 +180,7 @@
 
             </div>
         </div>
-        <div class="container-fluid service-container" style="display:block;">
+        <div class="container-fluid service-container" style="display:none;">
             <div class="item-banner">
                 <div id="carouselslider" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;">
                     <div class="carousel-indicators" style="padding-right: 60px;">
@@ -197,7 +197,7 @@
                                         เช่าเหมาลำไทยสมายล์ </p>
                                     <p class="herotab-txt">
                                         ออกแบบการเดินทางของคุณและเพลิดเพลินกับบริการของไทยสมายล์ </p>
-                                        <br>
+                                    <br>
                                     <img class="herotab-img " width="320px" height="90px" src="service1.png">
                                 </div>
                                 <div class="box2">
@@ -207,7 +207,7 @@
                                                 ประกันภัยการเดินทาง </p>
                                             <p class="herotab-txt">
                                                 เพิ่มความมั่นใจให้กับการเดินทางในต่างแดนของคุณแบบไร้กังวล </p>
-                                                <br>
+                                            <br>
                                             <img class="herotab-img" width="320px" height="90px" src="service2.png">
                                         </div>
                                     </a>
@@ -219,8 +219,8 @@
                                                 FLIGHT PASS </p>
                                             <p class="herotab-txt" style="margin-bottom: 0;">
                                                 บัตรโดยสารเที่ยวบินซื้อล่วงหน้ายิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
-                                           
-                                                ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
+
+                                            ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
                                             <img class="herotab-img" width="320px" height="90px" src="service3.png">
                                         </div>
                                     </a>
@@ -236,7 +236,7 @@
                                                 ประกันภัยการเดินทาง </p>
                                             <p class="herotab-txt">
                                                 เพิ่มความมั่นใจให้กับการเดินทางในต่างแดนของคุณแบบไร้กังวล </p>
-                                                <br>
+                                            <br>
                                             <img class="herotab-img" width="320px" height="90px" src="service2.png">
                                         </div>
                                     </a>
@@ -260,7 +260,7 @@
                                             บริการรับฝากและขนส่งสัมภาระ </p>
                                         <p class="herotab-txt">
                                             เดินตัวปลิว เที่ยวสบาย ไม่ต้องแบกกระเป๋าเดินทางอีกต่อไป </p>
-                                            <br>
+                                        <br>
                                         <img class="herotab-img" width="320px" height="90px" src="service1.png">
                                     </div>
                                 </div>
@@ -289,7 +289,7 @@
                                                 บริการรับฝากและขนส่งสัมภาระ </p>
                                             <p class="herotab-txt">
                                                 เดินตัวปลิว เที่ยวสบาย ไม่ต้องแบกกระเป๋าเดินทางอีกต่อไป </p>
-                                                <br>
+                                            <br>
                                             <img class="herotab-img" width="320px" height="90px" src="service2.png">
                                         </div>
                                     </a>
@@ -301,7 +301,7 @@
                                                 ทัวร์และตั๋วท่องเที่ยว </p>
                                             <p class="herotab-txt">
                                                 ค้นหากิจกรรมและดีลที่น่าสนใจ </p>
-                                                <br>
+                                            <br>
                                             <img class="herotab-img " width="320px" height="90px" src="service4.png">
                                         </div>
                                     </a>

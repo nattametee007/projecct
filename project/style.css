@@ -189,12 +189,8 @@ a:hover {
 
 .bk {
     display: flex;
-    flex-wrap: wrap;
-}
-
-.booking-container .booking-group {
-    cursor: pointer;
-    color: #f58024;
+    margin-top: 1%;
+    text-align: center;
 }
 
 .booking-group {
@@ -205,9 +201,7 @@ a:hover {
     color: #f58024;
     font-size: 20px;
     margin: 10px;
-    min-width: 235px;
-    min-height: auto;
-    width: 90%;
+    align-items: center;
 }
 
 .booking-text {
@@ -310,8 +304,6 @@ a:hover {
 .carousel .carousel-indicators button.active {
     background-color: rgb(231, 119, 15);
 }
-
-
 
 .carousel-indicators {
     margin: 10px 0 0 0;

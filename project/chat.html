@@ -1,134 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.textboxclass {
-height: 100px;
-width: 300px;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #w3review {
+      width: 300px;
+      resize: both;
+      height: 80px;
+      background-color: white;
+      margin-left: 22px;
+    }
 
-.textboxclass2 {
-height: 20px;
-width: 380px;
-}
+    .textboxclass2 {
+      height: 20px;
+      width: 380px;
+    }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+    .allbank {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-/* Button used to open the chat form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-/* The popup chat - hidden by default */
-.chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  z-index: 9;
-}
+    .open-button {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
 
-/* Add styles to the form container */
-.form-container {
-    border-radius: 10px;
-  width: 500px;
-  padding: 10px;
-  background-color: rgb(241, 242, 242);
-}
+    .chat-popup {
+      display: none;
+      position: fixed;
+      border: 1px solid #aaa;
+      overflow: hidden;
+      z-index: 100;
+      border-radius: 10px;
+      bottom: 5px;
+      right: 15px;
+      height: 480px;
+    }
 
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
+    .chat-popup2 {
+      display: none;
+      position: fixed;
+      border: 1px solid #aaa;
+      overflow: hidden;
+      z-index: 100;
+      border-radius: 10px;
+      width: 27px;
+      height: 480px;
+      right: 525px;
+      bottom: 5px;
+    }
 
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
-}
+    .form-container {
+      width: 507px;
+      height: 480px;
+      padding: 10px;
+      background-color: rgb(241, 242, 242);
+    }
 
-/* Set a style for the submit/send button */
-.form-container .btn {
-  background-color: rgb(245, 128, 36);
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 30%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
+    .form-container2 {
+      width: 27px;
+      height: 480px;
+      cursor: pointer;
+      background-color: rgb(241, 242, 242);
+    }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
+    .form-container .btn {
+      background-color: rgb(245, 128, 36);
+      color: white;
+      border: none;
+      cursor: pointer;
+      height: 7%;
+      width: 25%;
+      opacity: 0.8;
+      border-radius: 5px;
+    }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-</style>
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 1;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Popup Chat Window</h2>
-<p>Click on the button at the bottom of this page to open the chat form.</p>
-<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+  <button class="open-button" onclick="openForm()">Chat</button>
+  <div class="allbank">
+    <div class="chat-popup2" id="myForm2">
+      <form action="/action_page.php" class="form-container2">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><img src="more.png" class="btn cancel"
+          onclick="closeForm()">
+      </form>
+    </div>
 
-<button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
 
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <img src="https://www.thaismileair.com/assets/v3/images/logo.png" style="width: 110px;"><br>
+      <form action="/action_page.php" class="form-container">
+        <img src="https://www.thaismileair.com/assets/v3/images/logo.png" style="width: 95px;"><br>
 
-    <p style="background-color: rgb(245, 128, 36); color: white; padding: 10px;">We are currently closed. Our regular business hours are from 7 am to 8 pm. We apologies for any inconvenience caused.
-Please leave a message and someone will get back to you shortly.</p>
+        <p style="background-color: rgb(245, 128, 36); color: white; padding: 10px; font-size: 12px;">We are currently
+          closed. Our regular business hours are from 7 am to 8 pm.
+          <br>We apologies for any inconvenience caused.
+          <br>Please leave a message and someone will get back to you shortly.
+        </p>
 
-    <label for="msg"><b>Your email:</b></label>
-    
-    <input type="text" class="textboxclass2"><br><br>
-    
-    <label for="msg"><b>Your name:</b></label>
-    
-    <input type="text" class="textboxclass2" value=ผู้เยี่ยมชม><br><br>
-    
-    <label for="msg"><b>Message:</b></label>
-    
-    <input type="text" class="textboxclass"><br><br>
+        <label for="msg"><b>Your email:</b></label>
 
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    <p style="color: rgb(245, 128, 36);"><b>&nbsp;&nbsp;&nbsp;&nbsp;ขณะนี้อยู่นอกเวลาทำการ ท่านสามารถติดต่อด้านบัตรโดยสารอีกครั้งในเวลา 07.00 ถึง 20.00 น.</b></p><br><br><br><br>
-  </form>
-</div>
+        <input type="text" class="textboxclass2" style="margin-left: 5px;"><br><br>
 
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+        <label for="msg"><b>Your name:</b></label>
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
+        <input type="text" class="textboxclass2" value=ผู้เยี่ยมชม style="margin-left: 4px;"><br><br>
+        <div style="display: flex;">
+          <label for="msg" class="line1">
+            <p style="margin-top: 0px;"><b>Message:</b></p>
+          </label>
+          <textarea id="w3review" name="w3review" class="line2"></textarea>
+        </div><br>
+        <button type="submit" class="btn">Send</button>
+        <p style="color: rgb(245, 128, 36); font-size: 15px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;ขณะนี้อยู่นอกเวลาทำการ
+            ท่านสามารถติดต่อด้านบัตรโดยสารอีกครั้งในเวลา 07.00 ถึง 20.00 น.</b></p><br><br><br><br>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+      document.getElementById("myForm2").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("myForm2").style.display = "none";
+    }
+  </script>
 
 </body>
+
 </html>

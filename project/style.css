@@ -227,15 +227,12 @@ a:hover {
 
 /* โควิดกล่องสอง*/
 
-
-/* ตั๋วและโรงแรมกล่องสาม*/
-
-.hotel-group {
+.covid-group {
     font-size: 20px;
 }
 
 
-/* ตั๋วเครื่องบินและโรงแรมกล่อง 4 */
+/* โรงแรมกล่องสาม*/
 
 #book-box {
     background-color: #f58024;
@@ -251,6 +248,28 @@ a:hover {
 
 #book-box:hover {
     background-color: #DE660A;
+}
+
+.hotel-group {
+    font-size: 20px;
+}
+
+
+/* ตั๋วเครื่องบินและโรงแรมกล่อง 4 */
+
+.ticket {
+    display: flex;
+}
+
+.ticket-group {
+    border-right-style: 1px solid #E2DBDB;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+select {
+    background: none;
+    border: none;
 }
 
 

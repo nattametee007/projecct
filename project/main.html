@@ -56,35 +56,35 @@
     </nav>
     <div class="container-fluid" style="text-align: center;">
         <div class="bookingtab-container" style="padding-left: 150px;">
-            <div class="bktab" id="booktab">
-                <button class="bookingtab-group " data-target="booktab" onclick="document.getElementById('book').style.fontSize='35px'">
+            <div class="bktab">
+                <button class="bookingtab-group " id='booktab' data-target="booktab" onclick="booking1()">
 
                     <p class='bookingtab-text' id='booktab'>
                         <i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
                    
                 </button>
-                <button class="bookingtab-group" id='covidtab' data-target="covidtab">
+                <button class="bookingtab-group" id='covidtab' data-target="covidtab" onclick="covid1()">
 
                     <p class='bookingtab-text'><i class="fas fa-virus"></i>&nbsp;โควิด-19 เซ็นเตอร์/เครดิตวงเงิน(EMD)</p>
                    
                 </button>
 
-                <button class="bookingtab-group" id='hoteltab' data-target="hoteltab">
+                <button class="bookingtab-group" id='hoteltab' data-target="hoteltab" onclick="hotel1()">
                     <p class='bookingtab-text'><i class="fas fa-hotel"></i>&nbsp;จองที่พัก</p>
                     
                 </button>
 
-                <button class="bookingtab-group" id='bookingnhoteltab' data-target="bookingnhoteltab">
+                <button class="bookingtab-group" id='bookingnhoteltab' data-target="bookingnhoteltab" onclick="bookingnhotel1()">
                     <p class='bookingtab-text'><i class="fas fa-plane"></i><i class="fas fa-hotel"></i>&nbsp;ตั๋วเครื่องบิน+ที่พัก</p>
                    
                 </button>
 
-                <button class="bookingtab-group" id='carenttab' data-target="carenttab">
+                <button class="bookingtab-group" id='carenttab' data-target="carenttab" onclick="carent1()">
                     <p class='bookingtab-text'><i class="fas fa-car"></i>&nbsp;บริการรถเช่า</p>
                   
                 </button>
 
-                <button class="bookingtab-group" id='herotab' data-target="herotab">
+                <button class="bookingtab-group" id='herotab' data-target="herotab" onclick="hero1()">
                     <p class='bookingtab-text'><i class="fas fa-briefcase"></i>&nbsp;บริการอื่นๆ</p>
                    
                 </button>
@@ -95,7 +95,7 @@
     </div>
 
     <div class="container-fluid" style="width: 1285px; height: auto; position: relative; top: -25px;">
-        <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; display: block;">
+        <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; margin-top: 3%; display: block;">
             <div class="bk" id="book">
                 <div class="booking-group " data-target="book">
                     <p class='booking-text' id='book'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
@@ -122,7 +122,7 @@
 
             </div>
         </div>
-        <div class="covid-container" style="display: none;">
+        <div class="covid-container" id="covid-container" style="margin-top: 3%; display: none; ">
             <div class="row">
                 <div class="col-6 covid-group" style="text-align: right;">
                     <h5 style="font-size: 20px;  color: #f58024;">ศูนย์ข้อมูลช่วยเหลือ</h5>
@@ -135,7 +135,7 @@
                     <img src="covid2.png" width="320px" height="90px"></div>
             </div>
         </div>
-        <div class="hotel-container" style="display: none;">
+        <div class="hotel-container" id="hotel-container" style="display: none; margin-top: 2%;">
             <div class="row">
                 <div class="col-6 hotel-group" style="text-align: right;">
                     <h5 style="font-size: 20px;  color: #f58024;">โรงแรมและที่พักโดย Booking.com</h5>
@@ -148,7 +148,7 @@
                     <img src="hotel2.png" width="320px" height="90px"></div>
             </div>
         </div>
-        <div class="ticket-container" style="display: none;">
+        <div class="ticket-container" id="ticket-container" style="margin-top: 3%; display: none; ">
             <div class="row">
                 <div class="col-3 hotel-group" style="display: flex;">
                     <div class="btn-group">
@@ -170,7 +170,7 @@
                 <button type="button" id="book-box">จองเลย</button>
             </div>
         </div>
-        <div class="car-container" style="display: none;">
+        <div class="car-container" id="car-container" style="margin-top: 3%; display: none;">
             <div class="row">
                 <div class="car-group" style="text-align: center;">
                     <h5 style="font-size: 20px;  color: #f58024;">บริการรถเช่า</h5>
@@ -180,9 +180,9 @@
 
             </div>
         </div>
-        <div class="container-fluid service-container" style="display:block;">
+        <div class="container-fluid service-container" id="service-container" style=" margin-top: 3%; display:none;">
             <div class="item-banner">
-                <div id="carouselslider" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;">
+                <div id="carouselslider" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators" style="padding-right: 60px;">
                         <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="1" aria-label="Slide 2"></button>

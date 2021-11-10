@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <script src="https://kit.fontawesome.com/a111224822.js" crossorigin="anonymous"></script>
+
     <link href="style.css" rel="stylesheet">
 
     <style>
@@ -72,6 +74,49 @@
             margin-top: 5%;
         }
 
+        #custom-search-input {
+            margin: 0;
+            margin-top: 10px;
+            padding: 0;
+        }
+
+        #custom-search-input .search-query {
+            padding-right: 3px;
+            padding-right: 4px \9;
+            padding-left: 3px;
+            padding-left: 4px \9;
+            /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+            margin-bottom: 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        #custom-search-input button {
+            border: 0;
+            background: #000000;
+            /** belows styles are working good */
+            padding: 2px 5px;
+            margin-top: 2px;
+            position: relative;
+            left: -28px;
+            /* IE7-8 doesn't have border-radius, so don't indent the padding */
+            margin-bottom: 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            color: #f58026;
+            font-size: 26px;
+        }
+
+        .search-query:focus+button {
+            z-index: 3;
+        }
+
+        ::placeholder {
+            color: green;
+        }
     </style>
 
 </head>
@@ -121,7 +166,20 @@
         <h1 style="font-size: 52px; margin-bottom: -3%;">ข่าวสารจากไทยสมายล์</h1>
         <p style="font-size: 16px; color: #737373" class="text-muted">ตามติดทุกเรื่องราวของเรา พร้อมข่าวสารใหม่ๆ
             จากไทยสมายล์</p>
-        <input type="search" placeholder="ค้นหา" class="glyphicon glyphicon-search">
+        <div class="container">
+            <div class="row">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="search-query form-control" placeholder="ค้นหา" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container news">
@@ -130,9 +188,9 @@
         </h3>
         <div class="row">
             <div class="col-sm-6">
-                <a href="#"><img src="news1.jpg" width="100%" class="w-100 h-100"></a>
+                <a href="readmore1.html"><img src="news1.jpg" width="100%" class="w-100 h-100"></a>
                 <h6 class="text-muted">Mon 08 Nov 2021</h6>
-                <a href="#" class="maintitlenews">
+                <a href="readmore1.html" class="maintitlenews">
                     <p style="margin-top: -2%;">แค่โหลด App Uniqlo รับทันทีส่วนลดตั๋วโดยสารไทยสมายล์</p>
                 </a>
                 <p class="mainparanews">รีบโหลดก่อนสิทธิ์จะหมด ระยะเวลาในการสำรองที่นั่งและออกบัตรโดยสาร ระหว่างวันที่
@@ -141,11 +199,11 @@
             <div class="col-sm-6" style="padding-left: 2%;">
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="#"><img src="news1.jpg" width="100%"></a>
+                        <a href="readmore2.html"><img src="news1.jpg" width="100%"></a>
                     </div>
                     <div class="col-sm-6">
                         <h6 class="text-muted">Mon 08 Nov 2021</h6>
-                        <a href="#" class="maintitlenews">
+                        <a href="readmore2.html" class="maintitlenews">
                             <p style="margin-top: -4%;">บินในประเทศไทย – ทางลัดสู่บัตร..</p>
                         </a>
                         <p class="mainparanews" style="margin-top: -4%;">เพลิดเพลินกับการเดินทางท่อง <a href="readmore2.html"
@@ -155,11 +213,11 @@
                 <br>
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="#"><img src="news2.jpg" width="100%"></a>
+                        <a href="readmore3.html"><img src="news2.jpg" width="100%"></a>
                     </div>
                     <div class="col-sm-6">
                         <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                        <a href="#" class="maintitlenews">
+                        <a href="readmore3.html" class="maintitlenews">
                             <p style="margin-top: -4%;">ดาวน์โหลดแอปพลิเคชั่น Hunter J..</p>
                         </a>
                         <p class="mainparanews" style="margin-top: -4%;"><a href="readmore3.html" class="readmore">อ่านต่อ >></a></p>
@@ -168,11 +226,11 @@
                 <br>
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="#"><img src="news2.jpg" width="100%"></a>
+                        <a href="readmore4.html"><img src="news2.jpg" width="100%"></a>
                     </div>
                     <div class="col-sm-6">
                         <h6 class="text-muted">Sat 28 Aug 2021</h6>
-                        <a href="#" class="maintitlenews">
+                        <a href="readmore4.html" class="maintitlenews">
                             <p style="margin-top: -4%;">บริษัท ไทยสมายล์แอร์เวย์ จำกัด..</p>
                         </a>
                         <p class="mainparanews" style="margin-top: -4%;"><a href="readmore4.html" class="readmore">อ่านต่อ >></a></p>
@@ -496,7 +554,9 @@
                             <a href="https:\/\/www.facebook.com\/THAISmileAirways\/"><img src="footer2.png"></a><br>
                             <a href="https:\/\/www.youtube.com\/user\/ThaiSmileAirways"><img src="footer3.png"></a>
                             <a href="https:\/\/www.instagram.com\/accounts\/login\/"><img src="footer4.png"></a><br>
-                            <a href="https:\/\/www.tripadvisor.com\/WidgetEmbed-collectreview?lang=en_US&locationId=8729212&partnerId=1A097AE48E63472EA3DAE61C37CF9A42&display=true&allowMobile=true&"><img src="footer5.png"></a>
+                            <a
+                                href="https:\/\/www.tripadvisor.com\/WidgetEmbed-collectreview?lang=en_US&locationId=8729212&partnerId=1A097AE48E63472EA3DAE61C37CF9A42&display=true&allowMobile=true&"><img
+                                    src="footer5.png"></a>
                             <a href="https:\/\/twitter.com\/ThaiSmileAirway"><img src="footer6.png"></a><br><br><br>
                         </div>
                         <div class="col-md-5">

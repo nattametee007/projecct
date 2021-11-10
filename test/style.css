@@ -290,3 +290,21 @@ a {
 .box2 {
     margin: 10px;
 }
+
+.offre-tour-link.top-insurance {
+    background-color: #e9e9ea;
+    background-repeat: no-repeat;
+    background-position: 140% center;
+    background-size: contain;
+    position: relative;
+    padding: 10px 15px 10px 10px;
+    transition: 0.3s ease;
+    left: 14px;
+    height: 18%;
+}
+
+.offre-tour-link.top-insurance:hover {
+    background-position-x: 120%;
+    transition: 0.3s ease;
+}
+

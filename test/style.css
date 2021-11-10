@@ -146,16 +146,14 @@ a:hover .offer-tour-icon {
       background-color: rgb(231, 119, 15);
     }
 
-    .carousel {
-      box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
-      -webkit-box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
-      -moz-box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
-    }
+    
 
     .block-mg-booking-form {
         background-color: #f58024;
         border-radius: 2px;
     }
+
+   
 
     .mg-booking-form-title {
         padding: 18px;
@@ -294,17 +292,127 @@ a {
 .offre-tour-link.top-insurance {
     background-color: #e9e9ea;
     background-repeat: no-repeat;
-    background-position: 140% center;
+    background-position: 135% center;
     background-size: contain;
     position: relative;
     padding: 10px 15px 10px 10px;
     transition: 0.3s ease;
     left: 14px;
-    height: 18%;
+    height: 91px;
 }
+
+
 
 .offre-tour-link.top-insurance:hover {
     background-position-x: 120%;
     transition: 0.3s ease;
 }
 
+.owl-dots {
+    position: relative;
+    top: -30px;
+}
+
+.offer-tour-link {
+    position: relative;
+}
+
+
+.twin-tour-link {
+    background-color: #e9e9ea;
+    background-repeat: no-repeat;
+    background-position: 120% center;
+    background-size: contain;
+    position: relative;
+    transition: 0.3s ease;
+    left: 14px;
+    height: 18%;
+    
+}
+
+.twin-tour-link:hover {
+    background-position-x: 100%;
+    transition: 0.3s ease;
+}
+
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 30px !important;
+    height: 4px !important;
+    margin: 3px 5px !important;
+    background-color: rgb(112, 112, 114) !important;
+    display: block !important;
+    -webkit-backface-visibility: visible !important;
+    transition: opacity .2s ease !important;
+    border-radius: 0px !important;
+}
+
+.owl-theme .owl-dots .owl-dot span:hover {
+    background-color: rgb(235, 97, 17) !important;
+}
+
+.twin-ticket-link {
+    background-color: #e9e9ea;
+    background-repeat: no-repeat;
+    background-position: 110% center;
+    background-size: contain;
+    position: relative;
+    transition: 0.3s ease;
+    left: 14px;
+    height: 23%;
+    padding-top: 10px;
+    
+}
+
+.twin-ticket-link:hover {
+    background-position-x: 100%;
+    transition: 0.3s ease;
+}
+
+.twin-hotel-link {
+    background-color: #e9e9ea;
+    background-repeat: no-repeat;
+    background-position: 150% center;
+    background-size: contain;
+    position: relative;
+    transition: 0.3s ease;
+    left: 14px;
+    height: 18%;
+    
+}
+
+.twin-hotel-link:hover {
+    background-position-x: 120%;
+    transition: 0.3s ease;
+}
+
+.mg-booking-link-title {
+    color: #f58024;
+    font-size: 18px;
+    text-decoration: none !important;
+    width: 100%;
+}
+
+.mg-booking-link-sub{
+    color: #939598;
+    font-size: 13px;
+    text-decoration: none !important;
+    margin: 0 0 0 0;
+}
+
+.twin-agoda-link {
+    background-color: #e9e9ea;
+    background-repeat: no-repeat;
+    background-position: 130% center;
+    background-size: contain;
+    position: relative;
+    transition: 0.3s ease;
+    left: 14px;
+    height: 18%;
+    
+}
+
+.twin-agoda-link:hover {
+    background-position-x: 120%;
+    transition: 0.3s ease;
+}

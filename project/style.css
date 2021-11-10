@@ -1,318 +1,349 @@
-    body {
-        background-color: #000000;
-    }
-    
-    .navbar-inner {
-        font-size: 20px;
-        padding-left: 1px;
-    }
-    
-    .navbar-nav li a:hover {
-        color: #FF8C00 !important;
-    }
-    
-    a {
-        color: gray;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        color: #f58024;
-        text-decoration: none;
-    }
-    
-    .darkmode {
-        background-color: #333333;
-    }
-    
-    .lightmode {
-        background-color: white;
-    }
-    
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-    
-    .rctsearch1 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 0px;
-        padding-bottom: 50px;
-        margin: auto;
-    }
-    
-    .box1 {
-        background: #FFFFFF;
-        border-radius: 8px;
-        width: 238px;
-        margin: 10px;
-    }
-    
-    .box1 img {
-        width: 238px;
-        height: 165px;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-    
-    .des1 {
-        margin-top: -11px;
-    }
-    
-    .grouptxt1 {
-        margin-top: -6px;
-    }
-    
-    .grouptxt1 .date1 {
-        color: #737373;
-    }
-    
-    .from {
-        margin-left: 185px;
-        color: #737373;
-    }
-    
-    .price1 {
-        padding-left: 55%;
-        margin-top: -4%;
-        color: #f58024;
-    }
-    
-    .price2 {
-        padding-left: 62%;
-        margin-top: -4%;
-        color: #f58024;
-    }
-    
-    .round {
-        padding-left: 70%;
-        margin-top: -1%;
-        color: #737373;
-    }
-    
-    .detail1 {
-        padding: 10px;
-        font-size: 15px;
-    }
-    
-    .button1 {
-        text-align: center;
-        padding-bottom: 15px;
-    }
-    
-    .reserve1 {
-        background-color: #f58024;
-        font-size: 20px;
-        color: white;
-        border-radius: 5px;
-        padding-left: 70px;
-        padding-right: 70px;
-        padding-top: 7px;
-        padding-bottom: 7px;
-        border: #f58024;
-    }
-    
-    .reserve1:hover {
-        background-color: #939598;
-    }
-    
-    .navbar-inner {
-        height: 100px;
-        font-size: 20px;
-        padding: 10px;
-    }
-    
-    .navbar-nav li a:hover {
-        color: #FF8C00 !important;
-    }
-    
-    a {
-        color: gray;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        color: #f58024;
-        text-decoration: none;
-    }
-    
-    .search {
-        overflow: auto;
-    }
-    /* ส่วนข่าวสารอัพเดท*/
-    
-    .title {
-        color: #f58024;
-        text-align: center;
-    }
-    /* ส่วนของ tab ด้านบน*/
-    
-    .bookingtab-container .bookingtab-group {
-        cursor: pointer;
-        color: #f58024;
-    }
-    
-    .bktab {
-        display: flex;
-        flex-wrap: wrap;
-        padding-right: 150px;
-        justify-content: center;
-    }
-    
-    .bookingtab-group {
-        font-size: 16px;
-        margin: 10px;
-        border: rgb(51, 51, 51) solid;
-        background-color: rgb(51, 51, 51);
-        border-radius: 6px;
-        height: 44.2875;
-        cursor: pointer;
-        color: #f58024;
-    }
-    
-    .bookingtab-container {
-        text-align: center;
-        margin-left: -6%;
-    }
-    
-    .bookingtab-text {
-        margin: 10px;
-    }
-    /* จองเครื่องบินกล่องแรก*/
-    
-    .bk {
-        display: flex;
-        margin-top: 1%;
-        margin-left: 11%;
-    }
-    
-    .booking-group {
-        text-align: center;
-        height: 50px;
-        border: 1px solid #f58024;
-        border-radius: 5px;
-        color: #f58024;
-        font-size: 20px;
-        margin: 10px;
-        align-items: center;
-        width: 235px;
-    }
-    
-    .booking-group-promo {
-        text-align: center;
-        height: 50px;
-        border: 1px solid #FFFFFF;
-        border-radius: 5px;
-        color: #FFFFFF;
-        font-size: 20px;
-        margin: 10px;
-        align-items: center;
-        width: 235px;
-    }
-    
-    .booking-text {
-        padding: 15px 0 15px 0;
-        height: 50px;
-        line-height: 20px;
-    }
-    /* โควิดกล่องสอง*/
-    
-    .covid-group {
-        font-size: 20px;
-    }
-    /* ตั๋วและโรงแรมกล่องสาม*/
-    
-    .hotel-group {
-        font-size: 20px;
-    }
-    /* ตั๋วเครื่องบินและโรงแรมกล่อง 4 */
-    
-    #book-box {
-        background-color: #f58024;
-        font-size: 20px;
-        color: white;
-        border-radius: 5px;
-        padding-left: 70px;
-        padding-right: 70px;
-        padding-top: 7px;
-        padding-bottom: 7px;
-        border: #f58024;
-    }
-    
-    #book-box:hover {
-        background-color: #DE660A;
-    }
-    /* บริการอื่นๆกล่อง 5 */
-    
-    .herotab-title-txt {
-        font-size: 20px;
-        color: #f58024;
-        text-align: center;
-    }
-    
-    .herotab-txt {
-        font-size: 11px;
-        color: #939598;
-        text-align: center;
-        max-height: 80px;
-        overflow: visible;
-    }
-    
-    .herotab-img {
-        text-align: center;
-    }
-    
-    .set1 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .box2 {
-        width: 392.975px;
-        height: 210px;
-        text-align: center;
-        overflow: visible;
-        margin: 10px;
-    }
-    /* ข้อมูลที่น่าสนใจ*/
-    
-    .reserve2 {
-        background-color: #939598;
-        font-size: 18px;
-        color: white;
-        border-radius: 5px;
-        padding-top: 7px;
-        padding-bottom: 7px;
-        border: #939598;
-        width: 120px;
-        height: 39.6px;
-        line-height: 25.7143px;
-        vertical-align: middle;
-    }
-    
-    .reserve2:hover {
-        background-color: #f58024;
-    }
-    
-    .carousel .carousel-indicators button {
-        background-color: gray;
-        height: 4px;
-        width: 27px;
-    }
-    
-    .carousel .carousel-indicators button.active {
-        background-color: rgb(231, 119, 15);
-    }
-    
-    .carousel-indicators {
-        margin: 10px 0 0 0;
-        padding: 0 0 0 10px;
-        left: 280px;
-    }
-    
-    .promo-group {
-        padding-left: 2%;
-    }
+body {
+    background-color: #000000;
+}
+
+.navbar-inner {
+    font-size: 20px;
+    padding-left: 1px;
+}
+
+.navbar-nav li a:hover {
+    color: #FF8C00 !important;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f58024;
+    text-decoration: none;
+}
+
+.darkmode {
+    background-color: #333333;
+}
+
+.lightmode {
+    background-color: white;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.rctsearch1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    margin: auto;
+}
+
+.box1 {
+    background: #FFFFFF;
+    border-radius: 8px;
+    width: 238px;
+    margin: 10px;
+}
+
+.box1 img {
+    width: 238px;
+    height: 165px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.des1 {
+    margin-top: -11px;
+}
+
+.grouptxt1 {
+    margin-top: -6px;
+}
+
+.grouptxt1 .date1 {
+    color: #737373;
+}
+
+.from {
+    margin-left: 185px;
+    color: #737373;
+}
+
+.price1 {
+    padding-left: 55%;
+    margin-top: -4%;
+    color: #f58024;
+}
+
+.price2 {
+    padding-left: 62%;
+    margin-top: -4%;
+    color: #f58024;
+}
+
+.round {
+    padding-left: 70%;
+    margin-top: -1%;
+    color: #737373;
+}
+
+.detail1 {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.button1 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.reserve1 {
+    background-color: #f58024;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: #f58024;
+}
+
+.reserve1:hover {
+    background-color: #939598;
+}
+
+.navbar-inner {
+    height: 100px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.navbar-nav li a:hover {
+    color: #FF8C00 !important;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f58024;
+    text-decoration: none;
+}
+
+.search {
+    overflow: auto;
+}
+
+
+/* ส่วนข่าวสารอัพเดท*/
+
+.title {
+    color: #f58024;
+    text-align: center;
+}
+
+
+/* ส่วนของ tab ด้านบน*/
+
+.bookingtab-container .bookingtab-group {
+    cursor: pointer;
+    color: #f58024;
+}
+
+.bktab {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 150px;
+    justify-content: center;
+}
+
+.bookingtab-group {
+    font-size: 16px;
+    margin: 10px;
+    border: rgb(51, 51, 51) solid;
+    background-color: rgb(51, 51, 51);
+    border-radius: 6px;
+    height: 44.2875;
+    cursor: pointer;
+    color: #f58024;
+}
+
+.bookingtab-container {
+    text-align: center;
+    margin-left: -6%;
+}
+
+.bookingtab-text {
+    margin: 10px;
+}
+
+
+/* จองเครื่องบินกล่องแรก*/
+
+.bk {
+    display: flex;
+    margin-top: 1%;
+    margin-left: 11%;
+}
+
+.booking-group {
+    text-align: center;
+    height: 50px;
+    border: 1px solid #f58024;
+    border-radius: 5px;
+    color: #f58024;
+    font-size: 20px;
+    margin: 10px;
+    align-items: center;
+    width: 235px;
+}
+
+.booking-group-promo {
+    text-align: center;
+    height: 50px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 10px;
+    align-items: center;
+    width: 235px;
+}
+
+.booking-text {
+    padding: 15px 0 15px 0;
+    height: 50px;
+    line-height: 20px;
+}
+
+
+/* โควิดกล่องสอง*/
+
+.covid-group {
+    font-size: 20px;
+}
+
+
+/* โรงแรมกล่องสาม*/
+
+#book-box {
+    background-color: #f58024;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: #f58024;
+}
+
+#book-box:hover {
+    background-color: #DE660A;
+}
+
+.hotel-group {
+    font-size: 20px;
+}
+
+
+/* ตั๋วเครื่องบินและโรงแรมกล่อง 4 */
+
+.ticket {
+    display: flex;
+}
+
+.ticket-group {
+    border-right-style: 1px solid #E2DBDB;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+select {
+    background: none;
+    border: none;
+}
+
+
+/* บริการอื่นๆกล่อง 5 */
+
+.herotab-title-txt {
+    font-size: 20px;
+    color: #f58024;
+    text-align: center;
+}
+
+.herotab-txt {
+    font-size: 11px;
+    color: #939598;
+    text-align: center;
+    max-height: 80px;
+    overflow: visible;
+}
+
+.herotab-img {
+    text-align: center;
+}
+
+.set1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box2 {
+    width: 392.975px;
+    height: 210px;
+    text-align: center;
+    overflow: visible;
+    margin: 10px;
+}
+
+
+/* ข้อมูลที่น่าสนใจ*/
+
+.reserve2 {
+    background-color: #939598;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: #939598;
+    width: 120px;
+    height: 39.6px;
+    line-height: 25.7143px;
+    vertical-align: middle;
+}
+
+.reserve2:hover {
+    background-color: #f58024;
+}
+
+.carousel .carousel-indicators button {
+    background-color: gray;
+    height: 4px;
+    width: 27px;
+}
+
+.carousel .carousel-indicators button.active {
+    background-color: rgb(231, 119, 15);
+}
+
+.carousel-indicators {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 10px;
+    left: 280px;
+}
+
+.promo-group {
+    padding-left: 2%;
+}

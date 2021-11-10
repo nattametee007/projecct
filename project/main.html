@@ -147,9 +147,16 @@
                     <img src="hotel2.png" width="320px" height="90px"></div>
             </div>
         </div>
-        <div class="ticket-container" style="display: block;">
+        <div class="ticket-container" style="display: none;">
             <div class="row">
-                <div class="col-3 hotel-group">
+                <div class="col-3 hotel-group" style="display: flex;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">ไป-กลับ</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Tablet</a></li>
+                            <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-3 hotel-group">
                 </div>
@@ -162,7 +169,7 @@
                 <button type="button" id="book-box">จองเลย</button>
             </div>
         </div>
-        <div class="car-container" style="display: block;">
+        <div class="car-container" style="display: none;">
             <div class="row">
                 <div class="car-group" style="text-align: center;">
                     <h5 style="font-size: 20px;  color: #f58024;">บริการรถเช่า</h5>

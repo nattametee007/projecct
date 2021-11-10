@@ -68,7 +68,6 @@ function bookingnhotel1() {
     document.getElementById("booking-container").style.display = "none";
     document.getElementById("covid-container").style.display = "none";
     document.getElementById("hotel-container").style.display = "none";
-    document.getElementById("ticket-container").style.display = "none";
     document.getElementById("car-container").style.display = "none";
     document.getElementById("service-container").style.display = "none";
     document.getElementById("booktab").style.color = "#f58024";
@@ -91,7 +90,6 @@ function carent1() {
     document.getElementById("covid-container").style.display = "none";
     document.getElementById("hotel-container").style.display = "none";
     document.getElementById("ticket-container").style.display = "none";
-    document.getElementById("ticket-container").style.display = "none";
     document.getElementById("service-container").style.display = "none";
     document.getElementById("booktab").style.color = "#f58024";
     document.getElementById("booktab").style.background = "#333333";
@@ -112,7 +110,6 @@ function hero1() {
     document.getElementById("booking-container").style.display = "none";
     document.getElementById("covid-container").style.display = "none";
     document.getElementById("hotel-container").style.display = "none";
-    document.getElementById("ticket-container").style.display = "none";
     document.getElementById("ticket-container").style.display = "none";
     document.getElementById("car-container").style.display = "none";
     document.getElementById("booktab").style.color = "#f58024";

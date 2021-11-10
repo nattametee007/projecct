@@ -74,7 +74,7 @@
             margin-top: 5%;
         }
         
-        input[type=text] {
+        .inputbean {
             width: 47%;
             box-sizing: border-box;
             border: 2px solid #f58026;
@@ -107,6 +107,91 @@
         .dotgroup {
             display: inline-block;
         }
+
+        #w3review {
+      width: 300px;
+      resize: both;
+      height: 80px;
+      background-color: white;
+      margin-left: 22px;
+    }
+
+    .textboxclass2 {
+      height: 20px;
+      width: 380px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .open-button {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
+
+    .chat-popup {
+      display: none;
+      position: fixed;
+      border: 1px solid #aaa;
+      overflow: hidden;
+      z-index: 100;
+      border-radius: 10px;
+      bottom: 5px;
+      right: 15px;
+      height: 480px;
+    }
+
+    .chat-popup2 {
+      display: none;
+      position: fixed;
+      border: 1px solid #aaa;
+      overflow: hidden;
+      z-index: 100;
+      border-radius: 10px;
+      width: 27px;
+      height: 480px;
+      right: 525px;
+      bottom: 5px;
+    }
+
+    .form-container {
+      width: 507px;
+      height: 480px;
+      padding: 10px;
+      background-color: rgb(241, 242, 242);
+    }
+
+    .form-container2 {
+      width: 27px;
+      height: 480px;
+      cursor: pointer;
+      background-color: rgb(241, 242, 242);
+    }
+
+    .form-container .btn {
+      background-color: rgb(245, 128, 36);
+      color: white;
+      border: none;
+      cursor: pointer;
+      height: 7%;
+      width: 25%;
+      opacity: 0.8;
+      border-radius: 5px;
+    }
+
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 1;
+    }
     </style>
 
 </head>
@@ -127,7 +212,7 @@
                 <li><a href="#">จัดการการจอง</a></li>
                 <li><a href="#">คนหนีเที่ยว</a></li>
                 <li class="hidden-xs">
-                    <a id="mibew-agent-button" class="live-mobile" href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank" onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th" border="0" alt="" /></a>
+                    <a id="mibew-agent-button" class="live-mobile" href="#" onclick="openForm()"><img src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th" border="0" alt="" /></a>
 
                 </li>
 
@@ -151,7 +236,7 @@
         </p>
         <div class="searchgroup">
             <form>
-                <input type="text" name="search" placeholder="ค้นหา"><button><i class="fas fa-search"></i></button>
+                <input class="inputbean" type="text" name="search" placeholder="ค้นหา"><button><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
@@ -449,6 +534,57 @@
             </div>
         </div>
     </div>
+
+    <div class="allbank">
+        <div class="chat-popup2" id="myForm2">
+          <form action="/action_page.php" class="form-container2">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><img src="more.png" class="btn cancel"
+              onclick="closeForm()" style="margin-left: -12px;">
+          </form>
+        </div>
+    
+        <div class="chat-popup" id="myForm">
+    
+          <form action="/action_page.php" class="form-container">
+            <img src="https://www.thaismileair.com/assets/v3/images/logo.png" style="width: 95px;"><br><br>
+    
+            <p style="background-color: rgb(245, 128, 36); color: white; padding: 10px; font-size: 12px;">We are currently
+              closed. Our regular business hours are from 7 am to 8 pm.
+              <br>We apologies for any inconvenience caused.
+              <br>Please leave a message and someone will get back to you shortly.
+            </p>
+    
+            <label for="msg"><b>Your email:</b></label>
+    
+            <input type="text" class="textboxclass2" style="margin-left: 5px;"><br><br>
+    
+            <label for="msg"><b>Your name:</b></label>
+    
+            <input type="text" class="textboxclass2" value=ผู้เยี่ยมชม style="margin-left: 4px;"><br><br>
+            <div style="display: flex;">
+              <label for="msg" class="line1">
+                <p style="margin-top: 0px;"><b>Message:</b></p>
+              </label>
+              <textarea id="w3review" name="w3review" class="line2"></textarea>
+            </div><br>
+            <button type="submit" class="btn">Send</button><br><br>
+            <p style="color: rgb(245, 128, 36); font-size: 15px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;ขณะนี้อยู่นอกเวลาทำการ
+                ท่านสามารถติดต่อด้านบัตรโดยสารอีกครั้งในเวลา 07.00 ถึง 20.00 น.</b></p><br><br><br><br>
+          </form>
+        </div>
+      </div>
+    
+      <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+          document.getElementById("myForm2").style.display = "block";
+        }
+    
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+          document.getElementById("myForm2").style.display = "none";
+        }
+      </script>
 
     <!--footer-->
     <footer style="margin-top: 1%;">

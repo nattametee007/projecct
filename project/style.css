@@ -247,14 +247,16 @@ a:hover {
 
 .reserve2 {
     background-color: #939598;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     border-radius: 5px;
-    padding-left: 50px;
-    padding-right: 50px;
     padding-top: 7px;
     padding-bottom: 7px;
     border: #939598;
+    width: 120px;
+    height: 39.6px;
+    line-height: 25.7143px;
+    vertical-align: middle;
 }
 
 .reserve2:hover {

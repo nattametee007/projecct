@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&family=Prompt:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+
 }
 
-.offer-title {
+.offer-title, .hero-title {
     font-size: 22px;
     color: tomato;
     margin-bottom: 6px;
@@ -14,8 +19,9 @@
 
 .offer-container {
     width: 50%;
-    height: 180px;
-    padding: 0;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -35,7 +41,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 180px;
+    height: 150px;
     border: 1px solid #fff;
     position: relative;
     overflow: hidden;
@@ -92,8 +98,8 @@ a:hover .offer-tour-icon {
     position: absolute;
     z-index: 1;
     width: 100%;
-    padding: 0 15px 0 15px;
-    top: 73px;
+    padding: 0 12px 0 15px;
+    top: 42px;
 }
 
 .offer-tour-item:hover .offer-tour-item-text {
@@ -145,3 +151,160 @@ a:hover .offer-tour-icon {
       -webkit-box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
       -moz-box-shadow: 1px 2px 40px -1px rgba(34,31,31,0.64);
     }
+
+    .block-mg-booking-form {
+        background-color: #f58024;
+        border-radius: 2px;
+    }
+
+    .mg-booking-form-title {
+        padding: 18px;
+        font-size: 14px;
+        margin-bottom: -14px;
+        color: white;
+    }
+
+    .booking-form-col-input {
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 12px;
+    }
+    .mg-input {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    ::placeholder {
+        color: rgb(221, 220, 218);
+    }
+    .booking-form-col-input .mg-input {
+        width: 100%;
+        color: #939598;
+        border: 1px solid #d1d2d4;
+        background-color: white;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 6px;
+        padding: 10px 15px 8px 15px;
+        margin: 5px 0;
+    }
+
+    .booking-form-col-check {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+   
+
+    .pretty {
+    padding-left: 18px;
+    padding-top: 10px;
+    }
+
+    .state {
+        font-size: 14px;
+        color: white;
+    }
+    
+   
+      .in-online, .in-booking {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+
+        transition: 0.2s all linear;
+        margin-right: 5px;
+        border: 3.97px solid rgb(255, 255, 255);
+        background-color: rgb(236, 230, 230);
+        position: relative;
+        top: 4px;
+      }
+      
+      input:checked {
+        border: 3.97px solid rgb(255, 255, 255);
+        background-color: #f58024;
+      }
+      
+      button,
+      legend {
+        color: #f58024;
+        padding: 5px 10px;
+        border-radius: 0;
+        border: 0;
+        font-size: 14px;
+      }
+      
+      
+      
+      button:active {
+        color: black;
+        outline: 1px solid black;
+      }
+      
+.btn-mg-booking {
+    font-size: 22px;
+    margin: 15px 0 40px 0;
+}
+
+.btn-mg-booking {
+    width: 88%;
+    height: 38.5px;
+    color: white;
+    background-color: #d1d2d4;
+    text-align: center;
+    line-height: 1;
+    border-radius: 6px;
+    transition: 0.3s;
+    outline: none !important;
+    box-shadow: none !important;
+    margin: 20px;
+    margin-top: 20px;
+}
+
+.btn-mg-booking {
+    transition-duration: 0.4s;
+}
+
+.btn-mg-booking:hover {
+    background-color: white;
+    color: #f58024;
+}
+
+a { 
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a {
+    background-color: transparent;
+}
+
+.box2 {
+    margin: 10px;
+}
+
+.offre-tour-link.top-insurance {
+    background-color: #e9e9ea;
+    background-repeat: no-repeat;
+    background-position: 140% center;
+    background-size: contain;
+    position: relative;
+    padding: 10px 15px 10px 10px;
+    transition: 0.3s ease;
+    left: 14px;
+    height: 18%;
+}
+
+.offre-tour-link.top-insurance:hover {
+    background-position-x: 120%;
+    transition: 0.3s ease;
+}
+

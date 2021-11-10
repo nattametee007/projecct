@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SDASDSAD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db15b4141a.js" crossorigin="anonymous"></script>
+    <script src="change.js"></script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-inner navbar-light navbar-inverse" style="width: 1528px; height: 96px;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png" width="127.4" height="65"></a>
+                <a class="navbar-brand "><img src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png" width="48.725" height="65"></a>
+
+            </div>
+
+            <ul id="b" class="nav navbar-inner navbar-nav navbar-right">
+                <li><a href="#">ข้อเสนอที่น่าสนใจ</a></li>
+                <li><a href="#">ข่าวสารอัพเดท</a></li>
+                <li><a href="#">จัดการการจอง</a></li>
+                <li><a href="#">คนหนีเที่ยว</a></li>
+                <li class="hidden-xs">
+                    <a id="mibew-agent-button" class="live-mobile" href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank" onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th" border="0" alt="" /></a>
+
+                </li>
+
+                <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-user"></span>ล็อคอิน</a>
+                </li>
+                <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-align-right"></span></a>
+                </li>
+
+                <li>
+                    <a class="language-sub">TH</span><img
+                            src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" width="50"> </a>
+
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container-fluid" style="text-align: center;">
+        <div class="bookingtab-container" style="padding-left: 150px;">
+            <div class="bktab" id="booktab">
+                <button class="bookingtab-group " data-target="booktab" onclick="document.getElementById('book').style.fontSize='35px'">
+
+                    <p class='bookingtab-text' id='booktab'>
+                        <i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
+                   
+                </button>
+                <button class="bookingtab-group" id='covidtab' data-target="covidtab">
+
+                    <p class='bookingtab-text'><i class="fas fa-virus"></i>&nbsp;โควิด-19 เซ็นเตอร์/เครดิตวงเงิน(EMD)</p>
+                   
+                </button>
+
+                <button class="bookingtab-group" id='hoteltab' data-target="hoteltab">
+                    <p class='bookingtab-text'><i class="fas fa-hotel"></i>&nbsp;จองที่พัก</p>
+                    
+                </button>
+
+                <button class="bookingtab-group" id='bookingnhoteltab' data-target="bookingnhoteltab">
+                    <p class='bookingtab-text'><i class="fas fa-plane"></i><i class="fas fa-hotel"></i>&nbsp;ตั๋วเครื่องบิน+ที่พัก</p>
+                   
+                </button>
+
+                <button class="bookingtab-group" id='carenttab' data-target="carenttab">
+                    <p class='bookingtab-text'><i class="fas fa-car"></i>&nbsp;บริการรถเช่า</p>
+                  
+                </button>
+
+                <button class="bookingtab-group" id='herotab' data-target="herotab">
+                    <p class='bookingtab-text'><i class="fas fa-briefcase"></i>&nbsp;บริการอื่นๆ</p>
+                   
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="width: 1285px; height: auto; position: relative; top: -25px;">
+        <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; display: block;">
+            <div class="bk" id="book">
+                <div class="booking-group " data-target="book">
+                    <p class='booking-text' id='book'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
+
+                </div>
+                <div class="booking-group" id='covid' data-target="covid">
+
+                    <p class='booking-text'>เลือกเวลาการเดินทาง<i class="fas fa-angle-down"></i></p>
+
+                </div>
+
+                <div class="booking-group" id='hotel' data-target="hotel">
+                    <p class='booking-text'>เลือกจำนวนผู้โดยสาร<i class="fas fa-angle-down"></i></p>
+
+                </div>
+
+                <div class="booking-group" id='bookingnhotel' data-target="bookingnhotel" style="width: 200px;">
+                    <p class='booking-text'>โปรโมชั่นโค้ด</p>
+
+                </div>
+            </div>
+            <div style="font-size: 16px; color: #939598;">
+                <p><b><a>+ เลือกหลายปลายทาง</a></b></p>
+
+            </div>
+        </div>
+        <div class="covid-container" style="display: none;">
+            <div class="row">
+                <div class="col-6 covid-group" style="text-align: right;">
+                    <h5 style="font-size: 20px;  color: #f58024;">ศูนย์ข้อมูลช่วยเหลือ</h5>
+                    <h6 style="font-size: 15px; color: #939598; text-align: center;">ศูนย์ช่วยเหลือโควิด-19</h6>
+                    <img src="covid1.png" width="320px" height="90px">
+                </div>
+                <div class="col-6 covid-group" style="text-align: left;">
+                    <h5 style="font-size: 20px;  color: #f58024; ">ออกตั๋วโดยใช้เครดิตวงเงิน(EMD)</h5>
+                    <h6 style="font-size: 15px;  color: #939598; ">แบบฟอร์มการออกบัตรโดยสารโดยใช้หมายเลข EMD</h6>
+                    <img src="covid2.png" width="320px" height="90px"></div>
+            </div>
+        </div>
+        <div class="hotel-container" style="display: none;">
+            <div class="row">
+                <div class="col-6 hotel-group" style="text-align: right;">
+                    <h5 style="font-size: 20px;  color: #f58024;">โรงแรมและที่พักโดย Booking.com</h5>
+                    <h6 style="font-size: 15px; color: #939598; text-align: center;">ค้นหาที่พักที่ดีที่สุดสำหรับคุณ</h6>
+                    <img src="hotel1.png" width="320px" height="90px">
+                </div>
+                <div class="col-6 hotel-group" style="text-align: left;">
+                    <h5 style="font-size: 20px;  color: #f58024; ">โรงแรมและที่พักโดย Trip.com</h5>
+                    <h6 style="font-size: 15px;  color: #939598; ">ค้นหาที่พักที่ใช่สำหรับคุณ</h6>
+                    <img src="hotel2.png" width="320px" height="90px"></div>
+            </div>
+        </div>
+        <div class="ticket-container" style="display: none;">
+            <div class="row">
+                <div class="col-3 hotel-group" style="display: flex;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">ไป-กลับ</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Tablet</a></li>
+                            <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 hotel-group">
+                </div>
+                <div class="col-3 hotel-group">
+                </div>
+                <div class="col-3 hotel-group">
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button type="button" id="book-box">จองเลย</button>
+            </div>
+        </div>
+        <div class="car-container" style="display: none;">
+            <div class="row">
+                <div class="car-group" style="text-align: center;">
+                    <h5 style="font-size: 20px;  color: #f58024;">บริการรถเช่า</h5>
+                    <h6 style="font-size: 15px; color: #939598;">เช่ารถสบายๆในราคาสุดคุ้ม</h6>
+                    <img src="car.png" width="320px" height="90px">
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid service-container" style="display:block;">
+            <div class="item-banner">
+                <div id="carouselslider" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;">
+                    <div class="carousel-indicators" style="padding-right: 60px;">
+                        <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="set1">
+                                <div class="box2">
+                                    <p class="herotab-title-txt">
+                                        เช่าเหมาลำไทยสมายล์ </p>
+                                    <p class="herotab-txt">
+                                        ออกแบบการเดินทางของคุณและเพลิดเพลินกับบริการของไทยสมายล์ </p>
+                                    <br>
+                                    <img class="herotab-img " width="320px" height="90px" src="service1.png">
+                                </div>
+                                <div class="box2">
+                                    <a href="/th/insurance/" target="_blank">
+                                        <div class="herotab-group fade-in">
+                                            <p class="herotab-title-txt">
+                                                ประกันภัยการเดินทาง </p>
+                                            <p class="herotab-txt">
+                                                เพิ่มความมั่นใจให้กับการเดินทางในต่างแดนของคุณแบบไร้กังวล </p>
+                                            <br>
+                                            <img class="herotab-img" width="320px" height="90px" src="service2.png">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="box2">
+                                    <a href="/th/flightpass" target="_blank">
+                                        <div class="herotab-group fade-in">
+                                            <p class="herotab-title-txt">
+                                                FLIGHT PASS </p>
+                                            <p class="herotab-txt" style="margin-bottom: 0;">
+                                                บัตรโดยสารเที่ยวบินซื้อล่วงหน้ายิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
+
+                                            ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
+                                            <img class="herotab-img" width="320px" height="90px" src="service3.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="set1">
+                                <div class="box2">
+                                    <a href="/th/insurance/" target="_blank">
+                                        <div class="herotab-group fade-in">
+                                            <p class="herotab-title-txt">
+                                                ประกันภัยการเดินทาง </p>
+                                            <p class="herotab-txt">
+                                                เพิ่มความมั่นใจให้กับการเดินทางในต่างแดนของคุณแบบไร้กังวล </p>
+                                            <br>
+                                            <img class="herotab-img" width="320px" height="90px" src="service2.png">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="box2">
+                                    <a href="/th/flightpass" target="_blank">
+                                        <div class="herotab-group fade-in">
+                                            <p class="herotab-title-txt">
+                                                FLIGHT PASS </p>
+                                            <p class="herotab-txt" style="margin-bottom: 0;">
+                                                บัตรโดยสารเที่ยวบินซื้อล่วงหน้า </p>
+                                            <p class="herotab-txt">
+                                                ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
+                                            <img class="herotab-img" width="320px" height="90px" src="service3.png">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="box2">
+                                    <div class="herotab-group fade-in">
+                                        <p class="herotab-title-txt">
+                                            บริการรับฝากและขนส่งสัมภาระ </p>
+                                        <p class="herotab-txt">
+                                            เดินตัวปลิว เที่ยวสบาย ไม่ต้องแบกกระเป๋าเดินทางอีกต่อไป </p>
+                                        <br>
+                                        <img class="herotab-img" width="320px" height="90px" src="service1.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="set1">
+                                <div class="box2">
+                                    <a href="/th/flightpass" target="_blank">
+                                        <div class="herotab-group fade-in">
+                                            <p class="herotab-title-txt">
+                                                FLIGHT PASS </p>
+                                            <p class="herotab-txt" style="margin-bottom: 0;">
+                                                บัตรโดยสารเที่ยวบินซื้อล่วงหน้า </p>
+                                            <p class="herotab-txt">
+                                                ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
+                                            <img class="herotab-img" width="320px" height="90px" src="service1.png">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="box2">
+                                    <a href="https://system.bellugg.com/Booking/LuggageDelivery/?agent_id=2212&language=th" target="_blank">
+                                        <div class="herotab-group fade-in">
+                                            <p class="herotab-title-txt">
+                                                บริการรับฝากและขนส่งสัมภาระ </p>
+                                            <p class="herotab-txt">
+                                                เดินตัวปลิว เที่ยวสบาย ไม่ต้องแบกกระเป๋าเดินทางอีกต่อไป </p>
+                                            <br>
+                                            <img class="herotab-img" width="320px" height="90px" src="service2.png">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="box2">
+                                    <a href="https://th.trip.com/things-to-do/?locale=th_th&allianceID=3218818&sid=7121155" target="_blank">
+                                        <div class="herotab-group fade-in">
+                                            <p class="herotab-title-txt">
+                                                ทัวร์และตั๋วท่องเที่ยว </p>
+                                            <p class="herotab-txt">
+                                                ค้นหากิจกรรมและดีลที่น่าสนใจ </p>
+                                            <br>
+                                            <img class="herotab-img " width="320px" height="90px" src="service4.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselslider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselslider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 style="color: #f58024; margin-left: 13%; margin-top: 5%; ">ผลการค้นหาล่าสุด</h2>
+
+    <div class="container">
+        <div class="container destination" style="margin-left: 11%;">
+
+            <label for="search">จาก</label><br>
+            <select id="province" name="province">
+            <option value="" selected> ระบุต้นทาง</option>
+            <option value="กระบี่"> กระบี่ (KBV), ไทย</option>
+            <option value="กรุงเทพฯ">กรุงเทพฯ-สุวรรณภูมิ (BKK), ไทย </option>
+            <option value="กัวลาลัมเปอร์">กัวลาลัมเปอร์ (KUL), มาเลเซีย</option>
+            <option value="กาฐมาณฑุ">กาฐมาณฑุ (KTM), เนปาล </option>
+            <option value=ขอนแก่น>ขอนแก่น (KKC), ไทย </option>
+            <option value=คยา>คยา (GAY), อินเดีย </option>
+            <option value=ฉงชิ่ง>ฉงชิ่ง (CKG), จีน </option>
+            <option value=นครพนม>นครพนม (KOP), ไทย </option>
+            <option value=นครศรีธรรมราช>นครศรีธรรมราช (NST), ไทย</option>
+            <option value=นราธิวาส>นราธิวาส (NAW), ไทย </option>
+            <option value=น่าน>น่าน (NNT), ไทย </option>
+            <option value=ปีนัง>ปีนัง (PEN), มาเลเซีย </option>
+            <option value=พนมเปญ>พนมเปญ (PNH), กัมพูชา </option>
+            <option value=ภูเก็น>ภูเก็ต (HKT), ไทย </option>
+            <option value=มัณฑะเลย์ >มัณฑะเลย์ (MDL), พม่า </option>
+            <option value=มุมไบ>มุมไบ (BOM), อินเดีย </option>                                   
+            </select>
+
+
+        </div>
+
+
+
+        <div id="carouselExampleControls" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="rctsearch1">
+                        <div class="box1">
+                            <img src="lastsearch1.jpg">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1"></div>
+                                <div class="grouptxt1">
+                                    <p><b>ภูเก็ต</b></p>
+                                    <p class="date1">24/10/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price1"><b>THB1,250*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch2.jpg">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>เชียงใหม่</b></p>
+                                    <p class="date1">27/10/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price1"><b>THB1,140*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch3.webp">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>เทศบาลเมืองน่าน</b></p>
+                                    <p class="date1">18/10/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price1"><b>THB1,250*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch4.jpg">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>เชียงราย</b></p>
+                                    <p class="date1">24/10/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price2"><b>THB900*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="rctsearch1">
+                        <div class="box1">
+                            <img src="lastsearch5.jpg">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1"></div>
+                                <div class="grouptxt1">
+                                    <p><b>เชียงราย</b></p>
+                                    <p class="date1">08/11/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price2"><b>THB900*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch6.webp">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>หาดใหญ่</b></p>
+                                    <p class="date1">15/11/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price1"><b>THB1,060*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch7.jpg">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>สุราษฎร์ธานี</b></p>
+                                    <p class="date1">21/11/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price2"><b>THB900*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch8.jpg">
+                            <div class="detail1">
+                                <p><b>ภูเก็ต จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>กรุงเทพมหานคร</b></p>
+                                    <p class="date1">17/11/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price1"><b>THB1,000*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="rctsearch1">
+                        <div class="box1">
+                            <img src="lastsearch9.webp">
+                            <div class="detail1">
+                                <p><b>หาดใหญ่ จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1"></div>
+                                <div class="grouptxt1">
+                                    <p><b>กรุงเทพมหานคร</b></p>
+                                    <p class="date1">20/11/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price1"><b>THB1,100*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch10.webp">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>ขอนแก่น</b></p>
+                                    <p class="date1">14/11/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price1"><b>THB1,000*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch11.jpg">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>อุดรธานี</b></p>
+                                    <p class="date1">14/11/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price2"><b>THB900*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <img src="lastsearch12.jpg">
+                            <div class="detail1">
+                                <p><b>กรุงเทพมหานคร จุดหมาย</b></p>
+                                <p class="des1"><b>ปลายทาง</b></p>
+                                <div class="grouptxt1">
+                                    <p><b>อุบลราชธานี</b></p>
+                                    <p class="date1">15/11/2021</p>
+                                </div>
+                                <p class="from">จาก</p>
+                                <h3 class="price2"><b>THB900*</b></h3>
+                                <p class="round">เที่ยวเดียว</p>
+                            </div>
+                            <div class="button1">
+                                <button class="reserve1">จองเลย</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 style="color: #f58024; text-align: center; font-size: 42px;">สิ่งที่น่าสนใจ</h1>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="3" aria-label="Slide 3"></button>
+            </div> -->
+
+
+            <div class="carousel-indicators" style="margin-left: 16%;">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left:18%">
+                            <img src="promotion1.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;">ประกาศรายชื่อผู้โชคดี Best of<br>Luck Best of Smile ครั้งที่ <br>3/2564</h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 ">เพียงร่วมตอบแบบสอบถามหลังการเดินทางลุ้นรับตั๋วเครื่องบินไปกลับ<br>กรุงเทพฯ-กระบี่ ชั้น Smile Plus Class รายละเอียดเพิ่มเติม คลิก!</p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion2.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;">11.11 สิทธิพิเศษสำหรับผู้โดยสารไทย<br> สมายล์ เมื่อช้อป MOmline.com</h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 ">รับทันทีโค้ดส่วนลดมูลค่า 200 บาท เมื่อซื้อสินค้าครบ 2,000 บาทขึ้นไป/ใบเสร็จ ใช้สิทธิ<br> ตั้งแต่ 11-30 พ.ย.64นี้</p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion3.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;">ดาวน์โหลด "ยูนิโคล่แอป" รับฟรี<br>ทันที!โค้ดส่วนลดตั๋วโดยสาร 200<br>บาท</h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 "> เตรียมตัวให้พร้อมก่อนออกเดินทาง มาดาวน์โหลดยูนิโคล่แอป รับฟรีทันที<br>โค้ดส่วนลด 200 บาท ใช้ลดตั๋วเครื่องบินไทยสมายล์ </p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion4.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;"> WE x Trip.com &quot;11.11 Mega<br>Sale&quot; ดีลเที่ยวเริ่มต้น 11 บาท</h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 ">โปรโมชั่น 3 วันนี้เท่านั้น 9 - 11 พฤศจิกายน 2564 เที่ยวบิน ทีพัก และโปร<br>โมชั่นอื่น ๆ คลิก! </p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion5.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;">รับ Grab e-Voucher Promo<br>Code มูลค่า 300 บาท เมื่อใช้จ่าย<br>ด้วยบัตร UnionPay</h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 ">เมื่อใช้จ่ายตั้งแต่ 2,000 บาทขึ้นไป ผ่านเว็บไซต์<br>www.thaismileair.com ระยะเวลากิจกรรม 1 พฤศจิกายน 2564 - 31 <br>มกราคม 2565 *จำกัดสิทธิ์ 2,000 ท่านแรก*</p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion6.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;">สิทธิพิเศษสำหรับผู้ถือบัตรเครดิต<br>ธนาคารออมสิน </h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 "> รับสิทธิพิเศษ 2 ต่อ สำหรับผู้ถือบัตรต้องลงทะเบียนผ่าน SMS ของ<br>ธนาคารตั้งแต่วันที่ 1 พฤศจิกายน 2564 - 31 มกราคม 2565</p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion7.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;">Smile Privilege สิทธิพิเศษสำหรับ<br>ผู้โดยสารสายการบินไทยสมายล์</h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 ">กิน ช็อป พัก เที่ยว เราจัดมาให้แล้ว เพียงแสดง Boarding Pass THAI<br>Smile หรือรับสิทธิโดยกด Redeem ผ่าน THAI Smile Application</p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion8.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;"> สิทธิพิเศษสำหรับผู้ถือบัตรเครดิต<br>ธนาคารไทยพาณิชย์ เมื่อซื้อบัตร<br>โดยสารสายการบินไทยสมายล์</h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 ">คุ้มที่1 รับเครดิตเงินคืนรวมสูงสุด 3,600 บาท* / คุ้มที่2 ใช้คะแนนสะสม<br>SCB rewards หรือ M Points เท่ายอดซื้อแลกรับเครดิตเงินคืนเพิ่ม<br>12%** ระหว่างวันที่ 1 ตุลาคม2564 – 31 ธันวาคม 2564</p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion9.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;">โหลดปั๊บรับโปรกับแอปฯ “Hunter<br> Journey” รับสิทธิ์ส่วนลด สายการ<br>บิน ที่พัก รถเช่า และของรางวัลอีก<br>มากมาย </h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 ">วันนี้ - 30 พ.ย. 64 ขนความสนุกให้คุณได้ ล่า ท้า เที่ยว ผ่านมือถือได้แล้ว<br>วันนี้! เพียงดาวน์โหลดแอปฯ และลงทะเบียน ทาง App Store หรือ Play<br>Store </p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="promotion" style=" display: flex;  flex-wrap: wrap; color: #606060;">
+
+                        <div class="promo-group " style="margin-left: 18%">
+                            <img src="promotion10.jpg" width="370">
+                        </div>
+                        <div class="promo-group " style="padding-left: 50px;">
+
+                            <div>
+                                <h4 style="font-size: 30px; color: #999999;"> สิทธิพิเศษสำหรับผู้ถือบัตรทีทีบี ที<br>เอ็มบี และธนชาต </h4>
+                                <br>
+                                <br>
+                                <p style="font-size: 14px; color:#666666 ">รับส่วนลด 300 บาทต่อที่นั่ง สำหรับการซื้อบัตรโดยสารเครื่องบินแบบ<br>ไป-กลับ ทุกเส้นทางของสายการบิน</p>
+                            </div>
+                            <div>
+                                <button class="reserve2">อ่านต่อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background-color: #000000; color: gray; margin-top: 5%;">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <div class="row" style="text-align: center;">
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter1.png"></p>
+                        <p style="font-size: medium;">รับไมล์สะสม รอยัลออร์คิดพลัส</p>
+                        <p style="font-size: smaller;">สมาชิกรอยัล ออร์คิด พลัส สามารถรับไมล์สะสม รวมถึงการแลกตั๋วรางวัล เมื่อโดยสารกับสายการบินไทยสมายล์ได้ ท่านสามารถดูตารางไมล์สะสมสายการบินไทยสมายล์และวิ ...<a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter2.png"></p>
+                        <p style="font-size: medium;">บริการอาหารว่างและเครื่องดื่ม</p>
+                        <p style="font-size: smaller;">เรามีบริการของว่าง และเครื่องดื่มสำหรับทุกที่นั่ง ทั้งเที่ยวบินในประเทศและเที่ยวบินต่างประเทศ ... <a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter3.png"></p>
+                        <p style="font-size: medium;">เลือกที่นั่งฟรีไม่เสียค่าธรรมเนียม</p>
+                        <p style="font-size: smaller;">**เฉพาะเส้นทางบินภายในประเทศ** สำรองที่นั่งได้ก่อนใคร ฟรี! เพียงท่านเลือกเดินทางไปกับไทยสมายล์ ท่านก็สามารถใช้บริการสำรองที่นั่งออนไลน์ ท่านสามารถสำรอ ... <a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter4.png"></p>
+                        <p style="font-size: medium;">ฟรีน้ำหนักสัมภาระ 20 ก.ก.</p>
+                        <p style="font-size: smaller;">ท่านจะได้รับน้ำหนักกระเป๋าใต้ท้องเครื่องทันทีถึง 20 กิโลกรัมเมื่อซื้อตั๋วโดยสารชั้นสมายล์คลาส และ 30 กิโลกรัมสำหรับตั๋วโดยสารชั้นสมายล์พลัส เมื่อเดินท ...<a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid darkmode" style="color: gray;">
+            <br>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-11">
+                            <div class="col-md-3">
+                                <p>นโยบายความเป็นส่วนตัว</p>
+                                <hr>
+                                <a href="privacy.html">นโยบายความเป็นส่วนตัว</a><br>
+                                <a href="complementary.html">บริการพิเศษที่ท่านจะได้รับ</a><br>
+                                <a>นโยบายเกี่ยวกับสัมภาระ</a><br>
+                                <a>รอยัล ออร์คิด พลัส</a><br>
+                                <a>Frequent Flyer Programs</a><br>
+                                <a>ข้อกำหนดและเงื่อนไข</a><br>
+                                <a>นโยบายคุกกี้</a><br>
+                            </div>
+                            <div class="col-md-6">
+                                <p>แผนผังเว็บไซต์</p>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a>การจัดซื้อจัดจ้าง</a><br>
+                                        <a>ข้อเสนอและโปรโมชั่น</a><br>
+                                        <a>จุดหมาย</a><br>
+                                        <p><b>ปลายทาง</b></p>
+                                        <div class="grouptxt1"></div>
+                                        <a>เที่ยวบินเช่าเหมาลำ</a><br>
+                                        <a>สิทธิพิเศษ จาก WE PRIVILEGE</a><br>
+                                        <a>MARKETPLACE</a><br>
+                                        <a>e-Magazine</a><br>
+                                        <a>Star Alliance</a><br>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a>ปัญหาที่พบบ่อย</a><br>
+                                        <a>ข่าวและประกาศ</a><br>
+                                        <a>ไทยสมายล์ บล็อก</a><br>
+                                        <a>จัดการการจอง</a><br>
+                                        <a>ติดต่อเรา</a><br>
+                                        <a>ร่วมงานกับเรา</a><br>
+                                        <a>อัตราค่าโดยสารสูงสุดสำหรับเส้นทางในประเทศ</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <p>ที่เที่ยวยอดนิยม</p>
+                                <hr>
+                                <a>กรุงเทพไปจีน</a><br>
+                                <a>กรุงเทพไปอินเดีย</a><br>
+                                <a>กรุงเทพไปมาเลเซีย</a><br>
+                                <a>กรุงเทพไปพม่า</a><br>
+                                <a>กรุงเทพไปลาว</a><br>
+                                <a>กรุงเทพไปกัวลาลัมเปอร์</a><br>
+                                <a>กรุงเทพไปปีนัง</a><br>
+                                <a>กรุงเทพไปชัยปุระ</a><br>
+                                <a>กรุงเทพไปเสียมราฐ</a><br>
+                                <a>ประเทศไทยไปภายในประเทศ</a><br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <br>
+                            <p>คอลเซ็นเตอร์:</p>
+                            <p>+662 118 8888</p><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-line.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-facebook.png"><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-youtube.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-ig.png"><br>
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-trip.png">
+                            <img src="https://www.thaismileair.com/assets/v3/images/icon-twitter.png"><br><br><br>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="font-size: 50px; color: #f58024; font-weight: bolder;">1181</p><br><br><br>
+                            <i>&emsp;&emsp;<img
+                                    src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_footer_logo_dark_1.png"
+                                    style="width: 150px;"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color: #f58027;">
+                <br>
+                <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
+                </p>
+                <br>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -10,9 +10,104 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <script src="https://kit.fontawesome.com/a111224822.js" crossorigin="anonymous"></script>
+
     <link href="style.css" rel="stylesheet">
 
+    <style>
+        .containerallnews {
+            margin-bottom: 7%;
+        }
 
+        .maintitlenews {
+            color: #FFFFFF;
+            font-size: 20px;
+        }
+
+        .mainparanews {
+            margin-top: -2%;
+            color: #737373;
+            font-size: 14px;
+        }
+
+        .allnews img {
+            width: 95%;
+        }
+
+        .detailnews {
+            margin-top: 8.8%;
+        }
+
+        .datenews {
+            color: #737373;
+            font-size: 14px;
+        }
+
+        .titlenews {
+            color: #FFFFFF;
+            font-size: 20px;
+            margin-top: -4%;
+        }
+
+        .titlenews:hover {
+            color: #f58026;
+        }
+
+        .paranews {
+            margin-top: 2%;
+            color: #737373;
+            font-size: 14px;
+        }
+
+        .readmore {
+            font-size: 14px;
+            color: #f58026;
+        }
+
+        .readmore:hover {
+            color: #FFFFFF;
+        }
+
+        .text-muted {
+            color: #737373;
+            font-size: 14px;
+            margin-top: 5%;
+        }
+
+        input[type=text] {
+            width: 47%;
+            box-sizing: border-box;
+            border: 2px solid #f58026;
+            border-radius: 8px;
+            font-size: 23px;
+            background-color: #000000;
+            padding: 7px 20px 7px 20px;
+        }
+
+        ::placeholder {
+            color: #CCCCCC;
+        }
+
+        .searchgroup button {
+            background-color: #000000;
+            border: 1px solid #000000;
+            font-size: 26px;
+            margin-left: -3.5%;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .secondtitle,
+        .dotgroup {
+            display: inline-block;
+        }
+    </style>
 
 </head>
 
@@ -21,8 +116,11 @@
     <nav class="navbar navbar-inner navbar-inverse navbar-light">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png" width="100"></a>
-                <a class="navbar-brand "><img src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png" width="50"></a>
+                <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png"
+                        width="100"></a>
+                <a class="navbar-brand "><img
+                        src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png"
+                        width="50"></a>
 
             </div>
 
@@ -32,7 +130,11 @@
                 <li><a href="#">จัดการการจอง</a></li>
                 <li><a href="#">คนหนีเที่ยว</a></li>
                 <li class="hidden-xs">
-                    <a id="mibew-agent-button" class="live-mobile" href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank" onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th" border="0" alt="" /></a>
+                    <a id="mibew-agent-button" class="live-mobile"
+                        href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank"
+                        onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img
+                            src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th"
+                            border="0" alt="" /></a>
 
                 </li>
 
@@ -51,49 +153,334 @@
     </nav>
 
     <div class="title container-fluid">
-        <h1><b>ข่าวสารจากไทยสมายล์</b></h1><br>
-        <h6 class="text-muted">ตามติดทุกเรื่องราวของเรา พร้อมข่าวสารใหม่ๆ จากไทยสมายล์</h6>
-        <input type="search" placeholder="ค้นหา" class="glyphicon glyphicon-search">
+        <h1 style="font-size: 52px; margin-bottom: -3%;">ข่าวสารจากไทยสมายล์</h1>
+        <p style="font-size: 16px; color: #737373" class="text-muted">ตามติดทุกเรื่องราวของเรา พร้อมข่าวสารใหม่ๆ
+            จากไทยสมายล์</p>
+        <div class="searchgroup">
+            <form>
+                <input type="text" name="search" placeholder="ค้นหา"><button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
     </div>
 
     <div class="container news">
-        <h3>ข่าวอัพเดทล่าสุดจากไทยสมายล์</h3>
-        <div class="row">
-            <div class="col-lg-4">
-                <img src="https://www.thaismileair.com/assets/v2/news/3009/l_Announcement-ASF%20JAN2020%20(cover).jpg" class="w-100 h-100">
-                <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                <a href="#">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</a><br>
-                <a href="#">อ่านต่อ >></a>
+        <div class="titlewithdot">
+            <h3 class="secondtitle"
+                style="font-size: 28px; color: #f58026; margin-top: 6%; margin-bottom: 2.7%; margin-left: -1%; margin-right: 0.8%;">
+                <b>ข่าวอัพเดทล่าสุดจากไทยสมายล์</b>
+            </h3>
+            <div class="dotgroup">
+                <span class="dot" style="background-color: #141414"></span>
+                <span class="dot" style="background-color: #1F1F1F"></span>
+                <span class="dot" style="background-color: #333333"></span>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="readmore1.html"><img src="news1.jpg" width="100%" class="w-100 h-100"></a>
+                <h6 class="text-muted">Mon 08 Nov 2021</h6>
+                <a href="readmore1.html" class="maintitlenews">
+                    <p style="margin-top: -2%;">แค่โหลด App Uniqlo รับทันทีส่วนลดตั๋วโดยสารไทยสมายล์</p>
+                </a>
+                <p class="mainparanews">รีบโหลดก่อนสิทธิ์จะหมด ระยะเวลาในการสำรองที่นั่งและออกบัตรโดยสาร ระหว่างวันที่
+                    29 ตุลาคม ถึง 30 พฤศจิกายน 2564 <a href="readmore1.html" class="readmore">อ่านต่อ >></a></p>
+            </div>
+            <div class="col-sm-6" style="padding-left: 2%;">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="readmore2.html"><img src="news1.jpg" width="100%"></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6 class="text-muted">Mon 08 Nov 2021</h6>
+                        <a href="readmore2.html" class="maintitlenews">
+                            <p style="margin-top: -4%;">บินในประเทศไทย – ทางลัดสู่บัตร..</p>
+                        </a>
+                        <p class="mainparanews" style="margin-top: -4%;">เพลิดเพลินกับการเดินทางท่อง <a
+                                href="readmore2.html" class="readmore">อ่านต่อ >></a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="readmore3.html"><img src="news2.jpg" width="100%"></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6 class="text-muted">Tue 28 Sep 2021</h6>
+                        <a href="readmore3.html" class="maintitlenews">
+                            <p style="margin-top: -4%;">ดาวน์โหลดแอปพลิเคชั่น Hunter J..</p>
+                        </a>
+                        <p class="mainparanews" style="margin-top: -4%;"><a href="readmore3.html"
+                                class="readmore">อ่านต่อ >></a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="readmore4.html"><img src="news2.jpg" width="100%"></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6 class="text-muted">Sat 28 Aug 2021</h6>
+                        <a href="readmore4.html" class="maintitlenews">
+                            <p style="margin-top: -4%;">บริษัท ไทยสมายล์แอร์เวย์ จำกัด..</p>
+                        </a>
+                        <p class="mainparanews" style="margin-top: -4%;"><a href="readmore4.html"
+                                class="readmore">อ่านต่อ >></a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="containerallnews">
+        <div class="titlewithdot">
+            <h3 class="secondtitle"
+                style="color: #f58026; margin-top: 6%; margin-left: 4%; margin-bottom: 1.7%; margin-right: 0.8%; font-size: 28px;">
+                <b>ข่าวสารทั้งหมด</b>
+            </h3>
+            <div class="dotgroup">
+                <span class="dot" style="background-color: #141414"></span>
+                <span class="dot" style="background-color: #1F1F1F"></span>
+                <span class="dot" style="background-color: #333333"></span>
+            </div>
+        </div>
+        <div class="allnews">
             <div class="row">
-                <div class="col-lg-4 ">
-                    <img src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" class="w-100 h-100">
-                    <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                    <a href="#">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</a><br>
-                    <a href="#">อ่านต่อ >></a>
+                <div class="col-sm-3" style="margin-left: 3%;">
+                    <img src="news1.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Mon 08 Nov 2021</p>
+                        <p class="titlenews">บินในประเทศไทย – ทางลัดสู่บัตรทอง รอยัล ออร์คิด พลัส</p>
+                        <p class="paranews">เพลิดเพลินกับการเดินทางท่องเที่ยวทั่วไทยไปกับการบินไทยและไทยสมายล์
+                            รับความคุ้มค่ายิ่งขึ้นเมื่อเดินทางครบ 60 เที่ยวบิน <span class="readmore">อ่านต่อ >></span>
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-4 ">
-                    <img src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" class="w-100 h-100">
-                    <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                    <a href="#">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</a><br>
-                    <a href="#">อ่านต่อ >></a>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news2.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Tue 28 Sep 2021</p>
+                        <p class="titlenews">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
                 </div>
-                <div class="col-lg-4 ">
-                    <img src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" class="w-100 h-100">
-                    <h6 class="text-muted">Tue 28 Sep 2021</h6>
-                    <a href="#">ดาวน์โหลดแอปพลิเคชั่น Hunter Journey รับโค้ดส่วนลด 10%</a><br>
-                    <a href="#">อ่านต่อ >></a>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news2.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Sat 28 Aug 2021</p>
+                        <p class="titlenews">บริษัท ไทยสมายล์แอร์เวย์ จำกัด ประกาศแต่งตั้งผู้บริหารระดับสูง มี..</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news3.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Wed 27 Oct 2021</p>
+                        <p class="titlenews">ผู้โดยสารตรวจสอบมาตรการควบคุมการเดินทางเข้า-ออกพื้นที่ตามประกาศแต..</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 3%;">
+                <div class="col-sm-3" style="margin-left: 3%;">
+                    <img src="news4.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Sat 09 Oct 2021</p>
+                        <p class="titlenews">สิทธิพิเศษสำหรับผู้ถือบัตรทีทีบี ทีเอ็มบี และธนชาต</p>
+                        <p class="paranews">รับส่วนลด 300 บาทต่อที่นั่ง สำหรับการซื้อบัตรโดยสารเครื่องบินแบบไป-กลับ
+                            ทุกเส้นทางของสายการบิน <span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news5.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Sat 09 Oct 2021</p>
+                        <p class="titlenews">เอกสิทธิ์พิเศษเฉพาะ บัตรเครดิต ttb reserve infinite และ ttb reser..</p>
+                        <p class="paranews">รับส่วนลด 1,000 บาท เมื่อสำรองบัตรโดยสารเครื่องบิน ไป-กลับ ทุกเส้นทาง <span
+                                class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news6.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Mon 24 Feb 2020</p>
+                        <p class="titlenews">Announcement of eligible internship candidates to attend the Pane..</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news1.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Thu 15 Jul 2021</p>
+                        <p class="titlenews">ภัตตาคารการบินไทย ภูเก็ต (สาขาท่าอากาศยานภูเก็ต และ อาคารตึกโบราณ..</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 3%;">
+                <div class="col-sm-3" style="margin-left: 3%;">
+                    <img src="news7.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Fri 06 Mar 2020</p>
+                        <p class="titlenews">Announcement of successful Internship candidates who are selected..</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news8.png">
+                    <div class="detailnews">
+                        <p class="datenews">Mon 28 Jun 2021</p>
+                        <p class="titlenews">ประกาศรับสมัครบุคคลเพื่อคัดเลือกผู้ดำรงตำแหน่ง ประธานเจ้าหน้าที่บ..</p>
+                        <p class="paranews">ประกาศรับสมัครบุคคลเพื่อคัดเลือกผู้ดำรงตำแหน่ง ประธานเจ้าหน้าที่บริหาร
+                            (Chief Executive Officer) สามารถดูรายละเอียดเพิ่มเติมได้ที่ https://www.thaismi <span
+                                class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news9.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Fri 07 Feb 2020</p>
+                        <p class="titlenews">ประกาศรายชื่อผู้ผ่านการสัมภาษณ์รอบรายบุคคล ตำแหน่งพนักงานต้อนรับบ..</p>
+                        <p class="paranews">บริษัท ไทยสมายล์แอร์เวย์ จำกัด ขอประกาศรายชื่อผู้ผ่านการสัมภาษณ์รอบรายบุคคล
+                            ตำแหน่งพนักงานต้อนรับบนเครื่องบิน <span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news1.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Tue 09 Nov 2021</p>
+                        <p class="titlenews">ประชาสัมพันธ์กิจกรรม Best of Luck Best of Smile ครั้งที่ 3/2564</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 3%;">
+                <div class="col-sm-3" style="margin-left: 3%;">
+                    <img src="news9.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Thu 23 Jan 2020</p>
+                        <p class="titlenews">ประกาศรายชื่อผู้มีสิทธิเข้ารับการสอบสัมภาษณ์รายบุคคล ในการคัดเลื..</p>
+                        <p class="paranews">บริษัท ไทยสมายล์แอร์เวย์ จำกัด ขอให้ผู้มีรายชื่อตามประกาศนี้
+                            เข้ารับการสอบสัมภาษณ์รายบุคคลเพื่อคัดเลือกเข้าเป็นพนักงานต้อนรับบนเครื่องบิน ณ สำนักงานให
+                            <span class="readmore">อ่านต่อ >></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news7.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Fri 09 Apr 2021</p>
+                        <p class="titlenews">Announcement of successful Internship candidates who are selected..</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news1.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Thu 29 Jul 2021</p>
+                        <p class="titlenews">Best of Luck ครั้งที่ 2/2564</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news10.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Mon 01 Mar 2021</p>
+                        <p class="titlenews">ประกาศรับสมัครนักศึกษาฝึกงาน ครั้งที่ 1/2564</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 3%;">
+                <div class="col-sm-3" style="margin-left: 3%;">
+                    <img src="news11.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Thu 29 Jul 2021</p>
+                        <p class="titlenews">WE Privilege สิทธิพิเศษสำหรับผู้โดยสารไทยสมายล์</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news1.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Mon 05 Apr 2021</p>
+                        <p class="titlenews">Surf Skate on Board ใส่กระเป๋าถือขึ้นเครื่องไทยสมายล์ ฟรี!</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news10.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Mon 13 Jan 2020</p>
+                        <p class="titlenews">ประกาศรับสมัครนักศึกษาฝึกงาน ครั้งที่ 2/2563</p>
+                        <p class="paranews">บริษัท ไทยสมายล์แอร์เวย์ จำกัด
+                            มีความประสงค์ที่จะรับสมัครนักศึกษาฝึกงานหลายอัตรา
+                            ผู้ที่สนใจสมัครต้องปฏิบัติตามขั้นตอนการสมัครในประกาศฉบับนี้ และสามารถ <span
+                                class="readmore">อ่านต่อ >></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-left: -1.6%;">
+                    <img src="news6.jpg">
+                    <div class="detailnews">
+                        <p class="datenews">Tue 23 Mar 2021</p>
+                        <p class="titlenews">Announcement of eligible candidates to attend the Panel Interview..</p>
+                        <p class="paranews"><span class="readmore">อ่านต่อ >></span></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="container-fluid" style="background-color: #000000; color: gray;">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <div class="row" style="text-align: center;">
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter1.png"></p>
+                        <p style="font-size: medium;">รับไมล์สะสม รอยัลออร์คิดพลัส</p>
+                        <p style="font-size: smaller;">สมาชิกรอยัล ออร์คิด พลัส สามารถรับไมล์สะสม รวมถึงการแลกตั๋วรางวัล
+                            เมื่อโดยสารกับสายการบินไทยสมายล์ได้ ท่านสามารถดูตารางไมล์สะสมสายการบินไทยสมายล์และวิ
+                            ...<a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter2.png"></p>
+                        <p style="font-size: medium;">บริการอาหารว่างและเครื่องดื่ม</p>
+                        <p style="font-size: smaller;">เรามีบริการของว่าง และเครื่องดื่มสำหรับทุกที่นั่ง
+                            ทั้งเที่ยวบินในประเทศและเที่ยวบินต่างประเทศ ... <a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter3.png"></p>
+                        <p style="font-size: medium;">เลือกที่นั่งฟรีไม่เสียค่าธรรมเนียม</p>
+                        <p style="font-size: smaller;">**เฉพาะเส้นทางบินภายในประเทศ** สำรองที่นั่งได้ก่อนใคร ฟรี!
+                            เพียงท่านเลือกเดินทางไปกับไทยสมายล์ ท่านก็สามารถใช้บริการสำรองที่นั่งออนไลน์ ท่านสามารถสำรอ
+                            ... <a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter4.png"></p>
+                        <p style="font-size: medium;">ฟรีน้ำหนักสัมภาระ 20 ก.ก.</p>
+                        <p style="font-size: smaller;">ท่านจะได้รับน้ำหนักกระเป๋าใต้ท้องเครื่องทันทีถึง 20
+                            กิโลกรัมเมื่อซื้อตั๋วโดยสารชั้นสมายล์คลาส และ 30 กิโลกรัมสำหรับตั๋วโดยสารชั้นสมายล์พลัส
+                            เมื่อเดินท ...<a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
 
-
-
-
-
-    <footer>
+    <!--footer-->
+    <footer style="margin-top: 1%;">
         <div class="container-fluid" style="background-color: #333333; color: gray;">
             <br>
             <div class="row">
@@ -158,22 +545,22 @@
                 </div>
                 <div class="col-md-4">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             <br>
                             <p>คอลเซ็นเตอร์:</p>
                             <p>+662 118 8888</p><br>
-                            <img src="https://www.thaismileair.com/assets/v3/images/icon-line.png">
-                            <img src="https://www.thaismileair.com/assets/v3/images/icon-facebook.png"><br>
-                            <img src="https://www.thaismileair.com/assets/v3/images/icon-youtube.png">
-                            <img src="https://www.thaismileair.com/assets/v3/images/icon-ig.png"><br>
-                            <img src="https://www.thaismileair.com/assets/v3/images/icon-trip.png">
-                            <img src="https://www.thaismileair.com/assets/v3/images/icon-twitter.png"><br><br><br>
+                            <a href="http:\/\/line.me\/ti\/p\/\~\@thaismile"><img src="footer1.png"></a>
+                            <a href="https:\/\/www.facebook.com\/THAISmileAirways\/"><img src="footer2.png"></a><br>
+                            <a href="https:\/\/www.youtube.com\/user\/ThaiSmileAirways"><img src="footer3.png"></a>
+                            <a href="https:\/\/www.instagram.com\/accounts\/login\/"><img src="footer4.png"></a><br>
+                            <a
+                                href="https:\/\/www.tripadvisor.com\/WidgetEmbed-collectreview?lang=en_US&locationId=8729212&partnerId=1A097AE48E63472EA3DAE61C37CF9A42&display=true&allowMobile=true&"><img
+                                    src="footer5.png"></a>
+                            <a href="https:\/\/twitter.com\/ThaiSmileAirway"><img src="footer6.png"></a><br><br><br>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <p style="font-size: 50px; color: #f58024; font-weight: bolder;">1181</p><br><br><br>
-                            <i>&emsp;&emsp;<img
-                                    src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_footer_logo_dark_1.png"
-                                    style="width: 150px;"></i>
+                            <i>&emsp;&emsp;<img src="footer7.png" style="width: 150px;"></i>
 
                         </div>
                     </div>
@@ -181,13 +568,15 @@
             </div>
             <div class="row" style="background-color: #f58027;">
                 <br>
-                <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
+                <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL
+                    RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
                 </p>
                 <br>
             </div>
 
         </div>
     </footer>
+    <!--footer end-->
 </body>
 
 </html>

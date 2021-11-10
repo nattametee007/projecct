@@ -1,3 +1,3 @@
 function booking() {
-    document.getElementById("booktab").style.fontSize = "35px";
+    document.getElementById("book").style.fontSize = "10px";
 }

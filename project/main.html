@@ -57,45 +57,47 @@
     <div class="container-fluid" style="text-align: center;">
         <div class="bookingtab-container" style="padding-left: 150px;">
             <div class="bktab" id="booktab">
-                <div class="bookingtab-group " id='booktab' data-target="booktab" style="display: inline-block;">
+                <button class="bookingtab-group " data-target="booktab" onclick="document.getElementById('book').style.fontSize='35px'">
 
-                    <p class='bookingtab-text' onclick="booking()"><i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
-                    <div class="triangle-down"></div>
-                </div>
-                <div class="bookingtab-group" id='covidtab' data-target="covidtab">
+                    <p class='bookingtab-text' id='booktab'>
+                        <i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
+                   
+                </button>
+                <button class="bookingtab-group" id='covidtab' data-target="covidtab">
 
                     <p class='bookingtab-text'><i class="fas fa-virus"></i>&nbsp;โควิด-19 เซ็นเตอร์/เครดิตวงเงิน(EMD)</p>
-                    <div class="triangle-down"></div>
-                </div>
+                   
+                </button>
 
-                <div class="bookingtab-group" id='hoteltab' data-target="hoteltab">
+                <button class="bookingtab-group" id='hoteltab' data-target="hoteltab">
                     <p class='bookingtab-text'><i class="fas fa-hotel"></i>&nbsp;จองที่พัก</p>
-                    <div class="triangle-down"></div>
-                </div>
+                    
+                </button>
 
-                <div class="bookingtab-group" id='bookingnhoteltab' data-target="bookingnhoteltab">
+                <button class="bookingtab-group" id='bookingnhoteltab' data-target="bookingnhoteltab">
                     <p class='bookingtab-text'><i class="fas fa-plane"></i><i class="fas fa-hotel"></i>&nbsp;ตั๋วเครื่องบิน+ที่พัก</p>
-                    <div class="triangle-down"></div>
-                </div>
+                   
+                </button>
 
-                <div class="bookingtab-group" id='carenttab' data-target="carenttab">
+                <button class="bookingtab-group" id='carenttab' data-target="carenttab">
                     <p class='bookingtab-text'><i class="fas fa-car"></i>&nbsp;บริการรถเช่า</p>
-                    <div class="triangle-down"></div>
-                </div>
+                  
+                </button>
 
-                <div class="bookingtab-group" id='herotab' data-target="herotab">
+                <button class="bookingtab-group" id='herotab' data-target="herotab">
                     <p class='bookingtab-text'><i class="fas fa-briefcase"></i>&nbsp;บริการอื่นๆ</p>
-                    <div class="triangle-down"></div>
-                </div>
+                   
+                </button>
             </div>
 
         </div>
+
     </div>
-    <div class="container" style="width: 1285px; height: 120px;">
-        <div class="booking-container" style="width: 1255px; height: 80px;">
+    <div class="container" style="width: 1285px; height: auto;">
+        <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; display: none;">
             <div class="bk" id="book">
-                <div class="booking-group " id='book' data-target="book" style="display: inline-block;">
-                    <p class='booking-text'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
+                <div class="booking-group " data-target="book">
+                    <p class='booking-text' id='book'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
 
                 </div>
                 <div class="booking-group" id='covid' data-target="covid">
@@ -117,6 +119,19 @@
             <div style="font-size: 16px; color: #939598;">
                 <p><b><a>+ เลือกหลายปลายทาง</a></b></p>
 
+            </div>
+        </div>
+        <div class="covid-container">
+            <div class="row">
+                <div class="col-6 covid-group" style="text-align: right;">
+                    <h5 style="font-size: 20px;  color: #f58024;">ศูนย์ข้อมูลช่วยเหลือ</h5>
+                    <h6 style="font-size: 15px; color: #939598; text-align: center;">ศูนย์ช่วยเหลือโควิด-19</h6>
+                    <img src="covid1.png" width="320px" height="90px">
+                </div>
+                <div class="col-6 covid-group" style="text-align: left;">
+                    <h5 style="font-size: 20px;  color: #f58024; ">ออกตั๋วโดยใช้เครดิตวงเงิน(EMD)</h5>
+                    <h6 style="font-size: 15px;  color: #939598; ">แบบฟอร์มการออกบัตรโดยสารโดยใช้หมายเลข EMD</h6>
+                    <img src="covid2.png" width="320px" height="90px"></div>
             </div>
         </div>
     </div>

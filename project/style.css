@@ -245,6 +245,31 @@ a:hover {
 }
 
 
+/* บริการอื่นๆกล่อง 5 */
+
+.herotab-title-txt {
+    font-size: 20px;
+    color: #f58024;
+    text-align: center;
+}
+
+.herotab-txt {
+    font-size: 15px;
+    color: #939598;
+    text-align: center;
+}
+
+.herotab-img {
+    text-align: center;
+}
+
+.set1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
 /* ข้อมูลที่น่าสนใจ*/
 
 .reserve2 {

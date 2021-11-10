@@ -161,6 +161,7 @@ a:hover {
 .bktab {
     display: flex;
     flex-wrap: wrap;
+    padding-right: 150px;
     justify-content: center;
 }
 
@@ -254,11 +255,10 @@ a:hover {
 }
 
 .herotab-txt {
-    font-size: 15px;
+    font-size: 11px;
     color: #939598;
     text-align: center;
     max-height: 80px;
-    background-color: #eee;
     overflow: visible;
 }
 
@@ -275,8 +275,9 @@ a:hover {
 .box2 {
     width: 392.975px;
     height: 210px;
-    background-color: #eee;
+    text-align: center;
     overflow: visible;
+    margin: 10px;
 }
 
 
@@ -310,11 +311,7 @@ a:hover {
     background-color: rgb(231, 119, 15);
 }
 
-.carousel {
-    box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
-    -webkit-box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
-    -moz-box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
-}
+
 
 .carousel-indicators {
     margin: 10px 0 0 0;

@@ -257,6 +257,9 @@ a:hover {
     font-size: 15px;
     color: #939598;
     text-align: center;
+    max-height: 80px;
+    background-color: #eee;
+    overflow: visible;
 }
 
 .herotab-img {
@@ -267,6 +270,13 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.box2 {
+    width: 392.975px;
+    height: 210px;
+    background-color: #eee;
+    overflow: visible;
 }
 
 

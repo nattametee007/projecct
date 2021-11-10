@@ -74,48 +74,25 @@
             margin-top: 5%;
         }
 
-        #custom-search-input {
-            margin: 0;
-            margin-top: 10px;
-            padding: 0;
-        }
-
-        #custom-search-input .search-query {
-            padding-right: 3px;
-            padding-right: 4px \9;
-            padding-left: 3px;
-            padding-left: 4px \9;
-            /* IE7-8 doesn't have border-radius, so don't indent the padding */
-
-            margin-bottom: 0;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-        }
-
-        #custom-search-input button {
-            border: 0;
-            background: #000000;
-            /** belows styles are working good */
-            padding: 2px 5px;
-            margin-top: 2px;
-            position: relative;
-            left: -28px;
-            /* IE7-8 doesn't have border-radius, so don't indent the padding */
-            margin-bottom: 0;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-            color: #f58026;
-            font-size: 26px;
-        }
-
-        .search-query:focus+button {
-            z-index: 3;
+        input[type=text] {
+            width: 47%;
+            box-sizing: border-box;
+            border: 2px solid #f58026;
+            border-radius: 8px;
+            font-size: 23px;
+            background-color: #000000;
+            padding: 7px 20px 7px 20px;
         }
 
         ::placeholder {
-            color: green;
+            color: #CCCCCC;
+        }
+
+        .searchgroup button {
+            background-color: #000000;
+            border: 1px solid #000000;
+            font-size: 26px;
+            margin-left: -3.5%;
         }
     </style>
 
@@ -166,19 +143,10 @@
         <h1 style="font-size: 52px; margin-bottom: -3%;">ข่าวสารจากไทยสมายล์</h1>
         <p style="font-size: 16px; color: #737373" class="text-muted">ตามติดทุกเรื่องราวของเรา พร้อมข่าวสารใหม่ๆ
             จากไทยสมายล์</p>
-        <div class="container">
-            <div class="row">
-                <div id="custom-search-input">
-                    <div class="input-group col-md-12">
-                        <input type="text" class="search-query form-control" placeholder="ค้นหา" />
-                        <span class="input-group-btn">
-                            <button class="btn btn-danger" type="button">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            </div>
+        <div class="searchgroup">
+            <form>
+                <input type="text" name="search" placeholder="ค้นหา"><button><i class="fas fa-search"></i></button>
+            </form>
         </div>
     </div>
 

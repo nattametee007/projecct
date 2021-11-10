@@ -217,6 +217,25 @@ a:hover {
 /* โควิดกล่องสอง*/
 
 
+/* ตั๋วเครื่องบินและโรงแรมกล่อง 4 */
+
+#book-box {
+    background-color: #f58024;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: #f58024;
+}
+
+#book-box:hover {
+    background-color: #DE660A;
+}
+
+
 /* ข้อมูลที่น่าสนใจ*/
 
 .reserve2 {

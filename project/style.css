@@ -248,14 +248,16 @@ a:hover {
 
 .reserve2 {
     background-color: #939598;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     border-radius: 5px;
-    padding-left: 50px;
-    padding-right: 50px;
     padding-top: 7px;
     padding-bottom: 7px;
     border: #939598;
+    width: 120px;
+    height: 39.6px;
+    line-height: 25.7143px;
+    vertical-align: middle;
 }
 
 .reserve2:hover {
@@ -276,4 +278,15 @@ a:hover {
     box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
     -webkit-box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
     -moz-box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
+}
+
+.carousel-indicators {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 10px;
+    left: 280px;
+}
+
+.promo-group {
+    padding: 0 15px 0 15px;
+    height: 300px;
 }

@@ -57,7 +57,7 @@
     <div class="container-fluid" style="text-align: center;">
         <div class="bookingtab-container" style="padding-left: 150px;">
             <div class="bktab" id="booktab">
-                <button class="btn btn-primary bookingtab-group" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button class="bookingtab-group " data-target="booktab" onclick="document.getElementById('book').style.fontSize='35px'">
 
                     <p class='bookingtab-text' id='booktab'>
                         <i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
@@ -94,8 +94,8 @@
 
     </div>
 
-    <div class="container" style="width: 1285px; height: auto; position: relative; top: -25px;">
-        <div class="booking-container" id="booking-container" style=" display: block;">
+    <div class="container-fluid" style="width: 1285px; height: auto; position: relative; top: -25px;">
+        <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; display: block;">
             <div class="bk" id="book">
                 <div class="booking-group " data-target="book">
                     <p class='booking-text' id='book'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
@@ -112,7 +112,7 @@
 
                 </div>
 
-                <div class="booking-group" id='bookingnhotel' data-target="bookingnhotel">
+                <div class="booking-group" id='bookingnhotel' data-target="bookingnhotel" style="width: 200px;">
                     <p class='booking-text'>โปรโมชั่นโค้ด</p>
 
                 </div>
@@ -180,7 +180,7 @@
 
             </div>
         </div>
-        <div class="container-fluid service-container" style="display:none;">
+        <div class="container-fluid service-container" style="display:block;">
             <div class="item-banner">
                 <div id="carouselslider" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;">
                     <div class="carousel-indicators" style="padding-right: 60px;">

@@ -233,20 +233,15 @@ a:hover .offer-tour-icon {
       button,
       legend {
         color: #f58024;
-        background-color: rgb(255, 255, 255);
         padding: 5px 10px;
         border-radius: 0;
         border: 0;
         font-size: 14px;
       }
       
-      button:hover,
-      button:focus {
-        color: rgb(255, 255, 255);
-      }
+      
       
       button:active {
-        background-color: white;
         color: black;
         outline: 1px solid black;
       }
@@ -280,3 +275,18 @@ a:hover .offer-tour-icon {
     color: #f58024;
 }
 
+a { 
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a {
+    background-color: transparent;
+}
+
+.box2 {
+    margin: 10px;
+}

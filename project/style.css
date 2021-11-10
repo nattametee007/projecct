@@ -161,6 +161,7 @@ a:hover {
 .bktab {
     display: flex;
     flex-wrap: wrap;
+    padding-right: 150px;
     justify-content: center;
     align-items: center;
     margin-left: -13%;
@@ -258,6 +259,41 @@ a:hover {
 }
 
 
+/* บริการอื่นๆกล่อง 5 */
+
+.herotab-title-txt {
+    font-size: 20px;
+    color: #f58024;
+    text-align: center;
+}
+
+.herotab-txt {
+    font-size: 11px;
+    color: #939598;
+    text-align: center;
+    max-height: 80px;
+    overflow: visible;
+}
+
+.herotab-img {
+    text-align: center;
+}
+
+.set1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box2 {
+    width: 392.975px;
+    height: 210px;
+    text-align: center;
+    overflow: visible;
+    margin: 10px;
+}
+
+
 /* ข้อมูลที่น่าสนใจ*/
 
 .reserve2 {
@@ -288,11 +324,7 @@ a:hover {
     background-color: rgb(231, 119, 15);
 }
 
-.carousel {
-    box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
-    -webkit-box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
-    -moz-box-shadow: 1px 2px 40px -1px rgba(34, 31, 31, 0.64);
-}
+
 
 .carousel-indicators {
     margin: 10px 0 0 0;

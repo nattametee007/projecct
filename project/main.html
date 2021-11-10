@@ -17,7 +17,7 @@
 
     <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/db15b4141a.js" crossorigin="anonymous"></script>
-
+    <script src="change.js"></script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -54,11 +54,12 @@
         </div>
 
     </nav>
-    <div class="container-fluid" style="text-align: center; line-height: 16.8px;">
+    <div class="container-fluid" style="text-align: center;">
         <div class="bookingtab-container" style="padding-left: 150px;">
             <div class="bktab" id="booktab">
                 <div class="bookingtab-group " id='booktab' data-target="booktab" style="display: inline-block;">
-                    <p class='bookingtab-text'><i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
+
+                    <p class='bookingtab-text' onclick="booking()"><i class="fas fa-plane"></i>&nbsp;จองเที่ยวบิน</p>
                     <div class="triangle-down"></div>
                 </div>
                 <div class="bookingtab-group" id='covidtab' data-target="covidtab">
@@ -90,28 +91,32 @@
 
         </div>
     </div>
-    <div class="container">
-        <div class="booking-container" style="padding-left: 150px;">
+    <div class="container" style="width: 1285px; height: 120px;">
+        <div class="booking-container" style="width: 1255px; height: 80px;">
             <div class="bk" id="book">
                 <div class="booking-group " id='book' data-target="book" style="display: inline-block;">
-                    <p class='booking-text'><b>เลือกเส้นทาง</b></p>
+                    <p class='booking-text'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
 
                 </div>
                 <div class="booking-group" id='covid' data-target="covid">
 
-                    <p class='booking-text'><b>เลือกเวลาการเดินทาง</b></p>
+                    <p class='booking-text'>เลือกเวลาการเดินทาง<i class="fas fa-angle-down"></i></p>
 
                 </div>
 
                 <div class="booking-group" id='hotel' data-target="hotel">
-                    <p class='booking-text'><b>เลือกจำนวนผู้โดยสาร</b></p>
+                    <p class='booking-text'>เลือกจำนวนผู้โดยสาร<i class="fas fa-angle-down"></i></p>
 
                 </div>
 
-                <div class="booking-group" id='bookingnhotel' data-target="bookingnhotel">
-                    <p class='booking-text'><b>โปรโมชั่นโค้ด</b></p>
+                <div class="booking-group" id='bookingnhotel' data-target="bookingnhotel" style="width: 200px;">
+                    <p class='booking-text'>โปรโมชั่นโค้ด</p>
 
                 </div>
+            </div>
+            <div style="font-size: 16px; color: #939598;">
+                <p><b><a>+ เลือกหลายปลายทาง</a></b></p>
+
             </div>
         </div>
     </div>

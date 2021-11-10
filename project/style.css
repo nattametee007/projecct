@@ -170,6 +170,8 @@ a:hover {
     background-color: rgb(51, 51, 51);
     border-radius: 6px;
     height: 44.2875;
+    cursor: pointer;
+    color: #f58024;
 }
 
 .bookingtab-container {
@@ -181,12 +183,38 @@ a:hover {
 }
 
 
-/* จองเครื่องบิน*/
+/* จองเครื่องบินกล่องแรก*/
 
 .bk {
     display: flex;
     flex-wrap: wrap;
 }
+
+.booking-container .booking-group {
+    cursor: pointer;
+    color: #f58024;
+}
+
+.booking-group {
+    text-align: center;
+    height: 50px;
+    border: 1px solid #f58024;
+    border-radius: 5px;
+    color: #f58024;
+    font-size: 20px;
+    margin: 10px;
+    min-width: 235px;
+    min-height: auto;
+}
+
+.booking-text {
+    padding: 15px 0 15px 0;
+    height: 50px;
+    line-height: 20px;
+}
+
+
+/* ข้อมูลที่น่าสนใจ*/
 
 .reserve2 {
     background-color: #939598;

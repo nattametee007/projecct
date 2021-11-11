@@ -131,12 +131,11 @@
         margin-top: 40px;
         position: absolute;
         top: 8px;
-        color: aliceblue;
+        color: #ffffff;
         background-color: rgb(75, 59, 59);
-        opacity: 0.65;
+        opacity: 0.8;
         width: 116.2px;
         height: 80px;
-        padding: 12px 12px 6px 15px;
         text-align: justify;
     }
     
@@ -144,13 +143,22 @@
         color: #f58024;
         font-size: 40px;
         font-weight: 700;
-        line-height: 48px;
+        line-height: 0.9;
+        text-align: left;
+    }
+    
+    .topleft h6 {
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 0.1;
+        text-align: left;
     }
     
     .topleft h5 {
         color: aliceblue;
         font-size: 16px;
-        padding-right: 0px;
+        line-height: 0;
+        text-align: right;
     }
     
     li {

@@ -15,14 +15,103 @@
 
 
 </head>
+<style>
+    #w3review {
+        width: 300px;
+        resize: both;
+        height: 80px;
+        background-color: white;
+        margin-left: 22px;
+    }
+
+    .textboxclass2 {
+        height: 20px;
+        width: 380px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+    }
+
+    .chat-popup {
+        display: none;
+        position: fixed;
+        border: 1px solid #aaa;
+        overflow: hidden;
+        z-index: 100;
+        border-radius: 10px;
+        bottom: 5px;
+        right: 15px;
+        height: 480px;
+    }
+
+    .chat-popup2 {
+        display: none;
+        position: fixed;
+        border: 1px solid #aaa;
+        overflow: hidden;
+        z-index: 100;
+        border-radius: 10px;
+        width: 27px;
+        height: 480px;
+        right: 525px;
+        bottom: 5px;
+    }
+
+    .form-container {
+        width: 507px;
+        height: 480px;
+        padding: 10px;
+        background-color: rgb(241, 242, 242);
+    }
+
+    .form-container2 {
+        width: 27px;
+        height: 480px;
+        cursor: pointer;
+        background-color: rgb(241, 242, 242);
+    }
+
+    .form-container .btn {
+        background-color: rgb(245, 128, 36);
+        color: white;
+        border: none;
+        cursor: pointer;
+        height: 7%;
+        width: 25%;
+        opacity: 0.8;
+        border-radius: 5px;
+    }
+
+    .form-container .btn:hover,
+    .open-button:hover {
+        opacity: 1;
+    }
+</style>
 
 <body>
 
     <nav class="navbar navbar-inner navbar-inverse navbar-light">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png" width="100"></a>
-                <a class="navbar-brand "><img src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png" width="50"></a>
+                <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png"
+                        width="100"></a>
+                <a class="navbar-brand "><img
+                        src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png"
+                        width="50"></a>
 
             </div>
 
@@ -32,7 +121,9 @@
                 <li><a href="#">จัดการการจอง</a></li>
                 <li><a href="#">คนหนีเที่ยว</a></li>
                 <li class="hidden-xs">
-                    <a id="mibew-agent-button" class="live-mobile" href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank" onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th" border="0" alt="" /></a>
+                    <a id="mibew-agent-button" class="live-mobile" href="#" onclick="openForm()"><img
+                            src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th"
+                            border="0" alt="" /></a>
 
                 </li>
 
@@ -55,7 +146,8 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3" style="background-color: #F7F7F7; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div class="col-md-3"
+                style="background-color: #F7F7F7; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                 <br>
                 <p style="text-align: center; color: grey; font-size: large;">นโยบายความเป็นส่วนตัว</p>
                 <hr>
@@ -69,100 +161,171 @@
             </div>
             <div class="col-md-9" style="color: grey;">
                 <h4 style="color: #737373;">รับไมล์สะสม รอยัล ออร์คิด พลัส</h4>
-                <p>สมาชิกรอยัล ออร์คิด พลัส สามารถรับไมล์สะสม รวมถึงการแลกตั๋วรางวัล เมื่อโดยสารกับสายการบินไทยสมายล์ได้ ท่านสามารถดูตารางไมล์สะสมสายการบินไทยสมายล์และวิธีแลกตั๋วได้ที่ www.thaismileair.com/th/faq/thaismile
+                <p>สมาชิกรอยัล ออร์คิด พลัส สามารถรับไมล์สะสม รวมถึงการแลกตั๋วรางวัล เมื่อโดยสารกับสายการบินไทยสมายล์ได้
+                    ท่านสามารถดูตารางไมล์สะสมสายการบินไทยสมายล์และวิธีแลกตั๋วได้ที่
+                    www.thaismileair.com/th/faq/thaismile
                 </p>
                 <p>แลกตั๋วรางวัลกับไทยสมายล์</p>
-                <p>เมื่อสำรองที่นั่งรางวัลบัตรโดยสารและได้รับการยืนยันเรียบร้อยแล้ว ต้องมารับบัตรโดยสารภายใน 30 วัน มิฉะนั้นการสำรองรางวัลนั้นจะถูกยกเลิกโดยอัตโนมัติ รางวัลบัตรโดยสารสามารถออกบัตรโดยสารได้ทันทีที่สำนักงานการบินไทย บัตรโดยสารรางวัลจะมีอายุ
+                <p>เมื่อสำรองที่นั่งรางวัลบัตรโดยสารและได้รับการยืนยันเรียบร้อยแล้ว ต้องมารับบัตรโดยสารภายใน 30 วัน
+                    มิฉะนั้นการสำรองรางวัลนั้นจะถูกยกเลิกโดยอัตโนมัติ
+                    รางวัลบัตรโดยสารสามารถออกบัตรโดยสารได้ทันทีที่สำนักงานการบินไทย บัตรโดยสารรางวัลจะมีอายุ
                     1 ปี ท่านสามารถตรวจสอบตารางตั๋วรางวัลไทยสมายล์ได้ที่ www.thaismileair.com/th/faq/thaismile</p><br>
 
                 <h4 style="color: #737373;">บริการของว่าง และเครื่องดื่ม</h4>
                 <p>เรามีบริการของว่าง และเครื่องดื่มสำหรับทุกที่นั่ง ทั้งเที่ยวบินในประเทศและเที่ยวบินต่างประเทศ<br><br>
 
 
-                    <h4 style="color: #737373;">บริการอาหารเมนูพิเศษ</h4>
-                    <p>อาหารที่ทางสายการบินไทยสมายล์เตรียมไว้สำหรับผู้โดยสารทุกชั้นในทุกเที่ยวบินเป็นอาหารระดับคุณภาพและมีรสชาติดีเยี่ยม ผู้โดยสารบางท่านอาจต้องการสั่งอาหารเฉพาะทางหรืออาหารเฉพาะโรคและเพื่อตอบสนองทุกความต้องการของท่าน ทางสายการบินจึงเตรียมเมนูที่หลากหลายให้ผู้โดยสารเลือกในเวลาที่ท่านจองตั๋วเที่ยวบิน
-                    </p><br><br>
-                    <table class="table table-bordered" style="background-color: #EEEEEE;">
-                        <tr>
-                            <td>Vegetarian Hindu/Indian Vegetarian meal (AVML) - อาหารจำพวกเนื้อ ปลา และ สัตว์ปีก ส่วนอาหารที่มีส่วนผสมของหมู เจลาตินและไข่เป็นจำพวกอาหารต้องห้าม
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Infant/Baby food (BBML) - อาหารสำหรับเด็กที่มีอายุ 6-10 เดือน</td>
-                        </tr>
-                        <tr>
-                            <td>>Bland/Soft meal (BLML) - อาหารจืด อ่อน สำหรับผู้โดยสารที่มีอาการปวดท้องหรือมีปัญหาเกี่ยวกับลำไส้
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Child meal (CHML) - อาหารสำหรับเด็กที่มีอายุ 2 ปี หรือ มากกว่า 2 ปี อาหารชนิดนี้แนะนำสำหรับเด็กที่ไม่สามารถรับประทานอาหารที่บริการปกติบนเครื่องได้เนื่องจากมีรสจัดเกินไป
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Diabetic meal (DBML) - อาหารสำหรับผู้ป่วยโรคเบาหวาน ทั้งที่มีอินซูลีน และไม่มีอินซูลีน</td>
-                        </tr>
-                        <tr>
-                            <td>Fruit platter meal (FPML) - อาหารจานผลไม้ มีทั้งผลไม้สดและผลไม้แห้ง</td>
-                        </tr>
-                        <tr>
-                            <td>Gluten-Free meal (GFML) - อาหารปราศจากกลูเตน (โปรตีนจากข้าวไรย์ ข้าวบาร์เล่ย์ และข้าวโอ๊ต)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Hindu meal (HNML) - อาหารฮินดูเป็นอาหารที่ปรุงจากเนื้อลูกแกะ เนื้อปลา และเนื้ออื่น ๆ แต่ปราศจากเนื้อวัวและเนื้อหมู ส่วนผลิตภัณฑ์ที่ผลิตจากนมได้รับการอนุญาต
-                            </td>
-                            <tr>
-                                <td>Low-calorie meal (LCML) - อาหารพลังงานต่ำแต่มีคุณค่าทางโภชนาการ</td>
-                            </tr>
-                            <tr>
-                                <td>Low fat/cholesterol meal (LFML) - อาหารคอเลสเตอรอลต่ำ/ไขมันต่ำ</td>
-                            </tr>
-                            <tr>
-                                <td>Low sodium meal (LSML) - อาหารโซเดียมต่ำ หรือไม่มีส่วนประกอบของเกลือ</td>
-                            </tr>
-                            <tr>
-                                <td>Muslim meal (MOML) - อาหารมุสลิม ไม่มีส่วนประกอบของเนื้อหมู แฮม แบคอน แอลกอฮอล์โดยเป็นไปตามกฎของฮาลาล
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Non-Lactose meal (NLML) - อาหารที่มีแล็คโตสต่ำหรือปราศจากแล็คโตส (แล็คโตส คือน้ำตาลที่ผสมอยู่ในน้ำนม)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>No fish meal (NFML) - อาหารที่ไม่มีปลาเป็นส่วนประกอบ (เฉพาะ LH)</td>
-                            </tr>
-                            <tr>
-                                <td>Seafood meal (SFML) - อาหารทะเล</td>
-                            </tr>
-                            <tr>
-                                <td>Raw vegetarian meal (RVML) - อาหารมังสวิรัติ มีส่วนผสมของผักสดและผลไม้สด</td>
-                            </tr>
-                            <tr>
-                                <td>Strict European vegetarian meal (VGML) - อาหารมังสวิรัติแบบเคร่ง ปราศจากผลิตภัณฑ์จากเนื้อสัตว์ทุกประเภท
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Vegetarian Jain meal (VJML) - อาหารเจสำหรับผู้นับถือศาสนาเชน/หรือสำหรับคนอินเดียที่กินมังสวิรัติแบบเคร่ง
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Western vegetarian meal (VLML) - อาหารมังวิรัติ แบบไม่เคร่ง มีส่วนประกอบของนม ไข่ เนยแข็ง ผลไม้ ผัก ธัญพืช ถั่ว</td>
-                            </tr>
-                            <tr>
-                                <td>Vegetarian oriental meal (VOML) - อาหารเจแบบตะวันออก ปรุงตามสไตล์จีน</td>
-                            </tr>
-                    </table>
-                    <br>
-                    <h4 style="color: #737373;">สำรองที่นั่งได้ก่อนใคร ฟรี!</h4>
-                    <p>สำรองที่นั่งได้ก่อนใคร ฟรี! เพียงท่านเลือกเดินทางไปกับไทยสมายล์ ท่านก็สามารถใช้บริการสำรองที่นั่งออนไลน์ ท่านสามารถสำรองที่นั่งที่ต้องการได้ล่วงหน้าถึง 2 ชั่วโมงก่อนการเดินทาง โดยไม่เสียค่าใช้จ่ายใดๆ ท่าสามารถดูรายละเอียดขั้นตอนการสำรองที่นั่งได้จาก
-                        www.thaismileair.com/th/faq/thaismile
-                    </p><br>
+                <h4 style="color: #737373;">บริการอาหารเมนูพิเศษ</h4>
+                <p>อาหารที่ทางสายการบินไทยสมายล์เตรียมไว้สำหรับผู้โดยสารทุกชั้นในทุกเที่ยวบินเป็นอาหารระดับคุณภาพและมีรสชาติดีเยี่ยม
+                    ผู้โดยสารบางท่านอาจต้องการสั่งอาหารเฉพาะทางหรืออาหารเฉพาะโรคและเพื่อตอบสนองทุกความต้องการของท่าน
+                    ทางสายการบินจึงเตรียมเมนูที่หลากหลายให้ผู้โดยสารเลือกในเวลาที่ท่านจองตั๋วเที่ยวบิน
+                </p><br><br>
+                <table class="table table-bordered" style="background-color: #EEEEEE;">
+                    <tr>
+                        <td>Vegetarian Hindu/Indian Vegetarian meal (AVML) - อาหารจำพวกเนื้อ ปลา และ สัตว์ปีก
+                            ส่วนอาหารที่มีส่วนผสมของหมู เจลาตินและไข่เป็นจำพวกอาหารต้องห้าม
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Infant/Baby food (BBML) - อาหารสำหรับเด็กที่มีอายุ 6-10 เดือน</td>
+                    </tr>
+                    <tr>
+                        <td>>Bland/Soft meal (BLML) - อาหารจืด อ่อน
+                            สำหรับผู้โดยสารที่มีอาการปวดท้องหรือมีปัญหาเกี่ยวกับลำไส้
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Child meal (CHML) - อาหารสำหรับเด็กที่มีอายุ 2 ปี หรือ มากกว่า 2 ปี
+                            อาหารชนิดนี้แนะนำสำหรับเด็กที่ไม่สามารถรับประทานอาหารที่บริการปกติบนเครื่องได้เนื่องจากมีรสจัดเกินไป
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Diabetic meal (DBML) - อาหารสำหรับผู้ป่วยโรคเบาหวาน ทั้งที่มีอินซูลีน และไม่มีอินซูลีน</td>
+                    </tr>
+                    <tr>
+                        <td>Fruit platter meal (FPML) - อาหารจานผลไม้ มีทั้งผลไม้สดและผลไม้แห้ง</td>
+                    </tr>
+                    <tr>
+                        <td>Gluten-Free meal (GFML) - อาหารปราศจากกลูเตน (โปรตีนจากข้าวไรย์ ข้าวบาร์เล่ย์ และข้าวโอ๊ต)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hindu meal (HNML) - อาหารฮินดูเป็นอาหารที่ปรุงจากเนื้อลูกแกะ เนื้อปลา และเนื้ออื่น ๆ
+                            แต่ปราศจากเนื้อวัวและเนื้อหมู ส่วนผลิตภัณฑ์ที่ผลิตจากนมได้รับการอนุญาต
+                        </td>
+                    <tr>
+                        <td>Low-calorie meal (LCML) - อาหารพลังงานต่ำแต่มีคุณค่าทางโภชนาการ</td>
+                    </tr>
+                    <tr>
+                        <td>Low fat/cholesterol meal (LFML) - อาหารคอเลสเตอรอลต่ำ/ไขมันต่ำ</td>
+                    </tr>
+                    <tr>
+                        <td>Low sodium meal (LSML) - อาหารโซเดียมต่ำ หรือไม่มีส่วนประกอบของเกลือ</td>
+                    </tr>
+                    <tr>
+                        <td>Muslim meal (MOML) - อาหารมุสลิม ไม่มีส่วนประกอบของเนื้อหมู แฮม แบคอน
+                            แอลกอฮอล์โดยเป็นไปตามกฎของฮาลาล
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Non-Lactose meal (NLML) - อาหารที่มีแล็คโตสต่ำหรือปราศจากแล็คโตส (แล็คโตส
+                            คือน้ำตาลที่ผสมอยู่ในน้ำนม)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>No fish meal (NFML) - อาหารที่ไม่มีปลาเป็นส่วนประกอบ (เฉพาะ LH)</td>
+                    </tr>
+                    <tr>
+                        <td>Seafood meal (SFML) - อาหารทะเล</td>
+                    </tr>
+                    <tr>
+                        <td>Raw vegetarian meal (RVML) - อาหารมังสวิรัติ มีส่วนผสมของผักสดและผลไม้สด</td>
+                    </tr>
+                    <tr>
+                        <td>Strict European vegetarian meal (VGML) - อาหารมังสวิรัติแบบเคร่ง
+                            ปราศจากผลิตภัณฑ์จากเนื้อสัตว์ทุกประเภท
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vegetarian Jain meal (VJML) -
+                            อาหารเจสำหรับผู้นับถือศาสนาเชน/หรือสำหรับคนอินเดียที่กินมังสวิรัติแบบเคร่ง
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Western vegetarian meal (VLML) - อาหารมังวิรัติ แบบไม่เคร่ง มีส่วนประกอบของนม ไข่ เนยแข็ง
+                            ผลไม้ ผัก ธัญพืช ถั่ว</td>
+                    </tr>
+                    <tr>
+                        <td>Vegetarian oriental meal (VOML) - อาหารเจแบบตะวันออก ปรุงตามสไตล์จีน</td>
+                    </tr>
+                </table>
+                <br>
+                <h4 style="color: #737373;">สำรองที่นั่งได้ก่อนใคร ฟรี!</h4>
+                <p>สำรองที่นั่งได้ก่อนใคร ฟรี! เพียงท่านเลือกเดินทางไปกับไทยสมายล์
+                    ท่านก็สามารถใช้บริการสำรองที่นั่งออนไลน์ ท่านสามารถสำรองที่นั่งที่ต้องการได้ล่วงหน้าถึง 2
+                    ชั่วโมงก่อนการเดินทาง โดยไม่เสียค่าใช้จ่ายใดๆ ท่าสามารถดูรายละเอียดขั้นตอนการสำรองที่นั่งได้จาก
+                    www.thaismileair.com/th/faq/thaismile
+                </p><br>
 
-                    <h4 style="color: #737373;">ฟรีน้ำหนักสัมภาระ 20 กิโลกรัม</h4>
-                    <p>ท่านจะได้รับน้ำหนักกระเป๋าใต้ท้องเครื่องทันทีถึง 20 กิโลกรัมเมื่อซื้อตั๋วโดยสารชั้นสมายล์คลาส และ 30 กิโล
+                <h4 style="color: #737373;">ฟรีน้ำหนักสัมภาระ 20 กิโลกรัม</h4>
+                <p>ท่านจะได้รับน้ำหนักกระเป๋าใต้ท้องเครื่องทันทีถึง 20 กิโลกรัมเมื่อซื้อตั๋วโดยสารชั้นสมายล์คลาส และ 30
+                    กิโล
             </div>
         </div>
     </div>
+
+    <div class="allbank">
+        <div class="chat-popup2" id="myForm2">
+            <form action="/action_page.php" class="form-container2">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><img src="more.png" class="btn cancel"
+                    onclick="closeForm()" style="margin-left: -12px;">
+            </form>
+        </div>
+
+        <div class="chat-popup" id="myForm">
+
+            <form action="/action_page.php" class="form-container">
+                <img src="https://www.thaismileair.com/assets/v3/images/logo.png" style="width: 95px;"><br><br>
+
+                <p style="background-color: rgb(245, 128, 36); color: white; padding: 10px; font-size: 12px;">We are
+                    currently
+                    closed. Our regular business hours are from 7 am to 8 pm.
+                    <br>We apologies for any inconvenience caused.
+                    <br>Please leave a message and someone will get back to you shortly.
+                </p>
+
+                <label for="msg"><b>Your email:</b></label>
+
+                <input type="text" class="textboxclass2" style="margin-left: 5px;"><br><br>
+
+                <label for="msg"><b>Your name:</b></label>
+
+                <input type="text" class="textboxclass2" value=ผู้เยี่ยมชม style="margin-left: 4px;"><br><br>
+                <div style="display: flex;">
+                    <label for="msg" class="line1">
+                        <p style="margin-top: 0px;"><b>Message:</b></p>
+                    </label>
+                    <textarea id="w3review" name="w3review" class="line2"></textarea>
+                </div><br>
+                <button type="submit" class="btn">Send</button><br><br>
+                <p style="color: rgb(245, 128, 36); font-size: 15px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;ขณะนี้อยู่นอกเวลาทำการ
+                        ท่านสามารถติดต่อด้านบัตรโดยสารอีกครั้งในเวลา 07.00 ถึง 20.00 น.</b></p><br><br><br><br>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+            document.getElementById("myForm2").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+            document.getElementById("myForm2").style.display = "none";
+        }
+    </script>
+
     <!--footer-->
     <footer style="margin-top: 1%;">
         <div class="container-fluid" style="background-color: #333333; color: gray;">
@@ -237,7 +400,9 @@
                             <a href="https:\/\/www.facebook.com\/THAISmileAirways\/"><img src="footer2.png"></a><br>
                             <a href="https:\/\/www.youtube.com\/user\/ThaiSmileAirways"><img src="footer3.png"></a>
                             <a href="https:\/\/www.instagram.com\/accounts\/login\/"><img src="footer4.png"></a><br>
-                            <a href="https:\/\/www.tripadvisor.com\/WidgetEmbed-collectreview?lang=en_US&locationId=8729212&partnerId=1A097AE48E63472EA3DAE61C37CF9A42&display=true&allowMobile=true&"><img src="footer5.png"></a>
+                            <a
+                                href="https:\/\/www.tripadvisor.com\/WidgetEmbed-collectreview?lang=en_US&locationId=8729212&partnerId=1A097AE48E63472EA3DAE61C37CF9A42&display=true&allowMobile=true&"><img
+                                    src="footer5.png"></a>
                             <a href="https:\/\/twitter.com\/ThaiSmileAirway"><img src="footer6.png"></a><br><br><br>
                         </div>
                         <div class="col-md-5">

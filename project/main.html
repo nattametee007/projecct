@@ -16,6 +16,9 @@
     <script src="change.js"></script>
 
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="owl.carousel.min.css">
     <link rel="stylesheet" href="owl.theme.default.min.css">
 
@@ -25,54 +28,59 @@
 
 </head>
 
+
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid" style="height: 60px;">
             <div class="logo-thaismile" style="margin-left: 25px;">
                 <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png"
-                width="100.4" height="55"></a>
+                        width="100.4" height="55"></a>
                 <a class="navbar-brand "><img
-                    src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png"
-                    width="43" height="55"></a>
+                        src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png"
+                        width="43" height="55"></a>
             </div>
-            
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <form class="d-flex" style="padding-left: 500px;">
-                <ul id="b" class="nav navbar-inner navbar-nav navbar-left" style="margin-top: 50px ;">
-                    <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">ข้อเสนอที่น่าสนใจ</a></li>
-                    <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">ข่าวสารอัพเดท</a></li>
-                    <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">จัดการการจอง</a></li>
-                    <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">คนหนีเที่ยว</a></li>
-                    <li class="hidden-xs" style="margin-right: 15px;">
-                        <a id="mibew-agent-button" class="live-mobile"
-                            href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank"
-                            onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img
-                                src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th"
-                                border="0" alt="" /></a>
 
-                    </li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <form class="d-flex" style="padding-left: 500px;">
+                    <ul id="b" class="nav navbar-inner navbar-nav navbar-left" style="margin-top: 50px ;">
+                        <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">ข้อเสนอที่น่าสนใจ</a></li>
+                        <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">ข่าวสารอัพเดท</a></li>
+                        <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">จัดการการจอง</a></li>
+                        <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">คนหนีเที่ยว</a></li>
+                        <li class="hidden-xs" style="margin-right: 15px;">
+                            <a id="mibew-agent-button" class="live-mobile"
+                                href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank"
+                                onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img
+                                    src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th"
+                                    border="0" alt="" /></a>
 
-                    <li><a background-color: transparent; href="#" style="margin-right: 15px; font-size: 17px;" ><span
-                                class="glyphicon glyphicon-user" ></span>ล็อคอิน</a>
-                    </li>
-                    <li><a background-color: transparent; href="#" ><span
-                                class="glyphicon glyphicon-align-right"></span></a>
-                    </li>
+                        </li>
 
-                    <li >
-                        <a class="language-sub" style="font-size: 17px;" >TH  </span><img
-                                src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" width="50"> </a>
+                        <li><a background-color: transparent; href="#"
+                                style="margin-right: 15px; font-size: 17px;"><span
+                                    class="glyphicon glyphicon-user"></span>ล็อคอิน</a>
+                        </li>
+                        <li><a background-color: transparent; href="#"><span
+                                    class="glyphicon glyphicon-align-right"></span></a>
+                        </li>
 
-                    </li>
-                </ul>
-            </form>
-          </div>
+                        <li>
+                            <a class="language-sub" style="font-size: 17px;">TH </span><img
+                                    src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" width="50">
+                            </a>
+
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </div>
-      </nav>
-    
+    </nav>
+
     
     <div class="container-fluid" style="text-align: center; padding-top: 100px; padding-left: 80px;">
         <div class="bookingtab-container" style="padding-left: 150px;">
@@ -149,38 +157,32 @@
         </div>
         <div class="covid-container" id="covid-container" style="margin-top: 3%; display: none; ">
             <div class="row container">
-                <div class="col-6 covid-group container" style="text-align: right;">
+                <div class="col-6 covid-group container" style="text-align: center; position: relative; left: 150px;">
                     <h5 style="font-size: 20px;  color: #f58024; ">ศูนย์ข้อมูลช่วยเหลือ</h5>
                     <h6 style="font-size: 15px; color: #939598; ">ศูนย์ช่วยเหลือโควิด-19</h6>
                     <img src="covid1.png" width="320px" height="90px">
                 </div>
-                <div class="col-6 covid-group" style="text-align: left;">
+                <div class="col-6 covid-group" style="text-align: center; position: relative; right: 100px;">
                     <h5 style="font-size: 20px;  color: #f58024; ">ออกตั๋วโดยใช้เครดิตวงเงิน(EMD)</h5>
                     <h6 style="font-size: 15px;  color: #939598; ">แบบฟอร์มการออกบัตรโดยสารโดยใช้หมายเลข EMD</h6>
                     <img src="covid2.png" width="320px" height="90px">
                 </div>
 
-                <div class="col-6 covid-group container" style="text-align: left;">
-                    <h5 style="font-size: 20px;  color: #f58024;">ออกตั๋วโดยใช้เครดิตวงเงิน(EMD)</h5>
-                    <h6 style="font-size: 15px; color: #939598; ">แบบฟอร์มการออกบัตรโดยสารโดยใช้หมายเลข EMD</h6>
-                    <img src="covid2.png" width="320px" height="90px">
-                </div>
 
             </div>
         </div>
         <div class="hotel-container" id="hotel-container" style="margin-top: 3%; display: none; ">
             <div class="row">
-                <div class="col-6 hotel-group" style="text-align: right;">
+                <div class="col-6 hotel-group" style="text-align: center; position: relative; left: 160px;">
                     <h5 style="font-size: 20px;  color: #f58024;">โรงแรมและที่พักโดย Booking.com</h5>
                     <h6 style="font-size: 15px; color: #939598; text-align: center;">
                         ค้นหาที่พักที่ดีที่สุดสำหรับคุณ
                     </h6>
 
-                    <h6 style="font-size: 15px; color: #939598;">ค้นหาที่พักที่ดีที่สุดสำหรับคุณ</h6>
 
                     <img src="hotel1.png" width="320px" height="90px">
                 </div>
-                <div class="col-6 hotel-group" style="text-align: left;">
+                <div class="col-6 hotel-group" style="text-align: center; position: relative; right: 120px;">
                     <h5 style="font-size: 20px;  color: #f58024; ">โรงแรมและที่พักโดย Trip.com</h5>
                     <h6 style="font-size: 15px;  color: #939598; ">ค้นหาที่พักที่ใช่สำหรับคุณ</h6>
                     <img src="hotel2.png" width="320px" height="90px">
@@ -280,94 +282,101 @@
 
             </div>
         </div>
-        <div class="container-fluid service-container" id="service-container" style=" margin-top: 3%; display:none; margin-left: 50px;">
+        <div class="container-fluid service-container" id="service-container"
+            style=" margin-top: 3%; display:none; margin-left: 50px;">
             <div class="item-banner">
-            <div class="service-slider owl-carousel owl-theme">
-                <div class="item">
-                    <div class="box2" style="width: 70%;">
-                        <p class="herotab-title-txt" >
-                            เช่าเหมาลำไทยสมายล์ </p>
-                        <p class="herotab-txt">
-                            ออกแบบการเดินทางของคุณและเพลิดเพลินกับบริการของไทยสมายล์ </p>
-                        <br>
-                        <img class="herotab-img " width="320px" height="90px" src="service1.png" style="position: relative; top: -25px;">
-                    </div>
-                </div>
-                <div class="item">
-                <div class="box2" style="width: 70%;">
-                    <a href="/th/insurance/" target="_blank">
-                        <div class="herotab-group fade-in" style="width: 100%;">
+                <div class="service-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="box2" style="width: 70%;">
                             <p class="herotab-title-txt">
-                                ประกันภัยการเดินทาง </p>
+                                เช่าเหมาลำไทยสมายล์ </p>
                             <p class="herotab-txt">
-                                เพิ่มความมั่นใจให้กับการเดินทางในต่างแดนของคุณแบบไร้กังวล </p>
+                                ออกแบบการเดินทางของคุณและเพลิดเพลินกับบริการของไทยสมายล์ </p>
                             <br>
-                            <img class="herotab-img" width="320px" height="90px" src="service2.png " style="position: relative; top: -9px;" >
+                            <img class="herotab-img " width="320px" height="90px" src="service1.png"
+                                style="position: relative; top: -25px;">
                         </div>
-                    </a>
-                </div>
-                </div>
-                <div class="item">
-                <div class="box2" style="width: 70%;">
-                    <a href="/th/flightpass" target="_blank">
-                        <div class="herotab-group fade-in" style="width: 100%;">
-                            <p class="herotab-title-txt">
-                                FLIGHT PASS </p>
-                            <p class="herotab-txt" style="margin-bottom: 0;">
-                                บัตรโดยสารเที่ยวบินซื้อล่วงหน้า </p>
-                            <p class="herotab-txt">
-                                ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
-                            <img class="herotab-img" width="320px" height="90px" src="service3.png" style="position: relative; top: -2px;">
-                        </div>
-                    </a>
-                </div>
-                </div>
-                <div class="item">
-                    <div class="box2" style="width: 70%;">
-                        <p class="herotab-title-txt" >
-                            เช่าเหมาลำไทยสมายล์ </p>
-                        <p class="herotab-txt">
-                            ออกแบบการเดินทางของคุณและเพลิดเพลินกับบริการของไทยสมายล์ </p>
-                        <br>
-                        <img class="herotab-img " width="320px" height="90px" src="service1.png" style="position: relative; top: -25px;">
                     </div>
-                </div>
-                <div class="item">
-                <div class="box2" style="width: 70%;">
-                    <a href="/th/insurance/" target="_blank">
-                        <div class="herotab-group fade-in" style="width: 100%;">
+                    <div class="item">
+                        <div class="box2" style="width: 70%;">
+                            <a href="/th/insurance/" target="_blank">
+                                <div class="herotab-group fade-in" style="width: 100%;">
+                                    <p class="herotab-title-txt">
+                                        ประกันภัยการเดินทาง </p>
+                                    <p class="herotab-txt">
+                                        เพิ่มความมั่นใจให้กับการเดินทางในต่างแดนของคุณแบบไร้กังวล </p>
+                                    <br>
+                                    <img class="herotab-img" width="320px" height="90px" src="service2.png "
+                                        style="position: relative; top: -9px;">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box2" style="width: 70%;">
+                            <a href="/th/flightpass" target="_blank">
+                                <div class="herotab-group fade-in" style="width: 100%;">
+                                    <p class="herotab-title-txt">
+                                        FLIGHT PASS </p>
+                                    <p class="herotab-txt" style="margin-bottom: 0;">
+                                        บัตรโดยสารเที่ยวบินซื้อล่วงหน้า </p>
+                                    <p class="herotab-txt">
+                                        ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
+                                    <img class="herotab-img" width="320px" height="90px" src="service3.png"
+                                        style="position: relative; top: -2px;">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box2" style="width: 70%;">
                             <p class="herotab-title-txt">
-                                ประกันภัยการเดินทาง </p>
+                                เช่าเหมาลำไทยสมายล์ </p>
                             <p class="herotab-txt">
-                                เพิ่มความมั่นใจให้กับการเดินทางในต่างแดนของคุณแบบไร้กังวล </p>
+                                ออกแบบการเดินทางของคุณและเพลิดเพลินกับบริการของไทยสมายล์ </p>
                             <br>
-                            <img class="herotab-img" width="320px" height="90px" src="service2.png " style="position: relative; top: -9px;" >
+                            <img class="herotab-img " width="320px" height="90px" src="service1.png"
+                                style="position: relative; top: -25px;">
                         </div>
-                    </a>
-                </div>
-                </div>
-                <div class="item">
-                <div class="box2" style="width: 70%;">
-                    <a href="/th/flightpass" target="_blank">
-                        <div class="herotab-group fade-in" style="width: 100%;">
-                            <p class="herotab-title-txt">
-                                FLIGHT PASS </p>
-                            <p class="herotab-txt" style="margin-bottom: 0;">
-                                บัตรโดยสารเที่ยวบินซื้อล่วงหน้า </p>
-                            <p class="herotab-txt">
-                                ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
-                            <img class="herotab-img" width="320px" height="90px" src="service3.png" style="position: relative; top: -2px;">
+                    </div>
+                    <div class="item">
+                        <div class="box2" style="width: 70%;">
+                            <a href="/th/insurance/" target="_blank">
+                                <div class="herotab-group fade-in" style="width: 100%;">
+                                    <p class="herotab-title-txt">
+                                        ประกันภัยการเดินทาง </p>
+                                    <p class="herotab-txt">
+                                        เพิ่มความมั่นใจให้กับการเดินทางในต่างแดนของคุณแบบไร้กังวล </p>
+                                    <br>
+                                    <img class="herotab-img" width="320px" height="90px" src="service2.png "
+                                        style="position: relative; top: -9px;">
+                                </div>
+                            </a>
                         </div>
-                    </a>
+                    </div>
+                    <div class="item">
+                        <div class="box2" style="width: 70%;">
+                            <a href="/th/flightpass" target="_blank">
+                                <div class="herotab-group fade-in" style="width: 100%;">
+                                    <p class="herotab-title-txt">
+                                        FLIGHT PASS </p>
+                                    <p class="herotab-txt" style="margin-bottom: 0;">
+                                        บัตรโดยสารเที่ยวบินซื้อล่วงหน้า </p>
+                                    <p class="herotab-txt">
+                                        ยิ่งซื้อเที่ยวบินมาก ยิ่งประหยัดได้มากกว่า </p>
+                                    <img class="herotab-img" width="320px" height="90px" src="service3.png"
+                                        style="position: relative; top: -2px;">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-                </div>
-                
             </div>
-        </div>
-        
+
         </div>
     </div>
-
+    
 
     <section>
         <div class="sec-hero">
@@ -954,11 +963,513 @@
 
 
 
+    <div class="col-xs-12">
+        <body>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-img" style="height: 100%;">
+                        <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/3001/l_214747608_230497958903485_7332024095643430381_n.jpg">
+                        <div class="text-on-img">
+                            <div class="title-on-img">
+                                <h3 class="title-header">“ ชวนหนีไปเปิดตา หาที่กินเที่ยวพัก ”</h3>
+                                <p class="subtitle-header"><b>บันทึกคนหนีเที่ยว</b></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content-img">
+                            <h2 class="text-white title skew-revers">
+                                <br>
+                                พาไปตัดเกาะพีพี หินสวย น้ำใส ทะเลไทยสวนระดับโลก
+                            </h2> 
+                            <div class="province-img">
+                                <div class="line"></div>
+                                <h4 class="province-name-outer">
+                                    กระบี่
+                                </h4>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="privilege">
+                            <div class="privilege-bg">
+                                <div class="privilege-left">
+                                    <div class="after-black">
+                                        <span class="bg-black-left">
+                                        
+                                    </span></div>
+                                </div>
+                                <div class="privilege-right">
+                                    <div class="after-black">
+                                        <span class="bg-black-right">
+                                        
+                                    </span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-list">
+                            <div class="start-price">
+                                <div class="booking-now">
+                                     <button>
+                                         <a style="color:white">จองเลย</a>
+                                     </button>
+                                </div>
+                                <div class="price-content">
+                                    <h5 class="text-white m-0 price-top-text">เริ่มต้นที่</h5>
+                                    <h2 class="text-thaismile m-0 pricce-mid-text">
+                                        <b>1,230</b>
+                                    </h2>
+                                    <h5 class="text-white m-0 text-right price-bot-text">บาท</h5>
+                                </div>
+                            </div>
+                            <div class="related-text">
+                                <p class="m-0 frist-related text-center" >สิทธิพิเศษ</p>
+                                <p class="m-0 last-related text-center" >ที่น่าสนใจ</p>
+                                <img class="privilege-img"  style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 "> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img" style="height: 100%;">
+                        <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2763/l_EJ-48resize.jpg">
+                        <div class="text-on-img">
+                            <div class="title-on-img">
+                                <h3 class="title-header">“ เช็คอินก่อนใคร หนีไปเที่ยวด้วยกัน ”</h3>
+                                <p class="subtitle-header"><b>บันทึกคนหนีเที่ยว</b></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content-img">
+                            <h2 class="text-white title skew-revers">
+                                <br>
+                                นอนนับดาวสุดโรแมนติกในโดมใสกลางป่า Glamping ที่เชียงใหม่
+                            </h2> 
+                            <div class="province-img">
+                                <div class="line"></div>
+                                <h4 class="province-name-outer">
+                                    เชียงใหม่
+                                </h4>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="privilege">
+                            <div class="privilege-bg">
+                                <div class="privilege-left">
+                                    <div class="after-black">
+                                        <span class="bg-black-left">
+                                        
+                                    </span></div>
+                                </div>
+                                <div class="privilege-right">
+                                    <div class="after-black">
+                                        <span class="bg-black-right">
+                                        
+                                    </span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-list">
+                            <div class="start-price">
+                                <div class="booking-now">
+                                     <button>
+                                         <a style="color:white">จองเลย</a>
+                                     </button>
+                                </div>
+                                <div class="price-content">
+                                    <h5 class="text-white m-0 price-top-text">เริ่มต้นที่</h5>
+                                    <h2 class="text-thaismile m-0 pricce-mid-text">
+                                        <b>1,090</b>
+                                    </h2>
+                                    <h5 class="text-white m-0 text-right price-bot-text">บาท</h5>
+                                </div>
+                            </div>
+                            <div class="related-text">
+                                <p class="m-0 frist-related text-center" >สิทธิพิเศษ</p>
+                                <p class="m-0 last-related text-center" >ที่น่าสนใจ</p>
+                                <img class="privilege-img"  style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 "> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img" style="height: 100%;">
+                        <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/3028/l_GettyImages-1144542701%20(5)%20(1).jpg">
+                        <div class="text-on-img">
+                            <div class="title-on-img">
+                                <h3 class="title-header">“ เช็คอินก่อนใคร หนีไปเที่ยวกัน ”</h3>
+                                <p class="subtitle-header"><b>บันทึกคนหนีเที่ยว</b></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content-img">
+                            <h2 class="text-white title skew-revers">
+                                <br>
+                                ตะลุยสามเกาะสุดฮอตกับ 3 วัน 2 คืนสุด  เที่ยวกระบี่...มาทั้งทีต้องไปให้คุ้ม
+                            </h2> 
+                            <div class="province-img">
+                                <div class="line"></div>
+                                <h4 class="province-name-outer">
+                                    กระบี่
+                                </h4>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="privilege">
+                            <div class="privilege-bg">
+                                <div class="privilege-left">
+                                    <div class="after-black">
+                                        <span class="bg-black-left">
+                                        
+                                    </span></div>
+                                </div>
+                                <div class="privilege-right">
+                                    <div class="after-black">
+                                        <span class="bg-black-right">
+                                        
+                                    </span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-list">
+                            <div class="start-price">
+                                <div class="booking-now">
+                                     <button>
+                                         <a style="color:white">จองเลย</a>
+                                     </button>
+                                </div>
+                                <div class="price-content">
+                                    <h5 class="text-white m-0 price-top-text">เริ่มต้นที่</h5>
+                                    <h2 class="text-thaismile m-0 pricce-mid-text">
+                                        <b>1,230</b>
+                                    </h2>
+                                    <h5 class="text-white m-0 text-right price-bot-text">บาท</h5>
+                                </div>
+                            </div>
+                            <div class="related-text">
+                                <p class="m-0 frist-related text-center" >สิทธิพิเศษ</p>
+                                <p class="m-0 last-related text-center" >ที่น่าสนใจ</p>
+                                <img class="privilege-img"  style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 "> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img" style="height: 100%;">
+                        <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2969/l_214600823_4436038586432883_5066927913775983263_n.jpg">
+                        <div class="text-on-img">
+                            <div class="title-on-img">
+                                <h3 class="title-header">“ เช็คอินก่อนใคร หนีไปเที่ยวกัน ”</h3>
+                                <p class="subtitle-header"><b>บันทึกคนหนีเที่ยว</b></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content-img">
+                            <h2 class="text-white title skew-revers">
+                                <br>
+                                หมู่บ้านเล็กๆกลางหุบเขา ชีวิตง่ายๆ กับมนต์เสน่ห์ที่ไม่ว่าใครก็ต้องตกหลุมรัก
+                            </h2> 
+                            <div class="province-img">
+                                <div class="line"></div>
+                                <h4 class="province-name-outer">
+                                    เชียงใหม่
+                                </h4>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="privilege">
+                            <div class="privilege-bg">
+                                <div class="privilege-left">
+                                    <div class="after-black">
+                                        <span class="bg-black-left">
+                                        
+                                    </span></div>
+                                </div>
+                                <div class="privilege-right">
+                                    <div class="after-black">
+                                        <span class="bg-black-right">
+                                        
+                                    </span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-list">
+                            <div class="start-price">
+                                <div class="booking-now">
+                                     <button>
+                                         <a style="color:white">จองเลย</a>
+                                     </button>
+                                </div>
+                                <div class="price-content">
+                                    <h5 class="text-white m-0 price-top-text">เริ่มต้นที่</h5>
+                                    <h2 class="text-thaismile m-0 pricce-mid-text">
+                                        <b>1,090</b>
+                                    </h2>
+                                    <h5 class="text-white m-0 text-right price-bot-text">บาท</h5>
+                                </div>
+                            </div>
+                            <div class="related-text">
+                                <p class="m-0 frist-related text-center" >สิทธิพิเศษ</p>
+                                <p class="m-0 last-related text-center" >ที่น่าสนใจ</p>
+                                <img class="privilege-img"  style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 "> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img" style="height: 100%;">
+                        <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2965/l_crew%20hkt%2002.1.jpg">
+                        <div class="text-on-img">
+                            <div class="title-on-img">
+                                <h3 class="title-header">“ ใครอยากเที่ยว ตามมา! ”</h3>
+                                <p class="subtitle-header"><b>บันทึกคนหนีเที่ยว</b></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content-img">
+                            <h2 class="text-white title skew-revers">
+                                <br>
+                                ถึงงบจะน้อย ก็บินไปลอยทะเลที่ภูเก็ตได้นะคะ
+                            </h2> 
+                            <div class="province-img">
+                                <div class="line"></div>
+                                <h4 class="province-name-outer">
+                                    ภูเก็ต
+                                </h4>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="privilege">
+                            <div class="privilege-bg">
+                                <div class="privilege-left">
+                                    <div class="after-black">
+                                        <span class="bg-black-left">
+                                        
+                                    </span></div>
+                                </div>
+                                <div class="privilege-right">
+                                    <div class="after-black">
+                                        <span class="bg-black-right">
+                                        
+                                    </span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-list">
+                            <div class="start-price">
+                                <div class="booking-now">
+                                     <button>
+                                         <a style="color:white">จองเลย</a>
+                                     </button>
+                                </div>
+                                <div class="price-content">
+                                    <h5 class="text-white m-0 price-top-text">เริ่มต้นที่</h5>
+                                    <h2 class="text-thaismile m-0 pricce-mid-text">
+                                        <b>1,180</b>
+                                    </h2>
+                                    <h5 class="text-white m-0 text-right price-bot-text">บาท</h5>
+                                </div>
+                            </div>
+                            <div class="related-text">
+                                <p class="m-0 frist-related text-center" >สิทธิพิเศษ</p>
+                                <p class="m-0 last-related text-center" >ที่น่าสนใจ</p>
+                                <img class="privilege-img"  style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 "> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img" style="height: 100%;">
+                        <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2953/l_wangtarn%20valley%2004.jpg">
+                        <div class="text-on-img">
+                            <div class="title-on-img">
+                                <h3 class="title-header">“ ใครอยากเที่ยว ตามมา! ”</h3>
+                                <p class="subtitle-header"><b>บันทึกคนหนีเที่ยว</b></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content-img">
+                            <h2 class="text-white title skew-revers">
+                                <br>
+                                3 สถานที่เที่ยวเชียงใหม่ ไปเที่ยวเมื่อไหร่ก็ไม่เคยเบื่อ
+                            </h2> 
+                            <div class="province-img">
+                                <div class="line"></div>
+                                <h4 class="province-name-outer">
+                                    เชียงใหม่
+                                </h4>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="privilege">
+                            <div class="privilege-bg">
+                                <div class="privilege-left">
+                                    <div class="after-black">
+                                        <span class="bg-black-left">
+                                        
+                                    </span></div>
+                                </div>
+                                <div class="privilege-right">
+                                    <div class="after-black">
+                                        <span class="bg-black-right">
+                                        
+                                    </span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-list">
+                            <div class="start-price">
+                                <div class="booking-now">
+                                     <button>
+                                         <a style="color:white">จองเลย</a>
+                                     </button>
+                                </div>
+                                <div class="price-content">
+                                    <h5 class="text-white m-0 price-top-text">เริ่มต้นที่</h5>
+                                    <h2 class="text-thaismile m-0 pricce-mid-text">
+                                        <b>1,090</b>
+                                    </h2>
+                                    <h5 class="text-white m-0 text-right price-bot-text">บาท</h5>
+                                </div>
+                            </div>
+                            <div class="related-text">
+                                <p class="m-0 frist-related text-center" >สิทธิพิเศษ</p>
+                                <p class="m-0 last-related text-center" >ที่น่าสนใจ</p>
+                                <img class="privilege-img"  style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 "> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide"> <div class="bg-img" style="height: 100%;">
+                    <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2927/l_536124.jpg">
+                    <div class="text-on-img">
+                        <div class="title-on-img">
+                            <h3 class="title-header">“ ชวนหนีไปเปิดตา หาที่กินเที่ยวพัก ”</h3>
+                            <p class="subtitle-header"><b>บันทึกคนหนีเที่ยว</b></p>
+                            
+                        </div>
+                    </div>
+                    <div class="content-img">
+                        <h2 class="text-white title skew-revers">
+                            <br>
+                            เที่ยวสวนส้มจินจู แลนด์มาร์คใหม่ อ.แม่ริม จ.เชียงใหม่
+                        </h2> 
+                        <div class="province-img">
+                            <div class="line"></div>
+                            <h4 class="province-name-outer">
+                                เชียงใหม่
+                            </h4>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div class="privilege">
+                        <div class="privilege-bg">
+                            <div class="privilege-left">
+                                <div class="after-black">
+                                    <span class="bg-black-left">
+                                    
+                                </span></div>
+                            </div>
+                            <div class="privilege-right">
+                                <div class="after-black">
+                                    <span class="bg-black-right">
+                                    
+                                </span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-list">
+                        <div class="start-price">
+                            <div class="booking-now">
+                                 <button>
+                                     <a style="color:white">จองเลย</a>
+                                 </button>
+                            </div>
+                            <div class="price-content">
+                                <h5 class="text-white m-0 price-top-text">เริ่มต้นที่</h5>
+                                <h2 class="text-thaismile m-0 pricce-mid-text">
+                                    <b>1,090</b>
+                                </h2>
+                                <h5 class="text-white m-0 text-right price-bot-text">บาท</h5>
+                            </div>
+                        </div>
+                        <div class="related-text">
+                            <p class="m-0 frist-related text-center" >สิทธิพิเศษ</p>
+                            <p class="m-0 last-related text-center" >ที่น่าสนใจ</p>
+                            <img class="privilege-img"  style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 "> 
+                        </div>
+                    </div>
+                </div></div>
+                <div class="swiper-slide"> <div class="bg-img" style="height: 100%;">
+                    <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2920/l_Intercontinental_cover1.jpg">
+                    <div class="text-on-img">
+                        <div class="title-on-img">
+                            <h3 class="title-header">“ ชวนหนีไปเปิดตา หาที่กินเที่ยวพัก ”</h3>
+                            <p class="subtitle-header"><b>บันทึกคนหนีเที่ยว</b></p>
+                            
+                        </div>
+                    </div>
+                    <div class="content-img">
+                        <h2 class="text-white title skew-revers">
+                            <br>
+                            ลงใต้ไป "ภูเก็ต"  รวบรวมมาให้ทั้งที่พัก กิจกรรม และ ร้านอาหารจัดว่าเด็ด
+                        </h2> 
+                        <div class="province-img">
+                            <div class="line"></div>
+                            <h4 class="province-name-outer">
+                                ภูเก็ต
+                            </h4>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div class="privilege">
+                        <div class="privilege-bg">
+                            <div class="privilege-left">
+                                <div class="after-black">
+                                    <span class="bg-black-left">
+                                    
+                                </span></div>
+                            </div>
+                            <div class="privilege-right">
+                                <div class="after-black">
+                                    <span class="bg-black-right">
+                                    
+                                </span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-list">
+                        <div class="start-price">
+                            <div class="booking-now">
+                                 <button>
+                                     <a style="color:white">จองเลย</a>
+                                 </button>
+                            </div>
+                            <div class="price-content">
+                                <h5 class="text-white m-0 price-top-text">เริ่มต้นที่</h5>
+                                <h2 class="text-thaismile m-0 pricce-mid-text">
+                                    <b>1,180</b>
+                                </h2>
+                                <h5 class="text-white m-0 text-right price-bot-text">บาท</h5>
+                            </div>
+                        </div>
+                        <div class="related-text">
+                            <p class="m-0 frist-related text-center" >สิทธิพิเศษ</p>
+                            <p class="m-0 last-related text-center" >ที่น่าสนใจ</p>
+                            <img class="privilege-img"  style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 "> 
+                        </div>
+                    </div>
+                </div></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+    </div>
+    </div>
 
 
-
-
-
+    <br>
+    <br>
+    <br>
     <h1 style="color: #f58024; text-align: center; font-size: 42px;">สิ่งที่น่าสนใจ</h1>
 
     <br>
@@ -1096,17 +1607,17 @@
                                     บาท เมื่อใช้จ่าย<br>ด้วยบัตร UnionPay</h4>
                                 <br>
                                 <br>
-                    <p style="font-size: 14px; color:#666666 ">เมื่อใช้จ่ายตั้งแต่ 2,000
+                                <p style="font-size: 14px; color:#666666 ">เมื่อใช้จ่ายตั้งแต่ 2,000
                                     บาทขึ้นไป
                                     ผ่านเว็บไซต์<br>www.thaismileair.com ระยะเวลากิจกรรม 1 พฤศจิกายน 2564 - 31
                                     <br>มกราคม 2565 *จำกัดสิทธิ์ 2,000 ท่านแรก*
-                                    </p>
-                                    =======
-                                    <p style="font-size: 14px; color:#666666 ">เมื่อใช้จ่ายตั้งแต่ 2,000 บาทขึ้นไป
-                                        ผ่านเว็บไซต์
-                                        <br>www.thaismileair.com ระยะเวลากิจกรรม 1 พฤศจิกายน 2564 - 31
-                                        <br>มกราคม 2565 *จำกัดสิทธิ์ 2,000 ท่านแรก*
-                                    </p>
+                                </p>
+                                =======
+                                <p style="font-size: 14px; color:#666666 ">เมื่อใช้จ่ายตั้งแต่ 2,000 บาทขึ้นไป
+                                    ผ่านเว็บไซต์
+                                    <br>www.thaismileair.com ระยะเวลากิจกรรม 1 พฤศจิกายน 2564 - 31
+                                    <br>มกราคม 2565 *จำกัดสิทธิ์ 2,000 ท่านแรก*
+                                </p>
 
                             </div>
                             <div>
@@ -1355,15 +1866,15 @@
                             <a href="https:\/\/www.facebook.com\/THAISmileAirways\/"><img src="footer2.png"></a><br>
                             <a href="https:\/\/www.youtube.com\/user\/ThaiSmileAirways"><img src="footer3.png"></a>
                             <a href="https:\/\/www.instagram.com\/accounts\/login\/"><img src="footer4.png"></a><br>
-                          <a
+                            <a
                                 href="https:\/\/www.tripadvisor.com\/WidgetEmbed-collectreview?lang=en_US&locationId=8729212&partnerId=1A097AE48E63472EA3DAE61C37CF9A42&display=true&allowMobile=true&">
                                 <img src="footer5.png"></a>
-                         
-                                <a
-                                    href="https:\/\/www.tripadvisor.com\/WidgetEmbed-collectreview?lang=en_US&locationId=8729212&partnerId=1A097AE48E63472EA3DAE61C37CF9A42&display=true&allowMobile=true&"><img
-                                        src="footer5.png"></a>
-                               
-                                <a href="https:\/\/twitter.com\/ThaiSmileAirway"><img src="footer6.png"></a><br><br><br>
+
+                            <a
+                                href="https:\/\/www.tripadvisor.com\/WidgetEmbed-collectreview?lang=en_US&locationId=8729212&partnerId=1A097AE48E63472EA3DAE61C37CF9A42&display=true&allowMobile=true&"><img
+                                    src="footer5.png"></a>
+
+                            <a href="https:\/\/twitter.com\/ThaiSmileAirway"><img src="footer6.png"></a><br><br><br>
                         </div>
                         <div class="col-md-5">
                             <p style="font-size: 50px; color: #f58024; font-weight: bolder;">1181</p><br><br><br>
@@ -1372,38 +1883,40 @@
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
+        </div>
+
+        
 
         </div>
-            <div class="row" style="background-color: #f58027;">
-                <br>
-                <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL
-                    RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
-                </p>
-                <br>
-               
-            </div>
-           
-            <div class="row" style="background-color: #f58027;">
-                <br>
-                <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL
-                    RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
-                </p>
-                <br>
-            </div>
-            <div class="row" style="background-color: #f58027;">
-                <br>
-                <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL
-                    RIGHTS
-                    RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
-                </p>
-                <br>
-                </div>
-               
+        <div class="row" style="background-color: #f58027;">
+            <br>
+            <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL
+                RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
+            </p>
+            <br>
 
-                </div>
+        </div>
+
+        <div class="row" style="background-color: #f58027;">
+            <br>
+            <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL
+                RIGHTS RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
+            </p>
+            <br>
+        </div>
+        <div class="row" style="background-color: #f58027;">
+            <br>
+            <p style="text-align: right; color: white;">COPYRIGHT © 2020 THAI SMILE AIRWAYS COMPANY LIMITED. ALL
+                RIGHTS
+                RESERVED. | 工信部ICP备案号：粤ICP备16092451号&emsp;&emsp;&emsp;&emsp;&emsp;
+            </p>
+            <br>
+        </div>
+
+
+        </div>
     </footer>
     <!--footer end-->
 </body>
@@ -1419,7 +1932,7 @@
 
     //ส่วนของข้อเสนอและการจัดการเที่ยวบิน
 
-    $(function(){
+    $(function () {
         $(".owl-carousel").owlCarousel();
     });
 
@@ -1437,18 +1950,34 @@
 
 
     //ส่วนบริการอื่นๆ
-   
+
     $('.service-slider').owlCarousel({
-        loop:true,
+        loop: true,
         margin: 1,
-        dots:false,
-        nav:true,
-        responsive:{
-        0:{
-            items:3
+        dots: false,
+        nav: true,
+        responsive: {
+            0: {
+                items: 3
+            }
         }
-    }
     })
+
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        slidesPerView:2,
+        centeredSlides: true,
+        spaceBetween: 15,
+        freemode:true,
+        initialSlide:2,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
 
 
 </script>

@@ -786,3 +786,302 @@ a {
     background: transparent !important;
     text-decoration: none !important;
 }
+
+.swiper {
+    width: 100%;
+    height: 500px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide {
+      transform: skew(-4deg) !important;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width: 40% !important;
+  }
+
+  .swiper-slide:nth-child(2n) {
+    width: 40%;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+  }
+
+  .text-on-img {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  
+  .title-header {
+      color: white;
+      font-size: 20px;
+      transform: skew(0deg);
+  }
+
+  .subtitle-header{
+      color: rgb(235, 97, 17);
+      font-size: 17px;
+      transform: skew(0deg);
+  }
+
+  .text-white {
+      color: white;
+      font-size: 22px;
+      padding-bottom: 10px;
+  }
+
+  .skew-revers {
+      transform: skewX(7deg);
+  }
+
+  .content-img {
+      width: 55%;
+  }
+  .content-img {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 0;
+
+  }
+
+  .content-img {
+      border: 1px solid white;
+      border-bottom: 0;
+      overflow-y: visible;
+      margin: auto;
+  }
+
+
+  .province-img {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%,0);
+      bottom: 0;
+  }
+
+  .province-name-outer{
+      position: relative;
+      white-space: nowrap;
+      font-size: 16px;
+      color: white;
+     
+  }
+  .line {
+      position: relative;
+      width: 110%;
+      border-bottom: 1px solid white;
+      bottom: 0;
+  }
+
+  .province-name-outer{
+      padding: 0 25px !important;
+      margin: 8px 0;
+      position: relative;
+      top: 15px;
+      white-space: nowrap;
+  }
+
+  .privilege-bg {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    list-style: none;
+      
+  }
+
+  .privilege-left {
+      position: relative;
+      width: 13em;
+  }
+
+  .privilege-right {
+    position: relative;
+    width: 125%;
+}
+
+
+
+
+.after-black {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.bg-black-left {
+    left: -20px;
+    bottom: 0;
+    position: absolute;
+    background-color: black ;
+    opacity: .7;
+    transform: skewX(12deg);
+    height: 100%;
+    right: 0;
+}
+
+.bg-black-right {
+    content: "" !important;
+    left: 0;
+    bottom: 0;
+    position: absolute !important;
+    background-color: black !important;
+    opacity: .7;
+    transform: skewX(-14deg);
+    height: 100% !important;
+    right: -15px;
+}
+
+.booking-now {
+    position: absolute;
+    transform: translate(0,-50px);
+    bottom: 30px;
+}
+
+.booking-now button {
+    position: relative;
+    left: 20px;
+    background-color: #f58024;
+    color: white;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 100%;
+}
+
+.booking-now ::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: 35px;
+    bottom: -7px;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #f58024 transparent transparent transparent
+}
+
+.booking-now button{
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+}
+
+@-webkit-keyframes action {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-10px);}
+}
+
+@keyframes action {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-10px);}
+
+}
+
+.price-content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 7px 0;
+    top: -90px;
+    left: -250px;
+}
+
+.price-top-text{
+    opacity: 1;
+    color: white !important;
+    font-size: 12px;
+    position: relative;
+    bottom: -17px;
+    left: -37px;
+}
+
+.pricce-mid-text{
+    color: #DE660A;
+    font-size: 45px;
+    letter-spacing: 1px;
+}
+
+.price-bot-text{
+    opacity: 1;
+    color: white !important;
+    font-size: 12px;
+    position: relative;
+    bottom: 12px;
+    left: 45px;
+}
+
+
+.m-0 {
+    margin: 0 !important;
+}
+
+
+.related-text{
+    position: relative;
+    bottom: 175px;
+    left: 175px;
+}
+
+.related-text:first-child {
+    margin: auto auto 0 auto !important;
+}
+
+.related-text:last-child {
+    margin: 0 auto auto auto !important;
+}
+
+.frist-related,.last-related {
+    font-size: 18px;
+    color: white;
+}
+
+.privilege-img {
+    position: relative;
+    bottom: 63px;
+    left: 375px;
+    transform: skewX(-1deg);
+}
+
+.swiper-button-next,.swiper-button-prev { color: #DE660A !important; }

@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+
+
 body {
     background-color: #000000;
+    font-family: 'Prompt', sans-serif;;
 }
 
 .navbar-inner {
@@ -360,7 +364,7 @@ select {
 
 .offer-title, .hero-title {
     font-size: 22px;
-    color: tomato;
+    color: #FF8C00;
     margin-bottom: 6px;
     padding-left: 13px;
 
@@ -391,7 +395,7 @@ select {
     flex-wrap: wrap;
     width: 100%;
     height: 150px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
     position: relative;
     overflow: hidden;
     flex: 50%;
@@ -1084,4 +1088,415 @@ a {
     transform: skewX(-1deg);
 }
 
-.swiper-button-next,.swiper-button-prev { color: #DE660A !important; }
+.swiper-button-next,.swiper-button-prev { color: #f58024 !important; }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+
+.grid-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6,minmax(200px,200px));
+    grid-gap: 8px;
+    margin: 20px auto;
+    grid-template-rows: repeat(2,minmax(200px,200px));
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.grid-container .grid-layout .grid-item .img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.grid-container .grid-layout .grid-item {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 200px;
+}
+
+.grid-container .grid-layout .grid-item.medium {
+    grid-area: auto/span 2;
+}
+
+.grid-container .grid-layout .grid-item img{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+
+.overlay-style-1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgb(0, 0, 0,.2);
+    cursor: pointer;
+
+}
+
+.item-overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    font-weight: 700;
+    transform: skewX(-7deg);
+    margin: 18px;
+}
+
+
+.item-overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 18px;
+    line-height: 25px;
+}
+
+.item-overlay3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 18px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.overlay-style-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column wrap;
+    cursor: pointer;
+}
+
+.item-overlay4 {
+    position: relative;
+    display: block;
+    margin: auto 0 0 0;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.item-overlay5 {
+    position: relative;
+    display: block;
+    margin: 10px auto auto auto;
+}
+
+.p-overlay5{
+    text-align: center;
+    margin: 0;
+    font-size: 50px;
+    line-height: 40px;
+}
+
+.overlay-style-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.item-overlay6 {
+    margin: auto 0 0 0;
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+}
+
+.item-overlay7 {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+
+.item-overlay8 {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 0 auto 0;
+    font-size: 25px;
+}
+
+.p-overlay6 {
+    margin: 0;
+    font-size: 20px;
+    text-align: right;
+    line-height: 20px;
+}
+
+.grid-container .grid-layout .grid-item.r1c3 {
+    grid-area: 1/3;
+}
+
+.overlay-style-4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: rgb(0, 0, 0,.2);
+    cursor: pointer;
+}
+
+.item-overlay9 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    font-weight: 700;
+    transform: skewX(-7deg);
+    margin: 18px;
+}
+
+.item-overlay10 {
+    position: relative;
+    display: block;
+    margin: auto 0 0 0;
+    text-align: center;
+    top: 10px;
+    font-size: 58px;
+
+}
+
+.item-overlay11 {
+    position: relative;
+    display: block;
+    margin: auto 0 0 auto 0;
+    text-align: center;
+    font: 20px;
+
+}
+
+.item-overlay12 {
+    position: relative;
+    text-align: center;
+    margin: 0 0 20px 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.item-overlay13 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    font-weight: 700;
+    transform: skewX(-7deg);
+    margin: 18px;
+}
+
+.grid-container .grid-layout .grid-item.r1c5-large {
+    grid-area: 1/5/span 2/span 2;
+    height: 100%;
+}
+
+.item-overlay-large {
+    position: relative;
+    width: 100%;
+    top: 0;
+    transform: none;
+    left: 0;
+}
+
+.item-overlay14 {
+    position: relative;
+    display: block;
+    margin: auto 20px 0 20px;
+    font-size: 36px;
+    color: #3f3f3f;
+    width: 50%;
+    height: 1em;
+    overflow: hidden;
+}
+
+.item-overlay15 {
+    position: relative;
+    display: block;
+    margin: 0 20px 0 20px;
+    font-size: 26px;
+    text-transform: capitalize;
+}
+
+.item-overlay16 {
+    position: relative;
+    display: block;
+    margin: 0 20px 5px 20px;
+    color: #f58026;
+    font-size: 58px;
+}
+
+.grid-container .grid-layout .see-more {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    text-transform: uppercase;
+    height: 100%;
+    font-size: 40px;
+    color: white;
+    background: #000000b8;
+    width: 100%;
+}
+
+.grid-container .grid-layout .grid-item.see-more :hover {
+    display: flex;
+}
+
+.slide-in-bottom {
+    animation: slide-in-bottom 0.5s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+
+
+.grid-container .grid-layout .grid-item:hover {
+    background: rgb(0, 0, 0, 0.8);
+}
+
+.grid-container .grid-layout .grid-item:hover img {
+    transform: scale(2);
+    transition:  10s;
+
+}
+
+#menu-list {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    margin: auto;
+    flex-wrap: nowrap;
+}
+
+section {
+    overflow: hidden;
+}
+
+.top-over-text {
+    position: absolute;
+    margin: auto;
+    display: flex;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 13px;
+    text-transform: uppercase;
+    color: #939595;
+}
+
+.top-over-text.text-over {
+    margin: auto;
+    background-color: black;
+    position: relative;
+    display: block;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 700;
+    transform: skewX(-7deg);
+}
+
+
+.just-for-you-list.border {
+    border: 1px solid #939595;
+    transform: skewX(-7deg);
+    padding: 25px;
+}
+
+.just-for-you-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: auto;
+}
+
+
+.just-for-you-privilege{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: auto;
+}
+
+.item-list-text-h {
+    color: #f58026 !important;
+}
+
+.item-list-text,.item-list-text-h {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: px;
+    font-weight: 700;
+    padding: 0 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #939595;
+}
+
+.item-list-text,.item-list-text-h {
+    transform: skewX(7deg);
+}
+
+
+.between-l {
+    color: #939595;
+    transform: skewX(7deg);
+    font-weight: bolder;
+}
+
+.just-for-you-privilege {
+    border: 1px solid #939595;
+    transform: skewX(0);
+    padding: 25px;
+}
+
+.item-privilege-text-h{
+    color: #f58024 !important;
+}
+
+.item-privilege-text-h,.item-privilege-text {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: px;
+    font-weight: 700;
+    padding: 0 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #939595;
+}
+
+.between-p {
+    color: #939595;
+    transform: skewX(0);
+    font-weight: bolder;
+}

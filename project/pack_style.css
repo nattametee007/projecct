@@ -5,7 +5,6 @@
     
     .package {
         /* Font & Text */
-        font-family: krart_medium;
         font-size: 14px;
         font-style: normal;
         font-variant: normal;
@@ -28,17 +27,8 @@
         /* Box */
         height: 867px;
         width: 1315px;
-        border: 0px none rgb(115, 115, 115);
-        border-top: 0px none rgb(115, 115, 115);
-        border-right: 0px none rgb(115, 115, 115);
-        border-bottom: 0px none rgb(115, 115, 115);
-        border-left: 0px none rgb(115, 115, 115);
         margin: 0px 106.5px;
-        padding: 0px 15px;
-        max-height: none;
-        min-height: 0px;
-        max-width: none;
-        min-width: 0px;
+        padding: 20px 15px;
         /* Positioning */
         position: static;
         top: auto;
@@ -73,25 +63,75 @@
         text-overflow: clip;
         word-wrap: normal;
         box-shadow: none;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+    }
+    
+    .package-name {
+        font-size: 18px;
+        line-height: 28.8px;
+        transform: matrix(1, 0, -0.0524078, 1, 0, 0);
+        margin: 0 0 0 24px;
+        padding: 0px 15px 0 15px;
+        background-color: black;
+        /* Box */
+        height: 28.8px;
+        width: 215.425px;
+        position: absolute;
+        top: 7px;
+        bottom: 91.4px;
+        right: 213.275px;
+        left: 8px;
+        clear: none;
+        z-index: 1;
     }
     
     .package-title {
         /* Box */
         height: 85.2px;
         width: 418.7px;
-        padding: 20px 15px;
+        padding: 20px 15px 20px 15px;
+        margin: 25px 0 0 0;
         /* Effects */
         transform: matrix(1, 0, -0.0524078, 1, 0, 0);
         border: solid 1px;
+        /* Box */
+        height: 85.2px;
+        width: 418.7px;
+        border: 1px solid rgb(255, 255, 255);
+        /* Table */
+        border-collapse: separate;
+        border-spacing: 0px 0px;
+        caption-side: top;
+        empty-cells: show;
+        table-layout: auto;
+    }
+    
+    .time {
+        font-size: 16px;
+        height: 45.2px;
+        width: 240px;
+        transform: matrix(1, 0, 0.0524078, 1, 0, 0);
+        border-radius: 5px;
+        background-color: black;
+        border: 1px solid coral;
+        text-align: left;
+    }
+    
+    .booking-package {
+        font-size: 26px;
+        height: 45.2px;
+        width: 100px;
+        transform: matrix(1, 0, 0.05, 1, 0, 0);
+        border: 1px solid coral;
+        border-radius: 5px;
     }
     /* ส่วนของ package*/
     
+    .information-left {
+        width: 642.5px;
+    }
+    
     .price {
-        position: relative;
+        padding-top: 20px;
     }
     
     .topleft {

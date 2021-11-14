@@ -405,6 +405,7 @@ select {
 .offer-tour-item img {
     max-width: 100%;
     min-width: 100%;
+    height: 150px;
     transition: 0.5s;
     transform: scale(1);
 }
@@ -1499,4 +1500,24 @@ section {
     color: #939595;
     transform: skewX(0);
     font-weight: bolder;
+}
+
+.img-story {
+    width: 50px;
+}
+
+.img-story img {
+    border-radius: 50%;
+    border: 5px double rgb(230,99,0,0.6);
+    width: 100px;
+}
+
+.instory{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.sub-story{
+    font-size: 12px !important;
 }

@@ -1,63 +1,66 @@
-
+        * {
+            box-sizing: border-box;
+        }
+        
         .containerallnews {
             margin-bottom: 7%;
         }
-
+        
         .maintitlenews {
             color: #FFFFFF;
             font-size: 20px;
         }
-
+        
         .mainparanews {
             margin-top: -2%;
             color: #737373;
             font-size: 14px;
         }
-
+        
         .allnews img {
             width: 95%;
         }
-
+        
         .detailnews {
             margin-top: 8.8%;
         }
-
+        
         .datenews {
             color: #737373;
             font-size: 14px;
         }
-
+        
         .titlenews {
             color: #FFFFFF;
             font-size: 20px;
             margin-top: -4%;
         }
-
+        
         .titlenews:hover {
             color: #f58026;
         }
-
+        
         .paranews {
             margin-top: 2%;
             color: #737373;
             font-size: 14px;
         }
-
+        
         .readmore {
             font-size: 14px;
             color: #f58026;
         }
-
+        
         .readmore:hover {
             color: #FFFFFF;
         }
-
+        
         .text-muted {
             color: #737373;
             font-size: 14px;
             margin-top: 5%;
         }
-
+        
         .inputbean {
             width: 47%;
             box-sizing: border-box;
@@ -67,18 +70,18 @@
             background-color: #000000;
             padding: 7px 20px 7px 20px;
         }
-
-        ::placeholder {
+        
+         ::placeholder {
             color: #CCCCCC;
         }
-
+        
         .searchgroup button {
             background-color: #000000;
             border: 1px solid #000000;
             font-size: 26px;
             margin-left: -3.5%;
         }
-
+        
         .dot {
             height: 10px;
             width: 10px;
@@ -86,12 +89,12 @@
             border-radius: 50%;
             display: inline-block;
         }
-
+        
         .secondtitle,
         .dotgroup {
             display: inline-block;
         }
-
+        
         #w3review {
             width: 300px;
             resize: both;
@@ -99,16 +102,16 @@
             background-color: white;
             margin-left: 22px;
         }
-
+        
         .textboxclass2 {
             height: 20px;
             width: 380px;
         }
-
+        
         * {
             box-sizing: border-box;
         }
-
+        
         .open-button {
             background-color: #555;
             color: white;
@@ -121,7 +124,7 @@
             right: 28px;
             width: 280px;
         }
-
+        
         .chat-popup {
             display: none;
             position: fixed;
@@ -133,7 +136,7 @@
             right: 15px;
             height: 480px;
         }
-
+        
         .chat-popup2 {
             display: none;
             position: fixed;
@@ -146,21 +149,21 @@
             right: 525px;
             bottom: 5px;
         }
-
+        
         .form-container {
             width: 507px;
             height: 480px;
             padding: 10px;
             background-color: rgb(241, 242, 242);
         }
-
+        
         .form-container2 {
             width: 27px;
             height: 480px;
             cursor: pointer;
             background-color: rgb(241, 242, 242);
         }
-
+        
         .form-container .btn {
             background-color: rgb(245, 128, 36);
             color: white;
@@ -171,9 +174,373 @@
             opacity: 0.8;
             border-radius: 5px;
         }
-
+        
         .form-container .btn:hover,
         .open-button:hover {
             opacity: 1;
         }
- 
+        
+        .custom-list-travel {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        
+        .category-img {
+            display: flex;
+            position: relative;
+            max-height: 500px;
+        }
+        
+        .category-img img {
+            width: 50%;
+            z-index: 1;
+            height: auto;
+            position: relative;
+            cursor: pointer;
+            display: block;
+        }
+        
+        .custom-list-travel .content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        
+        .content-body {
+            width: 50%;
+            display: block;
+            margin-top: 40px;
+        }
+        
+        .content-right {
+            position: absolute;
+            z-index: 20;
+            right: 0;
+            padding: 0 30px 0 60px !important;
+        }
+        
+        .favorite {
+            margin-left: -207px;
+            left: 0;
+            height: 80px;
+        }
+        
+        .custom-list-travel .favorite {
+            position: absolute;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            z-index: 5;
+        }
+        
+        .start-price-travel.multi-price {
+            padding: 6px 12px 0 15px;
+            margin: 0;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        
+        .start-price-travel {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .multi-price .price-content-travel {
+            margin: auto;
+            padding: 5px 0;
+        }
+        
+        .start-price-travel.price-content-travel {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+        }
+        
+        .price-top-text-travel {
+            position: absolute;
+            font-size: 14px;
+            top: 1;
+            left: 1;
+        }
+        
+        .price-mid-text-travel {
+            font-size: 40px;
+            line-height: unset;
+            color: #f58026;
+        }
+        
+        .price-bot-text-travel {
+            position: absolute;
+            bottom: -2px;
+            right: 14px;
+            font-size: 14px;
+        }
+        
+        .booking-now-travel {
+            left: 20px;
+        }
+        
+        .booking-now-travel {
+            position: absolute;
+            transform: translate(0, 100px);
+        }
+        
+        .booking-now-travel button {
+            background-color: #f58026;
+            color: white;
+            font-size: 16px;
+            border: 0;
+            border-radius: 5px;
+            padding: 5px 20px;
+            height: 100%;
+        }
+        
+        .booking-now-travel ::before {
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+            content: "";
+            border-style: solid;
+            transition-duration: 0.3s;
+            transition-property: transform;
+            left: 35px;
+            top: -5px;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #f58026 transparent;
+        }
+        
+        .booking-now-travel button {
+            -webkit-animation: action 1s infinite alternate;
+            animation: action 1s infinite alternate;
+        }
+        
+        .favorite-btn-travel {
+            display: flex;
+            flex-direction: column;
+            padding: 6px;
+            background-color: rgba(245, 128, 38, .5);
+            color: white;
+            font-size: 20px;
+        }
+        
+        .favorite-btn-travel i {
+            margin: auto;
+        }
+        
+        .favorite-btn-travel i {
+            cursor: pointer;
+        }
+        
+        li.categoryname-travel {
+            font-size: 25px;
+            color: #f58026;
+        }
+        
+        .title-travel {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        
+        li.provincename-travel {
+            color: white;
+            font-size: 20px;
+        }
+        
+        li.intro {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #959595;
+        }
+        
+        .custom-list-travel-2 {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        
+        .content-travel-2 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        
+        #multi-slide .content-left {
+            position: absolute;
+            z-index: 20;
+            left: 0;
+            padding: 0 60px 0 30px !important;
+        }
+        
+        .favorite-2.right {
+            margin-right: -207px;
+            padding-left: 640px;
+            height: 80px;
+        }
+        
+        .favorite-2 {
+            position: absolute;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            z-index: 5;
+        }
+        
+        .booking-now-travel-2 {
+            right: 20px;
+        }
+        
+        .booking-now-travel-2 {
+            position: absolute;
+            transform: translate(0, 100px);
+        }
+        
+        .booking-now-travel-2 button {
+            background-color: #f58026;
+            color: white;
+            font-size: 16px;
+            border: 0;
+            border-radius: 5px;
+            padding: 5px 20px;
+            height: 100%;
+        }
+        
+        .booking-now-travel-2 ::before {
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+            content: "";
+            border-style: solid;
+            transition-duration: 0.3s;
+            transition-property: transform;
+            left: 35px;
+            top: -5px;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #f58026 transparent;
+        }
+        
+        .booking-now-travel-2 button {
+            -webkit-animation: action 1s infinite alternate;
+            animation: action 1s infinite alternate;
+        }
+        
+        .favortie-btn-travel-2 {
+            display: flex;
+            flex-direction: column;
+            padding: 6px;
+            background-color: rgba(245, 128, 38, .5);
+            color: white;
+            font-size: 20px;
+        }
+        
+        .favortie-btn-travel-2 i {
+            margin: auto;
+        }
+        
+        .favortie-btn-travel-2 i {
+            cursor: pointer;
+            ;
+        }
+        
+        .start-price-travel-2.multi-price {
+            padding: 6px 12px 0 15px;
+            margin: 0;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        
+        .start-price-travel-2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .price-content-travel-2 {
+            margin: auto;
+            padding: 5px 0;
+        }
+        
+        .price-content-travel-2 {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+        }
+        
+        .price-top-text-travel-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 14px;
+        }
+        
+        .price-mid-text-travel-2 {
+            font-size: 40px;
+            line-height: unset;
+            color: #f58026;
+        }
+        
+        .price-bot-text-travel-2 {
+            position: absolute;
+            font-size: 14px;
+            bottom: -6px;
+            right: 2px;
+            color: #FFFFFF;
+        }
+        
+        .category-2-img {
+            display: flex;
+            position: relative;
+            max-height: 500px;
+        }
+        
+        .category-2-img img {
+            width: 50%;
+            z-index: 1;
+            height: auto;
+            position: relative;
+            cursor: pointer;
+            display: block;
+        }
+        
+        .categoryname-2 {
+            font-size: 25px;
+            color: #f58026;
+        }
+        
+        .title-travel-2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        
+        .title-travel-2 span {
+            cursor: pointer;
+        }
+        
+        .provincename-2 {
+            color: #ffffff;
+            font-size: 20px;
+        }
+        
+        .intro-2 {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #959595;
+        }
+        
+        .content-body-2 {
+            width: 50%;
+            display: block;
+            margin-top: 40px;
+        }
+        
+        .titlenews2 {
+            font-size: 16px;
+            color: #ffffff;
+        }

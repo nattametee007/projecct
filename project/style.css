@@ -178,6 +178,8 @@ a:hover {
     width: auto;
     cursor: pointer;
     color: #f58024;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: all 0.5s ease 0s;
 }
 
 .bookingtab-container {
@@ -275,6 +277,10 @@ a:hover {
     color: #ffffff;
     display: flex;
     padding-right: 10px;
+    margin-left: 10px;
+}
+
+.t-group {
     margin-left: 10px;
 }
 
@@ -1533,4 +1539,13 @@ section {
 
 select {
     color: #FFFFFF;
+}
+
+option {
+    color: #939595;
+    text-decoration: none;
+}
+
+option:hover {
+    background-color: #f58026;
 }

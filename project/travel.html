@@ -78,33 +78,43 @@
             display: inline-block;
         }
 
+        .containerallnews {
+            margin-bottom: 7%;
+        }
+        
         .maintitlenews {
             color: #FFFFFF;
             font-size: 20px;
         }
-
+        
         .mainparanews {
             margin-top: -2%;
             color: #737373;
             font-size: 14px;
         }
-
-        .allnews img {
+        
+        #story img {
             width: 95%;
             cursor: pointer;
         }
-
+        
         .detailnews {
             margin-top: 8.8%;
         }
-
+        
         .datenews {
+            color: #737373;
+            font-size: 14px;
+        }
+        
+        .titlenews {
             color: #FFFFFF;
             font-size: 18px;
+            margin-top: -2%;
             cursor: pointer;
         }
 
-        .titlenews {
+        .titlenews2 {
             color: #FFFFFF;
             font-size: 16px;
             margin-top: -2%;
@@ -112,10 +122,10 @@
 
         .paranews {
             margin-top: 7%;
-            color: #959595;
+            color: #737373;
             font-size: 14px;
         }
-
+        
         .readmore {
             font-size: 14px;
             color: #FFFFFF;
@@ -137,10 +147,10 @@
     <nav class="navbar navbar-inner navbar-light navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png"
+                <a class="navbar-brand" href="#"><img src="/project/Image/logo.png"
                         width="100"></a>
                 <a class="navbar-brand "><img
-                        src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png"
+                        src="/project/Image/star.png"
                         width="50"></a>
 
             </div>
@@ -154,7 +164,7 @@
                     <a id="mibew-agent-button" class="live-mobile"
                         href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank"
                         onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img
-                            src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th"
+                            src="/project/Image/icon-live-chat.png"
                             border="0" alt="" /></a>
 
                 </li>
@@ -166,7 +176,7 @@
 
                 <li>
                     <a class="language-sub">TH</span><img
-                            src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" width="50"> </a>
+                            src="/project/Image/flag.jpg" width="50"> </a>
 
                 </li>
             </ul>
@@ -947,7 +957,7 @@
             </div>
     </div>
 
-    <div class="container-fluid containerallnews" style="margin-top: 5%;">
+    <div class="row" id="story" style="margin-top: -3%;">
         <div class="titlewithdot">
             <h3 class="secondtitle"
                 style="color: #f58026; margin-top: 6%; margin-left: 3%; margin-bottom: 1.7%; margin-right: 0.8%; font-size: 28px;">
@@ -959,48 +969,37 @@
                 <span class="dot" style="background-color: #333333"></span>
             </div>
         </div>
-        <div class="allnews">
-            <div class="row">
-                <div class="col-sm-3" style="margin-left: 3%;">
-                    <img src="news1.jpg">
-                    <div class="detailnews">
-                        <p class="datenews">นอนนับดาวสุดโรแมนติกในโดมใสกลางป่าสไตล์ Glamping ที่เชียงใหม่</p>
-                        <p class="titlenews">เชียงใหม่</p>
-                        <p class="paranews">ทิ้งตัวนอนห่มดาว กลางสายหมอกบนขุนเขาพร้อมอาหารเช้าจัดเต็มแบบฟินๆ <span
-                                class="readmore"><b>... อ่านต่อ</b></span>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-3" style="margin-left: -1.6%;">
-                    <img src="news2.jpg">
-                    <div class="detailnews">
-                        <p class="datenews">สตรีทฟู้ดในตำนานที่ต้องลองสักครั้งนึง</p>
-                        <p class="titlenews">กรุงเทพมหานคร</p>
-                        <p><span class="readmore"><b>อ่านต่อ</b></span></p>
-                    </div>
-                </div>
-                <div class="col-sm-3" style="margin-left: -1.6%;">
-                    <img src="news2.jpg">
-                    <div class="detailnews">
-                        <p class="datenews">ตะลุยสามเกาะสุดฮอต กับ 3 วัน 2 คืน สุด Unseen
-                            เที่ยวกระบี่….มาทั้งทีต้องไปให้คุ้ม</p>
-                        <p class="titlenews">กระบี่</p>
-                        <p class="paranews">อันซีนกระบี่ “เกาะเหลาลาดิง” สวรรค์ตัวจริงของท้องทะเลอันดามัน <span
-                                class="readmore"><b> ... อ่านต่อ</b></span>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-3" style="margin-left: -1.6%;">
-                    <img src="news3.jpg">
-                    <div class="detailnews">
-                        <p class="datenews">นอนอาบแดดรับ Vitamin Sea บนรีสอร์ทสไตล์บาลีสุดชิคที่เกาะสมุย แบบนิวนอร์มอล
-                        </p>
-                        <p class="titlenews">สุราษฎร์ธานี</p>
-                        <p class="paranews">มาพักผ่อนบนรีสอร์ทสวยสงบเหมือนเกาะส่วนตัวกับ Karma Resort จ.สุราษฎร์ธานี
-                            <span class="readmore"><b>... อ่านต่อ</b></span>
-                        </p>
-                    </div>
-                </div>
+        <div class="col-sm-3" style="margin-left: 3%;">
+            <img src="https://www.thaismileair.com/assets/v2/contenthub/3029/s_246957656_4047791548659814_4128955994687461093_n.jpg">
+            <div class="detailnews">
+                <p class="titlenews">สตรีทฟู้ดในตำนานที่ต้องลองสักครั้งนึง</p>
+                <p class="titlenews2">กรุงเทพ</p>
+                <p class="paranews"><span class="readmore"><b>อ่านต่อ</b></span>
+            </div>
+        </div>
+        <div class="col-sm-3" style="margin-left: -1.6%;">
+            <img src="https://www.thaismileair.com/assets/v2/contenthub/3007/s_242186929_3939887436116893_2075861734394486519_n.jpg">
+            <div class="detailnews">
+                <p class="titlenews">คาเฟ่กลางท้องนาสุดชิล ออบล้อมไปด้วยขุนเขาเขียวขจี วิวก็ปัง อาหารก็เลิศ</p>
+                <p class="titlenews2">ขอนแก่น</p>
+                <p class="paranews">พานั่งร้านอาหารและเครื่องดื่มสุดชิล ท่ามกลางท้องนาเขียวๆริมเขื่อน ใกล้ภูเขา ที่ ‘บ้านนอกคอกควาย’ จ.ขอนแก่น<span class="readmore"><b> ... อ่านต่อ</b></span>
+            </div>
+        </div>
+        <div class="col-sm-3" style="margin-left: -1.6%;">
+            <img src="https://www.thaismileair.com/assets/v2/contenthub/2963/s_HaciendaCoffee_CEI1%20resize.jpg">
+            <div class="detailnews">
+                <p class="titlenews">จิบน้ำชายามบ่าย ชมวิวภูเขาโอบล้อมด้วยธรรมชาติที่ Hacienda Coffee House &amp; Restaurant เชียงราย</p>
+                <p class="titlenews2">เชียงราย</p>
+                <p class="paranews">ร้านนี้น่ารักมาก ๆ ตกแต่งด้วยสไตล์ยุโรป มีทั้งที่นั่งแบบ indoor ในห้องแอร์ และแบบ outdoor ตรงระเบียงที่เราจะสามารถมองเห็นภูเขาแและธรรมชาติโดยรอบ บรรยากาศดีสุด ๆ<span class="readmore"><b> ... อ่านต่อ</b></span>
+            </div>
+        </div>
+        <div class="col-sm-3" style="margin-left: -1.6%;">
+            <img src="https://www.thaismileair.com/assets/v2/contenthub/2955/s_restaurant%2004.jpg">
+            <div class="detailnews">
+                <p class="titlenews">ตะลุยเชียงใหม่กับที่พัก ร้านอาหารและคาเฟ่สุดชิค แบบที่พลาดไม่ได้</p>
+                <p class="titlenews2">เชียงใหม่</p>
+                <p class="paranews">เที่ยวทิพย์ครั้งนี้ จะพาทุกคนไปเที่ยวเชียงใหม่กันค่ะ เรารวบรวมมาถึง 8 สถานที่ฟิน ๆ ถูกใจสายเที่ยว สายกินแน่นอน เพราะเราจะพาไปร้านอาหารที่อร่อยสุด ๆ ถึง 7 ร้านกันเลยทีเดียว และอีกที่นึงก็จะเป็นที่พัก ที่มีออนเซ็นกลางป่าให้ทุกคนได้ไปผ่อนคลายกัน
+                    <span class="readmore"><b> ... อ่านต่อ</b></span>
             </div>
         </div>
     </div>

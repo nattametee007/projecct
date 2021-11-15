@@ -278,6 +278,10 @@ a:hover {
     margin-left: 10px;
 }
 
+.t-group {
+    margin-left: 10px;
+}
+
 select {
     background: none;
     border: none;

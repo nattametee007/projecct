@@ -180,7 +180,7 @@
 
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navnav">
         <div class="container-fluid" style="height: 60px;">
             <div class="logo-thaismile" style="margin-left: 25px;">
                 <a class="navbar-brand" href="#"><img src="/project/Image/logo.png" width="100.4" height="55"></a>
@@ -222,7 +222,7 @@
     </nav>
 
 
-    <div class="container-fluid" style="text-align: center; padding-top: 100px; padding-left: 80px;">
+    <div class="container-fluid" style="text-align: center; padding-top: 100px; padding-left: 80px;" id="cont1">
         <div class="bookingtab-container" style="padding-left: 150px;">
             <div class="bktab">
                 <button class="bookingtab-group " id='booktab' data-target="booktab" onclick="booking1()">
@@ -287,45 +287,99 @@
         function openflight1() {
             document.getElementById("flight1").style.display = "block";
             document.getElementById("flight1").style.height = "100%";
+
+            document.getElementById("navnav").style.display = "none";
+            document.getElementById("cont1").style.display = "none";
+            document.getElementById("cont2").style.display = "none";
+            document.getElementById("cont3").style.display = "none";
+            document.getElementById("cont4").style.display = "none";
+            document.getElementById("cont5").style.display = "none";
+            document.getElementById("cont6").style.display = "none";
+            document.getElementById("cont7").style.display = "none";
         }
 
         function closeflight1() {
             document.getElementById("flight1").style.height = "0%";
+
+            document.getElementById("navnav").style.display = "block";
+            document.getElementById("cont1").style.display = "block";
+            document.getElementById("cont2").style.display = "block";
+            document.getElementById("cont3").style.display = "block";
+            document.getElementById("cont4").style.display = "block";
+            document.getElementById("cont5").style.display = "block";
+            document.getElementById("cont6").style.display = "block";
+            document.getElementById("cont7").style.display = "block";
         }
 
         function openflight2() {
             document.getElementById("flight2").style.display = "block";
             document.getElementById("flight2").style.height = "100%";
+
+            document.getElementById("navnav").style.display = "none";
+            document.getElementById("cont1").style.display = "none";
+            document.getElementById("cont2").style.display = "none";
+            document.getElementById("cont3").style.display = "none";
+            document.getElementById("cont4").style.display = "none";
+            document.getElementById("cont5").style.display = "none";
+            document.getElementById("cont6").style.display = "none";
+            document.getElementById("cont7").style.display = "none";
         }
 
         function closeflight2() {
             document.getElementById("flight2").style.height = "0%";
+
+            document.getElementById("navnav").style.display = "block";
+            document.getElementById("cont1").style.display = "block";
+            document.getElementById("cont2").style.display = "block";
+            document.getElementById("cont3").style.display = "block";
+            document.getElementById("cont4").style.display = "block";
+            document.getElementById("cont5").style.display = "block";
+            document.getElementById("cont6").style.display = "block";
+            document.getElementById("cont7").style.display = "block";
         }
 
         function openflight3() {
             document.getElementById("flight3").style.display = "block";
             document.getElementById("flight3").style.height = "100%";
+
+            document.getElementById("navnav").style.display = "none";
+            document.getElementById("cont1").style.display = "none";
+            document.getElementById("cont2").style.display = "none";
+            document.getElementById("cont3").style.display = "none";
+            document.getElementById("cont4").style.display = "none";
+            document.getElementById("cont5").style.display = "none";
+            document.getElementById("cont6").style.display = "none";
+            document.getElementById("cont7").style.display = "none";
         }
 
         function closeflight3() {
             document.getElementById("flight3").style.height = "0%";
+
+            document.getElementById("navnav").style.display = "block";
+            document.getElementById("cont1").style.display = "block";
+            document.getElementById("cont2").style.display = "block";
+            document.getElementById("cont3").style.display = "block";
+            document.getElementById("cont4").style.display = "block";
+            document.getElementById("cont5").style.display = "block";
+            document.getElementById("cont6").style.display = "block";
+            document.getElementById("cont7").style.display = "block";
         }
     </script>
 
-    <div class="container-fluid" style="width: 1285px; height: auto; position: relative; top: -25px;">
+    <div class="container-fluid" style="width: 1285px; height: auto; position: relative; top: -25px;" id="cont2">
         <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; margin-top: 3%; display: block;">
             <div class="bk" id="book">
                 <div class="booking-group " data-target="book" onclick="openflight1()">
                     <p class='booking-text' id='book'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
 
                 </div>
-                <div class="booking-group" id='covid' data-target="covid">
+                <div class="booking-group" id='covid' data-target="covid" onclick="openflight2()">
 
                     <p class='booking-text'>เลือกเวลาการเดินทาง<i class="fas fa-angle-down"></i></p>
 
                 </div>
 
-                <div class="booking-group" id='hotel' data-target="hotel">
+                <div class="booking-group" id='hotel' data-target="hotel" onclick="openflight3()">
                     <p class='booking-text'>เลือกจำนวนผู้โดยสาร<i class="fas fa-angle-down"></i></p>
 
                 </div>
@@ -592,7 +646,7 @@
     </div>
 
 
-    <section>
+    <section id="cont3">
         <div class="sec-hero">
             <div class="container">
                 <div class="row">
@@ -883,7 +937,7 @@
 
     <h2 style="color: #f58024; margin-left: 13%; margin-top: 5%; ">ผลการค้นหาล่าสุด</h2>
 
-    <div class="container">
+    <div class="container" id="cont4">
         <div class="container destination" style="margin-left: 11%;">
 
             <label for="search">จาก</label><br>
@@ -1149,7 +1203,7 @@
     </div>
 
 
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="cont5">
 
         <body>
             <!-- Swiper -->
@@ -1816,8 +1870,13 @@
         <br>
         <br>
 
+<<<<<<< HEAD
         <div class="container">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+=======
+    <div class="container" id="cont6">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+>>>>>>> 7c4f21ed9a17e35677e0ce6a545a2f6bae7f7bdd
 
                 <!-- <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselslider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -2072,7 +2131,53 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <div class="container-fluid" style="background-color: #000000; color: gray; margin-top: 5%;">
+=======
+    <div class="container-fluid" style="background-color: #000000; color: gray; margin-top: 5%;" id="cont7">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <div class="row" style="text-align: center;">
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter1.png"></p>
+                        <p style="font-size: medium;">รับไมล์สะสม รอยัลออร์คิดพลัส</p>
+                        <p style="font-size: smaller;">สมาชิกรอยัล ออร์คิด พลัส สามารถรับไมล์สะสม รวมถึงการแลกตั๋วรางวัล เมื่อโดยสารกับสายการบินไทยสมายล์ได้ ท่านสามารถดูตารางไมล์สะสมสายการบินไทยสมายล์และวิ ...
+                            <a>อ่านต่อ</a>
+                        </p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter2.png"></p>
+                        <p style="font-size: medium;">บริการอาหารว่างและเครื่องดื่ม</p>
+                        <p style="font-size: smaller;">เรามีบริการของว่าง และเครื่องดื่มสำหรับทุกที่นั่ง ทั้งเที่ยวบินในประเทศและเที่ยวบินต่างประเทศ ... <a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter3.png"></p>
+                        <p style="font-size: medium;">เลือกที่นั่งฟรีไม่เสียค่าธรรมเนียม</p>
+                        <p style="font-size: smaller;">**เฉพาะเส้นทางบินภายในประเทศ** สำรองที่นั่งได้ก่อนใคร ฟรี! เพียงท่านเลือกเดินทางไปกับไทยสมายล์ ท่านก็สามารถใช้บริการสำรองที่นั่งออนไลน์ ท่านสามารถสำรอ ... <a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                    <div class="col-md-3">
+                        <br><br>
+                        <p><img src="topfooter4.png"></p>
+                        <p style="font-size: medium;">ฟรีน้ำหนักสัมภาระ 20 ก.ก.</p>
+                        <p style="font-size: smaller;">ท่านจะได้รับน้ำหนักกระเป๋าใต้ท้องเครื่องทันทีถึง 20 กิโลกรัมเมื่อซื้อตั๋วโดยสารชั้นสมายล์คลาส และ 30 กิโลกรัมสำหรับตั๋วโดยสารชั้นสมายล์พลัส เมื่อเดินท ...<a>อ่านต่อ</a></p><br><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer style="margin-top: 1%;">
+        <div class="container-fluid" style="background-color: #333333; color: gray;">
+            <br>
+>>>>>>> 7c4f21ed9a17e35677e0ce6a545a2f6bae7f7bdd
             <div class="row">
                 <div class="col-md-1">
                 </div>

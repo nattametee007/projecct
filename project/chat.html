@@ -156,106 +156,141 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: 'Mitr', sans-serif;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    * {
+      font-family: 'Mitr', sans-serif;
+    }
 
-.overlay {
-  height: 63%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #333;
-  overflow-y: hidden;
-  transition: 0.5s;
-}
+    .overlay2 {
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      overflow-y: hidden;
+      transition: 0.5s;
+    }
 
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
+    .overlay2-content {
+      position: relative;
+      top: 40%;
+      width: 80%;
+      margin-top: 30px;
+      margin-left: 10%;
+    }
 
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+    .overlay2 a {
+      color: gray;
+      text-decoration: none;
 
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
+    }
 
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
+    .overlay2 a:hover,
+    .overlay2 a:focus {
+      color: rgb(245, 128, 36);
+    }
 
-@media screen and (max-height: 450px) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
+    .overlay2 .closebtn2 {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
 
-.textboxclass2 {
-  height: 50px;
-  width: 300px;
-  border-radius: 10px;
-}
-
-</style>
+  </style>
 </head>
+
 <body>
 
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <p style="color: rgb(245, 128, 36); font-size: 35px;">จัดการการจองพร้อมเช็คอิน</p>
-    <p style="color: gray; font-size: 14px;">เปลี่ยนทุกเส้นทางของคุณให้ง่ายขึ้น ด้วยบริการการจองและเช็คอินออนไลน์จากไทยสมายล์</p>
-    <p style="color: gray; font-size: 21px;">“สะดวก ง่ายดายกับออนไลน์เช็คอิน ให้ท่านเช็คอินล่วงหน้าก่อนใคร*”</p>
-    <div class="form-check">
-      <input type="radio" class="form-check-input1" id="radio1" name="optradio" value="option1" checked>
-      <label class="form-check-label" for="radio1" style="color: gray;">เช็คอินออนไลน์</label>
-      <input type="radio" class="form-check-input2" id="radio2" name="optradio" value="option2">
-      <label class="form-check-label" for="radio2" style="color: gray;">จัดการการจอง</label>
+  <div id="myNav2" class="overlay2">
+    <img src="https://www.thaismileair.com/assets/v3/images/logo.png"
+      style="width: 170px; margin-left: 50px; margin-top: 30px;">
+    <a href="javascript:void(0)" class="closebtn2" onclick="closeNav2()">&times;</a>
+    <div class="overlay2-content" style="margin-top: -150px;">
+      <div class="row">
+        <div class="col">
+          <p style="font-size: 24px; color: #aaa;"><b>วางแผนการเดินทาง</b></p>
+          <a style="font-size: 18px;" href>ข้อเสนอพิเศษ</a><br>
+          <a style="font-size: 18px;" href>จุดหมายปลายทาง</a><br>
+          <a style="font-size: 18px;" href>เที่ยวบินเช่าเหมาลำ</a><br>
+          <a style="font-size: 18px;" href>พันธมิตรของเรา</a><br>
+          <a style="font-size: 18px;" href>สิทธิพิเศษ จาก WE PRIVILEGE</a><br>
+          <a style="font-size: 18px;" href>MARKETPLACE</a>
+        </div>
+        <div class="col">
+          <p style="font-size: 24px; color: #aaa;"><b>บริการเสริม</b></p>
+          <a style="font-size: 18px;" href>FLIGHT PASS</a><br>
+          <a style="font-size: 18px;" href>บริการรับฝากและขนส่งสัมภาระ</a><br>
+          <a style="font-size: 18px;" href>ประกันภัยการเดินทาง</a><br>
+          <a style="font-size: 18px;" href>บริการรถเช่า</a><br>
+          <a style="font-size: 18px;" href>โรงแรมและที่พักโดย BOOKING.COM</a><br>
+          <a style="font-size: 18px;" href>โรงแรมและที่พักโดย TRIP.COM</a><br>
+          <a style="font-size: 18px;" href>ตั๋วเครื่องบิน + ที่พัก</a>
+        </div>
+        <div class="col" style="margin-left: 50px;">
+          <p style="font-size: 24px; color: #aaa;"><b>เกี่ยวกับเรา</b></p>
+          <a style="font-size: 18px;" href>ข่าวสาร</a><br>
+          <a style="font-size: 18px;" href>คำถามที่พบบ่อย</a><br>
+          <a style="font-size: 18px;" href>ติดต่อเรา</a><br>
+          <a style="font-size: 18px;" href>ร่วมงานกับไทยสมายล์</a><br>
+          <a style="font-size: 18px;" href>E-MAGAZINE</a><br>
+          <a style="font-size: 18px;" href>STAR ALLIANCE</a>
+        </div>
+        <div class="col">
+          <p style="font-size: 24px; color: #aaa;"><b>ข้อมูลการจอง</b></p>
+          <a style="font-size: 18px;" href>ข้อมูลการจอง</a>
+        </div>
+        <div class="col">
+          <p style="font-size: 24px; color: #aaa;"><b>เรื่องของคนชอบเที่ยว</b></p>
+          <a style="font-size: 18px;" href>คนหนีเที่ยว</a><br>
+          <a style="font-size: 18px;" href>SMILE LIVE CHAT</a>&nbsp&nbsp<img src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th">
+          <p style="font-size: 24px; color: rgb(245, 128, 36);"><b>QUICK MENU</b></b></p>
+          <a style="font-size: 18px; color: rgb(245, 128, 36);" href>จัดการการจอง</a><br>
+          <a style="font-size: 18px; color: rgb(245, 128, 36);" href>เช็คอินออนไลน์</a><br>
+          <a style="font-size: 18px; color: rgb(245, 128, 36);" href>มาตรการโควิด-19</a><br>
+          <a style="font-size: 18px; color: rgb(245, 128, 36);" href>EMD และการขยายอายุบัตรโดยสาร</a>
+        </div>
+      </div>
+
     </div>
-    <input type="text" class="textboxclass2" value=ผู้เยี่ยมชม><input type="text" class="textboxclass2" value=ผู้เยี่ยมชม><button type="submit" class="btn">Send</button>
   </div>
-</div>
 
-<h2>Fullscreen Overlay Nav Example</h2>
-<p>Click on the element below to open the fullscreen overlay navigation menu.</p>
-<p>In this example, the navigation menu will slide downwards from the top:</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <h2>Fullscreen overlay2 Nav Example</h2>
+  <p>Click on the element below to open the fullscreen overlay2 navigation menu.</p>
+  <p>In this example, the navigation menu will slide downwards from the top:</p>
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav2()">&#9776; open</span>
 
-<script>
-function openNav() {
-  document.getElementById("myNav").style.height = "63%";
-}
+  <script>
+    function openNav2() {
+      document.getElementById("myNav2").style.height = "50%";
+    }
 
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
-</script>
-     
+    function closeNav2() {
+      document.getElementById("myNav2").style.height = "0%";
+    }
+
+    function checkin() {
+      document.getElementById("submit").innerHTML = 'เช็คอิน';
+    }
+
+    function inbooking() {
+      document.getElementById("submit").innerHTML = 'ค้นหาการจอง';
+    }
+  </script>
+
 </body>
+
 </html>

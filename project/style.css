@@ -164,7 +164,7 @@ a:hover {
 .bktab {
     display: flex;
     flex-wrap: wrap;
-    padding-right: 150px;
+    padding-right: 100px;
     justify-content: center;
 }
 
@@ -175,6 +175,7 @@ a:hover {
     background-color: rgb(51, 51, 51);
     border-radius: 6px;
     height: 44.2875;
+    width: auto;
     cursor: pointer;
     color: #f58024;
 }
@@ -262,17 +263,41 @@ a:hover {
 
 .ticket {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .ticket-group {
-    border-right-style: 1px solid #E2DBDB;
+    border-right-style: solid;
+    height: 46.4px;
+    width: auto;
     font-size: 16px;
     color: #ffffff;
+    display: flex;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
+.t-group {
+    margin-left: 10px;
 }
 
 select {
     background: none;
     border: none;
+}
+
+label {
+    color: #737373;
+}
+
+option {
+    color: #939595;
+    text-decoration: none;
+}
+
+option:hover {
+    background-color: #f58026;
 }
 
 
@@ -308,6 +333,13 @@ select {
     text-align: center;
     overflow: visible;
     margin: 1px;
+}
+
+
+/* ผลการค้นหาล่าสุด*/
+
+#province {
+    margin-left: -7px;
 }
 
 
@@ -864,6 +896,15 @@ a {
     border-bottom: 0;
     overflow-y: visible;
     margin: auto;
+}
+
+#province {
+    background: #ffffff;
+    color: #737373;
+    width: 359.08px;
+    height: 40px;
+    border: 2px solid #f58024;
+    border-radius: 5px;
 }
 
 .province-img {
@@ -1496,6 +1537,7 @@ section {
 
 select {
     color: #FFFFFF;
+<<<<<<< HEAD
 }
 
 option {
@@ -1507,3 +1549,6 @@ option:hover {
     background-color: #f58026;
 }
 
+=======
+}
+>>>>>>> d1bb3aadcd0f6ff4af0c13f606dafbc90e6efb18

@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    
+
     <script src="https://kit.fontawesome.com/a111224822.js" crossorigin="anonymous"></script>
 
     <link href="style.css" rel="stylesheet">
@@ -81,18 +83,18 @@
             border-radius: 8px;
             font-size: 23px;
             background-color: #000000;
-            padding: 7px 20px 7px 20px;
+            padding: 8px 20px 8px 20px;
         }
 
-        ::placeholder {
+        .inputbean::placeholder {
             color: #CCCCCC;
         }
 
         .searchgroup button {
             background-color: #000000;
             border: 1px solid #000000;
-            font-size: 26px;
-            margin-left: -3.5%;
+            font-size: 21px;
+            margin-left: -3%;
         }
 
         .dot {
@@ -119,10 +121,6 @@
         .textboxclass2 {
             height: 20px;
             width: 380px;
-        }
-
-        * {
-            box-sizing: border-box;
         }
 
         .open-button {
@@ -192,6 +190,149 @@
         .open-button:hover {
             opacity: 1;
         }
+
+        .overlay {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay {
+                overflow-y: auto;
+            }
+
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        .textboxclass3,
+        .butt {
+            height: 50px;
+            width: 300px;
+            border-radius: 8px;
+            font-size: 22px;
+        }
+
+        .overlay::placeholder {
+            opacity: 0.5;
+        }
+
+        .butt {
+            background-color: gray;
+        }
+
+        .butt:hover {
+            background-color: rgb(245, 128, 36);
+        }
+
+        input[type='radio']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -3.5px;
+            left: -3.3px;
+            position: relative;
+            background-color: #d1d3d1;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 4px solid white;
+        }
+
+        input[type='radio']:checked:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -3.5px;
+            left: -3.3px;
+            position: relative;
+            background-color: rgb(245, 128, 36);
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 4px solid white;
+        }
+
+        .overlay2 {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay2-content {
+            position: relative;
+            top: 40%;
+            width: 80%;
+            margin-top: 30px;
+            margin-left: 200px;
+        }
+
+        .overlay2 a {
+            color: gray;
+            text-decoration: none;
+
+        }
+
+        .overlay2 a:hover,
+        .overlay2 a:focus {
+            color: rgb(245, 128, 36);
+        }
+
+        .overlay2 .closebtn2 {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
     </style>
 
 </head>
@@ -212,7 +353,7 @@
             <ul id="b" class="nav navbar-inner navbar-nav navbar-right">
                 <li><a href="#">ข้อเสนอที่น่าสนใจ</a></li>
                 <li><a href="#">ข่าวสารอัพเดท</a></li>
-                <li><a href="#">จัดการการจอง</a></li>
+                <li><a href="#" onclick="openNav()">จัดการการจอง</a></li>
                 <li><a href="#">คนหนีเที่ยว</a></li>
                 <li class="hidden-xs">
                     <a id="mibew-agent-button" class="live-mobile" href="#" onclick="openForm()"><img
@@ -223,7 +364,7 @@
 
                 <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-user"></span>ล็อคอิน</a>
                 </li>
-                <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-align-right"></span></a>
+                <li><a background-color: transparent; href="#" onclick="openNav2()"><span class="glyphicon glyphicon-align-right"></span></a>
                 </li>
 
                 <li>
@@ -574,7 +715,6 @@
         </div>
 
         <div class="chat-popup" id="myForm">
-
             <form action="/action_page.php" class="form-container">
                 <img src="https://www.thaismileair.com/assets/v3/images/logo.png" style="width: 95px;"><br><br>
 
@@ -605,6 +745,92 @@
         </div>
     </div>
 
+    <div id="myNav" class="overlay">
+        <img src="https://www.thaismileair.com/assets/v3/images/logo.png"
+            style="width: 170px; margin-left: 50px; margin-top: 30px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content" style="margin-top: -140px;">
+            <p style="color: rgb(245, 128, 36); font-size: 35px;">จัดการการจองพร้อมเช็คอิน</p><br>
+            <p style="color: gray; font-size: 14px;">
+                เปลี่ยนทุกเส้นทางของคุณให้ง่ายขึ้นด้วยบริการการจองและเช็คอินออนไลน์จากไทยสมายล์</p><br>
+            <p style="color: gray; font-size: 21px;">“สะดวก ง่ายดายกับออนไลน์เช็คอิน ให้ท่านเช็คอินล่วงหน้าก่อนใคร*”</p>
+            <div class="form-check">
+                <div class="pretty p-default p-round p-smooth">
+                    <input class="in-online" type="radio" name="radio1" checked onclick="checkin()">
+                    <label class="state"
+                        style="color: gray; font-size: 16px;">เช็คอินออนไลน์</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <input class="in-booking" type="radio" name="radio1" onclick="inbooking()">
+                    <label class="state" style="color: gray; font-size: 16px;">จัดการการจอง</label>
+                </div><br>
+            </div>
+            <input type="text" class="textboxclass3" placeholder="  หมายเลขการจอง">&nbsp&nbsp
+            <input type="text" class="textboxclass3" placeholder="  นามสกุลผู้โดยสาร">&nbsp&nbsp
+            <button class="butt" type="submit" id="submit" style="color: whitesmoke;">เช็คอิน</button><br><br>
+            <img src="botcheck.jpg" style="border-radius: 5px;"><br><br>
+            <ul style="text-align: left; color: gray; font-size: 12px; margin-left: 325px;">
+                <li>*ท่านสามารถเช็คอินออนไลน์ล่วงหน้าได้ 24-2 ชม. ก่อนการเดินทาง</li>
+                <li>*สำหรับผู้โดยสารที่มีการร้องขอบริการพิเศษ (SSR) จะไม่สามารถดำเนินการเช็คอินออนไลน์ล่วงหน้าได้</li>
+                <li>*สำหรับเที่ยวบินดังต่อไปนี้้ หลวงพระบาง(LliQ) เสียมราฐ(REP) อาห์เมดาบัด(AMD) ชัยปุระ(JAI)
+                    ลัคเนา(LKO) คยา(GAY) พาราณสี(VNS) ฉางซา(CSX) ฉงชิ่ง(CKG) เจิ้งโจว(CGO) มายัง
+                    กรุงเทพฯ-สุวรรณภูมิ(BKK)
+                    มีข้อจำกัดของระบบออนไลน์เช็คอินจึงยังไม่<br>สามารถทำการเช็คอินออนไลน์ล่วงหน้าได้</p>
+            </ul>
+        </div>
+    </div>
+
+    <div id="myNav2" class="overlay2">
+        <img src="https://www.thaismileair.com/assets/v3/images/logo.png"
+            style="width: 170px; margin-left: 50px; margin-top: 30px;">
+        <a href="javascript:void(0)" class="closebtn2" onclick="closeNav2()">&times;</a>
+        <div class="overlay2-content" style="margin-top: -150px;">
+            <div class="row">
+                <div class="col-md-2">
+                    <p style="font-size: 24px; color: #aaa;"><b>วางแผนการเดินทาง</b></p>
+                    <a style="font-size: 15.5px;" href>ข้อเสนอพิเศษ</a><br>
+                    <a style="font-size: 15.5px;" href>จุดหมายปลายทาง</a><br>
+                    <a style="font-size: 15.5px;" href>เที่ยวบินเช่าเหมาลำ</a><br>
+                    <a style="font-size: 15.5px;" href>พันธมิตรของเรา</a><br>
+                    <a style="font-size: 15.5px;" href>สิทธิพิเศษ จาก WE PRIVILEGE</a><br>
+                    <a style="font-size: 15.5px;" href>MARKETPLACE</a>
+                </div>
+                <div class="col-md-2" style="margin-left: 60px;">
+                    <p style="font-size: 24px; color: #aaa;"><b>บริการเสริม</b></p>
+                    <a style="font-size: 15.5px;" href>FLIGHT PASS</a><br>
+                    <a style="font-size: 15.5px;" href>บริการรับฝากและขนส่งสัมภาระ</a><br>
+                    <a style="font-size: 15.5px;" href>ประกันภัยการเดินทาง</a><br>
+                    <a style="font-size: 15.5px;" href>บริการรถเช่า</a><br>
+                    <a style="font-size: 15.5px;" href>โรงแรมและที่พักโดย BOOKING.COM</a><br>
+                    <a style="font-size: 15.5px;" href>โรงแรมและที่พักโดย TRIP.COM</a><br>
+                    <a style="font-size: 15.5px;" href>ตั๋วเครื่องบิน + ที่พัก</a>
+                </div>
+                <div class="col-md-2" style="margin-left: 100px;">
+                    <p style="font-size: 24px; color: #aaa;"><b>เกี่ยวกับเรา</b></p>
+                    <a style="font-size: 15.5px;" href>ข่าวสาร</a><br>
+                    <a style="font-size: 15.5px;" href>คำถามที่พบบ่อย</a><br>
+                    <a style="font-size: 15.5px;" href>ติดต่อเรา</a><br>
+                    <a style="font-size: 15.5px;" href>ร่วมงานกับไทยสมายล์</a><br>
+                    <a style="font-size: 15.5px;" href>E-MAGAZINE</a><br>
+                    <a style="font-size: 15.5px;" href>STAR ALLIANCE</a>
+                </div>
+                <div class="col-md-2" style="margin-left: 30px;">
+                    <p style="font-size: 24px; color: #aaa;"><b>ข้อมูลการจอง</b></p>
+                    <a style="font-size: 15.5px;" href>ข้อมูลการจอง</a>
+                </div>
+                <div class="col-md-2"style="margin-left: 30px;">
+                    <p style="font-size: 24px; color: #aaa;"><b>เรื่องของคนชอบเที่ยว</b></p>
+                    <a style="font-size: 15.5px;" href>คนหนีเที่ยว</a><br>
+                    <a style="font-size: 15.5px;" href>SMILE LIVE CHAT</a>&nbsp&nbsp<img
+                        src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th"><br><br>
+                    <p style="font-size: 24px; color: rgb(245, 128, 36);"><b>QUICK MENU</b></b></p>
+                    <a style="font-size: 15.5px; color: rgb(245, 128, 36);" href>จัดการการจอง</a><br>
+                    <a style="font-size: 15.5px; color: rgb(245, 128, 36);" href>เช็คอินออนไลน์</a><br>
+                    <a style="font-size: 15.5px; color: rgb(245, 128, 36);" href>มาตรการโควิด-19</a><br>
+                    <a style="font-size: 15.5px; color: rgb(245, 128, 36);" href>EMD และการขยายอายุบัตรโดยสาร</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         function openForm() {
             document.getElementById("myForm").style.display = "block";
@@ -614,6 +840,29 @@
         function closeForm() {
             document.getElementById("myForm").style.display = "none";
             document.getElementById("myForm2").style.display = "none";
+        }
+        function openNav() {
+            document.getElementById("myNav").style.height = "64%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+
+        function checkin() {
+            document.getElementById("submit").innerHTML = 'เช็คอิน';
+        }
+
+        function inbooking() {
+            document.getElementById("submit").innerHTML = 'ค้นหาการจอง';
+        }
+
+        function openNav2() {
+            document.getElementById("myNav2").style.height = "100%";
+        }
+
+        function closeNav2() {
+            document.getElementById("myNav2").style.height = "0%";
         }
     </script>
 

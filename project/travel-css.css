@@ -1,0 +1,179 @@
+
+        .containerallnews {
+            margin-bottom: 7%;
+        }
+
+        .maintitlenews {
+            color: #FFFFFF;
+            font-size: 20px;
+        }
+
+        .mainparanews {
+            margin-top: -2%;
+            color: #737373;
+            font-size: 14px;
+        }
+
+        .allnews img {
+            width: 95%;
+        }
+
+        .detailnews {
+            margin-top: 8.8%;
+        }
+
+        .datenews {
+            color: #737373;
+            font-size: 14px;
+        }
+
+        .titlenews {
+            color: #FFFFFF;
+            font-size: 20px;
+            margin-top: -4%;
+        }
+
+        .titlenews:hover {
+            color: #f58026;
+        }
+
+        .paranews {
+            margin-top: 2%;
+            color: #737373;
+            font-size: 14px;
+        }
+
+        .readmore {
+            font-size: 14px;
+            color: #f58026;
+        }
+
+        .readmore:hover {
+            color: #FFFFFF;
+        }
+
+        .text-muted {
+            color: #737373;
+            font-size: 14px;
+            margin-top: 5%;
+        }
+
+        .inputbean {
+            width: 47%;
+            box-sizing: border-box;
+            border: 2px solid #f58026;
+            border-radius: 8px;
+            font-size: 23px;
+            background-color: #000000;
+            padding: 7px 20px 7px 20px;
+        }
+
+        ::placeholder {
+            color: #CCCCCC;
+        }
+
+        .searchgroup button {
+            background-color: #000000;
+            border: 1px solid #000000;
+            font-size: 26px;
+            margin-left: -3.5%;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .secondtitle,
+        .dotgroup {
+            display: inline-block;
+        }
+
+        #w3review {
+            width: 300px;
+            resize: both;
+            height: 80px;
+            background-color: white;
+            margin-left: 22px;
+        }
+
+        .textboxclass2 {
+            height: 20px;
+            width: 380px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        .chat-popup {
+            display: none;
+            position: fixed;
+            border: 1px solid #aaa;
+            overflow: hidden;
+            z-index: 100;
+            border-radius: 10px;
+            bottom: 5px;
+            right: 15px;
+            height: 480px;
+        }
+
+        .chat-popup2 {
+            display: none;
+            position: fixed;
+            border: 1px solid #aaa;
+            overflow: hidden;
+            z-index: 100;
+            border-radius: 10px;
+            width: 27px;
+            height: 480px;
+            right: 525px;
+            bottom: 5px;
+        }
+
+        .form-container {
+            width: 507px;
+            height: 480px;
+            padding: 10px;
+            background-color: rgb(241, 242, 242);
+        }
+
+        .form-container2 {
+            width: 27px;
+            height: 480px;
+            cursor: pointer;
+            background-color: rgb(241, 242, 242);
+        }
+
+        .form-container .btn {
+            background-color: rgb(245, 128, 36);
+            color: white;
+            border: none;
+            cursor: pointer;
+            height: 7%;
+            width: 25%;
+            opacity: 0.8;
+            border-radius: 5px;
+        }
+
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+ 

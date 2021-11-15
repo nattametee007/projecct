@@ -269,10 +269,12 @@ a:hover {
 .ticket-group {
     border-right-style: solid;
     height: 46.4px;
-    width: 228.75px;
-    padding: 8px 20px 8px 20px;
+    width: auto;
     font-size: 16px;
     color: #ffffff;
+    display: flex;
+    padding-right: 10px;
+    margin-left: 10px;
 }
 
 select {
@@ -882,6 +884,15 @@ a {
     border-bottom: 0;
     overflow-y: visible;
     margin: auto;
+}
+
+#province {
+    background: #ffffff;
+    color: #737373;
+    width: 359.08px;
+    height: 40px;
+    border: 2px solid #f58024;
+    border-radius: 5px;
 }
 
 .province-img {

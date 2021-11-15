@@ -331,6 +331,13 @@ option:hover {
 }
 
 
+/* ผลการค้นหาล่าสุด*/
+
+#province {
+    margin-left: -7px;
+}
+
+
 /* ข้อมูลที่น่าสนใจ*/
 
 .reserve2 {

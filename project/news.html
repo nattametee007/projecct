@@ -9,331 +9,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="/project/Image/shortcut.png">
     
+    <link rel="shortcut icon" href="/project/Image/shortcut.png">
 
     <script src="https://kit.fontawesome.com/a111224822.js" crossorigin="anonymous"></script>
 
     <link href="style.css" rel="stylesheet">
 
-    <style>
-        .containerallnews {
-            margin-bottom: 7%;
-        }
 
-        .maintitlenews {
-            color: #FFFFFF;
-            font-size: 20px;
-        }
-
-        .mainparanews {
-            margin-top: -2%;
-            color: #737373;
-            font-size: 14px;
-        }
-
-        .allnews img {
-            width: 95%;
-        }
-
-        .detailnews {
-            margin-top: 8.8%;
-        }
-
-        .datenews {
-            color: #737373;
-            font-size: 14px;
-        }
-
-        .titlenews {
-            color: #FFFFFF;
-            font-size: 20px;
-            margin-top: -4%;
-        }
-
-        .titlenews:hover {
-            color: #f58026;
-        }
-
-        .paranews {
-            margin-top: 2%;
-            color: #737373;
-            font-size: 14px;
-        }
-
-        .readmore {
-            font-size: 14px;
-            color: #f58026;
-        }
-
-        .readmore:hover {
-            color: #FFFFFF;
-        }
-
-        .text-muted {
-            color: #737373;
-            font-size: 14px;
-            margin-top: 5%;
-        }
-
-        .inputbean {
-            width: 47%;
-            box-sizing: border-box;
-            border: 2px solid #f58026;
-            border-radius: 8px;
-            font-size: 23px;
-            background-color: #000000;
-            padding: 8px 20px 8px 20px;
-        }
-
-        .inputbean::placeholder {
-            color: #CCCCCC;
-        }
-
-        .searchgroup button {
-            background-color: #000000;
-            border: 1px solid #000000;
-            font-size: 21px;
-            margin-left: -3%;
-        }
-
-        .dot {
-            height: 10px;
-            width: 10px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .secondtitle,
-        .dotgroup {
-            display: inline-block;
-        }
-
-        #w3review {
-            width: 300px;
-            resize: both;
-            height: 80px;
-            background-color: white;
-            margin-left: 22px;
-        }
-
-        .textboxclass2 {
-            height: 20px;
-            width: 380px;
-        }
-
-        .open-button {
-            background-color: #555;
-            color: white;
-            padding: 16px 20px;
-            border: none;
-            cursor: pointer;
-            opacity: 0.8;
-            position: fixed;
-            bottom: 23px;
-            right: 28px;
-            width: 280px;
-        }
-
-        .chat-popup {
-            display: none;
-            position: fixed;
-            border: 1px solid #aaa;
-            overflow: hidden;
-            z-index: 100;
-            border-radius: 10px;
-            bottom: 5px;
-            right: 15px;
-            height: 480px;
-        }
-
-        .chat-popup2 {
-            display: none;
-            position: fixed;
-            border: 1px solid #aaa;
-            overflow: hidden;
-            z-index: 100;
-            border-radius: 10px;
-            width: 27px;
-            height: 480px;
-            right: 525px;
-            bottom: 5px;
-        }
-
-        .form-container {
-            width: 507px;
-            height: 480px;
-            padding: 10px;
-            background-color: rgb(241, 242, 242);
-        }
-
-        .form-container2 {
-            width: 27px;
-            height: 480px;
-            cursor: pointer;
-            background-color: rgb(241, 242, 242);
-        }
-
-        .form-container .btn {
-            background-color: rgb(245, 128, 36);
-            color: white;
-            border: none;
-            cursor: pointer;
-            height: 7%;
-            width: 25%;
-            opacity: 0.8;
-            border-radius: 5px;
-        }
-
-        .form-container .btn:hover,
-        .open-button:hover {
-            opacity: 1;
-        }
-
-        .overlay {
-            height: 0%;
-            width: 100%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #333;
-            overflow-y: hidden;
-            transition: 0.5s;
-        }
-
-        .overlay-content {
-            position: relative;
-            top: 25%;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .overlay a {
-            padding: 8px;
-            text-decoration: none;
-            font-size: 36px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .overlay a:hover,
-        .overlay a:focus {
-            color: #f1f1f1;
-        }
-
-        .overlay .closebtn {
-            position: absolute;
-            top: 20px;
-            right: 45px;
-            font-size: 60px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .overlay {
-                overflow-y: auto;
-            }
-
-            .overlay a {
-                font-size: 20px
-            }
-
-            .overlay .closebtn {
-                font-size: 40px;
-                top: 15px;
-                right: 35px;
-            }
-        }
-
-        .textboxclass3,
-        .butt {
-            height: 50px;
-            width: 300px;
-            border-radius: 8px;
-            font-size: 22px;
-        }
-
-        .overlay::placeholder {
-            opacity: 0.5;
-        }
-
-        .butt {
-            background-color: gray;
-        }
-
-        .butt:hover {
-            background-color: rgb(245, 128, 36);
-        }
-
-        input[type='radio']:after {
-            width: 15px;
-            height: 15px;
-            border-radius: 15px;
-            top: -3.5px;
-            left: -3.3px;
-            position: relative;
-            background-color: #d1d3d1;
-            content: '';
-            display: inline-block;
-            visibility: visible;
-            border: 4px solid white;
-        }
-
-        input[type='radio']:checked:after {
-            width: 15px;
-            height: 15px;
-            border-radius: 15px;
-            top: -3.5px;
-            left: -3.3px;
-            position: relative;
-            background-color: rgb(245, 128, 36);
-            content: '';
-            display: inline-block;
-            visibility: visible;
-            border: 4px solid white;
-        }
-
-        .overlay2 {
-            height: 0%;
-            width: 100%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #333;
-            overflow-y: hidden;
-            transition: 0.5s;
-        }
-
-        .overlay2-content {
-            position: relative;
-            top: 40%;
-            width: 80%;
-            margin-top: 30px;
-            margin-left: 200px;
-        }
-
-        .overlay2 a {
-            color: gray;
-            text-decoration: none;
-
-        }
-
-        .overlay2 a:hover,
-        .overlay2 a:focus {
-            color: rgb(245, 128, 36);
-        }
-
-        .overlay2 .closebtn2 {
-            position: absolute;
-            top: 20px;
-            right: 45px;
-            font-size: 60px;
-        }
-    </style>
 
 </head>
 
@@ -364,7 +47,7 @@
 
                 <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-user"></span>ล็อคอิน</a>
                 </li>
-                <li><a background-color: transparent; href="#" onclick="openNav2()"><span class="glyphicon glyphicon-align-right"></span></a>
+                <li><a background-color: transparent; href="#" onclick="openNav2()"><i class="fas fa-bars"></i></a>
                 </li>
 
                 <li>
@@ -709,7 +392,7 @@
     <div class="allbank">
         <div class="chat-popup2" id="myForm2">
             <form action="/action_page.php" class="form-container2">
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><img src="/project/Image/more.png" class="btn cancel"
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><img src="more.png" class="btn cancel"
                     onclick="closeForm()" style="margin-left: -12px;">
             </form>
         </div>
@@ -860,7 +543,7 @@
         }
 
         function openNav2() {
-            document.getElementById("myNav2").style.height = "50%";
+            document.getElementById("myNav2").style.height = "100%";
         }
 
         function closeNav2() {

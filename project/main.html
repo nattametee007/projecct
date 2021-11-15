@@ -23,6 +23,75 @@
     <script src="owl.carousel.min.js"></script>
     <script src="slider.js"></script>
 
+    <style>
+        body {
+            font-family: 'Mitr', sans-serif;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay {
+                overflow-y: auto;
+            }
+
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        .textboxclass2 {
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+
 </head>
 
 
@@ -116,7 +185,7 @@
     <div class="container-fluid" style="width: 1285px; height: auto; position: relative; top: -25px;">
         <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; margin-top: 3%; display: block;">
             <div class="bk" id="book">
-                <div class="booking-group " data-target="book">
+                <div class="booking-group " data-target="book" onclick="openflight1()">
                     <p class='booking-text' id='book'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
 
                 </div>

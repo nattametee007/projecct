@@ -1,4 +1,6 @@
-
+        * {
+            box-sizing: border-box;
+        }
         .containerallnews {
             margin-bottom: 7%;
         }
@@ -176,4 +178,183 @@
         .open-button:hover {
             opacity: 1;
         }
- 
+
+        .custom-list-travel {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        
+        .category-img {
+            display: flex;
+            position: relative;
+            max-height: 500px;
+        }
+        
+        .category-img img {
+            width: 50%;
+            z-index: 1;
+            height: auto;
+            position: relative;
+            cursor: pointer;
+            display: block;
+        }
+        
+        .custom-list-travel .content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        
+        .content-body {
+            width: 50%;
+            display: block;
+            margin-top: 40px;
+        
+        }
+        
+        .content-right {
+            position: absolute;
+            z-index: 20;
+            right: 0;
+            padding: 0 30px 0 60px !important;
+        }
+
+        .favorite {
+            margin-left: -207px;
+            left: 0;
+            height: 80px;
+        }
+
+
+    
+        .custom-list-travel .favorite {
+            position: absolute;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            z-index: 5;
+        }
+        
+        .start-price-travel.multi-price {
+            padding: 6px 12px 0 15px;
+            margin: 0;
+            background-color: rgba(0, 0,0, .5);
+        }
+
+        .start-price-travel {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .multi-price .price-content-travel {
+            margin: auto;
+            padding: 5px 0;
+        }
+        
+        .start-price-travel.price-content-travel {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .price-top-text-travel {
+            position: absolute;
+            font-size: 14px;
+            top: 1;
+            left: 1;
+        }
+
+        .price-mid-text-travel {
+            font-size: 40px;
+            line-height: unset;
+            color: #f58026;
+        }
+
+        .price-bot-text-travel {
+            position: absolute;
+            bottom: -2px;
+            right: 14px;
+            font-size: 14px;
+        }
+
+        .booking-now-travel {
+            left: 20px;
+        }
+
+        .booking-now-travel {
+            position: absolute;
+            transform: translate(0,100px);
+        }
+
+        .booking-now-travel button {
+            background-color: #f58026;
+            color: white;
+            font-size: 16px;
+            border: 0;
+            border-radius: 5px;
+            padding: 5px 20px;
+            height: 100%;
+        }
+
+        .booking-now-travel ::before {
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+            content: "";
+            border-style: solid;
+            transition-duration: 0.3s;
+            transition-property: transform;
+            left: 35px;
+            top: -5px;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #f58026 transparent;
+        }
+
+        .booking-now-travel button {
+            -webkit-animation: action 1s infinite alternate;
+            animation: action 1s infinite alternate;
+        }
+
+        .favorite-btn-travel {
+            display: flex;
+            flex-direction: column;
+            padding: 6px;
+            background-color: rgba(245,128,38,.5);
+            color: white;
+            font-size: 20px;
+        }
+
+        .favorite-btn-travel i {
+            margin: auto;
+        }
+
+        .favorite-btn-travel i {
+            cursor: pointer;
+        }
+
+        li.categoryname-travel {
+            font-size: 25px;
+            color: #f58026;
+        }
+
+        .title-travel {
+            font-size: 37px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        li.provincename-travel {
+            color: white;
+            font-size: 20px;
+        }
+
+        li.intro {
+            margin-top: 50px;
+            font-size: 20px;
+            color: #959595;
+        }

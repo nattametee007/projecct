@@ -44,6 +44,14 @@ body {
     border: 1px solid rgb(255, 255, 255);
 }
 
+    /* Monkey Box */
+.specpriv {
+    width: 100%;
+    /* Effects */
+    transform: matrix(1, 0, -0.0524078, 1, 0, 0);
+    margin-top: 5px;
+}
+
 .time {
     font-size: 16px;
     height: 42px;

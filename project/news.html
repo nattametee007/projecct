@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    
+
     <script src="https://kit.fontawesome.com/a111224822.js" crossorigin="anonymous"></script>
 
     <link href="style.css" rel="stylesheet">
@@ -92,7 +94,7 @@
             background-color: #000000;
             border: 1px solid #000000;
             font-size: 21px;
-            margin-left: -4%;
+            margin-left: -3%;
         }
 
         .dot {
@@ -119,10 +121,6 @@
         .textboxclass2 {
             height: 20px;
             width: 380px;
-        }
-
-        * {
-            box-sizing: border-box;
         }
 
         .open-button {
@@ -193,6 +191,148 @@
             opacity: 1;
         }
 
+        .overlay {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay {
+                overflow-y: auto;
+            }
+
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        .textboxclass3,
+        .butt {
+            height: 50px;
+            width: 300px;
+            border-radius: 8px;
+            font-size: 22px;
+        }
+
+        .overlay::placeholder {
+            opacity: 0.5;
+        }
+
+        .butt {
+            background-color: gray;
+        }
+
+        .butt:hover {
+            background-color: rgb(245, 128, 36);
+        }
+
+        input[type='radio']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -3.5px;
+            left: -3.3px;
+            position: relative;
+            background-color: #d1d3d1;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 4px solid white;
+        }
+
+        input[type='radio']:checked:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -3.5px;
+            left: -3.3px;
+            position: relative;
+            background-color: rgb(245, 128, 36);
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 4px solid white;
+        }
+
+        .overlay2 {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay2-content {
+            position: relative;
+            top: 40%;
+            width: 80%;
+            margin-top: 30px;
+            margin-left: 200px;
+        }
+
+        .overlay2 a {
+            color: gray;
+            text-decoration: none;
+
+        }
+
+        .overlay2 a:hover,
+        .overlay2 a:focus {
+            color: rgb(245, 128, 36);
+        }
+
+        .overlay2 .closebtn2 {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
     </style>
 
 </head>
@@ -212,15 +352,9 @@
 
             <ul id="b" class="nav navbar-inner navbar-nav navbar-right">
                 <li><a href="#">ข้อเสนอที่น่าสนใจ</a></li>
-<<<<<<< HEAD
-                <li><a href="#">ข่าวสารอัพเดท</a></li>
-                <li><a href="#">จัดการการจอง</a></li>
-                <li><a href="#">คนหนีเที่ยว</a></li>
-=======
                 <li><a href="news.html">ข่าวสารอัพเดท</a></li>
                 <li><a href="#" onclick="openNav()">จัดการการจอง</a></li>
                 <li><a href="travel-main.html">คนหนีเที่ยว</a></li>
->>>>>>> f10e7d0adeed4e105432665b881fbbec5eeca2c8
                 <li class="hidden-xs">
                     <a id="mibew-agent-button" class="live-mobile" href="#" onclick="openForm()"><img
                             src="/project/Image/icon-live-chat.png"
@@ -230,12 +364,12 @@
 
                 <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-user"></span>ล็อคอิน</a>
                 </li>
-                <li><a background-color: transparent; href="#"><span class="glyphicon glyphicon-align-right"></span></a>
+                <li><a background-color: transparent; href="#" onclick="openNav2()"><span class="glyphicon glyphicon-align-right"></span></a>
                 </li>
 
                 <li>
                     <a class="language-sub">TH</span><img
-                            src="/project/Image/flag.jpg width="50"> </a>
+                            src="/project/Image/flag.jpg" style="width: 50px;"> </a>
 
                 </li>
             </ul>
@@ -581,7 +715,6 @@
         </div>
 
         <div class="chat-popup" id="myForm">
-
             <form action="/action_page.php" class="form-container">
                 <img src="/project/Image/logo.png" style="width: 95px;"><br><br>
 
@@ -612,8 +745,6 @@
         </div>
     </div>
 
-<<<<<<< HEAD
-=======
     <div id="myNav" class="overlay">
         <img src="/project/Image/logo.png"
             style="width: 170px; margin-left: 50px; margin-top: 30px;">
@@ -637,6 +768,7 @@
             <button class="butt" type="submit" id="submit" style="color: whitesmoke;">เช็คอิน</button><br><br>
             <img src="/project/Image/botcheck.jpg" style="border-radius: 5px;"><br><br>
             <ul style="text-align: left; color: gray; font-size: 12px; margin-left: 325px;">
+                <br>
                 <br>
                 <li>*ท่านสามารถเช็คอินออนไลน์ล่วงหน้าได้ 24-2 ชม. ก่อนการเดินทาง</li>
                 <li>*สำหรับผู้โดยสารที่มีการร้องขอบริการพิเศษ (SSR) จะไม่สามารถดำเนินการเช็คอินออนไลน์ล่วงหน้าได้</li>
@@ -690,7 +822,7 @@
                     <p style="font-size: 24px; color: #aaa;"><b>เรื่องของคนชอบเที่ยว</b></p>
                     <a style="font-size: 15.5px;" href>คนหนีเที่ยว</a><br>
                     <a style="font-size: 15.5px;" href>SMILE LIVE CHAT</a>&nbsp&nbsp<img
-                        src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th"><br><br>
+                        src="/project/Image/icon-live-chat.png"><br><br>
                     <p style="font-size: 24px; color: rgb(245, 128, 36);"><b>QUICK MENU</b></b></p>
                     <a style="font-size: 15.5px; color: rgb(245, 128, 36);" href>จัดการการจอง</a><br>
                     <a style="font-size: 15.5px; color: rgb(245, 128, 36);" href>เช็คอินออนไลน์</a><br>
@@ -701,7 +833,6 @@
         </div>
     </div>
 
->>>>>>> f10e7d0adeed4e105432665b881fbbec5eeca2c8
     <script>
         function openForm() {
             document.getElementById("myForm").style.display = "block";
@@ -712,8 +843,6 @@
             document.getElementById("myForm").style.display = "none";
             document.getElementById("myForm2").style.display = "none";
         }
-<<<<<<< HEAD
-=======
         function openNav() {
             document.getElementById("myNav").style.height = "64%";
         }
@@ -737,7 +866,6 @@
         function closeNav2() {
             document.getElementById("myNav2").style.height = "0%";
         }
->>>>>>> f10e7d0adeed4e105432665b881fbbec5eeca2c8
     </script>
 
     <!--footer-->

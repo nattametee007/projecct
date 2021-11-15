@@ -262,10 +262,15 @@ a:hover {
 
 .ticket {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .ticket-group {
-    border-right-style: 1px solid #E2DBDB;
+    border-right-style: solid;
+    height: 46.4px;
+    width: 228.75px;
+    padding: 8px 20px 8px 20px;
     font-size: 16px;
     color: #ffffff;
 }
@@ -273,6 +278,19 @@ a:hover {
 select {
     background: none;
     border: none;
+}
+
+label {
+    color: #737373;
+}
+
+option {
+    color: #939595;
+    text-decoration: none;
+}
+
+option:hover {
+    background-color: #f58026;
 }
 
 
@@ -1496,13 +1514,4 @@ section {
 
 select {
     color: #FFFFFF;
-}
-
-option {
-    color: #939595;
-    text-decoration: none;
-}
-
-option:hover {
-    background-color: #f58026;
 }

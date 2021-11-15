@@ -164,7 +164,7 @@ a:hover {
 .bktab {
     display: flex;
     flex-wrap: wrap;
-    padding-right: 150px;
+    padding-right: 100px;
     justify-content: center;
 }
 
@@ -175,6 +175,7 @@ a:hover {
     background-color: rgb(51, 51, 51);
     border-radius: 6px;
     height: 44.2875;
+    width: auto;
     cursor: pointer;
     color: #f58024;
 }

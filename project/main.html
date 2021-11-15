@@ -23,158 +23,6 @@
     <script src="owl.carousel.min.js"></script>
     <script src="slider.js"></script>
 
-    <style>
-        body {
-            font-family: 'Mitr', sans-serif;
-        }
-        
-        .overlay {
-            height: 100%;
-            width: 100%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #333;
-            overflow-y: hidden;
-            transition: 0.5s;
-        }
-        
-        .overlay-content {
-            position: relative;
-            top: 25%;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-        }
-        
-        .overlay a {
-            padding: 8px;
-            text-decoration: none;
-            font-size: 36px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-        
-        .overlay a:hover,
-        .overlay a:focus {
-            color: #f1f1f1;
-        }
-        
-        .overlay .closebtn {
-            position: absolute;
-            top: 20px;
-            right: 45px;
-            font-size: 60px;
-        }
-        
-        @media screen and (max-height: 450px) {
-            .overlay {
-                overflow-y: auto;
-            }
-            .overlay a {
-                font-size: 20px
-            }
-            .overlay .closebtn {
-                font-size: 40px;
-                top: 15px;
-                right: 35px;
-            }
-        }
-        
-        .textboxclass2 {
-            height: 50px;
-            width: 300px;
-            border-radius: 10px;
-        }
-        
-        #w3review {
-            width: 300px;
-            resize: both;
-            height: 80px;
-            background-color: white;
-            margin-left: 22px;
-        }
-        
-        .textboxclass2 {
-            height: 20px;
-            width: 380px;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        .open-button {
-            background-color: #555;
-            color: white;
-            padding: 16px 20px;
-            border: none;
-            cursor: pointer;
-            opacity: 0.8;
-            position: fixed;
-            bottom: 23px;
-            right: 28px;
-            width: 280px;
-        }
-        
-        .chat-popup {
-            display: none;
-            position: fixed;
-            border: 1px solid #aaa;
-            overflow: hidden;
-            z-index: 100;
-            border-radius: 10px;
-            bottom: 5px;
-            right: 15px;
-            height: 480px;
-        }
-        
-        .chat-popup2 {
-            display: none;
-            position: fixed;
-            border: 1px solid #aaa;
-            overflow: hidden;
-            z-index: 100;
-            border-radius: 10px;
-            width: 27px;
-            height: 480px;
-            right: 525px;
-            bottom: 5px;
-        }
-        
-        .form-container {
-            width: 507px;
-            height: 480px;
-            padding: 10px;
-            background-color: rgb(241, 242, 242);
-        }
-        
-        .form-container2 {
-            width: 27px;
-            height: 480px;
-            cursor: pointer;
-            background-color: rgb(241, 242, 242);
-        }
-        
-        .form-container .btn {
-            background-color: rgb(245, 128, 36);
-            color: white;
-            border: none;
-            cursor: pointer;
-            height: 7%;
-            width: 25%;
-            opacity: 0.8;
-            border-radius: 5px;
-        }
-        
-        .form-container .btn:hover,
-        .open-button:hover {
-            opacity: 1;
-        }
-    </style>
-
 </head>
 
 
@@ -183,8 +31,8 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid" style="height: 60px;">
             <div class="logo-thaismile" style="margin-left: 25px;">
-                <a class="navbar-brand" href="#"><img src="/project/Image/logo.png" width="100.4" height="55"></a>
-                <a class="navbar-brand "><img src="star.png" width="43" height="55"></a>
+                <a class="navbar-brand" href="#"><img src="https://www.thaismileair.com/assets/v3/images/logo.png" width="100.4" height="55"></a>
+                <a class="navbar-brand "><img src="https://www.thaismileair.com/gallery/TermOfUse/starAlliancePartnersLogo/star_header_logo_dark_2.png" width="43" height="55"></a>
             </div>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -198,7 +46,7 @@
                         <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">จัดการการจอง</a></li>
                         <li style="margin-right: 25px;"><a href="#" style="font-size: 17px;">คนหนีเที่ยว</a></li>
                         <li class="hidden-xs" style="margin-right: 15px;">
-                            <a id="mibew-agent-button" class="live-mobile" href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank" onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img src="icon-live-chat.png" border="0" alt="" /></a>
+                            <a id="mibew-agent-button" class="live-mobile" href="https://truetouchcloud.com/thaismile/index.php/chat?locale=th" target="_blank" onclick="Mibew.Objects.ChatPopups['59c1f5c9e53ac131'].open();return false;"><img src="///www.thaismileair.com/assets/v2/img/icon-live-chat.png?i=mibew&amp;lang=th" border="0" alt="" /></a>
 
                         </li>
 
@@ -211,7 +59,7 @@
 
                         <li>
                             <a class="language-sub" style="font-size: 17px;">TH </span><img
-                                    src="flag.jpg" width="50">
+                                    src="https://www.thaismileair.com/assets/v3/images/flag-full-thai.jpg" width="50">
                             </a>
 
                         </li>
@@ -265,57 +113,10 @@
 
     </div>
 
-    <div id="flight1" class="overlay" style="display: none; background-color: white;">
-        <img src="flightback.jpg" onclick="closeflight1()" width="5%">
-        <br><br><br>
-        <img src="flight1.jpg" width="100%">
-    </div>
-
-    <div id="flight2" class="overlay" style="display: none; background-color: white;">
-        <img src="flightback.jpg" onclick="closeflight2()" width="5%">
-        <br><br><br>
-        <img src="flight2.jpg" width="100%">
-    </div>
-
-    <div id="flight3" class="overlay" style="display: none; background-color: white;">
-        <img src="flightback.jpg" onclick="closeflight3()" width="5%">
-        <br><br><br>
-        <img src="flight3.jpg" width="100%">
-    </div>
-
-    <script>
-        function openflight1() {
-            document.getElementById("flight1").style.display = "block";
-            document.getElementById("flight1").style.height = "100%";
-        }
-
-        function closeflight1() {
-            document.getElementById("flight1").style.height = "0%";
-        }
-
-        function openflight2() {
-            document.getElementById("flight2").style.display = "block";
-            document.getElementById("flight2").style.height = "100%";
-        }
-
-        function closeflight2() {
-            document.getElementById("flight2").style.height = "0%";
-        }
-
-        function openflight3() {
-            document.getElementById("flight3").style.display = "block";
-            document.getElementById("flight3").style.height = "100%";
-        }
-
-        function closeflight3() {
-            document.getElementById("flight3").style.height = "0%";
-        }
-    </script>
-
     <div class="container-fluid" style="width: 1285px; height: auto; position: relative; top: -25px;">
         <div class="booking-container" id="booking-container" style="width: 1255px; height: 80px; margin-top: 3%; display: block;">
             <div class="bk" id="book">
-                <div class="booking-group " data-target="book" onclick="openflight1()">
+                <div class="booking-group " data-target="book">
                     <p class='booking-text' id='book'>เลือกเส้นทาง<i class="fas fa-angle-down"></i></p>
 
                 </div>
@@ -378,27 +179,30 @@
         <div class="ticket-container" id="ticket-container" style="margin-top: 3%; display: none; ">
             <div class="container ticket">
                 <div class="ticket-group" style="display: flex; ">
-                    <div class="t-group">
-                        <label style="font-size: 12px;">เที่ยวบิน</label><br>
-                        <select>
+                    <p style="display: flex; border-right-style: 1px solid #E2DBDB; ">
+                        <div style="margin-left: 10px;">
+                            <label style="font-size: 12px;">เที่ยวบิน</label><br>
+                            <select>
                             <option>ไป-กลับ</option>
                             <option>เที่ยวเดียว</option>
                         </select>
-                        <hr>
-                    </div>
-                    <div class="t-group">
-                        <label style="font-size: 12px; ">ชั้นโดยสาร</label><br>
-                        <p>
-                            Economy
-                        </p>
-                        <hr>
-                    </div>
+                            <hr>
+                        </div>
+                        <div style="margin-left: 10px;">
+                            <label style="font-size: 12px; ">ชั้นโดยสาร</label><br>
+                            <select disabled>
+                            <option>Economy</option>
+                        </select>
+                            <hr>
+                        </div>
+                    </p>
+
 
                 </div>
-                <div class="ticket-group">
-                    <div class="t-group">
+                <div class="ticket-group" style="display: flex; border-right-style: 1px solid #f58024;">
+                    <div style="margin-left: 10px; ">
                         <label style="font-size: 12px;">ต้นทาง</label><br>
-                        <select style="width: 80px;">
+                        <select style="width: 50px;">
                             <option>ต้นทาง</option>
                             <option disabled style="font-size: large;">ไทย</option>
                             <option>กรุงเทพฯ-สุวรรณภูมิ</option>
@@ -420,7 +224,7 @@
                         </select>
                         <hr>
                     </div>
-                    <div class="t-group">
+                    <div style="margin-left: 10px;">
                         <label style="font-size: 12px;">ชั้นโดยสาร</label><br>
                         <select disabled>
                             <option>ปลายทาง</option>
@@ -428,22 +232,22 @@
                         <hr>
                     </div>
                 </div>
-                <div class="ticket-group" style="padding-right: 10px;">
-                    <div class="t-group">
-                        <label></label><br>
+                <div class="ticket-group" style="display: flex; border-right-style: 1px solid #f58024;">
+                    <div style="margin-left: 10px;">
+                        <label style="font-size: 12px;"></label><br>
                         <select>
-                            <option selected>วันเดินทางไป</option>
+                            <option>1 ท่าน</option>
                             <option>3 ท่าน</option>
                             <option>2 ท่าน</option>
-
+                          
 
                         </select>
                         <hr>
                     </div>
-                    <div class="t-group">
-                        <label></label><br>
+                    <div style="margin-left: 10px;">
+                        <label style="font-size: 12px;">เลือกจำนวนห้องพัก</label><br>
                         <select>
-                            <option selected>วันเดินทางกลับ</option>
+                            <option>1 ห้อง</option>
                             <option>2 ห้อง</option>
                             <option>3 ห้อง</option>
                             <option>4 ห้อง</option>
@@ -458,19 +262,19 @@
                     </div>
                 </div>
 
-                <div class="ticket-group" style="display: flex; border-style: none;">
-                    <div class="t-group">
+                <div class="ticket-group" style="display: flex; border-right-style: 1px solid #f58024;">
+                    <div style="margin-left: 10px;">
                         <label style="font-size: 12px;">ผู้เดินทาง</label><br>
                         <select>
                             <option>1 ท่าน</option>
                             <option>3 ท่าน</option>
                             <option>2 ท่าน</option>
-
+                          
 
                         </select>
                         <hr>
                     </div>
-                    <div class="t-group">
+                    <div style="margin-left: 10px;">
                         <label style="font-size: 12px;">เลือกจำนวนห้องพัก</label><br>
                         <select>
                             <option>1 ห้อง</option>
@@ -610,7 +414,7 @@
                                                 <div class="offer-tour-item">
                                                     <a href="package1.html">
                                                         <div class="offer-backdrop"></div>
-                                                        <img src="เชียงใหม่.jpg">
+                                                        <img src="https://www.thaismileair.com/assets/v2/offer/57/s_thailand-chiangmai.jpg">
                                                         <div class="offer-tour-item-text">
                                                             <p class="offer-tour-title">
                                                                 1,090
@@ -632,7 +436,7 @@
                                                 <div class="offer-tour-item">
                                                     <a href="package2.html">
                                                         <div class="offer-backdrop"></div>
-                                                        <img src="ภูเก็ต.jpg">
+                                                        <img src="https://www.thaismileair.com/assets/v2/offer/56/l_f_thailand-phuket-new-2.jpg">
                                                         <div class="offer-tour-item-text">
                                                             <p class="offer-tour-title">
                                                                 1,180
@@ -654,7 +458,7 @@
                                                 <div class="offer-tour-item">
                                                     <a href="package3.html">
                                                         <div class="offer-backdrop"></div>
-                                                        <img src="ขอนแก่น.jpg">
+                                                        <img src="https://www.thaismileair.com/assets/v2/offer/58/l_thailand-khonkan.jpg">
                                                         <div class="offer-tour-item-text">
                                                             <p class="offer-tour-title">
                                                                 1,050
@@ -676,7 +480,7 @@
                                                 <div class="offer-tour-item">
                                                     <a href="">
                                                         <div class="offer-backdrop"></div>
-                                                        <img src="นครพนม.png">
+                                                        <img src="https://www.thaismileair.com/assets/v2/offer/257/l_%20(1).png">
                                                         <div class="offer-tour-item-text">
                                                             <p class="offer-tour-title">
                                                                 1,220
@@ -752,16 +556,16 @@
                                             </div>
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
-                                                    <img src="eh_1.jpg" class="d-block w-100" alt="...">
+                                                    <img src="https://www.thaismileair.com/assets/v2/homebannereh/2560/eh_ehNISITHerobanner.jpg" class="d-block w-100" alt="...">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="eh_2.jpg" class="d-block w-100" alt="...">
+                                                    <img src="https://www.thaismileair.com/assets/v2/homebannereh/3026/eh_CA_Ads%20EMD_Hero_WK_210930-02.jpg" class="d-block w-100" alt="...">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="eh_3.jpg" class="d-block w-100" alt="...">
+                                                    <img src="https://www.thaismileair.com/assets/v2/homebannereh/3022/eh_WeTravelTogether3_Hero_8Oct21-TH.jpg" class="d-block w-100" alt="...">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="eh_4.jpg" class="d-block w-100" alt="...">
+                                                    <img src="https://www.thaismileair.com/assets/v2/homebannereh/2385/eh_Charterflight_Service_Banner29Oct21-02.jpg" class="d-block w-100" alt="...">
                                                 </div>
                                             </div>
                                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselslider-banner" data-bs-slide="prev">
@@ -888,10 +692,10 @@
 
             <label for="search">จาก</label><br>
             <select id="province" name="province">
-                <option value="" selected ><span id=optionn>ระบุต้นทาง</span></option>
-                <option value="กระบี่"><span id=optionn> กระบี่ (KBV), ไทย</span></option>
-                <option value="กรุงเทพฯ"><span id=optionn>กรุงเทพฯ-สุวรรณภูมิ (BKK), ไทย </span></option>
-                <option value="กัวลาลัมเปอร์"><span id=optionn>กัวลาลัมเปอร์ (KUL), มาเลเซีย</span></option>
+                <option value="" selected> ระบุต้นทาง</option>
+                <option value="กระบี่"> กระบี่ (KBV), ไทย</option>
+                <option value="กรุงเทพฯ">กรุงเทพฯ-สุวรรณภูมิ (BKK), ไทย </option>
+                <option value="กัวลาลัมเปอร์">กัวลาลัมเปอร์ (KUL), มาเลเซีย</option>
                 <option value="กาฐมาณฑุ">กาฐมาณฑุ (KTM), เนปาล </option>
                 <option value=ขอนแก่น>ขอนแก่น (KKC), ไทย </option>
                 <option value=คยา>คยา (GAY), อินเดีย </option>
@@ -1157,7 +961,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="bg-img" style="height: 100%;">
-                            <img class="pal-img" src="tv_1.jpg">
+                            <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/3001/l_214747608_230497958903485_7332024095643430381_n.jpg">
                             <div class="text-on-img">
                                 <div class="title-on-img">
                                     <h3 class="title-header">“ ชวนหนีไปเปิดตา หาที่กินเที่ยวพัก ”</h3>
@@ -1213,14 +1017,14 @@
                                 <div class="related-text">
                                     <p class="m-0 frist-related text-center">สิทธิพิเศษ</p>
                                     <p class="m-0 last-related text-center">ที่น่าสนใจ</p>
-                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="tv_2.jpg">
+                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 ">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="bg-img" style="height: 100%;">
-                            <img class="pal-img" src="tv_3.jpg">
+                            <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2763/l_EJ-48resize.jpg">
                             <div class="text-on-img">
                                 <div class="title-on-img">
                                     <h3 class="title-header">“ เช็คอินก่อนใคร หนีไปเที่ยวด้วยกัน ”</h3>
@@ -1276,14 +1080,14 @@
                                 <div class="related-text">
                                     <p class="m-0 frist-related text-center">สิทธิพิเศษ</p>
                                     <p class="m-0 last-related text-center">ที่น่าสนใจ</p>
-                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="tv_2.jpg">
+                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 ">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="bg-img" style="height: 100%;">
-                            <img class="pal-img" src="travel1.jpg">
+                            <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/3028/l_GettyImages-1144542701%20(5)%20(1).jpg">
                             <div class="text-on-img">
                                 <div class="title-on-img">
                                     <h3 class="title-header">“ เช็คอินก่อนใคร หนีไปเที่ยวกัน ”</h3>
@@ -1339,14 +1143,14 @@
                                 <div class="related-text">
                                     <p class="m-0 frist-related text-center">สิทธิพิเศษ</p>
                                     <p class="m-0 last-related text-center">ที่น่าสนใจ</p>
-                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="tv_2.jpg">
+                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 ">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="bg-img" style="height: 100%;">
-                            <img class="pal-img" src="tv_4.jpg">
+                            <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2969/l_214600823_4436038586432883_5066927913775983263_n.jpg">
                             <div class="text-on-img">
                                 <div class="title-on-img">
                                     <h3 class="title-header">“ เช็คอินก่อนใคร หนีไปเที่ยวกัน ”</h3>
@@ -1402,14 +1206,14 @@
                                 <div class="related-text">
                                     <p class="m-0 frist-related text-center">สิทธิพิเศษ</p>
                                     <p class="m-0 last-related text-center">ที่น่าสนใจ</p>
-                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="tv_2.jpg">
+                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 ">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="bg-img" style="height: 100%;">
-                            <img class="pal-img" src="tv_5.jpg">
+                            <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2965/l_crew%20hkt%2002.1.jpg">
                             <div class="text-on-img">
                                 <div class="title-on-img">
                                     <h3 class="title-header">“ ใครอยากเที่ยว ตามมา! ”</h3>
@@ -1465,14 +1269,14 @@
                                 <div class="related-text">
                                     <p class="m-0 frist-related text-center">สิทธิพิเศษ</p>
                                     <p class="m-0 last-related text-center">ที่น่าสนใจ</p>
-                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="tv_2.jpg">
+                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 ">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="bg-img" style="height: 100%;">
-                            <img class="pal-img" src="tv_6.jpg">
+                            <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2953/l_wangtarn%20valley%2004.jpg">
                             <div class="text-on-img">
                                 <div class="title-on-img">
                                     <h3 class="title-header">“ ใครอยากเที่ยว ตามมา! ”</h3>
@@ -1528,14 +1332,14 @@
                                 <div class="related-text">
                                     <p class="m-0 frist-related text-center">สิทธิพิเศษ</p>
                                     <p class="m-0 last-related text-center">ที่น่าสนใจ</p>
-                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="tv_2.jpg">
+                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 ">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="bg-img" style="height: 100%;">
-                            <img class="pal-img" src="tv_7.jpg">
+                            <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2927/l_536124.jpg">
                             <div class="text-on-img">
                                 <div class="title-on-img">
                                     <h3 class="title-header">“ ชวนหนีไปเปิดตา หาที่กินเที่ยวพัก ”</h3>
@@ -1591,14 +1395,14 @@
                                 <div class="related-text">
                                     <p class="m-0 frist-related text-center">สิทธิพิเศษ</p>
                                     <p class="m-0 last-related text-center">ที่น่าสนใจ</p>
-                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="tv_2.jpg">
+                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 ">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="bg-img" style="height: 100%;">
-                            <img class="pal-img" src="tv_8.jpg">
+                            <img class="pal-img" src="https://www.thaismileair.com/assets/v2/contenthub/2920/l_Intercontinental_cover1.jpg">
                             <div class="text-on-img">
                                 <div class="title-on-img">
                                     <h3 class="title-header">“ ชวนหนีไปเปิดตา หาที่กินเที่ยวพัก ”</h3>
@@ -1654,7 +1458,7 @@
                                 <div class="related-text">
                                     <p class="m-0 frist-related text-center">สิทธิพิเศษ</p>
                                     <p class="m-0 last-related text-center">ที่น่าสนใจ</p>
-                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="tv_2.jpg">
+                                    <img class="privilege-img" style="cursor: pointer; width: 80px; height: 65px;" src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/180/100/0/0/0 ">
                                 </div>
                             </div>
                         </div>
@@ -1663,155 +1467,7 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-    </div> 
-
-
-    <section>
-        <div class="col-xs-12" style="margin-top: 70px;">
-            <div class="title-content-privilege" style="text-align: center;">
-                <h1 style="color: #f58024;">สิทธิพิเศษ จาก WE PRIVILEGE</h1>
-            </div>
-        </div>
-        <div class="col-xs-12">
-            <section id="menu-list">
-                <div class="just-for-you-privilege border">
-                    <div class="item-privilege-text-h">ส่วนลดพิเศษ</div>
-                    <span class="between-p">|</span>
-                    <div class="item-privilege-text">ร้านอาหาร</div>
-                    <span class="between-p">|</span>
-                    <div class="item-privilege-text">ที่พัก</div>
-                    <span class="between-p">|</span>
-                    <div class="item-privilege-text">กิจกรรม</div>
-                </div>
-
-            </section>
-        </div>
-
-
-    <section>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="grid-container">
-                    <div class="grid-layout">
-                        <div class="grid-item medium">
-                            <div class="img">
-                                <img src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE4NzYlMkYzNzExMzgxLmpwZw==/300/300/1/0/0"
-                                    style="filter: brightness(0.8);">
-                            </div>
-                            <div class="overlay-style-1">
-                                <div class="item-overlay1">กีมาลา</div>
-                                <div class="item-overlay2">
-                                    <p style="font-size: 18px; font-weight: 700; margin: 0;">SPECIAL DISCOUNT</p>
-                                    <p style="font-size: 38px; font-weight: 700;"> 10 <span>%</span></p>
-                                </div>
-                                <div class="item-overlay3">ภูเก็ต</div>
-                            </div>
-
-                        </div>
-                        <div class="grid-item">
-                            <div class="img">
-                                <img src="https://www.thaismileair.com/assets/v3/images/privilege/bggrd.png">
-                            </div>
-                            <div class="overlay-style-3">
-                                <div class="item-overlay4">ส่วนลดที่พัก</div>
-                                <div class="item-overlay5">
-                                    <p class="p-overlay5">10-30
-                                        <span>%</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img">
-                                <img src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE4ODElMkZycGJ3Zml0Zy5qcGVn/300/300/1/0/0"
-                                    style="filter: brightness(0.8);">
-                            </div>
-                            <div class="overlay-style-2">
-                                <div class="item-overlay6">
-                                    <i class="fa fa-search"></i>
-                                </div>
-                                <div class="item-overlay7">ค้นหาสิทธิพิเศษเพิ่มเติมที่</div>
-                                <div class="item-overlay8">ภูเก็ต</div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img">
-                                <img src="https://www.thaismileair.com/assets/v3/images/privilege/bggrd.png">
-                            </div>
-                            <div class="overlay-style-3">
-                                <div class="item-overlay4">ส่วนลด</div>
-                                <div class="item-overlay5">
-                                    <p class="p-overlay5">40
-                                        <span>%</span>
-                                    </p>
-                                    <p class="p-overlay6">ขึ้นไป</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item r1c3">
-                            <div class="img">
-                                <img src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE4MjUlMkZDb3B5X29mX1NpbXBsZV9GbG9yYWxfSW1hZ2VfU3ByaW5nX1F1b3Rlc19JbnN0YWdyYW1fUG9zdDEuanBn/300/300/1/0/0"
-                                    style="filter: brightness(0.8);">
-                            </div>
-                            <div class="overlay-style-4">
-                                <div class="item-overlay9">ภูเก็ตเซิร์ฟดอทคอม โรงเรียนสอนเซิร์ฟและเซิร์ฟช็อป</div>
-                                <div class="item-overlay10">
-                                    10 <span>%</span>
-                                </div>
-                                <div class="item-overlay11">
-                                    SPECIAL DISCOUNT
-                                </div>
-                                <div class="item-overlay12">ภูเก็ต</div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img">
-                                <img src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE3NDUlMkZDSElfdGhlX1NwYS1Gcm9udC5qcGc=/300/300/1/0/0"
-                                    style="filter: brightness(0.8);">
-                            </div>
-                            <div class="overlay-style-4">
-                                <div class="item-overlay13">โรงแรม แชงกรี-ลา เชียงใหม่</div>
-                                <div class="item-overlay10">
-                                    20 <span>%</span>
-                                </div>
-                                <div class="item-overlay11">
-                                    SPECIAL DISCOUNT
-                                </div>
-                                <div class="item-overlay12">เชียงใหม่</div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img">
-                                <img src="https://www.thaismileair.com/privilegeimages/aHR0cHMlM0ElMkYlMkZhcGkud2Vwcml2aWxlZ2UuY29tJTJGdXBsb2FkJTJGbGl2ZSUyRnByaXZpbGVnZSUyRjE4ODYlMkZibG9nZ2lmXzYxNWQ3ZGQ0NDcxYmUucG5n/300/300/1/0/0"
-                                    style="filter: brightness(0.8);">
-                            </div>
-                            <div class="overlay-style-4">
-                                <div class="item-overlay13">คลินิกทันตกรรมอะเบาท์ทูธ</div>
-                                <div class="item-overlay10">
-                                    30 <span>%</span>
-                                </div>
-                                <div class="item-overlay11">
-                                    SPECIAL DISCOUNT
-                                </div>
-                                <div class="item-overlay12">กรุงเทพมหานคร</div>
-                            </div>
-                        </div>
-                        <div class="grid-item r1c5-large">
-                            <div class="img">
-                                <img class="item-overlay-large"
-                                    src="https://www.thaismileair.com/gallery/marketplace/marketplaceTH.jpg">
-                            </div>
-                            <div class="overlay-style-5">
-                                <div class="item-overlay14"></div>
-                                <div class="item-overlay15" style="color: #737373;"></div>
-                                <div class="item-overlay16"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
 
     <br>

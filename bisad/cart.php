@@ -120,7 +120,7 @@
                 </form>
 
 
-                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                <a class="nav-link" href="cart.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                   fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                   <path
                     d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
@@ -153,7 +153,20 @@
         ON users.user_id = cart.user_id
         JOIN inventory
         ON cart.product_id = inventory.product_id";
-        $result = $conn->query($sql);
+        //$result = $conn->query($sql);
+
+        if (isset($_POST['btn'])) {
+            $date = $_POST['idate'];
+            // SQL script for selecting by date
+            
+        
+            $query = mysqli_query($conn, $sql);
+        } else {
+            // SQL script for selecting all
+            
+        
+            $query = mysqli_query($conn, $sql);
+        }
 
 
         //สร้างตัวแปร ตัวแปร check คือ id สินค้า และ ตัวแปร cost คือ ผลรวม
@@ -166,11 +179,12 @@
         //$showcart = $result->cart[user_id == $customer]
 
         //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
-        
-        while($row = $result->cart){
-            echo "<tr>";
-            echo "<td><Input type=\"checkbox\" name=\"check\" value=\"1\"></td>";
-            echo "</tr>";
+        while ($row = mysqli_fetch_array($query)) {
+            echo $row['user_id'];
+            
+            //echo "<tr>";
+            //echo "<td><Input type=\"checkbox\" name=\"check\" value=\"1\"></td>";
+            //echo "</tr>";
         }
         ?>
     </div>

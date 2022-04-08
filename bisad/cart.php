@@ -2,14 +2,13 @@
 
     session_start();
     require_once 'config/db.php';
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>ตะกร้าสินค้า</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -144,68 +143,50 @@
 
         </div>
     </nav>
+    <br>
 
     <div class="container">
-        <h3 class="mt-4">สมัครสมาชิก</h3>
-        <hr>
-        <form action="signup_db.php" method="post">
-            <?php if(isset($_SESSION['error'])) { ?>
-                <div class="alert alert-danger" role="alert">
-                    <?php 
-                        echo $_SESSION['error'];
-                        unset($_SESSION['error']);
-                    ?>
-                </div>
-            <?php } ?>
-            <?php if(isset($_SESSION['success'])) { ?>
-                <div class="alert alert-success" role="alert">
-                    <?php 
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                    ?>
-                </div>
-            <?php } ?>
-            <?php if(isset($_SESSION['warning'])) { ?>
-                <div class="alert alert-warning" role="alert">
-                    <?php 
-                        echo $_SESSION['warning'];
-                        unset($_SESSION['warning']);
-                    ?>
-                </div>
-            <?php } ?>
+        <?php
+        //ดึงข้อมูล
+        $sql = "SELECT * FROM users
+        JOIN cart
+        ON users.user_id = cart.user_id
+        JOIN inventory
+        ON cart.product_id = inventory.product_id";
+        //$result = $conn->query($sql);
 
-            <div class="mb-3">
-                <label for="name" class="form-label">ชื่อ</label>
-                <input type="text" class="form-control" name="name" aria-describedby="name">
-            </div>
-            <div class="mb-3">
-                <label for="sex" class="form-label">เพศ</label>
-                <input type="text" class="form-control" name="sex" aria-describedby="sex">
-            </div>
-            <div class="mb-3">
-                <label for="birth" class="form-label">วันเกิด</label>
-                <input type="date" class="form-control" name="birth" aria-describedby="birth">
-            </div>
-            <div class="mb-3">
-                <label for="address" class="form-label">ที่อยู่</label>
-                <input type="text" class="form-control" name="address" aria-describedby="address">
-            </div>
-            <div class="mb-3">
-                <label for="username" class="form-label">ชื่อผู้ใช้</label>
-                <input type="text" class="form-control" name="username" aria-describedby="username">
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">รหัสผ่าน</label>
-                <input type="password" class="form-control" name="password">
-            </div>
-            <div class="mb-3">
-                <label for="confirm password" class="form-label">ยืนยันรหัสผ่าน</label>
-                <input type="password" class="form-control" name="c_password">
-            </div>
-            <button type="submit" name="signup" class="btn btn-primary">สมัครสมาชิก</button>
-        </form>
-        <hr>
-        <p>เป็นสมาชิกแล้วใช่ไหม คลิ๊กที่นี่เพื่อ <a href="signin.php">เข้าสู่ระบบ</a></p>
+        if (isset($_POST['btn'])) {
+            $date = $_POST['idate'];
+            // SQL script for selecting by date
+            
+        
+            $query = mysqli_query($conn, $sql);
+        } else {
+            // SQL script for selecting all
+            
+        
+            $query = mysqli_query($conn, $sql);
+        }
+
+
+        //สร้างตัวแปร ตัวแปร check คือ id สินค้า และ ตัวแปร cost คือ ผลรวม
+        $preorder = array();
+        $cost = 0;
+
+
+        //ดึงข้อมูล username และ จำนวนชนิดของสินค้าในตะกร้า
+        $customer = 1; //กำหนด user_id
+        //$showcart = $result->cart[user_id == $customer]
+
+        //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
+        while ($row = mysqli_fetch_array($query)) {
+            echo $row['user_id'];
+            
+            //echo "<tr>";
+            //echo "<td><Input type=\"checkbox\" name=\"check\" value=\"1\"></td>";
+            //echo "</tr>";
+        }
+        ?>
     </div>
 
 </body>

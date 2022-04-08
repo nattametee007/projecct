@@ -1,7 +1,19 @@
 <?php 
+    // Create connection
+    $connect = new mysqli('localhost', 'root', '', 'store');
 
-    session_start();
-    require_once 'config/db.php';
+    // Check Connection
+
+    if ($connect->connect_error) {
+        die("Something wrong.: " . $connect->connect_error);
+      }
+
+    $sql = "SELECT * FROM users
+            JOIN cart
+            ON users.user_id = cart.user_id
+            JOIN inventory
+            ON cart.product_id = inventory.product_id";
+    $result = $connect->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -147,28 +159,6 @@
 
     <div class="container">
         <?php
-        //ดึงข้อมูล
-        $sql = "SELECT * FROM users
-        JOIN cart
-        ON users.user_id = cart.user_id
-        JOIN inventory
-        ON cart.product_id = inventory.product_id";
-        //$result = $conn->query($sql);
-
-        if (isset($_POST['btn'])) {
-            $date = $_POST['idate'];
-            // SQL script for selecting by date
-            
-        
-            $query = mysqli_query($conn, $sql);
-        } else {
-            // SQL script for selecting all
-            
-        
-            $query = mysqli_query($conn, $sql);
-        }
-
-
         //สร้างตัวแปร ตัวแปร check คือ id สินค้า และ ตัวแปร cost คือ ผลรวม
         $preorder = array();
         $cost = 0;
@@ -179,12 +169,18 @@
         //$showcart = $result->cart[user_id == $customer]
 
         //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
-        while ($row = mysqli_fetch_array($query)) {
-            echo $row['user_id'];
+        while($row = $result->fetch_assoc()) {
+            if ($row['user_id'] == $customer){
+                
+                echo "<tr>";
+                echo "<td><Input type=\"checkbox\" name=\"check". $row['user_id'] ."\" value=\"1\"></td>";
+                echo "<td>" . $row['product_id'] . "</td>";
+                echo "<td>" . $row['quantities'] . "</td>";
+                echo "</tr><br>";
+
+                
+            }
             
-            //echo "<tr>";
-            //echo "<td><Input type=\"checkbox\" name=\"check\" value=\"1\"></td>";
-            //echo "</tr>";
         }
         ?>
     </div>

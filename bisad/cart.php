@@ -2,7 +2,6 @@
 
     session_start();
     require_once 'config/db.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -150,11 +149,11 @@
         <?php
         //ดึงข้อมูล
         $sql = "SELECT * FROM users
-                JOIN cart
-                ON users.user_id = cart.user_id
-                JOIN inventory
-                ON cart.product_id = inventory.product_id";
-        $result = $connect->query($sql);
+        JOIN cart
+        ON users.user_id = cart.user_id
+        JOIN inventory
+        ON cart.product_id = inventory.product_id";
+        $result = $conn->query($sql);
 
 
         //สร้างตัวแปร ตัวแปร check คือ id สินค้า และ ตัวแปร cost คือ ผลรวม
@@ -168,10 +167,11 @@
 
         //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
         
-        while($row = $result):
+        while($row = $result->cart){
             echo "<tr>";
             echo "<td><Input type=\"checkbox\" name=\"check\" value=\"1\"></td>";
             echo "</tr>";
+        }
         ?>
     </div>
 

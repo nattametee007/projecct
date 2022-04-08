@@ -158,8 +158,10 @@
     <br>
 
     <div class="container">
+        <h1 class = "text-center">ตะกร้าสินค้า</h1>
+        <br>
         <?php
-        //สร้างตัวแปร ตัวแปร check คือ id สินค้า และ ตัวแปร cost คือ ผลรวม
+        //สร้างตัวแปร ตัวแปร preorder คือ id สินค้า และ ตัวแปร cost คือ ผลรวมราคา
         $preorder = array();
         $cost = 0;
 
@@ -170,18 +172,28 @@
 
         //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
         while($row = $result->fetch_assoc()) {
-            if ($row['user_id'] == $customer){
-                
-                echo "<tr>";
-                echo "<td><Input type=\"checkbox\" name=\"check". $row['user_id'] ."\" value=\"1\"></td>";
-                echo "<td>" . $row['product_id'] . "</td>";
-                echo "<td>" . $row['quantities'] . "</td>";
-                echo "</tr><br>";
+            if ($row['user_id'] == $customer){                
 
-                
+                echo "<div class=\"row\">";
+                echo "<div class=\"col-2\"></div>";
+                echo "<div class=\"col-1\"><Input type=\"checkbox\" name=\"check". $row['user_id'] ."\" value=\"1\"></div>";
+                echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
+                echo "<div class=\"col-3\">";
+                echo "<div class=\"row\">" . $row['product_name'] . "</div>";
+                echo "<div class=\"row\">" . $row['cost'] . " บาท </div></div>";
+                echo "<div class=\"col-3\"> จำนวน" . " " . $row['quantities'] . " ชิ้น</div>";
+                echo "<div class=\"col-2\"></div>";
+                echo "</div><br><br>";
+  
             }
-            
         }
+
+        echo "<div class=\"row\">";
+        echo "<div class=\"col-2\"></div>";
+        echo "<div class=\"col-6\">ยอดรวม " . $cost . " บาท</div>";
+        echo "<div class=\"col-2\"><a href=\"payment.php\" type=\"button\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
+        echo "<div class=\"col-2\"></div>";
+
         ?>
     </div>
 

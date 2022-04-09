@@ -151,7 +151,7 @@ $db_handle = new DBController();
 	        ?>
             <div class="category-item">
 			
-			<div class="category-all"><?php echo $product_array[$key]["category"]; ?>
+			    <div class="category-all"><?php echo $product_array[$key]["category"]; ?>
 			
 		
 		    </div>
@@ -170,7 +170,7 @@ $db_handle = new DBController();
 	        ?>
 		<div class="product-item container">
 			
-			<a class="product-image" href="#"><img src="<?php echo $product_array[$key]["picture"]; ?>"></a>
+			<a class="product-image" href="detail.php"><img src="<?php echo $product_array[$key]["picture"]; ?>"></a>
 			<div class="product-tile-footer row">
 			<div class="product-title col-sm-4 p-3 bg-dark text-white"><?php echo $product_array[$key]["product_name"]; ?></div>
 			<div class="product-price  col-sm-4 p-3 bg-dark text-white"><?php echo "$".$product_array[$key]["cost"]; ?></div>

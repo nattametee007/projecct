@@ -168,7 +168,7 @@
 
         //ดึงข้อมูล user_id จากหน้า user.php
         //<a class="nav-link" href="cart.php?userid=<?=$customer questionmark >">
-        $customer = $_GET['userid'];
+        $customer = $_GET['usercart'];
 
         //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
         while($row = $result->fetch_assoc()) {
@@ -184,7 +184,7 @@
                 echo "<div class=\"col-2\" align=\"right\"> จำนวน" . " ";
                 echo "<a href=\"#\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
                 echo "<a href=\"#\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">+</a> ชิ้น</div>";
-                echo "<div class=\"col-1\"><a href=\"cartdelete.php?del_cart_product=" . $row['product_id'] . "\" class=\"btn btn-outline-danger btn-sm\">ลบ</a></div>";
+                echo "<div class=\"col-1\"><a href=\"cartdelete.php?del_cart_product=" . $row['product_id'] . "&del_cart_user=" . $customer . "\" class=\"btn btn-outline-danger btn-sm\">ลบ</a></div>";
                 echo "<div class=\"col-2\"></div>";
                 echo "</div><br><br>";
   
@@ -198,7 +198,7 @@
         echo "<div class=\"col-2\" align=\"right\"><a href=\"payment.php\" type=\"button\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
         echo "<div class=\"col-2\"></div>";
 
-        print_r($preorder);
+        //print_r($preorder);
 
         ?>
     </div>

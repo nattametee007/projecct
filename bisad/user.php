@@ -1,23 +1,28 @@
-<?php 
+<?php
 
-    session_start();
-    require_once 'config/db.php';
-    if (!isset($_SESSION['user_login'])) {
-        $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
-        header('location: signin.php');
-    }
+session_start();
+require_once 'config/db.php';
+if (!isset($_SESSION['user_login'])) {
+    $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
+    header('location: signin.php');
+}
 
 ?>
 
-<?php 
+<?php
 
-    if (isset($_SESSION['user_login'])) {
-        $user_id = $_SESSION['user_login'];
-        $stmt = $conn->query("SELECT * FROM users WHERE user_id = $user_id");
-        $stmt->execute();
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            }
-    $customer = $row['user_id'];
+if (isset($_SESSION['user_login'])) {
+    $user_id = $_SESSION['user_login'];
+    $stmt = $conn->query("SELECT * FROM users WHERE user_id = $user_id");
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+}
+$customer = $row['user_id'];
+?>
+<?php
+session_start();
+require_once("dbcontroller.php");
+$db_handle = new DBController();
 ?>
 
 <!DOCTYPE html>
@@ -31,87 +36,87 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            font-family: Arial;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        form.example input[type=text] {
-            padding: 10px;
-            font-size: 17px;
-            border: 1px solid grey;
-            float: left;
-            width: 80%;
-            background: #f1f1f1;
-        }
-        
-        form.example button {
-            float: left;
-            width: 20%;
-            padding: 10px;
-            background: #2196F3;
-            color: white;
-            font-size: 17px;
-            border: 1px solid grey;
-            border-left: none;
-            cursor: pointer;
-        }
-        
-        form.example button:hover {
-            background: #0b7dda;
-        }
-        
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-        
-        .dropbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-        
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
+    body {
+        font-family: Arial;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+    }
+
+    form.example button {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+    }
+
+    form.example button:hover {
+        background: #0b7dda;
+    }
+
+    form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
     </style>
 </head>
 
@@ -136,8 +141,8 @@
                 </form>
 
 
-                <a class="nav-link" href="cart.php?userid=<?=$customer?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <a class="nav-link" href="cart.php?userid=<?= $customer ?>"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                         <path
                             d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                     </svg></a>
@@ -161,42 +166,60 @@
     </nav>
 
     <div class="container">
-        <?php 
+        <?php
 
-            if (isset($_SESSION['user_login'])) {
-                $user_id = $_SESSION['user_login'];
-                $stmt = $conn->query("SELECT * FROM users WHERE user_id = $user_id");
-                $stmt->execute();
-                $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            }
+        if (isset($_SESSION['user_login'])) {
+            $user_id = $_SESSION['user_login'];
+            $stmt = $conn->query("SELECT * FROM users WHERE user_id = $user_id");
+            $stmt->execute();
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        }
         ?>
-
-
-
-
         <h3 class="mt-4">ยินดีต้อนรับ <?php echo $row['name'] ?></h3>
     </div>
-    <div class="container-fluid mt-3">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link" href="#">เสื้อ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">กางเกง</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">กระโปรง</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">ชุดเดรส</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">เครื่องประดับ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">รองเท้า</a>
-            </li>
-        </ul>
+
+    <div class='container' id="product-grid">
+        <div class="row">
+            <div class="col mt-4">
+                <h1>รายการทั้งหมด</h1>
+                <?php
+                $product_array = $db_handle->runQuery("SELECT * FROM inventory");
+                if (!empty($product_array)) {
+                    foreach ($product_array as $key => $value) {
+                ?>
+                <ul>
+                    <li>
+                        <a><div class="product-title"><?php echo $product_array[$key]["category"]; ?></div></a>
+                    </li>
+                </ul>
+
+                <?php
+                    }
+                }
+                ?>
+            </div>
+            <div class="col mt-8">
+                <?php
+                $product_array = $db_handle->runQuery("SELECT * FROM inventory");
+                if (!empty($product_array)) {
+                    foreach ($product_array as $key => $value) {
+                ?>
+                <div class="product-item">
+                    <form method="post"
+                        action="index.php?action=add&code=<?php echo $product_array[$key]["product_id"]; ?>">
+                        <div class="product-image"><img src="<?php echo $product_array[$key]["picture"]; ?>"></div>
+                        <div class="product-tile-footer">
+                            <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?></div>
+                            <div class="product-price"><?php echo "$" . $product_array[$key]["cost"]; ?></div>
+                        </div>
+                    </form>
+                </div>
+                <?php
+                    }
+                }
+                ?>
+            </div>
+        </div>
     </div>
 
 </body>

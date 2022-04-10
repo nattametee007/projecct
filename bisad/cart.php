@@ -182,8 +182,8 @@
                 echo "<div class=\"row\">" . $row['product_name'] . "</div>";
                 echo "<div class=\"row\">" . $row['cost'] . " บาท </div></div>";
                 echo "<div class=\"col-2\" align=\"right\"> จำนวน" . " ";
-                echo "<a href=\"#\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
-                echo "<a href=\"#\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">+</a> ชิ้น</div>";
+                echo "<a href=\"cartminus.php?minus_cart_product=" . $row['product_id'] . "&minus_cart_user=" . $customer . "&minus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
+                echo "<a href=\"cartplus.php?plus_cart_product=" . $row['product_id'] . "&plus_cart_user=" . $customer . "&plus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">+</a> ชิ้น</div>";
                 echo "<div class=\"col-1\"><a href=\"cartdelete.php?del_cart_product=" . $row['product_id'] . "&del_cart_user=" . $customer . "\" class=\"btn btn-outline-danger btn-sm\">ลบ</a></div>";
                 echo "<div class=\"col-2\"></div>";
                 echo "</div><br><br>";

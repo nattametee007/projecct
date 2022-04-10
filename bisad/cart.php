@@ -184,17 +184,14 @@
                 echo "<div class=\"col-2\" align=\"right\"> จำนวน" . " ";
                 echo "<a href=\"#\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
                 echo "<a href=\"#\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">+</a> ชิ้น</div>";
-                echo "<div class=\"col-1\"><button type=\"button\" class=\"btn btn-outline-danger btn-sm\" onclick=\"delete()\">ลบ</a></div>";
+                echo "<div class=\"col-1\"><a href=\"cartdelete.php?del_cart_product=" . $row['product_id'] . "\" class=\"btn btn-outline-danger btn-sm\">ลบ</a></div>";
                 echo "<div class=\"col-2\"></div>";
                 echo "</div><br><br>";
   
             }
         }
 
-        function delete(){
-            $sql = "DELETE FROM cart WHERE product_id = " . $row['product_id'];
-        }
-
+        //ส่วนท้ายของหน้าจอ cart
         echo "<div class=\"row\">";
         echo "<div class=\"col-2\"></div>";
         echo "<div class=\"col-6\" align=\"right\">ยอดรวม " . $cost . " บาท </div>";

@@ -173,3 +173,49 @@ $db_handle = new DBController();
     </div>
 </body>
 </html>
+<div class="row">
+    <div class="col">
+        <form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["product_id"]; ?>">
+            <div class="product-image"><img src="<?php echo $product_array[$key]["picture"]; ?>">
+            </div>
+            <div class="product-tile-footer">
+                <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?></div>
+                <div class="product-price"><?php echo "$" . $product_array[$key]["cost"]; ?></div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+            <div class="col mt-4">
+                <ul>
+                    <li>
+                        <a>
+                            <div class="product-title"><?php echo $product_array[$key]["category"];?></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col mt-8">
+                <?php                       
+                        if ($product_array[$key]["category"] == "เสื้อ") {
+                            $product_array = $db_handle->runQuery("SELECT * FROM inventory WHERE category='เสื้อ'");
+                            echo $product_array[$key]["product_name"];
+                            echo "$" . $product_array[$key]["cost"];
+                        } elseif ($product_array[$key]["category"] == "กางเกง") {
+                            $product_array = $db_handle->runQuery("SELECT * FROM inventory WHERE category='กางเกง'");
+                            echo $product_array[$key]["product_name"];
+                            echo "$" . $product_array[$key]["cost"];
+                        } elseif ($product_array[$key]["category"] == "กระโปรง") {
+                            $product_array = $db_handle->runQuery("SELECT * FROM inventory WHERE category='กระโปรง'");
+                            echo $product_array[$key]["product_name"];
+                            echo "$" . $product_array[$key]["cost"];
+                        } else {
+                            $product_array = $db_handle->runQuery("SELECT * FROM inventory WHERE category='ชุดเดรส'");
+                            echo $product_array[$key]["product_name"];
+                            echo "$" . $product_array[$key]["cost"];
+                        }
+                ?>
+
+
+            </div>
+        </div>

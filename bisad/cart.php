@@ -195,7 +195,7 @@
         echo "<div class=\"row\">";
         echo "<div class=\"col-2\"></div>";
         echo "<div class=\"col-6\" align=\"right\">ยอดรวม " . $cost . " บาท </div>";
-        echo "<div class=\"col-2\" align=\"right\"><a href=\"payment.php\" type=\"button\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
+        echo "<div class=\"col-2\" align=\"right\"><a href=\"payment.php?customer=" . $customer ."\" type=\"button\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
         echo "<div class=\"col-2\"></div>";
 
         //print_r($preorder);

@@ -8,13 +8,13 @@
         die("Something wrong.: " . $connect->connect_error);
       }
 
-    $del_cart_product = $_GET['del_cart_product'];
-    $del_cart_user = $_GET['del_cart_user'];
+    $plus_cart_product = $_GET['plus_cart_product'];
+    $plus_cart_user = $_GET['plus_cart_user'];
 
     // SQL script for deleting an item
-    $sql = "DELETE FROM cart WHERE product_id =" . $del_cart_product . " AND user_id = " . $del_cart_user;
+    $sql = "UPDATE cart SET quantities = quantities+1 WHERE product_id =" . $plus_cart_product . " AND user_id = " . $plus_cart_user;
       
     mysqli_query($connect,$sql);    
-    header("location:cart.php?usercart=". $del_cart_user);
+    header("location:cart.php?usercart=". $plus_cart_user);
 
 ?>

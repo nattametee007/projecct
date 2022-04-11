@@ -156,7 +156,8 @@
         </div>
     </nav>
     <br>
-
+    
+    <form action="<?=$_SERVER['PHP_SELF'];?>" method="POST">
     <div class="container">
         <h1 class = "text-center">ตะกร้าสินค้า</h1>
         <br>
@@ -168,13 +169,13 @@
 
         //ดึงข้อมูล user_id จากหน้า user.php
         //<a class="nav-link" href="cart.php?userid=<?=$customer questionmark >">
-        $customer = $_GET['userid'];
+        $customer = $_GET['usercart'];
 
         //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
         while($row = $result->fetch_assoc()) {
             if ($row['user_id'] == $customer){                
 
-                echo "<div class=\"row\">";
+                /*echo "<div class=\"row\">";
                 echo "<div class=\"col-2\"></div>";
                 echo "<div class=\"col-1\"><input type=\"checkbox\" name=\"check\" value=\"" . $row['product_id'] . "\"></div>";
                 echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
@@ -182,26 +183,54 @@
                 echo "<div class=\"row\">" . $row['product_name'] . "</div>";
                 echo "<div class=\"row\">" . $row['cost'] . " บาท </div></div>";
                 echo "<div class=\"col-2\" align=\"right\"> จำนวน" . " ";
-                echo "<a href=\"#\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
-                echo "<a href=\"#\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">+</a> ชิ้น</div>";
-                echo "<div class=\"col-1\"><a href=\"cartdelete.php?del_cart_product=" . $row['product_id'] . "\" class=\"btn btn-outline-danger btn-sm\">ลบ</a></div>";
+                echo "<a href=\"cartminus.php?minus_cart_product=" . $row['product_id'] . "&minus_cart_user=" . $customer . "&minus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
+                echo "<a href=\"cartplus.php?plus_cart_product=" . $row['product_id'] . "&plus_cart_user=" . $customer . "&plus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">+</a> ชิ้น</div>";
+                echo "<div class=\"col-1\"><a href=\"cartdelete.php?del_cart_product=" . $row['product_id'] . "&del_cart_user=" . $customer . "\" class=\"btn btn-outline-danger btn-sm\">ลบ</a></div>";
+                echo "<div class=\"col-2\"></div>";
+                echo "</div><br><br>";*/
+
+                echo "<div class=\"row\">";
+                echo "<div class=\"col-2\"></div>";
+                echo "<div class=\"col-1\"><input type=\"checkbox\" name=\"check[]\" value=\"" . $row['product_id'] . "\"></div>";
+                echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
+                echo "<div class=\"col-3\">";
+                echo "<div class=\"row\">" . $row['product_name'] . "</div>";
+                echo "<div class=\"row\">" . $row['cost'] . " บาท </div></div>";
+                echo "<div class=\"col-2\" align=\"right\"> จำนวน" . " ";
+                echo "<a href=\"cartminus.php?minus_cart_product=" . $row['product_id'] . "&minus_cart_user=" . $customer . "&minus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
+                echo "<a href=\"cartplus.php?plus_cart_product=" . $row['product_id'] . "&plus_cart_user=" . $customer . "&plus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">+</a> ชิ้น</div>";
+                echo "<div class=\"col-1\"><a href=\"cartdelete.php?del_cart_product=" . $row['product_id'] . "&del_cart_user=" . $customer . "\" class=\"btn btn-outline-danger btn-sm\">ลบ</a></div>";
                 echo "<div class=\"col-2\"></div>";
                 echo "</div><br><br>";
   
             }
         }
 
+        isset( $_POST['check'] ) ? $check = $_POST['check'] : $check = array();
+        if( count( $check ) > 0 ) {
+            
+            foreach( $check as $v ) {
+                array_push($check,$v);
+                $preorder[] = $v;
+                //echo $v;
+            }
+            //$input = implode( "|", $input );
+            //echo $input;
+
+        }
+
         //ส่วนท้ายของหน้าจอ cart
         echo "<div class=\"row\">";
         echo "<div class=\"col-2\"></div>";
         echo "<div class=\"col-6\" align=\"right\">ยอดรวม " . $cost . " บาท </div>";
-        echo "<div class=\"col-2\" align=\"right\"><a href=\"payment.php\" type=\"button\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
+        echo "<div class=\"col-2\" align=\"right\"><a href=\"payment.php?customer=" . $customer ."&check=" . json_encode($preorder) . "\" type=\"submit\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
+        //echo "<div class=\"col-2\" align=\"right\"><input type=\"submit\" class=\"btn btn-primary\" value=\"อัพเดต\"></div>";
         echo "<div class=\"col-2\"></div>";
-
-        print_r($preorder);
+        
 
         ?>
     </div>
+    </form>
 
 </body>
 

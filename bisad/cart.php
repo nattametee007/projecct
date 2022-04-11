@@ -210,8 +210,8 @@
         if( count( $check ) > 0 ) {
             
             foreach( $check as $v ) {
-                array_push($check,$v);
-                $preorder[] = $v;
+                array_push($preorder,$v);
+                //$preorder[] = $v;
                 //echo $v;
             }
             //$input = implode( "|", $input );

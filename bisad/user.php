@@ -19,22 +19,26 @@ if (isset($_SESSION['user_login'])) {
 }
 $customer = $row['user_id'];
 ?>
+
 <?php
-session_start();
+
 require_once("dbcontroller.php");
 $db_handle = new DBController();
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>USERS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
     body {
         font-family: Arial;
@@ -124,7 +128,7 @@ $db_handle = new DBController();
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            <a class="navbar-brand" href="user.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
                     <path
                         d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
@@ -164,61 +168,114 @@ $db_handle = new DBController();
 
         </div>
     </nav>
+    <?php
 
-    <div class="container">
-        <?php
-
-        if (isset($_SESSION['user_login'])) {
-            $user_id = $_SESSION['user_login'];
-            $stmt = $conn->query("SELECT * FROM users WHERE user_id = $user_id");
-            $stmt->execute();
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        }
-        ?>
-        <h3 class="mt-4">ยินดีต้อนรับ <?php echo $row['name'] ?></h3>
-    </div>
-
-    <div class='container' id="product-grid">
-        <div class="row">
-            <div class="col mt-4">
-                <h1>รายการทั้งหมด</h1>
-                <?php
-                $product_array = $db_handle->runQuery("SELECT * FROM inventory");
-                if (!empty($product_array)) {
-                    foreach ($product_array as $key => $value) {
-                ?>
-                <ul>
-                    <li>
-                        <a><div class="product-title"><?php echo $product_array[$key]["category"]; ?></div></a>
-                    </li>
-                </ul>
-
-                <?php
-                    }
+    if (isset($_SESSION['user_login'])) {
+        $user_id = $_SESSION['user_login'];
+        $stmt = $conn->query("SELECT * FROM users WHERE user_id = $user_id");
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    ?>
+    <?php
+            $all = array();
+            $product_array = $db_handle->runQuery("SELECT DISTINCT category FROM inventory");
+            if (!empty($product_array)) {
+                foreach ($product_array as $key => $value) {
+                    array_push($all, $product_array[$key]["category"]);
                 }
-                ?>
-            </div>
-            <div class="col mt-8">
-                <?php
-                $product_array = $db_handle->runQuery("SELECT * FROM inventory");
+            }
+            ?>
+    <div class="container-fluid row">
+        <div class="container col-2  ">
+
+            <ul class="nav" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#hommy">
+                        <h1>หมวดหมู่</h1>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <?php
+                          foreach ($all as $value)
+            { ?>
+                    <button type="button" class="container btn btn-outline-info">
+
+                        <a class="nav-link" data-bs-toggle="pill" href="#<?php echo $value; ?>">
+                            <div class="product-title"><?php echo $value; ?>
+                        </a>
+
+                    </button>
+                    <?php } ?>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="container col-10  tab-content ">
+            <div id="hommy" class="container row tab-pane active ">
+                <div class="row tab-pane active" >
+                    <?php $product_array = $db_handle->runQuery("SELECT *  FROM inventory ");
                 if (!empty($product_array)) {
                     foreach ($product_array as $key => $value) {
-                ?>
-                <div class="product-item">
-                    <form method="post"
-                        action="index.php?action=add&code=<?php echo $product_array[$key]["product_id"]; ?>">
-                        <div class="product-image"><img src="<?php echo $product_array[$key]["picture"]; ?>"></div>
-                        <div class="product-tile-footer">
-                            <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?></div>
-                            <div class="product-price"><?php echo "$" . $product_array[$key]["cost"]; ?></div>
+                         ?>
+
+                    <div class="product-image col-sm-3 " >
+                        <div class="product-image"><a href="detail.php"><img src="<?php echo $product_array[$key]["picture"]; ?>"></a>
                         </div>
-                    </form>
+                        <div class="product-tile-footer">
+                            <button type="button" class="btn btn-outline-info">
+                                <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
+                            </button>
+                            <button type="button" class="btn ">
+                                <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?></div>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <?php  }
+                }  ?>
                 </div>
-                <?php
-                    }
-                }
-                ?>
             </div>
+
+            <?php
+            
+            foreach ($all as $value)
+            { ?>
+
+
+            <div class="container  tab-pane fade row  " id='<?php echo $value; ?>'>
+                <div class="row tab-pane active">
+                    <?php $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE category='$value'");
+                if (!empty($product_array)) {
+                    foreach ($product_array as $key => $value) {
+                         ?>
+
+                    <div class="product-image col-sm-3 ">
+                        <div class="product-image"><a href="detail.php"><img src="<?php echo $product_array[$key]["picture"]; ?>"></a>
+                        </div>
+                        <div class="product-tile-footer">
+                            <button type="button" class="btn btn-outline-info">
+                                <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
+                            </button>
+                            <button type="button" class="btn ">
+                                <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?></div>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <?php  }
+                }  ?>
+                </div>
+            </div>
+
+            <?php    } ?>
+
+
         </div>
     </div>
 

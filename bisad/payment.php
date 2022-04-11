@@ -164,22 +164,11 @@
 
         //รับข้อมูล user_id
         $customer = $_GET['customer'];
+        $preorder = $_GET['check'];
 
-        //แสดงชื่อและที่อยู่ลูกค้า
-        echo "<div class=\"row\"";
-        echo "<div class=\"col-3\"></div>";
-        echo "<div class=\"col-8\">";
-        while($row = $result->fetch_assoc()) {
-            if ($row['user_id'] == $customer){  
-                echo "ชื่อ        " . $row['name'] . "<br>";
-                echo "ที่อยู่       " . $row['address'];
+        print_r(json_decode($preorder));
 
-            }
         
-        }
-
-        echo "</div>";
-        echo "<div class=\"col-3\"></div></div>";
 
         ?>
     </div>

@@ -223,7 +223,7 @@ $db_handle = new DBController();
                          ?>
 
                     <div class="product-image col-sm-3 " >
-                        <div class="product-image"><a href="detail.php"><img src="<?php echo $product_array[$key]["picture"]; ?>"></a>
+                        <div class="product-image"><a href="detail.php?product='<?php $product_array[$key]["product_id"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height = "100px"></a>
                         </div>
                         <div class="product-tile-footer">
                             <button type="button" class="btn btn-outline-info">
@@ -255,7 +255,7 @@ $db_handle = new DBController();
                          ?>
 
                     <div class="product-image col-sm-3 ">
-                        <div class="product-image"><a href="detail.php"><img src="<?php echo $product_array[$key]["picture"]; ?>"></a>
+                        <div class="product-image"><a href="detail.php?product='<?php $product_array[$key]["product_id"]; ?>'"><img src="<?php echo $product_array[$key]["picture"]; ?>"></a>
                         </div>
                         <div class="product-tile-footer">
                             <button type="button" class="btn btn-outline-info">

@@ -3,7 +3,6 @@ session_start();
 require_once("dbcontroller.php");
 $db_handle = new DBController();
 
-
 ?>
 <html lang="en">
 
@@ -137,12 +136,19 @@ $db_handle = new DBController();
 
         </div>
     </nav>
+
+    <?php
+        $product = $_GET['product'];
+        //$product = mysqli_real_escape_string($conn,$_GET['product']);
+        echo $product;
+    ?>
+
     <center>
         <div class="container-fluid mt-2">
             <div class="container row">
 
                 <div class="col-sm-5  "><?php
-                                        $product_array = $db_handle->runQuery("SELECT * FROM inventory WHERE product_name='เสื้อยืด'");
+                                        $product_array = $db_handle->runQuery("SELECT * FROM inventory WHERE product_id=$product");
                                         if (!empty($product_array)) {
                                             foreach ($product_array as $key => $value) {
                                         ?>

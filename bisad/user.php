@@ -160,7 +160,7 @@ $db_handle = new DBController();
                     <div class="dropdown-content">
                         <a href="index.php">สมัครสมาชิก</a>
                         <a href="signin.php">เข้าสู่ระบบ</a>
-                        <a href="#">ดูรายการสั่งซื้อ</a>
+                        <a href="orderlist.php">ดูรายการสั่งซื้อ</a>
                         <a href="logout.php">ออกจากระบบ</a>
                     </div>
                 </div>

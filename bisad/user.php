@@ -168,15 +168,7 @@ $db_handle = new DBController();
 
         </div>
     </nav>
-    <?php
 
-    if (isset($_SESSION['user_login'])) {
-        $user_id = $_SESSION['user_login'];
-        $stmt = $conn->query("SELECT * FROM users WHERE user_id = $user_id");
-        $stmt->execute();
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    ?>
     <?php
             $all = array();
             $product_array = $db_handle->runQuery("SELECT DISTINCT category FROM inventory");

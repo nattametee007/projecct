@@ -200,7 +200,7 @@ $db_handle = new DBController();
 
         </div>
 
-        <div class="container col-10  tab-content ">
+        <div class="container col-10  tab-content  ">
             <div id="hommy" class="container row tab-pane active ">
                 <div class="row tab-pane active">
                     <?php
@@ -210,10 +210,10 @@ $db_handle = new DBController();
                         foreach ($product_array as $key => $value) {
                     ?>
 
-                            <div class="product-image col-sm-3 ">
+                            <div class="product-image col-sm-3 card">
 
 
-                                <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"];?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="100px"></a>
+                                <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="100px"></a>
                                 </div>
 
                                 <div class="product-tile-footer">
@@ -225,6 +225,7 @@ $db_handle = new DBController();
                                     </button>
 
                                 </div>
+
                             </div>
 
                     <?php  }
@@ -244,8 +245,8 @@ $db_handle = new DBController();
                             foreach ($product_array as $key => $value) {
                         ?>
 
-                                <div class="product-image col-sm-3 ">
-                                    <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="100px"></a>
+                                <div class="product-image col-sm-3 card">
+                                    <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="100px"></a>
                                     </div>
                                     <div class="product-tile-footer">
                                         <button type="button" class="btn btn-outline-info">

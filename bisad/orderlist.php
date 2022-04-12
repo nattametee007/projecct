@@ -152,11 +152,11 @@ include("condb.php");
 
 	<div class="container" style='margin-top:3%;margin-left:2%'>
         <div class='row'>
-        <div class='col-4'>
+        <div class='col-3'>
         <table class="table table-striped table-hover">
             <thead>
                 <tr class="row">
-                    <th class="col-sm-3" class="nav-link active" data-bs-toggle="pill" href="#home">หมายเลขคำสั่งซื้อ</th>
+                    <th class="col-sm-7">หมายเลขคำสั่งซื้อ</th>
                 </tr>
             </thead>
             <tbody>
@@ -164,7 +164,7 @@ include("condb.php");
                 <?php foreach($rsorder as $row){
                     array_push($allorderid, $row['order_id']); ?>
                     <tr>
-                        <td><a class="nav-link" data-bs-toggle="pill" href="#<?php echo $row['order_id']; ?>"><?php echo $row['order_id']; ?></a></td>
+                        <td><a href="#<?php echo $row['order_id']; ?>"><?php echo $row['order_id']; ?></a></td>
                     </tr>
                 <?php } ?>
             </tbody>
@@ -174,11 +174,7 @@ include("condb.php");
         ?>
         <div class='col-8'>
             <div class="tab-content">
-    <div id="home" class="container tab-pane active"><br>
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    
-                <div id="<?php echo $id; ?>" class="container tab-pane fade"><br>
+                <div id="<?php echo $id; ?>" class="container tab-pane active"><br>
                 <?php
                 $queryorderlistdetail = "SELECT so.*, i.picture, i.product_name, i.cost FROM sale_order as so INNER JOIN inventory as i ON so.product_id = i.product_id WHERE so.order_id = $id";
                 $rsorderdetail = mysqli_query($conn, $queryorderlistdetail);
@@ -201,7 +197,7 @@ include("condb.php");
                     echo "<div class='col-md-3 offset-md-1'>" . "<img src='picture/" . $row['picture'] . "' width='100%'>" . "</div>";
                     echo "<div class='col-md-5 offset-md-0.5'>";
                         echo "<div class='row'>";
-                            echo "<div class='col-md-5 offset-md-0.5'>ชื่อสินค้า : " . $row['product_name'] . "</div>";
+                            echo "<div class='col-md-6 offset-md-0.5'>ชื่อสินค้า : " . $row['product_name'] . "</div>";
                         echo "</div>";
                         echo "<div class='row'>";
                             echo "<div class='col-md-5 offset-md-0.5'>ราคาต่อหน่วย : " . number_format($row['cost'],2) . "&nbsp;บาท" . "</div>";

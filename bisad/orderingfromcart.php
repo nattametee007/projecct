@@ -20,7 +20,7 @@
 <html lang="en">
 
 <head>
-    <title>ชำระเงิน</title>
+    <title>สั่งซื้อสินค้า</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -158,19 +158,46 @@
     <br>
 
     <div class="container">
-        <h1 class = "text-center">ชำระเงิน </h1>
+        <h1 class = "text-center">สั่งซื้อสินค้า</h1>
         <br>
         <?php
 
-        //รับข้อมูล user_id
+        //รับข้อมูล user_id และ costsum ในตะกร้าสินค้า
         $customer = $_GET['customer'];
-        $preorder = $_GET['check'];
+        $costsum = $_GET['costsum'];
 
-        print_r(json_decode($preorder));
+
+        //แสดงรายการสินค้า
+        while($row = $result->fetch_assoc()) {
+
+            if ($row['user_id'] == $customer){     
+
+                echo "<div class=\"row\">";
+                echo "<div class=\"col-3\"></div>";
+                echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
+                echo "<div class=\"col-3\">" . $row['product_name'] . "<br>". $row['cost'] . " บาท</div>";
+                echo "<div class=\"col-2\" align=\"right\">จำนวน " . $row['quantities'] . " ชิ้น<br>รวม " . $row['quantities']*$row['cost'] . " บาท</div>";
+                echo "<div class=\"col-3\"></div>";
+                echo "</div><br>";
+
+            }
+        }
+            echo "<div class=\"row\">";
+            echo "<div class=\"col-7\"></div>";
+            echo "<div class=\"col-2\" align=\"right\">รวม " . $costsum . " บาท</div>";
+            echo "<div class=\"col-3\"></div>";
+            echo "</div><br><br>";
 
         
+        //ส่วนท้ายของหน้าจอ ordering
+        echo "<div class=\"row\">";
+        echo "<div class=\"col-7\"></div>";
+        echo "<div class=\"col-2\" align=\"right\"><a href=\"orderinsert_cartdelete.php?customer=" . $customer . "\" type=\"submit\" class=\"btn btn-primary\">สั่งซื้อ</a></div>";
+        echo "<div class=\"col-3\"></div>";
 
         ?>
+
+        
     </div>
 
 </body>

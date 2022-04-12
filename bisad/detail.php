@@ -170,7 +170,7 @@ $db_handle = new DBController();
 
                 <div class="col-sm-7 ">
 
-                    <div class="product-title">
+                    <div class="container">
                         <h1>
                             <?php echo $product_array[$key]["product_name"]; ?><br>
                             <?php echo $product_array[$key]["cost"]; ?><br>
@@ -180,14 +180,15 @@ $db_handle = new DBController();
                     <hr>
 
 
-                    <div class="product-tile-footer row">
+                    <div class="container row">
 
-                        <div class="product-title col "><button type="button" class="container btn btn-outline-info">
+                        <div class="container col">
+                            <button type="button" class="container btn btn-outline-info">
                                 <a href="payment.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><h2>สั่งซื้อสินค้า</h2></a>
                         </button></div>
 
 
-                        <div class="product-price  col ">
+                        <div class="container col">
                             <button type="button" class="container btn btn-outline-info">
                                 <h2>เพิ่มลงตะกร้า</h2>
                             </button>

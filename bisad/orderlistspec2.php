@@ -2,7 +2,7 @@
 include('condb.php');
 include('signin_db.php');
 
-$order_id = mysqli_real_escape_string($conn,$_GET['order_id']);
+$order_id = $_GET['order_id'];
 
 $queryorderlistdetail = "SELECT so.*, i.picture, i.product_name, i.cost FROM sale_order as so INNER JOIN inventory as i ON so.product_id = i.product_id WHERE so.order_id = $order_id AND so.user_id = $user_id";
 $rsorderdetail = mysqli_query($conn, $queryorderlistdetail);
@@ -158,32 +158,36 @@ $rowdetailtd = mysqli_fetch_array($rsordertd);
     <h4>หมายเลขคำสั่งซื้อ : <?php echo $order_id; ?><br>
         วัน เวลาที่สั่งซื้อ : <?php echo $rowdetailtd['time_date']; ?>
     </h4>
-    <div class="container">
-        <?php
-            $amount=0;
-            foreach($rsorderdetail as $row){
-                $amount += $row['total'];
-                echo "<div class='row'>";
-                    echo "<div class='col-md-3 offset-md-3'>" . "<img src='../picture/" . $row['picture'] . "' width='100%'>" . "</div>";
-                    echo "<div class='col-md-5 offset-md-0.5'>";
-                        echo "<div class='row'>";
-                            echo "<div class='col-md-5 offset-md-0.5'>ชื่อสินค้า : " . $row['product_name'] . "</div>";
-                        echo "</div>";
-                        echo "<div class='row'>";
-                            echo "<div class='col-md-5 offset-md-0.5'>ราคาต่อหน่วย : " . number_format($row['cost'],2) . "&nbsp;บาท" . "</div>";
-                        echo "</div>";
-                        echo "<div class='row'>";
-                            echo "<div class='col-md-5 offset-md-0.5'>จำนวน : " . number_format($row['quantities']) . "&nbsp;ชิ้น" . "</div>";
-                        echo "</div>";
-                    echo "</div>";
-                echo "</div>";
-                echo "<br>";
-            } //close foreach
-                    echo "<br>";
-                    echo "<div class='row'>";
-                        echo "<div class='col-md-4 offset-md-6'>" . "<b>" . "ยอดรวมทั้งหมด&nbsp;" . number_format($amount,2) . "&nbsp;บาท" . "</b>" . "</div>";
-                    echo "</div>";
-        ?>
+    <div class="table-responsive">
+        <table class='table'>
+            <tr>
+                <th width='5%'>#</th>
+                <th width='20%'>รูปสินค้า</th>
+                <th width='25%'>สินค้า</th>
+                <th width='10%'>ราคา</th>
+                <th width='10%'>จำนวน</th>
+                <th width='10%'>รวม(บาท)</th>
+            </tr>
+            <?php
+                $amount=0;
+                foreach($rsorderdetail as $row){
+                    $amount += $row['total'];
+                    echo "<tr>";
+                        echo "<td>" . @$i == 1 . "</td>";
+                        echo "<td>" . "<img src='../picture/" . $row['picture'] . "' width='100%'>" . "</td>";
+                        echo "<td>" . $row['product_name'] . "</td>";
+                        echo "<td align='right'>" . number_format($row['cost'],2) . "</td>";
+                        echo "<td align='right'>" . number_format($row['quantities']) . "</td>";
+                        echo "<td align='right'>" . number_format($row['total'],2) . "</td>";
+
+                        echo "</tr>";
+                } //close foreach
+                        echo "<tr>";
+                            echo "<td colspan='5' align='center'><b>ยอดรวมทั้งหมด</b></td>";
+                            echo "<td align='right'>" . "<b>" . number_format($amount,2) . "</b>" . "</td>";
+                        echo "</tr>";
+            ?>
+        </table>
     </div>
 
 </body>

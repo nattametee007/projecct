@@ -3,6 +3,7 @@ session_start();
 include("condb.php");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -149,23 +150,79 @@ include("condb.php");
     $rsorder = mysqli_query($conn, $queryorder);
     ?>
 
-    <h3>รายการสั่งซื้อ</h3>
-	<div class="container" style='margin-top:3%;margin-left:10%'>
+	<div class="container" style='margin-top:3%;margin-left:2%'>
+        <div class='row'>
+        <div class='col-4'>
         <table class="table table-striped table-hover">
             <thead>
                 <tr class="row">
-                    <th class="col-sm-3">หมายเลขคำสั่งซื้อ</th>
+                    <th class="col-sm-3" class="nav-link active" data-bs-toggle="pill" href="#home">หมายเลขคำสั่งซื้อ</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($rsorder as $row){ ?>
-                    <?php $order_id = $row['order_id']; ?>
+                <?php $allorderid = array(); ?>
+                <?php foreach($rsorder as $row){
+                    array_push($allorderid, $row['order_id']); ?>
                     <tr>
-                        <td><a href='orderlistspec.php?order_id=$order_id'><?php echo $row['order_id']; ?></a></td>
+                        <td><a class="nav-link" data-bs-toggle="pill" href="#<?php echo $row['order_id']; ?>"><?php echo $row['order_id']; ?></a></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
+        </div>
+        <?php foreach($allorderid as $id){
+        ?>
+        <div class='col-8'>
+            <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    
+                <div id="<?php echo $id; ?>" class="container tab-pane fade"><br>
+                <?php
+                $queryorderlistdetail = "SELECT so.*, i.picture, i.product_name, i.cost FROM sale_order as so INNER JOIN inventory as i ON so.product_id = i.product_id WHERE so.order_id = $id";
+                $rsorderdetail = mysqli_query($conn, $queryorderlistdetail);
+                $rowdetail = mysqli_fetch_array($rsorderdetail);
+
+                $queryorderlisttd = "SELECT DISTINCT time_date FROM sale_order WHERE order_id = $id";
+                $rsordertd = mysqli_query($conn, $queryorderlisttd);
+                $rowdetailtd = mysqli_fetch_array($rsordertd);
+                ?>
+                <h3>รายการสั่งซื้อ</h3>
+    <h4>หมายเลขคำสั่งซื้อ : <?php echo $id; ?><br>
+        วัน เวลาที่สั่งซื้อ : <?php echo $rowdetailtd['time_date']; ?>
+    </h4>
+    <div class="container">
+        <?php
+            $amount=0;
+            foreach($rsorderdetail as $row){
+                $amount += $row['total'];
+                echo "<div class='row'>";
+                    echo "<div class='col-md-3 offset-md-1'>" . "<img src='picture/" . $row['picture'] . "' width='100%'>" . "</div>";
+                    echo "<div class='col-md-5 offset-md-0.5'>";
+                        echo "<div class='row'>";
+                            echo "<div class='col-md-5 offset-md-0.5'>ชื่อสินค้า : " . $row['product_name'] . "</div>";
+                        echo "</div>";
+                        echo "<div class='row'>";
+                            echo "<div class='col-md-5 offset-md-0.5'>ราคาต่อหน่วย : " . number_format($row['cost'],2) . "&nbsp;บาท" . "</div>";
+                        echo "</div>";
+                        echo "<div class='row'>";
+                            echo "<div class='col-md-5 offset-md-0.5'>จำนวน : " . number_format($row['quantities']) . "&nbsp;ชิ้น" . "</div>";
+                        echo "</div>";
+                    echo "</div>";
+                echo "</div>";
+                echo "<br>";
+            } //close foreach
+                    echo "<br>";
+                    echo "<div class='row'>";
+                        echo "<div class='col-md-4 offset-md-6'>" . "<b>" . "ยอดรวมทั้งหมด&nbsp;" . number_format($amount,2) . "&nbsp;บาท" . "</b>" . "</div>";
+                    echo "</div>";
+        ?>
+    </div>
+    <?php } ?>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>

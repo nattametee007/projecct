@@ -4,6 +4,7 @@ require_once("dbcontroller.php");
 $db_handle = new DBController();
 
 ?>
+ 
 <html lang="en">
 
 <head>
@@ -136,17 +137,17 @@ $db_handle = new DBController();
 
         </div>
     </nav>
-
     <?php
         $product = $_GET['product'];
         //$product = mysqli_real_escape_string($conn,$_GET['product']);
-        echo $product;
+        
     ?>
+   
 
     <center>
         <div class="container-fluid mt-2">
             <div class="container row">
-
+            <h1><?php echo $product; ?></h1>
                 <div class="col-sm-5  "><?php
                                         $product_array = $db_handle->runQuery("SELECT * FROM inventory WHERE product_id=$product");
                                         if (!empty($product_array)) {
@@ -154,7 +155,7 @@ $db_handle = new DBController();
                                         ?>
 
 
-                            <a class="product-image img-fluid" width="1100" height="500" href="detail.php"><img src="<?php echo $product_array[$key]["picture"]; ?>"></a>
+                            <a class="product-image img-fluid" width="1100" height="500"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>"></a>
 
                     <?php
                                             }

@@ -8,12 +8,27 @@
         die("Something wrong.: " . $connect->connect_error);
       }
 
+    $customer = $_GET['customer'];
+    
+
+    //SQL query cart
     $sql = "SELECT * FROM users
             JOIN cart
             ON users.user_id = cart.user_id
             JOIN inventory
             ON cart.product_id = inventory.product_id";
     $result = $connect->query($sql);
+    
+
+    //SQL for loop to delete cart
+    while($row = $result->fetch_assoc()) {  
+
+        $sql3 = "DELETE FROM cart WHERE user_id =" . $customer . " AND product_id =" . $row['product_id'];
+        mysqli_query($connect,$sql3);
+
+    }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +130,7 @@
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            <a class="navbar-brand" href="user.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
           fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
           <path
             d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
@@ -155,49 +170,15 @@
 
         </div>
     </nav>
-    <br>
+    
+    <br><br><br>
 
     <div class="container">
-        <h1 class = "text-center">สั่งซื้อสินค้า</h1>
-        <br>
-        <?php
-
-        //รับข้อมูล user_id และ costsum ในตะกร้าสินค้า
-        $customer = $_GET['customer'];
-        $costsum = $_GET['costsum'];
-
-
-        //แสดงรายการสินค้า
-        while($row = $result->fetch_assoc()) {
-
-            if ($row['user_id'] == $customer){     
-
-                echo "<div class=\"row\">";
-                echo "<div class=\"col-3\"></div>";
-                echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
-                echo "<div class=\"col-3\">" . $row['product_name'] . "<br>". $row['cost'] . " บาท</div>";
-                echo "<div class=\"col-2\" align=\"right\">จำนวน " . $row['quantities'] . " ชิ้น<br>รวม " . $row['quantities']*$row['cost'] . " บาท</div>";
-                echo "<div class=\"col-3\"></div>";
-                echo "</div><br>";
-
-            }
-        }
-            echo "<div class=\"row\">";
-            echo "<div class=\"col-7\"></div>";
-            echo "<div class=\"col-2\" align=\"right\">รวม " . $costsum . " บาท</div>";
-            echo "<div class=\"col-3\"></div>";
-            echo "</div><br><br>";
-
-        
-        //ส่วนท้ายของหน้าจอ ordering
-        echo "<div class=\"row\">";
-        echo "<div class=\"col-7\"></div>";
-        echo "<div class=\"col-2\" align=\"right\"><a href=\"orderinsertfromcart.php?customer=" . $customer . "\" type=\"submit\" class=\"btn btn-primary\">สั่งซื้อ</a></div>";
-        echo "<div class=\"col-3\"></div>";
-
-        ?>
-
-        
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6" align="center"><h3>สั่งซื้อสินค้าสำเร็จ</h3></div>
+            <div class="col-3"></div>
+        </div>
     </div>
 
 </body>

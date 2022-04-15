@@ -178,109 +178,114 @@ $db_handle = new DBController();
         }
     }
     ?>
-    <div class="container-fluid mt-2">
-        <div class="container row">
-            <div class="container col-2  ">
+    <center>
+        <div class="container-fluid mt-2">
+            <div class="container row">
+                <div class="container col-2  ">
 
-                <ul class="nav" role="tablist">
+                    <ul class="nav" role="tablist">
 
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="pill" href="#hommy">
-                            <h1>หมวดหมู่</h1>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <?php
-                    foreach ($all as $value) { ?>
-                        <button type="button" class="container btn btn-outline-info">
-
-                            <a class="nav-link" data-bs-toggle="pill" href="#<?php echo $value; ?>">
-                                <div class="product-title"><?php echo $value; ?>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="pill" href="#hommy">
+                                <h1>หมวดหมู่</h1>
                             </a>
+                        </li>
 
-                        </button>
-                        <?php } ?>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <?php
+                    foreach ($all as $value) { ?>
+                            <button type="button" class="container btn btn-outline-info">
 
-            </div>
+                                <a class="nav-link" data-bs-toggle="pill" href="#<?php echo $value; ?>">
+                                    <div class="product-title"><?php echo $value; ?>
+                                </a>
 
-            <div class="container col-10  tab-content  ">
-                <div id="hommy" class="container row tab-pane active ">
-                    <div class="row tab-pane active">
-                        <?php
+                            </button>
+                            <?php } ?>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="container col-10  tab-content  ">
+                    <div id="hommy" class="container row tab-pane active ">
+                        <div class="row tab-pane active">
+                            <?php
 
                     $product_array = $db_handle->runQuery("SELECT *  FROM inventory ");
                     if (!empty($product_array)) {
                         foreach ($product_array as $key => $value) {
                     ?>
 
-                        <div class="product-image col-sm-3 card">
+                            <div class="product-image col-sm-3 card">
 
 
-                            <div class="product-image"><a
-                                    href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img
-                                        src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="100px"></a>
+                                <div class="product-image"><a
+                                        href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img
+                                            src="picture/<?php echo $product_array[$key]["picture"]; ?>"
+                                            height="100px"></a>
+                                </div>
+
+                                <div class="product-tile-footer">
+                                    <button type="button" class="btn btn-outline-info">
+                                        <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
+                                    </button>
+                                    <button type="button" class="btn ">
+                                        <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?>
+                                        </div>
+                                    </button>
+
+                                </div>
+
                             </div>
 
-                            <div class="product-tile-footer">
-                                <button type="button" class="btn btn-outline-info">
-                                    <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
-                                </button>
-                                <button type="button" class="btn ">
-                                    <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?></div>
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                        <?php  }
+                            <?php  }
                     }  ?>
+                        </div>
                     </div>
-                </div>
 
-                <?php
+                    <?php
 
             foreach ($all as $value) { ?>
 
 
-                <div class="container  tab-pane fade row  " id='<?php echo $value; ?>'>
-                    <div class="row tab-pane active">
-                        <?php $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE category='$value'");
+                    <div class="container  tab-pane fade row  " id='<?php echo $value; ?>'>
+                        <div class="row tab-pane active">
+                            <?php $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE category='$value'");
                         if (!empty($product_array)) {
                             foreach ($product_array as $key => $value) {
                         ?>
 
-                        <div class="product-image col-sm-3 card">
-                            <div class="product-image"><a
-                                    href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img
-                                        src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="100px"></a>
-                            </div>
-                            <div class="product-tile-footer">
-                                <button type="button" class="btn btn-outline-info">
-                                    <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
-                                </button>
-                                <button type="button" class="btn ">
-                                    <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?></div>
-                                </button>
+                            <div class="product-image col-sm-3 card">
+                                <div class="product-image"><a
+                                        href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img
+                                            src="picture/<?php echo $product_array[$key]["picture"]; ?>"
+                                            height="100px"></a>
+                                </div>
+                                <div class="product-tile-footer">
+                                    <button type="button" class="btn btn-outline-info">
+                                        <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
+                                    </button>
+                                    <button type="button" class="btn ">
+                                        <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?>
+                                        </div>
+                                    </button>
 
+                                </div>
                             </div>
-                        </div>
 
-                        <?php  }
+                            <?php  }
                         }  ?>
+                        </div>
                     </div>
+
+                    <?php    } ?>
+
+
                 </div>
-
-                <?php    } ?>
-
-
             </div>
         </div>
-    </div>
-
+    </center>
 </body>
 
 </html>

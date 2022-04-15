@@ -165,7 +165,7 @@ $db_handle = new DBController();
 
                     <div class="container">
                         <h1><?php echo $product_array[$key]["product_name"]; ?></h1><br>
-                        <h3> <?php echo $product_array[$key]["cost"]; ?></h3><br>
+                        <h3> <?php echo "THB" . $product_array[$key]["cost"]; ?></h3><br>
                         <h5><?php echo $product_array[$key]["detail"]; ?></h5>
 
                     </div>

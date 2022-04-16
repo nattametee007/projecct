@@ -182,6 +182,7 @@
                 echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
                 echo "<div class=\"col-2\">";
                 echo "<div class=\"row\">" . $row['product_name'] . "</div>";
+                echo "<div class=\"row\">" . $row['colour'] . "," . $row['size'] . "</div>";
                 echo "<div class=\"row\">" . $row['cost'] . " บาท </div></div>";
                 echo "<div class=\"col-2\" align=\"right\"> จำนวน" . " ";
                 echo "<a href=\"cartminus.php?minus_cart_product=" . $row['product_id'] . "&minus_cart_user=" . $customer . "&minus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";

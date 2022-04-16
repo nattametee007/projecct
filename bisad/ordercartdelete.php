@@ -181,6 +181,10 @@
         </div>
     </div>
 
+    <script>
+        alert("สั่งซื้อสินค้าสำเร็จ");
+    </script>
+
 </body>
 
 </html>

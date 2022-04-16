@@ -8,19 +8,34 @@
         die("Something wrong.: " . $connect->connect_error);
       }
 
+    $customer = $_GET['customer'];
+    
+
+    //SQL query cart
     $sql = "SELECT * FROM users
             JOIN cart
             ON users.user_id = cart.user_id
             JOIN inventory
             ON cart.product_id = inventory.product_id";
     $result = $connect->query($sql);
+    
+
+    //SQL for loop to delete cart
+    while($row = $result->fetch_assoc()) {  
+
+        $sql3 = "DELETE FROM cart WHERE user_id =" . $customer . " AND product_id =" . $row['product_id'];
+        mysqli_query($connect,$sql3);
+
+    }
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>ตะกร้าสินค้า</title>
+    <title>สั่งซื้อสินค้า</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -115,7 +130,7 @@
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            <a class="navbar-brand" href="user.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
           fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
           <path
             d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
@@ -155,54 +170,16 @@
 
         </div>
     </nav>
-    <br>
     
+    <br><br><br>
+
     <div class="container">
-        <h1 class = "text-center">ตะกร้าสินค้า</h1>
-        <br>
-        <?php
-        //สร้างตัวแปร ตัวแปร preorder คือ id สินค้า และ ตัวแปร costsum คือ ผลรวมราคา
-        $preorder = array();
-        //$preorder2 = "";
-        $costsum = 0;
-
-
-        //ดึงข้อมูล user_id จากหน้า user.php
-        $customer = $_GET['usercart'];
-
-        //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
-        while($row = $result->fetch_assoc()) {
-            if ($row['user_id'] == $customer){                
-                
-                array_push($preorder,$row['product_id']);
-                //$preorder2 = $preorder2 . $row['product_id'] . ",";
-                $costsum = $costsum + ($row['cost']*$row['quantities']);
-                echo "<div class=\"row\">";
-                echo "<div class=\"col-3\"></div>";
-                echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
-                echo "<div class=\"col-2\">";
-                echo "<div class=\"row\">" . $row['product_name'] . "</div>";
-                echo "<div class=\"row\">" . $row['cost'] . " บาท </div></div>";
-                echo "<div class=\"col-2\" align=\"right\"> จำนวน" . " ";
-                echo "<a href=\"cartminus.php?minus_cart_product=" . $row['product_id'] . "&minus_cart_user=" . $customer . "&minus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
-                echo "<a href=\"cartplus.php?plus_cart_product=" . $row['product_id'] . "&plus_cart_user=" . $customer . "&plus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">+</a> ชิ้น</div>";
-                echo "<div class=\"col-1\"><a href=\"cartdelete.php?del_cart_product=" . $row['product_id'] . "&del_cart_user=" . $customer . "\" class=\"btn btn-outline-danger btn-sm\">ลบ</a></div>";
-                echo "<div class=\"col-3\"></div>";
-                echo "</div><br><br>";
-  
-            }
-        }
-
-        //ส่วนท้ายของหน้าจอ cart
-        echo "<div class=\"row\">";
-        echo "<div class=\"col-8\" align=\"right\">ยอดรวม " . $costsum . " บาท </div>";
-        echo "<div class=\"col-2\" ><a href=\"paymentfromcart.php?customer=" . $customer ."&costsum=" . $costsum . "\" type=\"submit\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
-        echo "<div class=\"col-2\"></div>";
-        
-
-        ?>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6" align="center"><h3>สั่งซื้อสินค้าสำเร็จ</h3></div>
+            <div class="col-3"></div>
+        </div>
     </div>
-    </form>
 
 </body>
 

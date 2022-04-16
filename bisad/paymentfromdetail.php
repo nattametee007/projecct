@@ -8,12 +8,11 @@
         die("Something wrong.: " . $connect->connect_error);
       }
 
-    $sql = "SELECT * FROM users
-            JOIN cart
-            ON users.user_id = cart.user_id
-            JOIN inventory
-            ON cart.product_id = inventory.product_id";
+    $sql = "SELECT * FROM users";
     $result = $connect->query($sql);
+
+    $sql1 = "SELECT * FROM inventory";
+    $result1 = $connect->query($sql1);
 ?>
 
 <!DOCTYPE html>
@@ -164,13 +163,82 @@
 
         //รับข้อมูล user_id
         $customer = $_GET['customer'];
-        $preorder = $_GET['check'];
+        $productorder = $_GET['productorder'];
+        $quantitiesorder = $_GET['quantitiesorder'];
+        $costsum = 0;
 
-        print_r(json_decode($preorder));
+        //แสดงชื่อและที่อยู่ลูกค้า
+        while($row = $result->fetch_assoc()) {
+
+            if ($row['user_id'] == $customer){     
+
+                echo "<div class=\"row\">";
+                echo "<div class=\"col-2\"></div>";
+                echo "<div class=\"col-2\">ชื่อและที่อยู่</div>";
+                echo "<div class=\"col-6\">" . $row['name'] . "<br>" . $row['address'] ."</div>";
+                echo "<div class=\"col-2\"></div>";
+                echo "</div><br>";
+
+            }
+        }
+
+
+        //แสดงรายการสินค้า
+        echo "<div class=\"row\">";
+        echo "<div class=\"col-2\"></div>";
+        echo "<div class=\"col-2\">รายการสินค้า</div>";
+        echo "<div class=\"col-8\"></div>";
+        echo "</div>";
+
+        while($row = $result1->fetch_assoc()) {
+
+            if ($row['product_id'] == $productorder){     
+
+                echo "<div class=\"row\">";
+                echo "<div class=\"col-4\"></div>";
+                echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
+                echo "<div class=\"col-3\">" . $row['product_name'] . "<br>". $row['cost'] . " บาท</div>";
+                echo "<div class=\"col-2\" align=\"right\">จำนวน " . $quantitiesorder . " ชิ้น<br>รวม " . $quantitiesorder*$row['cost'] . " บาท</div>";
+                echo "<div class=\"col-2\"></div>";
+                echo "</div><br>";
+                $costsum = $costsum + $quantitiesorder*$row['cost'];
+            }
+        }
+            echo "<div class=\"row\">";
+            echo "<div class=\"col-8\"></div>";
+            echo "<div class=\"col-2\" align=\"right\">รวม " . $costsum . " บาท</div>";
+            echo "<div class=\"col-2\"></div>";
+            echo "</div><br>";
+        ?>
+
+        <!--แสดงวิธีชำระเงิน-->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-2">เลือกวิธีชำระเงิน</div>
+            <div class="col-8"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-2" align="right"><input type="radio" name="age"><label>บัตรเครดิต/เดบิต</label></div>
+            <div class="col-2" align="right"><input type="radio" name="age"><label>โมบายแบงก์กิ้ง</label></div>
+            <div class="col-2" align="right"><input type="radio" name="age"><label>โอนเงินผ่านธนาคาร</label></div>
+            <div class="col-2" align="right"><input type="radio" name="age"><label>ชำระเงินปลายทาง</label></div>
+            <div class="col-2"></div>
+        </div>
+        <br><br>
+        
+        <?php
+
+        //ส่วนท้ายของหน้าจอ payment
+        echo "<div class=\"row\">";
+        echo "<div class=\"col-8\" align=\"right\">ยอดรวม " . $costsum . " บาท </div>";
+        echo "<div class=\"col-2\" align=\"right\"><a href=\"orderingfromdetail.php?customer=" . $customer . "&productorder=" . $productorder ."&quantitiesorder=" . $quantitiesorder ."&costsum=" . $costsum ."\" type=\"submit\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
+        echo "<div class=\"col-2\"></div>";
+        
+        ?>
 
         
-
-        ?>
     </div>
 
 </body>

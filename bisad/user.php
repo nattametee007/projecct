@@ -217,13 +217,13 @@ $db_handle = new DBController();
                         foreach ($product_array as $key => $value) {
                     ?>
 
-                            <div class="product-image col-sm-3 card">
+                            <div class="product-image col-sm-4 card">
 
 
                                 <div class="product-image"><a
                                         href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img
                                             src="picture/<?php echo $product_array[$key]["picture"]; ?>"
-                                            height="100px"></a>
+                                            height="150px"></a>
                                 </div>
 
                                 <div class="product-tile-footer">
@@ -237,7 +237,8 @@ $db_handle = new DBController();
 
                                 </div>
 
-                            </div>
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+    
 
                             <?php  }
                     }  ?>

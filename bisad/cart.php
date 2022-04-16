@@ -195,10 +195,16 @@
         }
 
         //ส่วนท้ายของหน้าจอ cart
-        echo "<div class=\"row\">";
-        echo "<div class=\"col-8\" align=\"right\">ยอดรวม " . $costsum . " บาท </div>";
-        echo "<div class=\"col-2\" ><a href=\"paymentfromcart.php?customer=" . $customer ."&costsum=" . $costsum . "\" type=\"submit\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
-        echo "<div class=\"col-2\"></div>";
+        if ($costsum == 0){
+            echo "<div class=\"row\"><div class=\"col-12\" align=\"center\">ไม่มีสินค้าในตะกร้า</div></div>";
+        }
+        else {
+            echo "<div class=\"row\">";
+            echo "<div class=\"col-8\" align=\"right\">ยอดรวม " . $costsum . " บาท </div>";
+            echo "<div class=\"col-2\" ><a href=\"paymentfromcart.php?customer=" . $customer ."&costsum=" . $costsum . "\" type=\"submit\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
+            echo "<div class=\"col-2\"></div>";
+        }
+        
         
 
         ?>

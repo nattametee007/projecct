@@ -182,6 +182,7 @@
                 echo "<div class=\"col-1\"><img src=\"picture/" . $row['picture'] ."\" height = 100% width = 100% ></div>";
                 echo "<div class=\"col-2\">";
                 echo "<div class=\"row\">" . $row['product_name'] . "</div>";
+                echo "<div class=\"row\">" . $row['colour'] . "," . $row['size'] . "</div>";
                 echo "<div class=\"row\">" . $row['cost'] . " บาท </div></div>";
                 echo "<div class=\"col-2\" align=\"right\"> จำนวน" . " ";
                 echo "<a href=\"cartminus.php?minus_cart_product=" . $row['product_id'] . "&minus_cart_user=" . $customer . "&minus_cart_quan=" . $row['quantities'] . "\" type=\"button\" class=\"btn btn-outline-primary btn-sm\">-</a> " . $row['quantities'] . " ";
@@ -194,10 +195,16 @@
         }
 
         //ส่วนท้ายของหน้าจอ cart
-        echo "<div class=\"row\">";
-        echo "<div class=\"col-8\" align=\"right\">ยอดรวม " . $costsum . " บาท </div>";
-        echo "<div class=\"col-2\" ><a href=\"paymentfromcart.php?customer=" . $customer ."&costsum=" . $costsum . "\" type=\"submit\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
-        echo "<div class=\"col-2\"></div>";
+        if ($costsum == 0){
+            echo "<div class=\"row\"><div class=\"col-12\" align=\"center\">ไม่มีสินค้าในตะกร้า</div></div>";
+        }
+        else {
+            echo "<div class=\"row\">";
+            echo "<div class=\"col-8\" align=\"right\">ยอดรวม " . $costsum . " บาท </div>";
+            echo "<div class=\"col-2\" ><a href=\"paymentfromcart.php?customer=" . $customer ."&costsum=" . $costsum . "\" type=\"submit\" class=\"btn btn-primary\">ชำระเงิน</a></div>";
+            echo "<div class=\"col-2\"></div>";
+        }
+        
         
 
         ?>

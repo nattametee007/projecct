@@ -181,7 +181,7 @@ $db_handle = new DBController();
     <center>
         <div class="container-fluid mt-2">
             <div class="container row">
-                <div class="container col-3  ">
+                <div class="container col-2  ">
 
                     <ul class="nav nav-pills" role="tablist">
 
@@ -207,7 +207,7 @@ $db_handle = new DBController();
 
                 </div>
 
-                <div class="container col-9  tab-content  ">
+                <div class="container col-10  tab-content  ">
                     <div id="hommy" class="container row tab-pane active ">
                         <div class="row tab-pane active">
                             <?php
@@ -229,7 +229,7 @@ $db_handle = new DBController();
                                 <div class="product-tile-footer">
                                     <button type="button" class="btn btn-outline-info">
                                         <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
-                                    </button>
+                                    </button><br>
                                     <button type="button" class="btn ">
                                         <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?>
                                         </div>
@@ -257,23 +257,23 @@ $db_handle = new DBController();
                             foreach ($product_array as $key => $value) {
                         ?>
 
-                            <div class="product-image col-sm-3 card">
+                            <div class="product-image col-sm-4 card">
                                 <div class="product-image"><a
                                         href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img
                                             src="picture/<?php echo $product_array[$key]["picture"]; ?>"
-                                            height="100px"></a>
+                                            height="150px"></a>
                                 </div>
                                 <div class="product-tile-footer">
                                     <button type="button" class="btn btn-outline-info">
                                         <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
-                                    </button>
+                                    </button><br>
                                     <button type="button" class="btn ">
                                         <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?>
                                         </div>
                                     </button>
 
                                 </div>
-                            </div>
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <?php  }
                         }  ?>

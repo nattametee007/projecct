@@ -183,24 +183,24 @@ $db_handle = new DBController();
             <div class="container row">
                 <div class="container col-3  ">
 
-                    <ul class="nav" role="tablist">
+                    <ul class="nav nav-pills" role="tablist">
 
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="pill" href="#hommy">
-                                <h1>หมวดหมู่</h1>
+                            <a class="nav-link active" data-bs-toggle="pill" href="#hommy">
+                                <h6>หมวดหมู่</h6>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <?php
                     foreach ($all as $value) { ?>
-                            <button type="button" class="container btn btn-outline-info">
+                            
 
                                 <a class="nav-link" data-bs-toggle="pill" href="#<?php echo $value; ?>">
-                                    <div class="product-title"><?php echo $value; ?>
+                                    <?php echo $value; ?>
                                 </a>
 
-                            </button>
+            
                             <?php } ?>
                         </li>
                     </ul>

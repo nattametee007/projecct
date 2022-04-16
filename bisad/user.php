@@ -181,7 +181,7 @@ $db_handle = new DBController();
     <center>
         <div class="container-fluid mt-2">
             <div class="container row">
-                <div class="container col-2  ">
+                <div class="container col-3  ">
 
                     <ul class="nav" role="tablist">
 
@@ -207,7 +207,7 @@ $db_handle = new DBController();
 
                 </div>
 
-                <div class="container col-10  tab-content  ">
+                <div class="container col-9  tab-content  ">
                     <div id="hommy" class="container row tab-pane active ">
                         <div class="row tab-pane active">
                             <?php

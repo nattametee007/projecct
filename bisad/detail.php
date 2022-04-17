@@ -186,9 +186,9 @@ $db_handle = new DBController();
                                 <label class="form-check-label"
                                     for="check1"><?php echo $product_array[$key]["colour"]; ?></label>
                                 <input type="checkbox" class="form-check-input" disabled>
-                                <label class="form-check-label">เขียว</label>
+                                <label class="form-check-label">มิ้นต์</label>
                                 <input type="checkbox" class="form-check-input" disabled>
-                                <label class="form-check-label">เทา</label>
+                                <label class="form-check-label">คราม</label>
                             </div>
 
                             <div class="form-group">

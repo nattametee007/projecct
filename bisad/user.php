@@ -194,13 +194,13 @@ $db_handle = new DBController();
                         <li class="nav-item">
                             <?php
                     foreach ($all as $value) { ?>
-                            
 
-                                <a class="nav-link" data-bs-toggle="pill" href="#<?php echo $value; ?>">
-                                    <?php echo $value; ?>
-                                </a>
 
-            
+                            <a class="nav-link" data-bs-toggle="pill" href="#<?php echo $value; ?>">
+                                <?php echo $value; ?>
+                            </a>
+
+
                             <?php } ?>
                         </li>
                     </ul>
@@ -217,28 +217,32 @@ $db_handle = new DBController();
                         foreach ($product_array as $key => $value) {
                     ?>
 
-                            <div class="product-image col-sm-4 card">
+                            <div class="product-image col-sm-3 card">
+                                
 
+                                    <div class="product-image"><a
+                                            href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img
+                                            
+                                                src="picture/<?php echo $product_array[$key]["picture"]; ?>"
+                                                height="150px"></a>
+                                    </div>
+                           
+                                
+                                    <div class="product-tile-footer">
+                                        <button type="button" class="btn btn-outline-info">
+                                            <div class="product-title">
+                                                <?php echo $product_array[$key]["product_name"]; ?>
+                                        </button><br>
+                                        <button type="button" class="btn ">
+                                            <div class="product-price">
+                                                <?php echo "THB" . $product_array[$key]["cost"]; ?>
+                                            </div>
+                                        </button>
 
-                                <div class="product-image"><a
-                                        href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img
-                                            src="picture/<?php echo $product_array[$key]["picture"]; ?>"
-                                            height="150px"></a>
-                                </div>
-
-                                <div class="product-tile-footer">
-                                    <button type="button" class="btn btn-outline-info">
-                                        <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
-                                    </button><br>
-                                    <button type="button" class="btn ">
-                                        <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?>
-                                        </div>
-                                    </button>
-
-                                </div>
-
+                                    </div>
+                                
                             </div>&nbsp;&nbsp;&nbsp;&nbsp;
-    
+
 
                             <?php  }
                     }  ?>
@@ -257,22 +261,28 @@ $db_handle = new DBController();
                             foreach ($product_array as $key => $value) {
                         ?>
 
-                            <div class="product-image col-sm-4 card">
-                                <div class="product-image"><a
-                                        href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'"><img
-                                            src="picture/<?php echo $product_array[$key]["picture"]; ?>"
-                                            height="150px"></a>
-                                </div>
-                                <div class="product-tile-footer">
-                                    <button type="button" class="btn btn-outline-info">
-                                        <div class="product-title"><?php echo $product_array[$key]["product_name"]; ?>
-                                    </button><br>
-                                    <button type="button" class="btn ">
-                                        <div class="product-price"><?php echo "THB" . $product_array[$key]["cost"]; ?>
-                                        </div>
-                                    </button>
+                            <div class="product-image col-sm-3 card">
+                                
+                                    <div class="product-image"><a
+                                            href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img
+                                            
+                                                src="picture/<?php echo $product_array[$key]["picture"]; ?>"
+                                                height="100px"></a>
+                                    </div>
+                               
+                                    <div class="product-tile-footer">
+                                        <button type="button" class="btn btn-outline-info">
+                                            <div class="product-title">
+                                                <?php echo $product_array[$key]["product_name"]; ?>
+                                        </button><br>
+                                        <button type="button" class="btn ">
+                                            <div class="product-price">
+                                                <?php echo "THB" . $product_array[$key]["cost"]; ?>
+                                            </div>
+                                        </button>
 
-                                </div>
+                                    </div>
+                                
                             </div>&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <?php  }

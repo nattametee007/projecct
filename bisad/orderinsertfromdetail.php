@@ -41,7 +41,7 @@
              VALUES (" . $numorder . "," . $costsum . "," . $quantitiesorder . ","  . $customer. "," . $productorder . ")";
     mysqli_query($connect,$sql2);
 
-  
+    header("location:user.php");
 
 ?>
 

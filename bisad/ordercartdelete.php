@@ -28,6 +28,7 @@
 
     }
 
+    header("location:user.php");
 
 ?>
 

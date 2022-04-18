@@ -195,7 +195,7 @@ $db_handle = new DBController();
                             <div class="container row">
 
                                 <div class="container col">
-                                    <a class="container btn btn-outline-info" href="payment.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $user; ?>'">
+                                    <a class="container btn btn-outline-info" href="payment.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $user; ?>'&quantitiesorder=1">
                                         สั่งซื้อสินค้า
                                     </a>
 
@@ -230,7 +230,7 @@ $db_handle = new DBController();
                                 </div>
                                 <div class="form-group">
                                     <label>จำนวน : </label>
-                                    <input type="text" class="form-control" placeholder="จำนวน" name="iqty" />
+                                    <input type="text" class="form-control" placeholder="จำนวน" name="iqty" value=1>
                                 </div>
 
                             </div><br>
@@ -238,7 +238,7 @@ $db_handle = new DBController();
                             <div class="container row">
 
                                 <div class="container col">
-                                    <a class="container btn btn-outline-info" href="payment.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $user; ?>'">
+                                    <a class="container btn btn-outline-info" href="paymentfromdetail.php?product=<?php echo $product; ?>&user=<?php echo $user; ?>&quantitiesorder=1">
                                         สั่งซื้อสินค้า
                                     </a>
 

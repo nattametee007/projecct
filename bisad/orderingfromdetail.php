@@ -166,8 +166,8 @@
 
         //แสดงรายการสินค้า
         while($row = $result->fetch_assoc()) {
-
-            if ($row['product_id'] == $productorder){     
+            $productt = "'" . $row['product_id'] . "'";
+            if ($productt == $productorder){     
 
                 echo "<div class=\"row\">";
                 echo "<div class=\"col-3\"></div>";
@@ -189,7 +189,7 @@
         //ส่วนท้ายของหน้าจอ ordering
         echo "<div class=\"row\">";
         echo "<div class=\"col-7\"></div>";
-        echo "<div class=\"col-2\" align=\"right\"><a href=\"orderinsert.php?customer=" . $customer . "&productorder=" . $productorder ."&quantitiesorder=" . $quantitiesorder ."&costsum=" . $costsum . "\" type=\"submit\" class=\"btn btn-primary\">สั่งซื้อ</a></div>";
+        echo "<div class=\"col-2\" align=\"right\"><a href=\"orderinsertfromdetail.php?customer=" . $customer . "&productorder=" . $productorder ."&quantitiesorder=" . $quantitiesorder ."&costsum=" . $costsum . "\" type=\"submit\" class=\"btn btn-primary\">สั่งซื้อ</a></div>";
         echo "<div class=\"col-3\"></div>";
 
         ?>

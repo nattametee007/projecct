@@ -162,16 +162,19 @@
         <?php
 
         //รับข้อมูล user_id
-        $customer = $_GET['customer'];
-        $productorder = $_GET['productorder'];
+        $customer = $_GET['user'];
+        $productorder = $_GET['product'];
         $quantitiesorder = $_GET['quantitiesorder'];
         $costsum = 0;
 
+
         //แสดงชื่อและที่อยู่ลูกค้า
         while($row = $result->fetch_assoc()) {
+            $userr = "'" . $row['user_id'] . "'";
 
-            if ($row['user_id'] == $customer){     
+            if ($userr == $customer){     
 
+                
                 echo "<div class=\"row\">";
                 echo "<div class=\"col-2\"></div>";
                 echo "<div class=\"col-2\">ชื่อและที่อยู่</div>";
@@ -191,8 +194,8 @@
         echo "</div>";
 
         while($row = $result1->fetch_assoc()) {
-
-            if ($row['product_id'] == $productorder){     
+            $productt = "'" . $row['product_id'] . "'";
+            if ($productt == $productorder){     
 
                 echo "<div class=\"row\">";
                 echo "<div class=\"col-4\"></div>";

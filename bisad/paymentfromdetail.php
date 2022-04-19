@@ -14,7 +14,7 @@
     $sql1 = "SELECT * FROM inventory";
     $result1 = $connect->query($sql1);
 
-    $customer = $_GET['customer'];
+    $customer = $_GET['user'];
 ?>
 
 <!DOCTYPE html>

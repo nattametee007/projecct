@@ -165,12 +165,12 @@ $db_handle = new DBController();
     
     <?php
     $item_search = $_POST['search2'];
-    $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE  '$item_search' in ( product_name)");
+    $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE  '$item_search' in ( product_name) OR '$item_search' in (category)");
     if (!empty($product_array)) {
         foreach ($product_array as $key => $value) {
     ?>
 
-            <div class="product-image col-sm-3 card">
+            <center><div class="product-image col-sm-3 card" style='margin-top:8px'>
 
 
                 <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="150px"></a>
@@ -190,7 +190,7 @@ $db_handle = new DBController();
 
                 </div>
 
-            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;<center>
 
 
     <?php  }

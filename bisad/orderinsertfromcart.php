@@ -38,9 +38,14 @@
     //SQL for loop to insert ordering
     while($row = $result->fetch_assoc()) {  
 
-        $sql2 = "INSERT INTO sale_order (order_id, total, quantities, user_id, product_id)
-                 VALUES (" . $numorder . "," . $row['quantities']*$row['cost'] . "," . $row['quantities'] . ","  . $customer. "," . $row['product_id'] . ")";
-        mysqli_query($connect,$sql2);
+        if ($row['user_id'] == $customer) {
+
+            $sql2 = "INSERT INTO sale_order (order_id, total, quantities, user_id, product_id)
+                     VALUES (" . $numorder . "," . $row['quantities']*$row['cost'] . "," . $row['quantities'] . ","  . $customer. "," . $row['product_id'] . ")";
+            mysqli_query($connect,$sql2);
+
+        }
+        
 
     }
 

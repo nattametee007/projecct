@@ -137,7 +137,7 @@ $db_handle = new DBController();
 
             <ul class="navbar-nav">
 
-                <form class="example" method="POST" action="search.php"style="margin:auto;max-width:300px">
+                <form class="example" method="POST" style="margin:auto;max-width:300px">
                     <input type="text" placeholder="Search.." name="search2">
                     <button type="submit" name="btn1"><i class="fa fa-search"></i></button>
                 </form>
@@ -162,138 +162,39 @@ $db_handle = new DBController();
 
         </div>
     </nav>
+    
     <?php
-    if (isset($_POST["btn1"])) {
-        include("connect.php");
-        //$item_search = $_POST['search2'];
-        header("location:search.php");
-   
-    };
-
-    ?>
-
-
-    <?php
-    $all = array();
-    $product_array = $db_handle->runQuery("SELECT DISTINCT category FROM inventory");
+    $item_search = $_POST['search2'];
+    $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE product_name in ( '$item_search')");
     if (!empty($product_array)) {
         foreach ($product_array as $key => $value) {
-            array_push($all, $product_array[$key]["category"]);
-        }
-    }
     ?>
-    <center>
-        <div class="container-fluid mt-2">
-            <div class="container row">
-                <div class="container col-2  ">
 
-                    <ul class="nav nav-pills" role="tablist">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="pill" href="#hommy">
-                                <h6>หมวดหมู่</h6>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <?php
-                            foreach ($all as $value) { ?>
+            <div class="product-image col-sm-3 card">
 
 
-                                <a class="nav-link" data-bs-toggle="pill" href="#<?php echo $value; ?>">
-                                    <?php echo $value; ?>
-                                </a>
+                <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="150px"></a>
+                </div>
 
 
-                            <?php } ?>
-                        </li>
-                    </ul>
+                <div class="product-tile-footer">
+                    <button type="button" class="btn btn-outline-info">
+                        <div class="product-title">
+                            <?php echo $product_array[$key]["product_name"]; ?>
+                    </button><br>
+                    <button type="button" class="btn ">
+                        <div class="product-price">
+                            <?php echo "THB" . $product_array[$key]["cost"]; ?>
+                        </div>
+                    </button>
 
                 </div>
 
-                <div class="container col-10  tab-content  ">
-                    <div id="hommy" class="container row tab-pane active ">
-                        <div class="row tab-pane active">
-                            <?php
-
-                            $product_array = $db_handle->runQuery("SELECT *  FROM inventory ");
-                            if (!empty($product_array)) {
-                                foreach ($product_array as $key => $value) {
-                            ?>
-
-                                    <div class="product-image col-sm-3 card">
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-                                        <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="150px"></a>
-                                        </div>
-
-
-                                        <div class="product-tile-footer">
-                                            <button type="button" class="btn btn-outline-info">
-                                                <div class="product-title">
-                                                    <?php echo $product_array[$key]["product_name"]; ?>
-                                            </button><br>
-                                            <button type="button" class="btn ">
-                                                <div class="product-price">
-                                                    <?php echo "THB" . $product_array[$key]["cost"]; ?>
-                                                </div>
-                                            </button>
-
-                                        </div>
-
-                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-                            <?php  }
-                            }  ?>
-                        </div>
-                    </div>
-
-                    <?php
-
-                    foreach ($all as $value) { ?>
-
-
-                        <div class="container  tab-pane fade row  " id='<?php echo $value; ?>'>
-                            <div class="row tab-pane active">
-                                <?php $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE category='$value'");
-                                if (!empty($product_array)) {
-                                    foreach ($product_array as $key => $value) {
-                                ?>
-
-                                        <div class="product-image col-sm-3 card">
-
-                                            <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="100px"></a>
-                                            </div>
-
-                                            <div class="product-tile-footer">
-                                                <button type="button" class="btn btn-outline-info">
-                                                    <div class="product-title">
-                                                        <?php echo $product_array[$key]["product_name"]; ?>
-                                                </button><br>
-                                                <button type="button" class="btn ">
-                                                    <div class="product-price">
-                                                        <?php echo "THB" . $product_array[$key]["cost"]; ?>
-                                                    </div>
-                                                </button>
-
-                                            </div>
-
-                                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
-
-                                <?php  }
-                                }  ?>
-                            </div>
-                        </div>
-
-                    <?php    } ?>
-
-
-                </div>
-            </div>
-        </div>
-    </center>
-
+    <?php  }
+    }  ?>
 </body>
 
 </html>

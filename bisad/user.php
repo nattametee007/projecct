@@ -137,7 +137,7 @@ $db_handle = new DBController();
 
             <ul class="navbar-nav">
 
-                <form class="example" method="POST" action="search.php"style="margin:auto;max-width:300px">
+                <form class="example" method="POST" action="search.php" style="margin:auto;max-width:300px">
                     <input type="text" placeholder="Search.." name="search2">
                     <button type="submit" name="btn1"><i class="fa fa-search"></i></button>
                 </form>
@@ -164,8 +164,7 @@ $db_handle = new DBController();
     </nav>
     <?php
     if (isset($_POST["btn1"])) {
-        include("connect.php");
-        //$item_search = $_POST['search2'];
+      
         header("location:search.php");
    
     };

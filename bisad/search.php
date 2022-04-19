@@ -165,7 +165,7 @@ $db_handle = new DBController();
     
     <?php
     $item_search = $_POST['search2'];
-    $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE product_name in ( '$item_search')");
+    $product_array = $db_handle->runQuery("SELECT *  FROM inventory WHERE  '$item_search' in ( product_name)");
     if (!empty($product_array)) {
         foreach ($product_array as $key => $value) {
     ?>

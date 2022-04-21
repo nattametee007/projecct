@@ -170,9 +170,10 @@
         //ดึงข้อมูล user_id จากหน้า user.php
         $customer = $_GET['usercart'];
 
+
         //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
         while($row = $result->fetch_assoc()) {
-            if ($row['user_id'] == $customer){                
+            if ($row['user_id'] == $customer or "'" . $row['user_id'] . "'" == $customer){                
                 
                 array_push($preorder,$row['product_id']);
                 //$preorder2 = $preorder2 . $row['product_id'] . ",";

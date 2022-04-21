@@ -175,7 +175,7 @@
         //แสดงชื่อและที่อยู่ลูกค้า
         while($row = $result->fetch_assoc()) {
 
-            if ($row['user_id'] == $customer){     
+            if ($row['user_id'] == $customer or "'" . $row['user_id'] . "'" == $customer){     
 
                 echo "<div class=\"row\">";
                 echo "<div class=\"col-2\"></div>";
@@ -197,7 +197,7 @@
 
         while($row = $result1->fetch_assoc()) {
 
-            if ($row['user_id'] == $customer){     
+            if ($row['user_id'] == $customer or "'" . $row['user_id'] . "'" == $customer){     
 
                 echo "<div class=\"row\">";
                 echo "<div class=\"col-4\"></div>";

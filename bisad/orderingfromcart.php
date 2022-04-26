@@ -172,7 +172,7 @@
         //แสดงรายการสินค้า
         while($row = $result->fetch_assoc()) {
 
-            if ($row['user_id'] == $customer){     
+            if ($row['user_id'] == $customer or "'" . $row['user_id'] . "'" == $customer){     
 
                 echo "<div class=\"row\">";
                 echo "<div class=\"col-3\"></div>";

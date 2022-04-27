@@ -174,15 +174,13 @@ $db_handle = new DBController();
 
 
                 <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="150px"></a>
+                <br>
+                                            <?php echo $product_array[$key]["product_name"]; ?>
                 </div>
 
 
                 <div class="product-tile-footer">
-                    <button type="button" class="btn btn-outline-info">
-                        <div class="product-title">
-                            <?php echo $product_array[$key]["product_name"]; ?>
-                    </button><br>
-                    <button type="button" class="btn ">
+                                    <button type="button" class="btn ">
                         <div class="product-price">
                             <?php echo "THB" . $product_array[$key]["cost"]; ?>
                         </div>

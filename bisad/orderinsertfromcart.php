@@ -28,17 +28,18 @@
     //กำหนด order_id จากการดูจำนวน row ของ sales_order
     $numorder = 1;
     while($row = $result1->fetch_assoc()) {
-
+        
         $numorder = $numorder + 1;
 
     }
-    echo $numorder;
     
 
     //SQL for loop to insert ordering
     while($row = $result->fetch_assoc()) {  
 
-        if ($row['user_id'] == $customer) {
+        $userr = "'" . $row['user_id'] . "'";
+
+        if ($userr == $customer) {
 
             $sql2 = "INSERT INTO sale_order (order_id, total, quantities, user_id, product_id)
                      VALUES (" . $numorder . "," . $row['quantities']*$row['cost'] . "," . $row['quantities'] . ","  . $customer. "," . $row['product_id'] . ")";

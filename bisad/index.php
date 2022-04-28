@@ -196,6 +196,13 @@ require_once 'config/db.php';
                 <label for="confirm password" class="form-label">ยืนยันรหัสผ่าน</label>
                 <input type="password" class="form-control" name="c_password">
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    ข้าพเจ้ายอมรับเงื่อนไขการใช้งานและนโยบายความเป็นส่วนตัวของทางร้าน
+                </label>
+            </div>
+            <br>
             <button type="submit" name="signup" class="btn " style='background-color: #D99B84; color: #000000;'>สมัครสมาชิก</button>
         </form>
         <hr>

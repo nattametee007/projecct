@@ -44,7 +44,7 @@
                 <label for="password" class="form-label">รหัสผ่าน</label>
                 <input type="password" class="form-control" name="password">
             </div>
-            <button type="submit" name="signin" class="btn btn-primary">เข้าสู่ระบบ</button>
+            <button type="submit" name="signin" class="btn " style='background-color: #D99B84; color: #000000;'">เข้าสู่ระบบ</button>
         </form>
         <hr>
         <p>ยังไม่เป็นสมาชิกใช่ไหม คลิ๊กที่นี่เพื่อ <a href="index.php">สมัครสมาชิก</a></p>

@@ -10,46 +10,64 @@
   
 <body>
     <div class="container mt-5">
-        <h1>Add Grocery List</h1>
+        <h1>Add Inventory List</h1>
         <form action="add.php" method="POST">
             <div class="form-group">
-                <label>Item name</label>
+                <label>product_name</label>
                 <input type="text" 
                     class="form-control" 
-                    placeholder="Item name" 
+                    placeholder="product_name" 
                     name="iname" />
             </div>
   
             <div class="form-group">
-                <label>Item quantity</label>
+                <label>picture</label>
                 <input type="text" 
                     class="form-control" 
-                    placeholder="Item quantity" 
-                    name="iqty" />
+                    placeholder="picture" 
+                    name="ipic" />
+            </div>
+
+            <div class="form-group">
+                <label>size</label>
+                <input type="text" 
+                    class="form-control" 
+                    placeholder="size" 
+                    name="isize" />
+            </div>
+
+            <div class="form-group">
+                <label>colour</label>
+                <input type="text" 
+                    class="form-control" 
+                    placeholder="colour" 
+                    name="icolour" />
+            </div>
+
+            <div class="form-group">
+                <label>cost</label>
+                <input type="float" 
+                    class="form-control" 
+                    placeholder="cost" 
+                    name="icost" />
+            </div>
+            
+            <div class="form-group">
+                <label>detail</label>
+                <input type="text" 
+                    class="form-control" 
+                    placeholder="detail" 
+                    name="idetail" />
             </div>
   
             <div class="form-group">
-                <label>Item status</label>
-                <select class="form-control" 
-                    name="istatus">
-                    <option value="0">
-                        PENDING
-                    </option>
-                    <option value="1">
-                        BOUGHT
-                    </option>
-                    <option value="2">
-                        NOT AVAILABLE
-                    </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Date</label>
-                <input type="date" 
+                <label>category</label>
+                <input type="text" 
                     class="form-control" 
-                    placeholder="Date" 
-                    name="idate">
+                    placeholder="category" 
+                    name="icate" />
             </div>
+
             <div class="form-group">
                 <input type="submit" 
                     value="Add" 
@@ -62,12 +80,16 @@
     <?php
         if(isset($_POST["btn"])) {
             include("connect.php");
-            $item_name=$_POST['iname'];
-            $item_qty=$_POST['iqty'];
-            $item_status=$_POST['istatus'];
-            $date=$_POST['idate'];
+            $iname=$_POST['iname'];
+            $ipic=$_POST['ipic'];
+            $isize=$_POST['isize'];
+            $icolour=$_POST['icolour'];
+            $icost=$_POST['icost'];
+            $idetail=$_POST['idetail'];
+            $icate=$_POST['icate'];
 
             // SQL script for adding an item
+            $sql = "INSERT INTO inventory (product_name,picture,size,colour,cost,detail,category) VALUES ('$iname','$ipic','$isize','$icolour','$icost','$idetail','$icate')";
       
   
             mysqli_query($conn,$sql);

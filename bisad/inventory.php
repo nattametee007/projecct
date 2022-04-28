@@ -122,7 +122,7 @@ include("condb.php");
       </button>
             <div style='margin-right:60%;'>
                 <a href='inventory.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>คำสั่งซื้อ</button></a>
-                <a href='#'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>จัดการคลังสินค้า</button></a>
+                <a href='products.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>จัดการคลังสินค้า</button></a>
             </div>
 
             <ul class="navbar-nav">

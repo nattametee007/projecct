@@ -151,7 +151,7 @@
 
     <div class="container">
         <h1 class = "text-center">สั่งซื้อสินค้า</h1>
-        <br>
+        
         <?php
 
         //รับข้อมูล user_id และ costsum ในตะกร้าสินค้า
@@ -160,6 +160,8 @@
         $quantitiesorder = $_GET['quantitiesorder'];
         $costsum = $_GET['costsum'];
 
+        echo "<div style=\"background-color: #F2E5D5;\"><br>";
+        
         //แสดงรายการสินค้า
         while($row = $result->fetch_assoc()) {
             $productt = "'" . $row['product_id'] . "'";
@@ -188,6 +190,7 @@
         echo "<div class=\"col-2\" align=\"right\"><a href=\"orderinsertfromdetail.php?customer=" . $customer . "&productorder=" . $productorder ."&quantitiesorder=" . $quantitiesorder ."&costsum=" . $costsum . "\" type=\"submit\" class=\"btn\" style=\"background-color: #D99B84;\">สั่งซื้อ</a></div>";
         echo "<div class=\"col-3\"></div>";
 
+        echo "</div><br>";
         ?>
 
         

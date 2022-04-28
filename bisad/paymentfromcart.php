@@ -158,13 +158,14 @@
 
     <div class="container">
         <h1 class = "text-center">ชำระเงิน </h1>
-        <br>
+        
         <?php
 
         //รับข้อมูล user_id และ costsum ในตะกร้าสินค้า
         $customer = $_GET['customer'];
         $costsum = $_GET['costsum'];
 
+        echo "<div style=\"background-color: #F2E5D5;\"><br>";
 
         //แสดงชื่อและที่อยู่ลูกค้า
         while($row = $result->fetch_assoc()) {
@@ -235,6 +236,7 @@
         echo "<div class=\"col-2\" align=\"right\"><a href=\"orderingfromcart.php?customer=" . $customer . "&costsum=" . $costsum ."\" type=\"submit\" class=\"btn\" style=\"background-color: #D99B84;\">ชำระเงิน</a></div>";
         echo "<div class=\"col-2\"></div>";
 
+        echo "</div><br>";
         ?>
 
         

@@ -153,7 +153,7 @@
     
     <div class="container">
         <h1 class = "text-center">ตะกร้าสินค้า</h1>
-        <br>
+        
         <?php
         //สร้างตัวแปร ตัวแปร preorder คือ id สินค้า และ ตัวแปร costsum คือ ผลรวมราคา
         $preorder = array();
@@ -164,6 +164,7 @@
         //ดึงข้อมูล user_id จากหน้า user.php
         $customer = $_GET['usercart'];
 
+        echo "<div style=\"background-color: #F2E5D5;\"><br>";
 
         //แสดงสินค้าทั้งหมดที่อยู่ในตะกร้า
         while($row = $result->fetch_assoc()) {
@@ -200,7 +201,7 @@
             echo "<div class=\"col-2\"></div>";
         }
         
-        
+        echo "</div><br>";
 
         ?>
     </div>

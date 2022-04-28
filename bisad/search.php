@@ -170,7 +170,7 @@ $db_handle = new DBController();
         foreach ($product_array as $key => $value) {
     ?>
 
-            <center><div class="product-image col-sm-3 card" style='margin-top:8px; background-color: #F2E5D5;'>
+            <center><div class="product-image col-sm-3 card" style='margin-top:8px; background-color: #F2E5D5;margin-bottom : 20px'>
 
 
                 <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="150px"></a>

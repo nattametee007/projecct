@@ -221,7 +221,7 @@ $db_handle = new DBController();
                                 foreach ($product_array as $key => $value) {
                             ?>
 
-                                    <div class="product-image col-sm-3 card" style='background-color: #F2E5D5;'>
+                                    <div class="product-image col-sm-3 card" style='background-color: #F2E5D5;margin-bottom : 20px'>
 
 
                                         <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="150px"></a>
@@ -259,7 +259,7 @@ $db_handle = new DBController();
                                     foreach ($product_array as $key => $value) {
                                 ?>
 
-                                        <div class="product-image col-sm-3 card" style='background-color: #F2E5D5;'>
+                                        <div class="product-image col-sm-3 card" style='background-color: #F2E5D5; margin-bottom : 20px'>
 
                                             <div class="product-image"><a href="detail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $customer; ?>'&cate='<?php echo $product_array[$key]["category"]; ?>'"><img src="picture/<?php echo $product_array[$key]["picture"]; ?>" height="150px"></a>
                                             <br>

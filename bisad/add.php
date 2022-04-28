@@ -13,7 +13,7 @@
         <h1>Add Grocery List</h1>
         <form action="add.php" method="POST">
             <div class="form-group">
-                <label>Item namessss</label>
+                <label>Item name</label>
                 <input type="text" 
                     class="form-control" 
                     placeholder="Item name" 

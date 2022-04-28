@@ -196,7 +196,7 @@ require_once 'config/db.php';
                 <label for="confirm password" class="form-label">ยืนยันรหัสผ่าน</label>
                 <input type="password" class="form-control" name="c_password">
             </div>
-            <button type="submit" name="signup" class="btn btn-primary">สมัครสมาชิก</button>
+            <button type="submit" name="signup" class="btn " style='background-color: #D99B84; color: #000000;'>สมัครสมาชิก</button>
         </form>
         <hr>
         <p>เป็นสมาชิกแล้วใช่ไหม คลิ๊กที่นี่เพื่อ <a href="signin.php">เข้าสู่ระบบ</a></p>

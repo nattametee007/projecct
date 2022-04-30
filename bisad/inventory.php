@@ -29,6 +29,7 @@ include("condb.php");
 <style>
     body {
         font-family: Arial;
+        background-color: #F2E5D5;
     }
 
     * {
@@ -158,7 +159,7 @@ include("condb.php");
                     <th class="col-sm-1">ราคา(บาท)</th>
                 </tr>
             </thead>
-            <tbody style='background-color: #F2E5D5;'>
+            <tbody style='background-color: white;'>
                 <?php $amount=0; ?>
                 <?php foreach($rsso as $row){
                     $amount += $row['total'];

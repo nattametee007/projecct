@@ -122,7 +122,7 @@ include("condb.php");
       </button>
             <div style='margin-right:60%;'>
                 <a href='account.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>คำสั่งซื้อ</button></a>
-                <a href='#'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>แสดงยอดขาย</button></a>
+                <a href='graph.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>แสดงยอดขาย</button></a>
             </div>
 
             <ul class="navbar-nav">
@@ -136,7 +136,6 @@ include("condb.php");
                     </div>
                 </div>
             </ul>
-
         </div>
     </nav>
 

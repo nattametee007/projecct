@@ -121,8 +121,15 @@ include("condb.php");
         <span class="navbar-toggler-icon"></span>
       </button>
             <div style='margin-right:60%;'>
-                <a href='account.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>คำสั่งซื้อ</button></a>
-                <a href='graph.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>แสดงยอดขาย</button></a>
+                <a href='account.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>คำสั่งซื้อ</button></a>&nbsp;&nbsp;&nbsp;
+                
+                <div class="dropdown" style="float:right;">
+                <button class="btn btn-lg dropbtn" style='background-color: #D99B84; color: #000000; padding-bottom:3px; padding-top:13.5px;'><h5>แสดงยอดขาย</h5></button>
+                    <div class="dropdown-content">
+                        <a href="signin.php">เข้าสู่ระบบ</a>
+                        <a href="logout.php">ออกจากระบบ</a>
+                    </div>
+                </div>
             </div>
 
             <ul class="navbar-nav">

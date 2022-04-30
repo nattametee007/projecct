@@ -127,8 +127,9 @@ include("condb.php");
                 <div class="dropdown" style="float:right;">
                 <button class="btn btn-lg dropbtn" style='background-color: #D99B84; color: #000000; padding-bottom:3px; padding-top:13.5px;'><h5>แสดงยอดขาย</h5></button>
                     <div class="dropdown-content">
-                        <a href="signin.php">เข้าสู่ระบบ</a>
-                        <a href="logout.php">ออกจากระบบ</a>
+                        <a href="graph1.php">รายวัน</a>
+                        <a href="graph2.php">รายเดือน</a>
+                        <a href="graph3.php">รายปี</a>
                     </div>
                 </div>
             </div>

@@ -27,6 +27,7 @@
     <style>
         body {
             font-family: Arial;
+            background-color: #F2E5D5;
         }
         
         * {
@@ -123,7 +124,7 @@
             <ul class="navbar-nav">
 
                 <form class="example" method="POST" action="search.php" style="margin:auto;max-width:300px">
-                    <input type="text" placeholder="Search.." name="search2">
+                    <input type="text" placeholder="ค้นหา.." name="search2">
                     <button type="submit" name="btn1" style='background-color: #D99B84;'><i class="fa fa-search"></i></button>
                 </form>
 
@@ -160,7 +161,7 @@
         $quantitiesorder = $_GET['quantitiesorder'];
         $costsum = $_GET['costsum'];
 
-        echo "<div style=\"background-color: #F2E5D5;\"><br>";
+        echo "<div style=\"background-color: white;\"><br>";
         
         //แสดงรายการสินค้า
         while($row = $result->fetch_assoc()) {

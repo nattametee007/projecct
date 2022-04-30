@@ -19,6 +19,7 @@ $user = $_GET['user'];
     <style>
         body {
             font-family: Arial;
+            background-color: #F2E5D5;
         }
 
         * {
@@ -114,7 +115,7 @@ $user = $_GET['user'];
             <ul class="navbar-nav">
 
                 <form class="example" method="POST" action="search.php" style="margin:auto;max-width:300px">
-                    <input type="text" placeholder="Search.." name="search2">
+                    <input type="text" placeholder="ค้นหา.." name="search2">
                     <button type="submit" name="btn1" style='background-color: #D99B84;'><i class="fa fa-search"></i></button>
                 </form>
 
@@ -208,6 +209,121 @@ $user = $_GET['user'];
 
                             </div>
                         </form>
+                    <?php } elseif ($category == "'กระเป๋า'") { ?>
+                        <form method="POST">
+                            <div class="container" style="text-align: left;">
+                                <div class="form-group">
+                                    <label>สี :</label><br>
+                                    <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                                    <label class="form-check-label" for="check1"><?php echo $product_array[$key]["colour"]; ?></label>
+                                    <input type="checkbox" class="form-check-input" disabled>
+                                    <label class="form-check-label">มิ้นต์</label>
+                                    <input type="checkbox" class="form-check-input" disabled>
+                                    <label class="form-check-label">คราม</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>จำนวน : </label>
+                                    <input type="text" class="form-control" placeholder="จำนวน" name="iqty" />
+                                </div>
+
+
+                            </div><br>
+
+                            <div class="container row">
+
+                                <div class="container col">
+                                    <a class="container btn btn-outline-info" href="paymentfromdetail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $user; ?>'&quantitiesorder=1">
+                                        สั่งซื้อสินค้า
+                                    </a>
+
+                                </div>
+                                <div class="container col">
+                                    <input type="submit" value="เพิ่มลงตะกร้า" class="container btn btn-outline-info" name="btn">
+
+                                </div>
+
+                            </div>
+                        </form>
+                    <?php } elseif ($category == "'หมวก'") { ?>
+                        <form method="POST">
+                            <div class="container" style="text-align: left;">
+                                <div class="form-group">
+                                    <label>สี :</label><br>
+                                    <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                                    <label class="form-check-label" for="check1"><?php echo $product_array[$key]["colour"]; ?></label>
+                                    <input type="checkbox" class="form-check-input" disabled>
+                                    <label class="form-check-label">มิ้นต์</label>
+                                    <input type="checkbox" class="form-check-input" disabled>
+                                    <label class="form-check-label">คราม</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>จำนวน : </label>
+                                    <input type="text" class="form-control" placeholder="จำนวน" name="iqty" />
+                                </div>
+
+
+                            </div><br>
+
+                            <div class="container row">
+
+                                <div class="container col">
+                                    <a class="container btn btn-outline-info" href="paymentfromdetail.php?product='<?php echo $product_array[$key]["product_id"]; ?>'&user='<?php echo $user; ?>'&quantitiesorder=1">
+                                        สั่งซื้อสินค้า
+                                    </a>
+
+                                </div>
+                                <div class="container col">
+                                    <input type="submit" value="เพิ่มลงตะกร้า" class="container btn btn-outline-info" name="btn">
+
+                                </div>
+
+                            </div>
+                        </form>
+                    <?php } elseif ($category == "'รองเท้า'") { ?> 
+                        <form method="POST">
+                            <div class="container" style="text-align: left;">
+                                <div class="form-group">
+                                    <label>สี :</label><br>
+                                    <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                                    <label class="form-check-label" for="check1"><?php echo $product_array[$key]["colour"]; ?></label>
+                                    <input type="checkbox" class="form-check-input" disabled>
+                                    <label class="form-check-label">มิ้นต์</label>
+                                    <input type="checkbox" class="form-check-input" disabled>
+                                    <label class="form-check-label">คราม</label>
+                                </div>
+                                <div class="form-group">
+                                    <label>ขนาด : </label><br>
+                                    <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                                    <label class="form-check-label" for="check1"><?php echo $product_array[$key]["size"]; ?></label>
+                                    <input type="checkbox" class="form-check-input" disabled>
+                                    <label class="form-check-label">41</label>
+                                    <input type="checkbox" class="form-check-input" disabled>
+                                    <label class="form-check-label">42</label>
+                                </div>
+                                <div class="form-group">
+                                    <label>จำนวน : </label>
+                                    <input type="text" class="form-control" placeholder="จำนวน" name="iqty" value=1>
+                                </div>
+
+                            </div><br>
+
+                            <div class="container row">
+
+                                <div class="container col">
+                                    <a class="container btn btn-outline-info" href="paymentfromdetail.php?product=<?php echo $product; ?>&user=<?php echo $user; ?>&quantitiesorder=1">
+                                        สั่งซื้อสินค้า
+                                    </a>
+
+                                </div>
+                                <div class="container col">
+                                    <input type="submit" value="เพิ่มลงตะกร้า" class="container btn btn-outline-info" name="btn">
+
+                                </div>
+
+                            </div>
+                        </form>
                     <?php } else { ?> 
                         <form method="POST">
                             <div class="container" style="text-align: left;">
@@ -225,7 +341,7 @@ $user = $_GET['user'];
                                     <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
                                     <label class="form-check-label" for="check1"><?php echo $product_array[$key]["size"]; ?></label>
                                     <input type="checkbox" class="form-check-input" disabled>
-                                    <label class="form-check-label">m</label>
+                                    <label class="form-check-label">M</label>
                                     <input type="checkbox" class="form-check-input" disabled>
                                     <label class="form-check-label">L</label>
                                 </div>

@@ -11,6 +11,7 @@
     <style>
         body {
             font-family: Arial;
+            background-color: #F2E5D5;
         }
     </style>
 </head>

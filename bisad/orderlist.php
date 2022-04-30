@@ -42,6 +42,7 @@ $db_handle = new DBController();
     <style>
     body {
         font-family: Arial;
+        background-color: #F2E5D5;
     }
 
     * {
@@ -138,7 +139,7 @@ $db_handle = new DBController();
             <ul class="navbar-nav">
 
                 <form class="example" method="POST" action="search.php" style="margin:auto;max-width:300px">
-                    <input type="text" placeholder="Search.." name="search2">
+                    <input type="text" placeholder="ค้นหา.." name="search2">
                     <button type="submit" name="btn1" style='background-color: #D99B84;'><i class="fa fa-search"></i></button>
                 </form>
 
@@ -174,13 +175,13 @@ $db_handle = new DBController();
     ?>
     <div class="container-fluid mt-4">
         <div class="container row">
-            <div class="container col-3  " style='margin-right:-70px'>
+            <div class="container col-2  " style='margin-right:-70px'>
 
                 <ul class="nav nav-pills" role="tablist">
 
                     <li class="nav-item">
                         <a class="nav-link active" data-bs-toggle="pill" style='background-color: #D99B84; color: #000000; padding-left:29px; padding-right:29px;' href="#allorderid">
-                            <h6>หมายเลขคำสั่งซื้อทั้งหมด</h6>
+                            <h7>หมายเลขคำสั่งซื้อทั้งหมด</h7>
                         </a>
                         <br>
                     </li>
@@ -208,7 +209,7 @@ $db_handle = new DBController();
 
 foreach ($all as $value3) { ?>
 
-        <div class="product-image col-sm-12 card" style='background-color: #F2E5D5;'>
+        <div class="product-image col-sm-12 card" style='background-color: white;'>
         
             <?php $queryuserr = $db_handle->runQuery("SELECT DISTINCT u.name, u.address FROM users as u INNER JOIN sale_order as so WHERE u.user_id = '$customer'");
             $querytdd = $db_handle->runQuery("SELECT DISTINCT time_date FROM sale_order WHERE order_id = '$value3'");
@@ -220,7 +221,7 @@ foreach ($all as $value3) { ?>
                 echo '<h5>วัน เวลาที่สั่งซื้อ : ' . $querytdd[$key4]['time_date'] . '</h5>';
             }
             foreach ($queryuserr as $key5 => $value5) {
-            echo '<h5>ชื่อ : คุณ' . $queryuserr[$key5]['name'] . '</h5>';
+            echo '<h5>ชื่อ : คุณ ' . $queryuserr[$key5]['name'] . '</h5>';
             echo '<h5>ที่อยู่ : ' . $queryuserr[$key5]['address'] . '</h5>';
             }
             echo '</div>';
@@ -277,7 +278,7 @@ foreach ($all as $value3) { ?>
 
 
                 <div class="container tab-pane fade" id='orderid<?php echo $value; ?>'>
-                    <div class="product-image col-sm-12 card" style='background-color: #F2E5D5;'>
+                    <div class="product-image col-sm-12 card" style='background-color: white;'>
                     
                         <?php $queryuser = $db_handle->runQuery("SELECT DISTINCT u.name, u.address FROM users as u INNER JOIN sale_order as so WHERE u.user_id = '$customer'");
                         $querytd = $db_handle->runQuery("SELECT DISTINCT time_date FROM sale_order WHERE order_id = '$value'");

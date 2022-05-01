@@ -29,6 +29,7 @@ include("condb.php");
 <style>
     body {
         font-family: Arial;
+        background-color: #F2E5D5;
     }
 
     * {
@@ -121,8 +122,16 @@ include("condb.php");
         <span class="navbar-toggler-icon"></span>
       </button>
             <div style='margin-right:60%;'>
-                <a href='account.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>คำสั่งซื้อ</button></a>
-                <a href='graph.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>แสดงยอดขาย</button></a>
+                <a href='account.php'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>คำสั่งซื้อ</button></a>&nbsp;&nbsp;&nbsp;
+                
+                <div class="dropdown" style="float:right;">
+                <button class="btn btn-lg dropbtn" style='background-color: #D99B84; color: #000000; padding-bottom:3px; padding-top:13.5px;'><h5>แสดงยอดขาย</h5></button>
+                    <div class="dropdown-content">
+                        <a href="graph1.php">รายวัน</a>
+                        <a href="graph2.php">รายเดือน</a>
+                        <a href="graph3.php">รายปี</a>
+                    </div>
+                </div>
             </div>
 
             <ul class="navbar-nav">
@@ -136,13 +145,15 @@ include("condb.php");
                     </div>
                 </div>
             </ul>
-
         </div>
     </nav>
 
-    <a href='#'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>รายวัน</button></a>
-    <a href='#'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>รายเดือน</button></a>
-    <a href='#'><button type="button" class="btn btn-lg" style='background-color: #D99B84; color: #000000;'>รายปี</button></a>
+    <div align='center' style='margin-top:30px'>
+    <img src='picture/graph1.png' height=500px>
+    </div>
+
+    
+    
 
 </body>
 </html>

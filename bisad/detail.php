@@ -173,7 +173,7 @@ $user = $_GET['user'];
 
                     </div>
                     <hr>
-                    <?php if ($category == "'เครื่องประดับ'") { ?>
+                    <?php if ($category == "เครื่องประดับ") { ?>
                         <form method="POST">
                             <div class="container" style="text-align: left;">
                                 <div class="form-group">
@@ -209,7 +209,7 @@ $user = $_GET['user'];
 
                             </div>
                         </form>
-                    <?php } elseif ($category == "'กระเป๋า'") { ?>
+                    <?php } elseif ($category == "กระเป๋า") { ?>
                         <form method="POST">
                             <div class="container" style="text-align: left;">
                                 <div class="form-group">
@@ -245,7 +245,7 @@ $user = $_GET['user'];
 
                             </div>
                         </form>
-                    <?php } elseif ($category == "'หมวก'") { ?>
+                    <?php } elseif ($category == "หมวก") { ?>
                         <form method="POST">
                             <div class="container" style="text-align: left;">
                                 <div class="form-group">
@@ -281,7 +281,7 @@ $user = $_GET['user'];
 
                             </div>
                         </form>
-                    <?php } elseif ($category == "'รองเท้า'") { ?> 
+                    <?php } elseif ($category == "รองเท้า") { ?> 
                         <form method="POST">
                             <div class="container" style="text-align: left;">
                                 <div class="form-group">

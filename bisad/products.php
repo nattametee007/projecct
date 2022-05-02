@@ -198,7 +198,8 @@ if (isset($_POST['btn'])) {
             <div class="form-group">
                 <input type="submit" 
                     value="เพิ่มสินค้า" 
-                    class="btn btn-danger" 
+                    class="btn"
+                          style="background-color: #D99B84; color: #000000;"
                     name="btn">
             </div>
         </form>
